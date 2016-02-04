@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.1415926-2.4-0.9998 (MiKTeX 2.9) (preloaded format=xelatex 2016.2.4)  4 FEB 2016 19:27
+This is XeTeX, Version 3.1415926-2.4-0.9998 (MiKTeX 2.9) (preloaded format=xelatex 2016.2.4)  4 FEB 2016 20:04
 entering extended mode
 **C:/Users/Narctiss/Documents/University*Work/Major*Project/Metagenome-Assembly
 -Quality-Analysis-Toolkit/Documents/Outline*Project*Specification/jee22_Outline
@@ -355,26 +355,29 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 Requested font "pplr7t" at 14.4pt
  -> pplr7t
 LaTeX Font Info:    Font shape `OT1/ppl/bx/n' in size <14.4> not available
-(Font)              Font shape `OT1/ppl/b/n' tried instead on input line 46.
+(Font)              Font shape `OT1/ppl/b/n' tried instead on input line 45.
 Requested font "pplb7t" at 14.4pt
  -> pplb7t
 
-Overfull \hbox (20.33022pt too wide) in paragraph at lines 48--49
+Overfull \hbox (20.33022pt too wide) in paragraph at lines 47--48
 \OT1/ppl/m/n/10.95 The project aims to pro-duce a soft-ware ap-pli-ca-tion to s
 erve as a toolkit for re-port-ing on metagenome
  []
 
 LaTeX Font Info:    Font shape `OT1/ppl/bx/n' in size <10.95> not available
-(Font)              Font shape `OT1/ppl/b/n' tried instead on input line 61.
+(Font)              Font shape `OT1/ppl/b/n' tried instead on input line 58.
 Requested font "pplb7t" at 10.95pt
  -> pplb7t
-[1] [2]
+[1]
 ("C:\Users\Narctiss\Documents\University Work\Major Project\Metagenome-Assembly
 -Quality-Analysis-Toolkit\Documents\Outline Project Specification\jee22_Outline
 ProjectSpecification.bbl"
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [2]
 Missing character: There is no ç in font pplr7t!
 
-Underfull \hbox (badness 1142) in paragraph at lines 51--54
+Underfull \hbox (badness 1142) in paragraph at lines 44--47
 \OT1/ppl/m/n/10.95 y-sis,'' $http : / / www . ncbi . nlm . nih . gov / pmc / ar
 ticles / PMC3351745/$, Feb. 2012, ac-cessed
  []
@@ -383,19 +386,19 @@ Requested font "pplr7t" at 8.0pt
  -> pplr7t
 Requested font "pplr7t" at 6.0pt
  -> pplr7t
-[3]) 
+) 
 AED: lastpage setting LastPage
-[4]
+[3]
 ("C:\Users\Narctiss\Documents\University Work\Major Project\Metagenome-Assembly
 -Quality-Analysis-Toolkit\Documents\Outline Project Specification\jee22_Outline
 ProjectSpecification.aux") ) 
 Here is how much of TeX's memory you used:
  2698 strings out of 429035
  33628 string characters out of 3166908
- 97237 words of memory out of 3000000
+ 95237 words of memory out of 3000000
  5916 multiletter control sequences out of 15000+200000
  13418 words of font info for 48 fonts, out of 3000000 for 9000
  912 hyphenation exceptions out of 8191
- 34i,10n,43p,1034b,333s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 34i,10n,43p,897b,329s stack positions out of 5000i,500n,10000p,200000b,50000s
 
-Output written on jee22_OutlineProjectSpecification.pdf (5 pages).
+Output written on jee22_OutlineProjectSpecification.pdf (4 pages).

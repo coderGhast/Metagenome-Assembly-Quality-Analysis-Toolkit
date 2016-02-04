@@ -26,8 +26,8 @@
 \projecttitle{A Toolkit For Reporting On Metagenome Assembly Quality}
 \projecttitlememoir{A toolkit for reporting on metagenome assembly quality} %same as the project title or abridged version for page header
 \reporttitle{Outline Project Specification}
-\version{0.3} % Correct to 1.0 when in Release
-\docstatus{Draft} % or Release
+\version{1.0} % Correct to 1.0 when in Release
+\docstatus{Release} % or Release
 \modulecode{CS39440}
 \degreeschemecode{G401}
 \degreeschemename{BSC Computer Science (inc Integrated Industrial and Professional Training)}
@@ -41,30 +41,24 @@
 
 \setcounter{tocdepth}{3} %set required number of level in table of contents
 
-
 %==============================================================================
 \section{Project description}
 %==============================================================================
-The project aims to produce a software application to serve as a toolkit for reporting on metagenome assembly quality. This toolkit should allow a user to provide input of a metagenome\cite{metagenome} (most likely in the FASTA format\cite{fasta}) and receive output of a report detailing the quality of their metagenome. This project has a degree of research and understanding, and the designing and developing of an application to carry out the task.
+The project aims to produce a software application to serve as a toolkit for reporting on metagenome assembly quality. This toolkit should allow a user to provide input of a metagenome\cite{metagenome} (most likely in the FASTA format\cite{fasta}) and receive output of a report detailing the quality of their metagenome. This project will involde research into metagenomics and the designing and developing of an application to carry out the task.
 
-Before any technical work can be done, I must determine what quality is in metagenomics. Quality could be multiple things, and could be up for interpretation depending what result the user wishes to see. The user may ask questions such as: Is it a chimera assembly, or is there something actually interesting and real? Is the assembly long enough to be useful? Or are they so long that it just seems irregular when it should be assembled from a varying amount of species and sub-species? Understanding the users requirement on quality will help me develop the application with the focus on the user.
+Before any technical work can be done, I must determine what quality is in metagenomics. Quality could be multiple things, and could be up for interpretation depending what result the user wishes to see. The user may ask questions such as: Is the assembly found in nature, or is it  a chimera made by the assembly? Is the assembly long enough to be useful, or is it so long that it may be irregular? Understanding the users requirement on quality will help me develop the application with the focus on the user.
 
-It could also be useful to a user if the report suggests places where the metagenome may be split if there are irregularities or instances where it seems like the assembly doesn't seem right e.g. where a chimera may have been made by combining multiple reads in the wrong way. Can we give a confidence factor on how likely the assembly is to be of good quality? We can never truly say "This is good quality" as we don't know what we have to begin with, but the aim is to present a report on what areas of the assembly could be looked at in closer detail. We may be able to present comparison results between the same sample processed through different assemblies.
+It could also be useful to a user if the report suggests places where the metagenome may be split if there are instances where it seems likely that the assembly doesn't seem right e.g. reads combined where they should not have been. We can never truly say "This is good quality", as we don't know what we have to begin with, but the aim is to present a report on what areas of the assembly could be looked at in closer detail and why. There is also the potential for using a large database of known genomes to see if any known genome matches all or part of the provided assembly.
 
-Advancing the application, it may be worthwhile to suggest areas of the assembly to look at in detail using the raw reads, before the assembly is created. By considering the reads themselves to try to report on the quality, a user can further delve into both interesting and suggested problem areas of the provided assembly. There is also the potential for using a large database of known genomes to see if any known genome matches all or part of the provided assembly.
-
-Quality control in genomics is huge, as mistakes can be costly in time and financially. Without good quality control, a user may attempt to synthesize a gene based on an assembly that has no way of existing in nature, and not achieve the result they were originally aiming for. While the application may not be able to give exact results on how `good' an assembly is, by highlighting significant areas where there may be issues, it will potentially aid the field of metagenomics in understanding the samples taken and reaching assemblies in better ways. It may also help users select better assembly processes by giving them tools to compare different assemblies from the same samples, and see if there are any known existing genomes that match their provided assembly.
+Quality control in metagenomics is huge. Without good quality control, a user may attempt to synthesize a gene based on an assembly that has no way of existing in nature, and not achieve the result they were originally aiming for. While the application may not be able to give exact results on how `good' an assembly is, by highlighting significant areas where there may be issues, it will potentially aid the field of metagenomics in understanding the samples taken and reaching assemblies in better ways.
 
 %==============================================================================
 \section{Proposed tasks}
 %==============================================================================
-\textbf{Research metagenomics} - Understand what they are, how are assemblies created, and how do they look in text-form? I will need to have basic understanding of the domain in order to develop the application to be useful to the users. Reading papers on metagenomics and determining quality in the field will help me do this, and a number of reading sources have been provided in the annotated bibliography at the end of the document.
+\textbf{Research metagenomics} - Understand what they are, how are assemblies created, and how do they look in text-form? I will need to have basic understanding of the domain before I can begin technical work. Reading papers on metagenomics and current processes of determining quality will help me do this.
 \newline
 \noindent
-\textbf{Investigate existing/similar tools} - There are a number of tools that exist to do some quality control checks, many for single species genome assemblies, and some for metagenomes. Some of the techniques I intend to investigate are K-mer\cite{kmer} counting, GC counting\cite{gccount}, n50 and anything else I discover. Some applications already carry out these techniques, and I will look at these, such as Jellyfish\cite{jellyfish}, BFC\cite{bfc} with Bloom Filter, REAPR\cite{reapr}, QC Chain\cite{qcchain}. Looking at these tools will help me decide the direction of my application, and whether I should use outputs from other applications as input, or take the raw metagenome and work with that. I will also investigate what other applications do and don't do well, and find out why, to help improve my own application.
-\newline
-\noindent
-\textbf{Investigate visualisation tools} - For outputting the report of the quality of a metagenome, it would be good to display the assembly and highlight the areas of significance using some visualisation tools. I will be doing research into what tools exist that would fit the needs of my application.
+\textbf{Investigate existing/similar tools} - There are a number of tools and techniques that exist for quality control checks for genomes. Some of the techniques I intend to investigate are K-mer\cite{kmer} counting, GC counting\cite{gccount}, n50 and anything else I discover. Applications such as Jellyfish\cite{jellyfish}, BFC\cite{bfc}, REAPR\cite{reapr} and QC Chain\cite{qcchain} already do some of these techniques. Looking at these tools may help me understand the domain better and how my final technical product should behave. This investigation will also involve finding good ways of visually representing the assembly in the quality report.
 \newline
 \noindent
 \textbf{Set up local environment and version control} - Initially, I plan to use the Java language to develop my application, using the IntelliJ IDE. For version control, I will use git and keep my repository on my personal GitHub account during the projects lifetime. During this period, I will also decide which way to develop the application, whether I take a plan driven approach or an agile approach, using all or elements from Scrum, XP and Feature Driven Development.
@@ -73,7 +67,7 @@ Quality control in genomics is huge, as mistakes can be costly in time and finan
 \textbf{Development} - To begin with, I will just program some basics, such as GC content counting, both to learn and to start the application, and approach each technique as an addition to the application, building on it iteratively to quickly have a minium viable product that can easily be expanded upon and maintained over time. 
 \newline
 \noindent
-\textbf{Implement more advanced techniques} - Once a minimum product has been made, that may only test using one or two techniques and provide a basic report, I will intent to further develop the application to provide a visual report about the metagenome provided. In the report, it will give the user enough detailed information that they can use in order to find why this report has claimed the metagenome is or isn't of quality, and potentially offer solutions as to what they might find useful to look at either to improve the metagenome, or discover where the irregularities are located. This will involve more advanced quality control checks, and the potential for checking databases for similar or matches to existing known genomes, such as using BLAST\cite{blast}.
+\textbf{Implement more advanced techniques} - Once a minimum product has been made, I intend to further develop the application to provide a detailed visual report about the quality of the metagenome provided. The report will give the user enough detailed information that they can use in order to find why the application gives the results it does, and potentially offer solutions as to what they might find useful to look at either to improve the metagenome, or discover where the irregularities are located. This will involve more advanced quality control checks, and the potential for checking databases for similar/matches to existing known genome sequences through using BLAST\cite{blast}.
 \newline
 \noindent
 \textbf{Construct a set of test scripts and files} - In order to determine whether my application is successful in its tasks, I will write a number of test scripts for its functionality, and use real and artificially created data where I have expected and assumed outputs and see if my application gives me the anticipated results.
@@ -85,12 +79,11 @@ Quality control in genomics is huge, as mistakes can be costly in time and finan
 \textbf{Project meetings and online blog} - Attend project meetings with my supervisor (minimum) once a week, and discuss my progress and plans. These will also be documented on my blog, and will reflect the stories I am taking into each week to work on.
 \newline
 \noindent
-\textbf{Preparation for demonstrations} - There are two demonstrations. The first is a mid-project demonstration in the week before Easter, while the second is a final demonstration after the submission of my technical work and final report. Both of these demonstrations will be planned for and practised before being given, and through them I hope to show my markers the function of my application, any research I have conducted and any technical challenges or interesting sections of my application. 
+\textbf{Preparation for demonstrations} - There are two demonstrations, a mid-project demonstration in the week before Easter and a final demonstration after the submission of my technical work and final report. Both of these demonstrations will be planned for before being given, and through them I hope to show my markers the function of my application, any research I have conducted and any technical challenges or interesting sections of my application. 
 
 %==============================================================================
 \section{Project deliverables}
 %==============================================================================
-
 \textbf{Mid project demonstration notes} - A compiled set of notes used in planning and giving a mid-project demonstration. This will be included in the appendix of the final report.
 \newline
 \noindent
@@ -110,7 +103,6 @@ Quality control in genomics is huge, as mistakes can be costly in time and finan
 \newline
 \noindent
 \textbf{Final Demonstration} - While there will be no documents, this is an event that will take place and I will need to consider how I structure the demonstration and how to present it during the time of my project
-
 %
 % Start to comment out / remove the following lines. They are only provided for instruction for this example template.  You don't need the following section title, because it will be added as part of the bibliography section. 
 %
@@ -126,7 +118,6 @@ Quality control in genomics is huge, as mistakes can be costly in time and finan
 %
 % End of comment out / remove the lines. They are only provided for instruction for this example template. 
 %
-
 
 \nocite{*} % include everything from the bibliography, irrespective of whether it has been referenced.
 

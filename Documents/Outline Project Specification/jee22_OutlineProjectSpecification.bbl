@@ -24,18 +24,13 @@ M.~Hunt, T.~Kikuchi, M.~Sanders, C.~Newbold, M.~Berriman, and T.~Otto, ``Reapr:
   \url{http://www.sanger.ac.uk/science/tools/reapr/}, May 2013, accessed
   February 2016.
  \begin{quotation}\noindent REAPR is a tool that attempts to evaluate genome
-  assemblies, much as this project intends to do. It will be interesting to try
-  the software and their approach to evaluation. \end{quotation}
+  assemblies. \end{quotation}
 
 \bibitem{jellyfish}
 G.~Marçais and C.~Kingsford, ``Jellyfish - fast, parallel k-mer counting for
   dna,'' \url{http://www.cbcb.umd.edu/software/jellyfish/}, July 2011, accessed
   February 2016.
- \begin{quotation}\noindent Rather than writing my own k-mer counting tool, it
-  may be apt to either use, or request the results from, the JELLYFISH
-  application, that could potentially provide better and faster results for
-  k-mer counting than I would be able to do with the time available to me
-  during the lifetime of this project. \end{quotation}
+ \begin{quotation}\noindent Parallel k-mer counting tool. \end{quotation}
 
 \bibitem{bfc}
 P.~Melsted and J.~K. Pritchard, ``Efficient counting of k-mers in dna sequences
@@ -43,18 +38,15 @@ P.~Melsted and J.~K. Pritchard, ``Efficient counting of k-mers in dna sequences
   \url{http://pritchardlab.stanford.edu/bfcounter.html/}, Aug. 2011, accessed
   February 2016.
  \begin{quotation}\noindent BFC is a tool for k-mer counting that uses a bloom
-  filter. This would be a good alternative to investigate, similar to
-  JELLYFISH, when deciding how to determine quality with the application
-  written as part of this project. \end{quotation}
+  filter. \end{quotation}
 
 \bibitem{metagenome}
 T.~Thomas, J.~Gilbert, and F.~Meyer, ``Metagenomics - a guide from sampling to
   data analysis,'' \url{http://www.ncbi.nlm.nih.gov/pmc/articles/PMC3351745/},
   Feb. 2012, accessed February 2016.
  \begin{quotation}\noindent A detailed explanation of metagenomics in the field
-  of biology, its uses and suggested construction for scientific usage. Reading
-  and understanding this paper will help me understand the domain of the
-  project. \end{quotation}
+  of biology, its uses and suggested construction for scientific usage.
+  \end{quotation}
 
 \bibitem{fasta}
 Various, ``Fasta format - wikipedia, the free encyclopedia,''
@@ -69,29 +61,23 @@ Various, ``Fasta format - wikipedia, the free encyclopedia,''
 ------, ``Gc-content - wikipedia, the free encyclopedia,''
   \url{https://en.wikipedia.org/wiki/GC-content/}, Oct. 2015, accessed February
   2016.
- \begin{quotation}\noindent From this web link, the GC content is ``the
-  percentage of nitrogenous bases on a DNA molecule that are either guanine or
-  cytosine". By measuring this in small equal sections of the provided
-  assembly, the application may be able to naively judge where there is a split
-  in the data that may indicate an irregularity. \end{quotation}
+ \begin{quotation}\noindent I will use GC content counting as a starting point
+  for looking at the quality of metagenome assemblies. \end{quotation}
 
 \bibitem{kmer}
 ------, ``k-mer - wikipedia, the free encyclopedia,''
   \url{https://en.wikipedia.org/wiki/K-mer/}, Oct. 2015, accessed February
   2016.
- \begin{quotation}\noindent k-mers are a way of representing subsequences of
-  strings, and are often used in sequence assembly, sequence alignment and
-  genome quality assessment. I intend to use the technique to help product the
-  report of quality. \end{quotation}
+ \begin{quotation}\noindent I intend to use the k-mers, and k-mer counting, to
+  help product the report of quality. \end{quotation}
 
 \bibitem{blast}
 ------, ``Blast: Basic local alignment search tool,''
   \url{http://blast.ncbi.nlm.nih.gov/Blast.cgi/}, unknown, accessed February
   2016.
- \begin{quotation}\noindent BLAST is a tool used for searching the NCBI
-  database of known sequenced genome assemblies. I could use this to see if any
-  assembly provided by the user, or portions of them, match known assemblies in
-  the NCBI database. \end{quotation}
+ \begin{quotation}\noindent I could use this to see if any assembly provided by
+  the user, or portions of them, match known assemblies in the NCBI database.
+  \end{quotation}
 
 \bibitem{qcchain}
 Q.~Zhou, X.~Su, G.~Jing, and K.~Ning, ``Meta-qc-chain: comprehensive and fast
@@ -99,10 +85,6 @@ Q.~Zhou, X.~Su, G.~Jing, and K.~Ning, ``Meta-qc-chain: comprehensive and fast
   \url{http://www.ncbi.nlm.nih.gov/pubmed/24508279/}, Feb. 2014, accessed
   February 2016.
  \begin{quotation}\noindent Meta-QC-Chain is a quality control tool for
-  metagenomic data that attempts to highlight areas of errors, irregularities
-  and noise in the data through known quality control techniques, similar to
-  the project posed here. This will be useful in seeing what alternatives and
-  techniques exist that I may also use, or to avoid where there may be other
-  available techniques these tools do not cover and use. \end{quotation}
+  metagenomic data.. \end{quotation}
 
 \end{thebibliography}
