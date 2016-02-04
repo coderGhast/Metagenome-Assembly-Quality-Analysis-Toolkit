@@ -1,0 +1,17 @@
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9) (preloaded format=pdftex 2013.11.17)  4 FEB 2016 11:53
+entering extended mode
+**D:/Users/James/University*Documents/Modules/Major*Project/Metagenome-Assembly
+-Quality-Analysis-Toolkit/Documents/Outline*Project*Specification/mmpv2.sty
+
+("D:/Users/James/University Documents/Modules/Major Project/Metagenome-Assembly
+-Quality-Analysis-Toolkit/Documents/Outline Project Specification/mmpv2.sty"
+! Undefined control sequence.
+l.10 \ProvidesPackage
+                     {mmpv2}
+? 
+! Emergency stop.
+l.10 \ProvidesPackage
+                     {mmpv2}
+End of file on the terminal!
+
+!  ==> Fatal error occurred, no output PDF file produced!

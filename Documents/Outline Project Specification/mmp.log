@@ -1,18 +1,14 @@
-This is pdfTeX, Version 3.1415926-2.4-1.40.13 (MiKTeX 2.9) (preloaded format=pdftex 2014.2.15)  3 FEB 2016 18:32
+This is XeTeX, Version 3.1415926-2.5-0.9999.3 (MiKTeX 2.9) (preloaded format=xetex 2016.2.4)  4 FEB 2016 11:56
 entering extended mode
-**C:/Users/Narctiss/Desktop/MMP-master/MMP-master/Outline*Project*Specification
-/LaTeXTemplate/mmp.bib
+**D:/Users/James/University*Documents/Modules/Major*Project/Metagenome-Assembly
+-Quality-Analysis-Toolkit/Documents/Outline*Project*Specification/mmp.bib
 
-("C:/Users/Narctiss/Desktop/MMP-master/MMP-master/Outline Project Specification
-/LaTeXTemplate/mmp.bib"
-! Undefined control sequence.
-l.17 ... I can add in comments that are in \textbf
-                                                  {bold} and \em{italics} an...
-
-? 
+("D:/Users/James/University Documents/Modules/Major Project/Metagenome-Assembly
+-Quality-Analysis-Toolkit/Documents/Outline Project Specification/mmp.bib")
+*
 ! Emergency stop.
-l.17 ... I can add in comments that are in \textbf
-                                                  {bold} and \em{italics} an...
+<*> ...ments/Outline*Project*Specification/mmp.bib
+                                                  
 End of file on the terminal!
 
-!  ==> Fatal error occurred, no output PDF file produced!
+No pages of output.

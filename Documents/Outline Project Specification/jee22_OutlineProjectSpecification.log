@@ -1,18 +1,20 @@
-This is pdfTeX, Version 3.1415926-2.4-1.40.13 (MiKTeX 2.9) (preloaded format=pdflatex 2013.11.26)  4 FEB 2016 01:31
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9) (preloaded format=pdflatex 2013.11.17)  4 FEB 2016 11:56
 entering extended mode
-**C:/Users/Narctiss/Documents/University*Work/Major*Project/Documents/Outline*P
-roject*Specification/jee22_OutlineProjectSpecification.tex
+**D:/Users/James/University*Documents/Modules/Major*Project/Metagenome-Assembly
+-Quality-Analysis-Toolkit/Documents/Outline*Project*Specification/jee22_Outline
+ProjectSpecification.tex
 
-("C:/Users/Narctiss/Documents/University Work/Major Project/Documents/Outline P
-roject Specification/jee22_OutlineProjectSpecification.tex"
+("D:/Users/James/University Documents/Modules/Major Project/Metagenome-Assembly
+-Quality-Analysis-Toolkit/Documents/Outline Project Specification/jee22_Outline
+ProjectSpecification.tex"
 LaTeX2e <2011/06/27>
 Babel <v3.8m> and hyphenation patterns for english, afrikaans, ancientgreek, ar
 abic, armenian, assamese, basque, bengali, bokmal, bulgarian, catalan, coptic, 
 croatian, czech, danish, dutch, esperanto, estonian, farsi, finnish, french, ga
-lician, german, german-x-2012-05-30, greek, gujarati, hindi, hungarian, iceland
+lician, german, german-x-2013-05-26, greek, gujarati, hindi, hungarian, iceland
 ic, indonesian, interlingua, irish, italian, kannada, kurmanji, latin, latvian,
  lithuanian, malayalam, marathi, mongolian, mongolianlmc, monogreek, ngerman, n
-german-x-2012-05-30, nynorsk, oriya, panjabi, pinyin, polish, portuguese, roman
+german-x-2013-05-26, nynorsk, oriya, panjabi, pinyin, polish, portuguese, roman
 ian, russian, sanskrit, serbian, slovak, slovenian, spanish, swedish, swissgerm
 an, tamil, telugu, turkish, turkmen, ukenglish, ukrainian, uppersorbian, usengl
 ishmax, welsh, loaded.
@@ -120,10 +122,10 @@ LaTeX Font Info:    Overwriting math alphabet `\mathfrak' in version `bold'
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\amsfonts\amssymb.sty"
 Package: amssymb 2013/01/14 v3.01 AMS font symbols
 )
-(C:\Users\Narctiss\AppData\Roaming\MiKTeX\2.9\tex\latex\lastpage\lastpage.sty
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\lastpage\lastpage.sty"
 Package: lastpage 2013/01/28 v1.2l Refers to last page's name (HMM; JPG)
 )
-(C:\Users\Narctiss\AppData\Roaming\MiKTeX\2.9\tex\latex\fancyhdr\fancyhdr.sty
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\fancyhdr\fancyhdr.sty"
 \fancy@headwidth=\skip46
 \f@ncyO@elh=\skip47
 \f@ncyO@erh=\skip48
@@ -134,8 +136,8 @@ Package: lastpage 2013/01/28 v1.2l Refers to last page's name (HMM; JPG)
 \f@ncyO@olf=\skip53
 \f@ncyO@orf=\skip54
 )
-("C:\Users\Narctiss\Documents\University Work\Major Project\Documents\Outline P
-roject Specification\mmpv2.sty"
+("D:\Users\James\University Documents\Modules\Major Project\Metagenome-Assembly
+-Quality-Analysis-Toolkit\Documents\Outline Project Specification\mmpv2.sty"
 Package: mmpv2 
 
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\geometry\geometry.sty"
@@ -198,17 +200,18 @@ Package: ltxcmds 2011/11/09 v1.22 LaTeX kernel commands for general use (HO)
 \Gin@req@height=\dimen121
 \Gin@req@width=\dimen122
 ))
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\ltxmisc\url.sty"
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\url\url.sty"
 \Urlmuskip=\muskip11
 Package: url 2006/04/12  ver 3.3  Verb mode for urls, etc.
 )
-(C:\Users\Narctiss\AppData\Roaming\MiKTeX\2.9\tex\latex\cite\cite.sty
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\cite\cite.sty"
 LaTeX Info: Redefining \cite on input line 302.
-LaTeX Info: Redefining \nocite on input line 332.
-Package: cite 2015/02/27  v 5.5
+LaTeX Info: Redefining \nocite on input line 373.
+Package: cite 2010/09/10  v 5.3
 )
-("C:\Users\Narctiss\Documents\University Work\Major Project\Documents\Outline P
-roject Specification\jee22_OutlineProjectSpecification.aux")
+("D:\Users\James\University Documents\Modules\Major Project\Metagenome-Assembly
+-Quality-Analysis-Toolkit\Documents\Outline Project Specification\jee22_Outline
+ProjectSpecification.aux")
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 22.
 LaTeX Font Info:    ... okay on input line 22.
 LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 22.
@@ -268,7 +271,7 @@ Package lastpage Info: Please have a look at the pageslts package at
 * \@reversemarginfalse
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
-(C:\Users\Narctiss\AppData\Roaming\MiKTeX\2.9\tex\context\base\supp-pdf.mkii
+("C:\Program Files (x86)\MiKTeX 2.9\tex\context\base\supp-pdf.mkii"
 [Loading MPS to PDF converter (version 2006.09.02).]
 \scratchcounter=\count103
 \scratchdimen=\dimen123
@@ -305,38 +308,34 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [1
 
-{C:/Users/Narctiss/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map}]
+{C:/ProgramData/MiKTeX/2.9/pdftex/config/pdftex.map}]
 LaTeX Font Info:    Font shape `OT1/ppl/bx/n' in size <14.4> not available
 (Font)              Font shape `OT1/ppl/b/n' tried instead on input line 46.
- [1] [2]
-("C:\Users\Narctiss\Documents\University Work\Major Project\Documents\Outline P
-roject Specification\jee22_OutlineProjectSpecification.bbl"
 LaTeX Font Info:    Font shape `OT1/ppl/bx/n' in size <10.95> not available
-(Font)              Font shape `OT1/ppl/b/n' tried instead on input line 48.
-)
+(Font)              Font shape `OT1/ppl/b/n' tried instead on input line 65.
+ [1] [2]
 
 AED: lastpage setting LastPage
-[3]
-("C:\Users\Narctiss\Documents\University Work\Major Project\Documents\Outline P
-roject Specification\jee22_OutlineProjectSpecification.aux") ) 
+
+("D:\Users\James\University Documents\Modules\Major Project\Metagenome-Assembly
+-Quality-Analysis-Toolkit\Documents\Outline Project Specification\jee22_Outline
+ProjectSpecification.aux") ) 
 Here is how much of TeX's memory you used:
- 3071 strings out of 493921
- 41080 string characters out of 3144866
- 101928 words of memory out of 3000000
- 6307 multiletter control sequences out of 15000+200000
- 17294 words of font info for 53 fonts, out of 3000000 for 9000
+ 3059 strings out of 493921
+ 40880 string characters out of 3144875
+ 105012 words of memory out of 3000000
+ 6300 multiletter control sequences out of 15000+200000
+ 16229 words of font info for 51 fonts, out of 3000000 for 9000
  841 hyphenation exceptions out of 8191
- 34i,11n,43p,1185b,274s stack positions out of 5000i,500n,10000p,200000b,50000s
-{C:/Program Files
- (x86)/MiKTeX 2.9/fonts/enc/dvips/fontname/8r.enc}<C:/Program Files (x86)/MiKTe
-X 2.9/fonts/type1/urw/helvetic/uhvb8a.pfb><C:/Program Files (x86)/MiKTeX 2.9/fo
-nts/type1/urw/palatino/uplb8a.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type
-1/urw/palatino/uplr8a.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/urw/pa
-latino/uplri8a.pfb>
-Output written on jee22_OutlineProjectSpecification.pdf (4 pages, 70742 bytes).
+ 34i,10n,43p,730b,247s stack positions out of 5000i,500n,10000p,200000b,50000s
+{C:/Program Files (x86)/MiKTeX 2.9/fonts/enc/dvips/
+fontname/8r.enc}<C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/urw/helvetic/uhv
+b8a.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/urw/palatino/uplb8a.pfb>
+<C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/urw/palatino/uplr8a.pfb>
+Output written on jee22_OutlineProjectSpecification.pdf (3 pages, 59271 bytes).
 
 PDF statistics:
- 32 PDF objects out of 1000 (max. 8388607)
+ 25 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
  1 words of extra memory for PDF output out of 10000 (max. 10000000)
 
