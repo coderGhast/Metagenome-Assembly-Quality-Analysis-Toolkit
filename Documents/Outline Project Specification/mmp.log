@@ -1,14 +1,18 @@
-This is XeTeX, Version 3.1415926-2.5-0.9999.3 (MiKTeX 2.9) (preloaded format=xetex 2016.2.4)  4 FEB 2016 11:56
+This is pdfTeX, Version 3.1415926-2.4-1.40.13 (MiKTeX 2.9) (preloaded format=pdftex 2014.2.15)  4 FEB 2016 17:21
 entering extended mode
-**D:/Users/James/University*Documents/Modules/Major*Project/Metagenome-Assembly
+**C:/Users/Narctiss/Documents/University*Work/Major*Project/Metagenome-Assembly
 -Quality-Analysis-Toolkit/Documents/Outline*Project*Specification/mmp.bib
 
-("D:/Users/James/University Documents/Modules/Major Project/Metagenome-Assembly
--Quality-Analysis-Toolkit/Documents/Outline Project Specification/mmp.bib")
-*
+("C:/Users/Narctiss/Documents/University Work/Major Project/Metagenome-Assembly
+-Quality-Analysis-Toolkit/Documents/Outline Project Specification/mmp.bib"
+! Undefined control sequence.
+l.65 howpublished={\url
+                       {http://www.ncbi.nlm.nih.gov/pmc/articles/PMC3351745/}},
+
+? 
 ! Emergency stop.
-<*> ...ments/Outline*Project*Specification/mmp.bib
-                                                  
+l.65 howpublished={\url
+                       {http://www.ncbi.nlm.nih.gov/pmc/articles/PMC3351745/}},
 End of file on the terminal!
 
-No pages of output.
+!  ==> Fatal error occurred, no output PDF file produced!
