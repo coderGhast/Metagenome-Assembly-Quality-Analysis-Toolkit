@@ -1,0 +1,18 @@
+This is pdfTeX, Version 3.1415926-2.4-1.40.13 (MiKTeX 2.9) (preloaded format=pdftex 2014.2.15)  3 FEB 2016 18:32
+entering extended mode
+**C:/Users/Narctiss/Desktop/MMP-master/MMP-master/Outline*Project*Specification
+/LaTeXTemplate/mmp.bib
+
+("C:/Users/Narctiss/Desktop/MMP-master/MMP-master/Outline Project Specification
+/LaTeXTemplate/mmp.bib"
+! Undefined control sequence.
+l.17 ... I can add in comments that are in \textbf
+                                                  {bold} and \em{italics} an...
+
+? 
+! Emergency stop.
+l.17 ... I can add in comments that are in \textbf
+                                                  {bold} and \em{italics} an...
+End of file on the terminal!
+
+!  ==> Fatal error occurred, no output PDF file produced!
