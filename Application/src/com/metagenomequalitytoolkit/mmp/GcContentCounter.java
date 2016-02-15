@@ -17,11 +17,13 @@ public class GcContentCounter {
     private ArrayList<GcWindow> splitIntoWindows(String assembly, int windowSize){
         ArrayList<GcWindow> windowedAssembly = new ArrayList<>();
         for(int i=0; i < (assembly.length()); i += windowSize){
-            for(int j=0; j < windowSize; j++){
-                if(i + j < assembly.length()){
-                    windowedAssembly.add(new GcWindow(assembly.substring(i, i + j)));
+                StringBuilder stringBuilder = new StringBuilder();
+                if(i + windowSize < assembly.length()){
+                    stringBuilder.append(assembly.substring(i, i + windowSize));
+                } else {
+                    stringBuilder.append(assembly.substring(i));
                 }
-            }
+                windowedAssembly.add(new GcWindow(stringBuilder.toString()));
         }
         return windowedAssembly;
     }

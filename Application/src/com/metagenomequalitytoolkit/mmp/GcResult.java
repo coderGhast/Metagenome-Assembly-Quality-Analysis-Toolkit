@@ -47,4 +47,20 @@ public class GcResult {
 
         return totalCCount;
     }
+
+    public ArrayList<Double> getGCContentPercentages(){
+        ArrayList<Double> percentages = new ArrayList<>();
+
+        for (GcWindow gcWindow: gcWindows) {
+            int gcContent = gcWindow.getCCount() + gcWindow.getGCount();
+            int contentWindowSize = gcWindow.getWindowContentSize();
+            if(gcContent > 0) {
+                percentages.add(((new Double(gcContent) / new Double(contentWindowSize)) * 100));
+            } else {
+                percentages.add(new Double(0));
+            }
+        }
+
+        return percentages;
+    }
 }
