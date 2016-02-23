@@ -1,19 +1,15 @@
 package com.metagenomequalitytoolkit.mmp;
 
+import java.util.ArrayList;
+
 /**
  * Created by James Euesden on 2/10/2016.
  */
 public class QualityToolkit {
 
     protected void run(){
-        String assembly = new FastaReader().readFile("./assets/contig.1274754.fa");
-
-        GcContentCounter gcContentCounter = new GcContentCounter();
-        GcResult result = gcContentCounter.countGcContent(assembly, 100);
-
-        System.out.println("GC Percentages: ");
-        for(int i=0; i < result.getGCContentPercentages().size(); i++){
-            System.out.println(result.getGCContentPercentages().get(i) + "%");
-        }
+        FastaReader reader = new FastaReader();
+        reader.readFile("./assets/contig.1274754.fa");
+        //reader.readFile("./assets/contigs.fa");
     }
 }

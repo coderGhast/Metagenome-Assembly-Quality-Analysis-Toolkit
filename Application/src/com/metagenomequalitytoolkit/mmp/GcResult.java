@@ -55,7 +55,7 @@ public class GcResult {
             int gcContent = gcWindow.getCCount() + gcWindow.getGCount();
             int contentWindowSize = gcWindow.getWindowContentSize();
             if(gcContent > 0) {
-                percentages.add(((new Double(gcContent) / new Double(contentWindowSize)) * 100));
+                percentages.add(((new Double(gcContent) / new Double(contentWindowSize))));
             } else {
                 percentages.add(new Double(0));
             }
