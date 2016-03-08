@@ -5,15 +5,9 @@ package toolkit.domain;
  */
 public class QualityToolkit {
 
-    public QualityToolkit(){
-
-    }
-
-    public String test = "helloloalal";
-
     public GcResult run(){
         FastaReader reader = new FastaReader();
-        return reader.readFile("./src/main/resources/contig.1274754.fa");
+        return reader.readFile("./src/main/resources/static/contig.1274754.fa");
         //reader.readFile("./src/main/resources/contigs.fa");
     }
 }

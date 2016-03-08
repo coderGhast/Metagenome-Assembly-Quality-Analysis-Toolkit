@@ -50,7 +50,7 @@ public class FastaReader{
     }
 
     private GcResult qualityAssess(ContiguousRead currentContig){
-        GcResult gcResult = gcContentCounter.countGcContent(currentContig.getContigContext(), 500);
+        GcResult gcResult = gcContentCounter.countGcContent(currentContig.getContigContext(), 300);
         OpenReadingFrameResult orfResult = orfFinder.findPotentialGenomeEncodingRegions(currentContig.getContigContext());
         System.out.println("Potential ORF at character " + orfResult.getStartIndex() + " sequence: " + orfResult.getPotentialOrf());
 

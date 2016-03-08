@@ -1,13 +1,68 @@
 <!DOCTYPE html>
-<html xmlns:th="http://www.thymeleaf.org">
+<html xmlns:th="http://www.w3.org/1999/xhtml">
 <head>
-	<title>Spring Boot and Thymeleaf example</title>
+    <title>Hello Spring Boot!</title>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <link href="../static/css/core.css"
+          th:href="@{/css/core.css}"
+          rel="stylesheet" media="screen" />
+    <script src="../js/plotly-latest.min.js"
+            th:href="@{/js/plotly-latest.min.js}"></script>
 </head>
 <body>
-<h3>Trying to get toolkit results...</h3>
+<p>Hello Spring Boot!</p>
 
-<p th:text="${qualitytoolkit.test}">Test</p>
+<!--tr th:each="gcresult : ${gcresults}">
+    <td th:text="${gcresult}">Window</td>
+</tr-->
 
+
+<div id="gccontentchart" style="width:900px;height:450px;"></div>
+<script th:inline="javascript">
+/*<![CDATA[*/
+
+    var windowdata = [[${gcresults}]];
+    var windownums= [[${windownumbers}]];
+/*]]>*/
+</script>
+
+<script>
+    var dataForm = {
+      x: windownums,
+      y: windowdata,
+      marker: {color: 'rgb(121, 121, 121)'},
+      type: 'bar'
+    };
+
+    var data = [dataForm];
+
+    var layout = {
+      title: 'GC Content Percentages of (filename here) in window size of (Insert window size)',
+      xaxis: {
+        title: 'Window Number',
+        titlefont: {
+          size: 16,
+          color: 'rgb(105, 105, 105)'
+        },
+        tickfont: {
+          size: 14,
+          color: 'rgb(105, 105, 105)'
+        }
+      },
+      yaxis: {
+        title: 'GC Content %',
+        titlefont: {
+          size: 16,
+          color: 'rgb(105, 105, 105)'
+        },
+        tickfont: {
+          size: 14,
+          color: 'rgb(105, 105, 105)'
+        }
+      },
+    };
+
+    Plotly.newPlot('gccontentchart', data, layout);
+</script>
 </body>
 </html>
