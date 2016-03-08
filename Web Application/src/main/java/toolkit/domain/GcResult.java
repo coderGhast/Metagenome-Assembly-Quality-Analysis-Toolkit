@@ -1,4 +1,4 @@
-package toolkit;
+package toolkit.domain;
 
 import java.util.ArrayList;
 

@@ -2,8 +2,8 @@ package toolkit.unit;
 
 import org.junit.Before;
 import org.junit.Test;
-import toolkit.GcResult;
-import toolkit.GcWindow;
+import toolkit.domain.GcResult;
+import toolkit.domain.GcWindow;
 
 import java.util.ArrayList;
 

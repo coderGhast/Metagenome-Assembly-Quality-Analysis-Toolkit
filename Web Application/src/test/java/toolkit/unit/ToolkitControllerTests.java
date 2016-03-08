@@ -15,7 +15,7 @@ import org.springframework.test.context.web.WebAppConfiguration;
 import org.springframework.test.web.servlet.MockMvc;
 import org.springframework.test.web.servlet.request.MockMvcRequestBuilders;
 import org.springframework.test.web.servlet.setup.MockMvcBuilders;
-import toolkit.ToolkitController;
+import toolkit.web.ToolkitController;
 
 /**
  * Created by James Euesden on 01/03/2016.
@@ -35,6 +35,6 @@ public class ToolkitControllerTests {
     public void getHello() throws Exception {
         mvc.perform(MockMvcRequestBuilders.get("/").accept(MediaType.APPLICATION_JSON))
                 .andExpect(status().isOk())
-                .andExpect(content().string(equalTo("Insert some toolkit stuff here!")));
+                .andExpect(content().string(equalTo("Insert some toolkit.html stuff here!")));
     }
 }

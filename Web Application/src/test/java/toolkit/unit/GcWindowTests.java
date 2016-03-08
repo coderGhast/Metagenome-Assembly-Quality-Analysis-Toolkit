@@ -1,7 +1,7 @@
 package toolkit.unit;
 
 import org.junit.Test;
-import toolkit.GcWindow;
+import toolkit.domain.GcWindow;
 
 import static org.junit.Assert.assertEquals;
 

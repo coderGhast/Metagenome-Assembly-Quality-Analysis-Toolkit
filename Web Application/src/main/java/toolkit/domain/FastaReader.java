@@ -1,4 +1,4 @@
-package toolkit;
+package toolkit.domain;
 
 import java.io.BufferedReader;
 import java.io.FileNotFoundException;
@@ -12,7 +12,7 @@ public class FastaReader{
     private GcContentCounter gcContentCounter = new GcContentCounter();
     private OpenReadingFrameFinder orfFinder = new OpenReadingFrameFinder();
 
-    public void readFile(String fileLocation){
+    public GcResult readFile(String fileLocation){
         StringBuilder fastaFileContentBuilder = new StringBuilder();
 
         try {
@@ -40,15 +40,16 @@ public class FastaReader{
             }
             // Assess the final contig
             currentContig.setContigContext(fastaFileContentBuilder.toString());
-            qualityAssess(currentContig);
+            return qualityAssess(currentContig);
         } catch (FileNotFoundException e) {
             e.printStackTrace();
         }catch (IOException e) {
             e.printStackTrace();
         }
+        return null;
     }
 
-    private void qualityAssess(ContiguousRead currentContig){
+    private GcResult qualityAssess(ContiguousRead currentContig){
         GcResult gcResult = gcContentCounter.countGcContent(currentContig.getContigContext(), 500);
         OpenReadingFrameResult orfResult = orfFinder.findPotentialGenomeEncodingRegions(currentContig.getContigContext());
         System.out.println("Potential ORF at character " + orfResult.getStartIndex() + " sequence: " + orfResult.getPotentialOrf());
@@ -59,5 +60,7 @@ public class FastaReader{
         for(int i=0; i < gcResult.getGCContentPercentages().size(); i++){
             System.out.println((i+1) + "\t" + gcResult.getGCContentPercentages().get(i));
         }
+
+        return gcResult;
     }
 }

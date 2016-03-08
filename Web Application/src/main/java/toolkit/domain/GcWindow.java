@@ -1,4 +1,4 @@
-package toolkit;
+package toolkit.domain;
 
 /**
  * Created by James Euesden on 2/15/2016.
