@@ -1,40 +1,31 @@
 package toolkit.web;
 
 import org.springframework.stereotype.Controller;
-import org.springframework.ui.ModelMap;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
-import org.springframework.web.servlet.ModelAndView;
 import toolkit.domain.GcResult;
-import toolkit.domain.GcWindow;
 import toolkit.domain.QualityToolkit;
-
-import java.util.ArrayList;
+import toolkit.domain.GcResultViewData;
+import toolkit.domain.UserParameters;
+import toolkit.utilities.GraphDataBuilder;
 
 /**
  * Created by James Euesden on 01/03/2016.
  */
 @Controller
 public class ToolkitController {
+
     @RequestMapping("/")
-    public ModelAndView index() {
-        ModelAndView modelAndView = new ModelAndView("toolkit");
-        QualityToolkit toolkit = new QualityToolkit();
-        GcResult result = toolkit.run();
-        ArrayList<Double> windows = result.getGCContentPercentages();
-        StringBuilder windowNumbers = new StringBuilder();
-        int i = 1;
-        for(Double window : windows){
-            if(i>1){
-                windowNumbers.append(", ");
-            }
-            windowNumbers.append(i);
-            i++;
-        }
+    public String index(Model model) {
+        // For Prototype testing
+        UserParameters params = new UserParameters();
+        params.awayFromAverageThreshold = 2.5;
+        params.fileName = "./src/main/resources/static/contig.1274754.fa";
+        params.gcWindowSize = 1000;
 
-        modelAndView.addObject("gcresults", windows);
-        modelAndView.addObject("windownumbers", windowNumbers.toString());
+        GcResult result = new QualityToolkit().run(params.fileName, params.gcWindowSize);
+        model.addAttribute("gcResult", new GraphDataBuilder().getGcChartData(result, params));
 
-        return modelAndView;
+        return "toolkit";
     }
 }

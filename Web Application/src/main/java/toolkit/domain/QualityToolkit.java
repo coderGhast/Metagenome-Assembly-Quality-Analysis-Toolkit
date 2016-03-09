@@ -5,9 +5,9 @@ package toolkit.domain;
  */
 public class QualityToolkit {
 
-    public GcResult run(){
+    public GcResult run(String fileName, int gcWindowSize){
         FastaReader reader = new FastaReader();
-        return reader.readFile("./src/main/resources/static/contig.1274754.fa");
+        return reader.readFile(fileName, gcWindowSize);
         //reader.readFile("./src/main/resources/contigs.fa");
     }
 }

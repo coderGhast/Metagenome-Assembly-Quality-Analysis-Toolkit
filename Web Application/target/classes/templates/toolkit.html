@@ -9,32 +9,38 @@
     <script src="../js/plotly-latest.min.js"
             th:href="@{/js/plotly-latest.min.js}"></script>
 </head>
+
 <body>
-<p>Hello Spring Boot!</p>
+<h3>Metagenome Quality Toolkit</h3>
 
-<!--tr th:each="gcresult : ${gcresults}">
-    <td th:text="${gcresult}">Window</td>
-</tr-->
+<div id="gccontentchart"></div>
 
-
-<div id="gccontentchart" style="width:900px;height:450px;"></div>
 <script th:inline="javascript">
 /*<![CDATA[*/
-
-    var windowdata = [[${gcresults}]];
-    var windownums= [[${windownumbers}]];
+    var windowdata = [[${gcResult.gcPercentages}]];
+    var windownums = [[${gcResult.gcWindows}]];
+    var gccontentmean = [[${gcResult.gcAverage}]];
+    var gcColours = [[${gcResult.gcBarColours}]];
+    var gcMeanForAllWindows = [[${gcResult.gcMeanForAllWindows}]];
 /*]]>*/
-</script>
 
-<script>
-    var dataForm = {
+    var dataForm1 = {
       x: windownums,
       y: windowdata,
-      marker: {color: 'rgb(121, 121, 121)'},
-      type: 'bar'
+      marker: {color: gcColours},
+      type: 'bar',
+      name: 'GC Content % Windows'
     };
 
-    var data = [dataForm];
+    var dataForm2 = {
+        x: windownums,
+        y: gcMeanForAllWindows,
+        mode: 'lines',
+        marker: {color: 'rgba(17, 120, 120, 1)'},
+        name: 'GC Content % Average'
+    };
+
+    var data = [dataForm1, dataForm2];
 
     var layout = {
       title: 'GC Content Percentages of (filename here) in window size of (Insert window size)',

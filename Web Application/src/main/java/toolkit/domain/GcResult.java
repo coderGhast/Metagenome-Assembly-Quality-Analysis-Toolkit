@@ -8,6 +8,8 @@ import java.util.ArrayList;
 public class GcResult {
     private ArrayList<GcWindow> gcWindows = new ArrayList<>();
     private int windowSize;
+    private double gcMean;
+    private boolean meanCalculated;
 
     public GcResult(int windowSize){
         this.windowSize = windowSize;
@@ -46,6 +48,21 @@ public class GcResult {
         }
 
         return totalCCount;
+    }
+
+    public double mean(){
+        if(!meanCalculated){
+            double total = 0;
+            ArrayList<Double> percentages = getGCContentPercentages();
+            for (Double gcContentPercentage: percentages) {
+                total += gcContentPercentage;
+            }
+            gcMean = total / percentages.size();
+            meanCalculated = true;
+            return gcMean;
+        }
+
+        return gcMean;
     }
 
     public ArrayList<Double> getGCContentPercentages(){

@@ -12,7 +12,7 @@ public class FastaReader{
     private GcContentCounter gcContentCounter = new GcContentCounter();
     private OpenReadingFrameFinder orfFinder = new OpenReadingFrameFinder();
 
-    public GcResult readFile(String fileLocation){
+    public GcResult readFile(String fileLocation, int windowSize){
         StringBuilder fastaFileContentBuilder = new StringBuilder();
 
         try {
@@ -25,7 +25,7 @@ public class FastaReader{
                     if(currentContig.getContigInformation() != null){
                         currentContig.setContigContext(fastaFileContentBuilder.toString());
                         if(fastaFileContentBuilder.length() > 101){
-                            qualityAssess(currentContig);
+                            qualityAssess(currentContig, windowSize);
                         } else {
                             System.out.println("Skipped: " + currentContig.getContigInformation());
                         }
@@ -40,7 +40,7 @@ public class FastaReader{
             }
             // Assess the final contig
             currentContig.setContigContext(fastaFileContentBuilder.toString());
-            return qualityAssess(currentContig);
+            return qualityAssess(currentContig, windowSize);
         } catch (FileNotFoundException e) {
             e.printStackTrace();
         }catch (IOException e) {
@@ -49,8 +49,8 @@ public class FastaReader{
         return null;
     }
 
-    private GcResult qualityAssess(ContiguousRead currentContig){
-        GcResult gcResult = gcContentCounter.countGcContent(currentContig.getContigContext(), 300);
+    private GcResult qualityAssess(ContiguousRead currentContig, int windowSize){
+        GcResult gcResult = gcContentCounter.countGcContent(currentContig.getContigContext(), windowSize);
         OpenReadingFrameResult orfResult = orfFinder.findPotentialGenomeEncodingRegions(currentContig.getContigContext());
         System.out.println("Potential ORF at character " + orfResult.getStartIndex() + " sequence: " + orfResult.getPotentialOrf());
 
