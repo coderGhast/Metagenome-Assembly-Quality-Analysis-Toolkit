@@ -24,7 +24,7 @@ public class GraphDataBuilder {
         gcResultViewData.gcWindows = gcWindowNumbers;
         gcResultViewData.gcAverage = result.mean();
         gcResultViewData.gcBarColours = assignBarColours(gcResultViewData.gcPercentages,
-                gcResultViewData.gcAverage, params.awayFromAverageThreshold);
+                gcResultViewData.gcAverage, params.getAwayFromAverageThreshold());
         gcResultViewData.gcMeanForAllWindows = gcMeanForAllWindows;
 
         return gcResultViewData;

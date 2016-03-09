@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Hello Spring Boot!</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <link href="../static/css/core.css"
+          th:href="@{/css/core.css}"
+          rel="stylesheet" media="screen" />
+    <script src="../js/plotly-latest.min.js"
+            th:href="@{/js/plotly-latest.min.js}"></script>
+</head>
+
+<body>
+<h1>Metagenome Quality Toolkit</h1>
+
+<div th:replace="fragments/qualityparameters :: qualityparameters">Form for input here</div>
+
+</body>
+</html>

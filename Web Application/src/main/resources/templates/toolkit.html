@@ -11,7 +11,8 @@
 </head>
 
 <body>
-<h3>Metagenome Quality Toolkit</h3>
+<h1>Metagenome Quality Toolkit</h1>
+<div th:replace="fragments/qualityparameters :: qualityparameters">Form for input here</div>
 
 <div id="gccontentchart"></div>
 
@@ -22,6 +23,8 @@
     var gccontentmean = [[${gcResult.gcAverage}]];
     var gcColours = [[${gcResult.gcBarColours}]];
     var gcMeanForAllWindows = [[${gcResult.gcMeanForAllWindows}]];
+    var windowSize = [[${userparameters.gcWindowSize}]];
+    console.log(windowSize);
 /*]]>*/
 
     var dataForm1 = {
@@ -42,8 +45,11 @@
 
     var data = [dataForm1, dataForm2];
 
+    var gcContentTitleTemplatePartOne =  'GC Content Percentages of (filename here) in window size of ';
+    var gcContentTitle = gcContentTitleTemplatePartOne.concat(windowSize);
+
     var layout = {
-      title: 'GC Content Percentages of (filename here) in window size of (Insert window size)',
+      title: gcContentTitle,
       xaxis: {
         title: 'Window Number',
         titlefont: {
