@@ -8,6 +8,5 @@ public class QualityToolkit {
     public GcResult run(String fileName, int gcWindowSize){
         FastaReader reader = new FastaReader();
         return reader.readFile(fileName, gcWindowSize);
-        //reader.readFile("./src/main/resources/contigs.fa");
     }
 }

@@ -1,4 +1,4 @@
-package toolkit.unit;
+package toolkit.unit.domain;
 
 import org.junit.Test;
 import toolkit.domain.GcWindow;

@@ -20,15 +20,6 @@ public class ToolkitController {
     @RequestMapping(value="/", method = RequestMethod.GET)
     public String index(Model model) {
         model.addAttribute("userparameters", new UserParameters());
-        // For Prototype testing
-        //UserParameters params = new UserParameters();
-        //params.setAwayFromAverageThreshold(2.5);
-        //params.setFileName("./src/main/resources/static/contig.1274754.fa");
-        //params.setGcWindowSize(1000);
-
-        //GcResult result = new QualityToolkit().run(params.getFileName(), params.getGcWindowSize());
-        //model.addAttribute("gcResult", new GraphDataBuilder().getGcChartData(result, params));
-
         return "welcome";
     }
 
