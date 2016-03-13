@@ -1,13 +1,12 @@
 <!DOCTYPE html>
 <html xmlns:th="http://www.w3.org/1999/xhtml">
 <head>
-    ...
 </head>
 <body>
 <div class="QualityParameters" th:fragment="qualityparameters">
     <h2>Quality Parameters</h2>
     <form action="#" th:action="@{/}" th:object="${userparameters}" method="post">
-        <p>Percentage away from the average of the GC Content % you wish to highlight:<br />
+        <p>Standard deviations away from the average of the GC Content % you wish to highlight:<br />
             <input type="text" th:field="*{awayFromAverageThreshold}" th:value="*{awayFromAverageThreshold}"/></p>
         <p>The size of the GC Content windows to analyse:<br/> <input type="text" th:field="*{gcWindowSize}" th:value="*{gcWindowSize}" /></p>
         <p><input type="submit" value="Submit" /></p>

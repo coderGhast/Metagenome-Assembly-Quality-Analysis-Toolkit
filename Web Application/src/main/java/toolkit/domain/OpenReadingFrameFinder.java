@@ -12,14 +12,14 @@ public class OpenReadingFrameFinder {
             int startCodon = contig.indexOf("ATG");
             String currentPotentialRegion = contig.substring(startCodon);
 
-            System.out.println("Potential ORF found with stop codons:");
+            System.out.println("Potential ORF found at character start " + startCodon + " with stop codons:");
             // Ends on TAG, TAA, TGA
             if(currentPotentialRegion.contains("TAG")){
                 int stopCodon = currentPotentialRegion.indexOf("TAG") + 3;
                 String orfCharacters = currentPotentialRegion.substring(0, stopCodon);
                 if(orfCharacters.length() - 3 > 6){
                     result.addPotentialOrfLocationToResult(new OpenReadingFrameLocation(orfCharacters, startCodon, stopCodon));
-                    System.out.println("TAG stop codon: " + currentPotentialRegion.substring(0, stopCodon));
+                    printOut(startCodon, stopCodon, currentPotentialRegion);
                 }
             }
             if(currentPotentialRegion.contains("TGA")){
@@ -27,7 +27,7 @@ public class OpenReadingFrameFinder {
                 String orfCharacters = currentPotentialRegion.substring(0, stopCodon);
                 if(orfCharacters.length() - 3 > 6){
                     result.addPotentialOrfLocationToResult(new OpenReadingFrameLocation(orfCharacters, startCodon, stopCodon));
-                    System.out.println("TGA stop codon: " + currentPotentialRegion.substring(0, stopCodon));
+                    printOut(startCodon, stopCodon, currentPotentialRegion);
                 }
             }
             if(currentPotentialRegion.contains("TAA")){
@@ -35,7 +35,7 @@ public class OpenReadingFrameFinder {
                 String orfCharacters = currentPotentialRegion.substring(0, stopCodon);
                 if(orfCharacters.length() - 3 > 6){
                     result.addPotentialOrfLocationToResult(new OpenReadingFrameLocation(orfCharacters, startCodon, stopCodon));
-                    System.out.println("TAA stop codon: " + currentPotentialRegion.substring(0, stopCodon));
+                    printOut(startCodon, stopCodon, currentPotentialRegion);
                 }
             }
         }
@@ -51,8 +51,14 @@ public class OpenReadingFrameFinder {
             }
             lastCheck++;
         }
-        System.out.println("Number of ATG in sequence: " + count + " (last check: " + lastCheck + ")");
+        System.out.println("Number of ATG in sequence: " + count);
 
         return result;
+    }
+
+    // TEMPORARY FOR INTERESTING VIEWING
+    private void printOut(int startCodon, int stopCodon, String currentPotentialRegion){
+        int trueStopCodonPosition = startCodon + stopCodon;
+        System.out.println("Stop codon character at position " + trueStopCodonPosition + ": " + currentPotentialRegion.substring(0, stopCodon));
     }
 }

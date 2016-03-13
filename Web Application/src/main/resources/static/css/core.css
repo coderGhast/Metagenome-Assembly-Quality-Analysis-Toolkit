@@ -1,6 +1,49 @@
+html{
+    padding:0px;
+    margin:0px;
+}
+
 body{
-    background-color:#CCCCCC;
-    margin-left:5%;
+    background-color:#ffffff;
+    margin:0px;
+    font-family: 'Signika', sans-serif;
+    height:100%;
+}
+
+h1{
+    margin:0px;
+    font-family: 'Signika', sans-serif;
+}
+
+#header-title{
+    padding:25px;
+    padding-left:20%;
+}
+
+.header{
+    height:100px;
+    width:100%;
+    background-color:#DADADA;
+    color:#155415;
+}
+
+#logo{
+    float:left;
+    height:80%;
+    padding:0px;
+    padding-left:14%;
+    padding-top:12px;
+    margin:0px;
+}
+
+.page{
+    height:100%;
+    margin-left:20%;
+    margin-right:20%;
+}
+
+#content{
+    padding:10px;
 }
 
 #gccontentchart{

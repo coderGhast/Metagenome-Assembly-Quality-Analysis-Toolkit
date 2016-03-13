@@ -31,10 +31,13 @@ public class GraphDataBuilder {
     }
 
     private ArrayList<String> assignBarColours(ArrayList<Double> gcContentPercentages, double mean, double awayFromAverageThreshold){
+        double threshold = StandardDeviationCalculator.calculateStandardDeviation(gcContentPercentages, mean);
+        // Multiply the threshold by the amount of times the user wants the standard deviation away from the mean.
+        threshold = threshold * awayFromAverageThreshold;
         ArrayList<String> barColours = new ArrayList<String>();
         for(Double currentWindowPercentage : gcContentPercentages){
-            if(currentWindowPercentage > (mean + awayFromAverageThreshold) ||
-                    currentWindowPercentage < (mean - awayFromAverageThreshold )){
+            if(currentWindowPercentage > (mean + threshold) ||
+                    currentWindowPercentage < (mean - threshold )){
                 barColours.add("rgba(222,45,38,0.8)");
             } else {
                 barColours.add("rgba(204,204,204,1)");
@@ -42,5 +45,4 @@ public class GraphDataBuilder {
         }
         return barColours;
     }
-
 }

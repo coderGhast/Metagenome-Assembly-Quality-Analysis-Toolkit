@@ -51,13 +51,10 @@ public class FastaReader{
 
     private GcResult qualityAssess(ContiguousRead currentContig, int windowSize){
         GcResult gcResult = gcContentCounter.countGcContent(currentContig.getContigContext(), windowSize);
+        OpenReadingFrameResult orfResult = new OpenReadingFrameFinder().findPotentialOrfLocations(currentContig.getContigContext());
 
-        System.out.println("Contig: " + currentContig.getContigInformation() + " Length: " + currentContig.getContigContext().length());
+        System.out.println("Contig: " + currentContig.getContigInformation());
         System.out.println(currentContig.getContigContext());
-        System.out.println("window\tgccontent");
-        for(int i=0; i < gcResult.getGCContentPercentages().size(); i++){
-            System.out.println((i+1) + "\t" + gcResult.getGCContentPercentages().get(i));
-        }
 
         return gcResult;
     }

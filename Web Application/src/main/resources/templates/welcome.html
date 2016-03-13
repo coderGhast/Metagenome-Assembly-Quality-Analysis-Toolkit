@@ -3,6 +3,7 @@
 <head>
     <title>Hello Spring Boot!</title>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <link href="https://fonts.googleapis.com/css?family=Signika" rel="stylesheet" type="text/css" />
     <link href="../static/css/core.css"
           th:href="@{/css/core.css}"
           rel="stylesheet" media="screen" />
@@ -11,9 +12,11 @@
 </head>
 
 <body>
-<h1>Metagenome Quality Toolkit</h1>
-
-<div th:replace="fragments/qualityparameters :: qualityparameters">Form for input here</div>
-
+<div th:replace="fragments/header :: header"></div>
+<div class="page">
+    <div id="content">
+        <div th:replace="fragments/qualityparameters :: qualityparameters">Form for input here</div>
+    </div>
+</div>
 </body>
 </html>
