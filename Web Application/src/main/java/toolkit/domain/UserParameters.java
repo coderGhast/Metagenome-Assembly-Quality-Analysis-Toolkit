@@ -5,31 +5,40 @@ package toolkit.domain;
  */
 public class UserParameters {
 
-    private double awayFromAverageThreshold = 0;
-    private int gcWindowSize = 0;
-    private String fileName = "";
+    private double _awayFromAverageThreshold = 0;
+    private int _gcWindowSize = 0;
+    private String _fileName = "";
+    private int _contigLengthThreshold = 100;
+
+    public int getContigLengthThreshold() {
+        return _contigLengthThreshold;
+    }
+
+    public void setContigLengthThreshold(int contigLengthThreshold) {
+        this._contigLengthThreshold = contigLengthThreshold;
+    }
 
     public double getAwayFromAverageThreshold() {
-        return awayFromAverageThreshold;
+        return _awayFromAverageThreshold;
     }
 
     public void setAwayFromAverageThreshold(double awayFromAverageThreshold) {
-        this.awayFromAverageThreshold = awayFromAverageThreshold;
+        this._awayFromAverageThreshold = awayFromAverageThreshold;
     }
 
     public int getGcWindowSize() {
-        return gcWindowSize;
+        return _gcWindowSize;
     }
 
     public void setGcWindowSize(int gcWindowSize) {
-        this.gcWindowSize = gcWindowSize;
+        this._gcWindowSize = gcWindowSize;
     }
 
     public String getFileName() {
-        return fileName;
+        return _fileName;
     }
 
     public void setFileName(String fileName) {
-        this.fileName = fileName;
+        this._fileName = fileName;
     }
 }

@@ -5,8 +5,8 @@ package toolkit.domain;
  */
 public class QualityToolkit {
 
-    public GcResult run(String fileName, int gcWindowSize){
+    public GcResult run(String fileName, int gcWindowSize, int contigLengthThreshold){
         FastaReader reader = new FastaReader();
-        return reader.readFile(fileName, gcWindowSize);
+        return reader.readFile(fileName, gcWindowSize, contigLengthThreshold);
     }
 }

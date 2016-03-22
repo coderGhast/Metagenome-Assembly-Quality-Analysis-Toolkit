@@ -12,7 +12,7 @@ public class FastaReader{
     private GcContentCounter gcContentCounter = new GcContentCounter();
     private OpenReadingFrameFinder orfFinder = new OpenReadingFrameFinder();
 
-    public GcResult readFile(String fileLocation, int windowSize){
+    public GcResult readFile(String fileLocation, int windowSize, int contigLengthThreshold){
         StringBuilder fastaFileContentBuilder = new StringBuilder();
 
         try {
@@ -24,7 +24,7 @@ public class FastaReader{
                 if(line.startsWith(">")) {
                     if(currentContig.getContigInformation() != null){
                         currentContig.setContigContext(fastaFileContentBuilder.toString());
-                        if(fastaFileContentBuilder.length() > 101){
+                        if(fastaFileContentBuilder.length() > contigLengthThreshold){
                             qualityAssess(currentContig, windowSize);
                         } else {
                             System.out.println("Skipped: " + currentContig.getContigInformation());

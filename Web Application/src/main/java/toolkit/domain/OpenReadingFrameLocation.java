@@ -18,6 +18,10 @@ public class OpenReadingFrameLocation {
         return _orfCharacters;
     }
 
+    public int orfLength(){
+        return _stopCodon - _startCodon;
+    }
+
     public int getStopCodon() {
         return _stopCodon;
     }

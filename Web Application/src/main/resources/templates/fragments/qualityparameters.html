@@ -8,7 +8,10 @@
     <form action="#" th:action="@{/}" th:object="${userparameters}" method="post">
         <p>Standard deviations away from the average of the GC Content % you wish to highlight:<br />
             <input type="text" th:field="*{awayFromAverageThreshold}" th:value="*{awayFromAverageThreshold}"/></p>
-        <p>The size of the GC Content windows to analyse:<br/> <input type="text" th:field="*{gcWindowSize}" th:value="*{gcWindowSize}" /></p>
+        <p>The size of the GC Content windows to analyse:<br/>
+            <input type="text" th:field="*{gcWindowSize}" th:value="*{gcWindowSize}" /></p>
+        <p>Length of contiguous read length be in order to be considered:<br/>
+            <input type="text" th:field="*{contigLengthThreshold}" th:value="*{contigLengthThreshold}" /></p>
         <p><input type="submit" value="Submit" /></p>
     </form>
 </div>
