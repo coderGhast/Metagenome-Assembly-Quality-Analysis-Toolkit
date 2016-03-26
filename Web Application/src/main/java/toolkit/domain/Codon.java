@@ -16,7 +16,7 @@ public class Codon {
         return _contigStartIndex;
     }
 
-    public String get_codonCharacters() {
+    public String getCodonCharacters() {
         return _codonCharacters;
     }
 }

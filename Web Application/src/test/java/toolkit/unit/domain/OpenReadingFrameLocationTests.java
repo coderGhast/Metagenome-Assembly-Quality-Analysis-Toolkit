@@ -20,8 +20,8 @@ public class OpenReadingFrameLocationTests {
     @Test
     public void constructorOfOpenReadingFrameLocationShouldSetFields(){
         assertEquals("ATGCCCCCCCTAG", _sut.getOrfCharacters());
-        assertEquals(0, _sut.getStartCodon());
-        assertEquals(12, _sut.getStopCodon());
+        assertEquals(0, _sut.getOrfStartIndex());
+        assertEquals(12, _sut.getOrfStopIndex());
     }
 
 

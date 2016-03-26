@@ -6,23 +6,23 @@ import java.util.ArrayList;
  * Created by James Euesden on 2/22/2016.
  */
 public class OpenReadingFrameFinder {
-    public OpenReadingFrameResult findPotentialOrfLocations(String contig){
+    public OpenReadingFrameResult findPotentialOrfLocations(String contig) {
 
-        OpenReadingFrameResult frameOneResult = getOrfResultFromFrame(contig);
-        OpenReadingFrameResult frameTwoResult = getOrfResultFromFrame(contig.substring(1));
-        OpenReadingFrameResult frameThreeResult = getOrfResultFromFrame(contig.substring(2));
+        OpenReadingFrameResult frameOneResult = getOrfResultFromFrame(contig, 0);
+        OpenReadingFrameResult frameTwoResult = getOrfResultFromFrame(contig.substring(1), 1);
+        OpenReadingFrameResult frameThreeResult = getOrfResultFromFrame(contig.substring(2), 2);
         //TODO: Convert contig characters to base pairs, reverse the sequence and then carry out 3 frame checks again
 
         OpenReadingFrameResult result = new OpenReadingFrameResult();
-        for(int i=0; i < frameOneResult.getPotentialOrfLocations().size(); i++){
+        for (int i = 0; i < frameOneResult.getPotentialOrfLocations().size(); i++) {
             result.addPotentialOrfLocationToResult(frameOneResult.getPotentialOrfLocations().get(i));
         }
 
-        for(int i=0; i < frameTwoResult.getPotentialOrfLocations().size(); i++){
+        for (int i = 0; i < frameTwoResult.getPotentialOrfLocations().size(); i++) {
             result.addPotentialOrfLocationToResult(frameTwoResult.getPotentialOrfLocations().get(i));
         }
 
-        for(int i=0; i < frameThreeResult.getPotentialOrfLocations().size(); i++){
+        for (int i = 0; i < frameThreeResult.getPotentialOrfLocations().size(); i++) {
             result.addPotentialOrfLocationToResult(frameThreeResult.getPotentialOrfLocations().get(i));
         }
 
@@ -30,42 +30,42 @@ public class OpenReadingFrameFinder {
         return result;
     }
 
-    private OpenReadingFrameResult getOrfResultFromFrame(String contigFrame){
+    private OpenReadingFrameResult getOrfResultFromFrame(String contigFrame, int frameNumberModifier) {
         OpenReadingFrameResult result;
 
         ArrayList<Codon> startCodons = new ArrayList<>();
         ArrayList<Codon> stopCodons = new ArrayList<>();
 
-        for(int i = 0; i < contigFrame.length(); i+=3){
-            if((i + 3) <= contigFrame.length()){
-                if(contigFrame.substring(i, i+3).equalsIgnoreCase("ATG")){
-                    startCodons.add(new Codon("ATG", i));
+        for (int i = 0; i < contigFrame.length(); i += 3) {
+            if ((i + 3) <= contigFrame.length()) {
+                if (contigFrame.substring(i, i + 3).equalsIgnoreCase("ATG")) {
+                    startCodons.add(new Codon("ATG", i + frameNumberModifier));
                 }
             }
         }
 
-        for(int i = 0; i < contigFrame.length(); i+=3){
-            if((i + 3) <= contigFrame.length()) {
+        for (int i = 0; i < contigFrame.length(); i += 3) {
+            if ((i + 3) <= contigFrame.length()) {
                 String nextCodonInFrame = contigFrame.substring(i, i + 3);
                 if (stopCodonDetected(nextCodonInFrame)) {
-                    stopCodons.add(new Codon(nextCodonInFrame, i));
+                    stopCodons.add(new Codon(nextCodonInFrame, i + frameNumberModifier));
                 }
             }
         }
 
-        result = constructOrfsFromCodons(startCodons, stopCodons, contigFrame);
+        result = constructOrfsFromCodons(startCodons, stopCodons, contigFrame, frameNumberModifier);
         return result;
     }
 
-    private boolean stopCodonDetected(String codon){
+    private boolean stopCodonDetected(String codon) {
         boolean stopCodonDetected = false;
-        if(codon.equalsIgnoreCase("TAG")){
+        if (codon.equalsIgnoreCase("TAG")) {
             stopCodonDetected = true;
         }
-        if(codon.equalsIgnoreCase("TGA")){
+        if (codon.equalsIgnoreCase("TGA")) {
             stopCodonDetected = true;
         }
-        if(codon.equalsIgnoreCase("TAA")){
+        if (codon.equalsIgnoreCase("TAA")) {
             stopCodonDetected = true;
         }
 
@@ -73,33 +73,72 @@ public class OpenReadingFrameFinder {
     }
 
     private OpenReadingFrameResult constructOrfsFromCodons(ArrayList<Codon> startCodons, ArrayList<Codon> stopCodons,
-                                                           String contig){
+                                                           String contig, int frameNumberModifier) {
         OpenReadingFrameResult result = new OpenReadingFrameResult();
 
-        if(startCodons.size() > 0 && stopCodons.size() > 0){
-            for(int i=0; i<startCodons.size(); i++){
-                Codon earliestStartCodon = startCodons.get(i);
-                if(startCodons.size() > (i+1)){
-                    Codon nextCodon = startCodons.get(i + 1);
-                    for (Codon currentStopCodon:stopCodons) {
-                        if(currentStopCodon.getContigStartIndex() > earliestStartCodon.getContigStartIndex()
-                                && currentStopCodon.getContigStartIndex() < nextCodon.getContigStartIndex()){
-                            result.addPotentialOrfLocationToResult(createCompletedOrf(contig, earliestStartCodon, currentStopCodon));
+        // Deal with each and every Start and Stop Codon to build our ORF Locations
+        while(startCodons.size() > 0 && stopCodons.size() > 0){
+            // Remove every Stop Codon that comes before our current first known Start Codon.
+            for (int i = 0; i < stopCodons.size(); i++) {
+                Codon stopCodon = stopCodons.get(i);
+                if(stopCodon.getContigStartIndex() < startCodons.get(0).getContigStartIndex()){
+                    stopCodons.remove(stopCodon);
+                }
+            }
+
+            // Remove every Start Codon that comes after the current Start Codon but before the next Stop Codon
+            for(int i = 0; i < startCodons.size(); i++){
+                if(startCodons.size() > 1){
+                    Codon nextCodon = startCodons.get(1);
+                    if(nextCodon.getContigStartIndex() < stopCodons.get(0).getContigStartIndex()){
+                        startCodons.remove(nextCodon);
+                    }
+                }
+            }
+
+            // If there is more than one Start Codon left, we need to remove any Stop Codons between the current Start
+            // Codon and the last Stop Codon before the next Start Codon
+            if(startCodons.size() > 1){
+                for (int i = 0; i < stopCodons.size(); i++) {
+                    Codon stopCodon = stopCodons.get(i);
+                    // Only looking at those Stop Codons that come before the next Start Codon
+                    if(stopCodon.getContigStartIndex() < startCodons.get(1).getContigStartIndex()){
+                        if(stopCodons.size() > 1){
+                            // If there is another Stop Codon after the current known one, and it is also before the next
+                            // Start Codon after the current, we know we're safe to remove the current Stop Codon as the
+                            // next Stop Codon makes a longer ORF before the next ORF.
+                            if(stopCodons.get(1).getContigStartIndex() < startCodons.get(1).getContigStartIndex()){
+                                stopCodons.remove(stopCodon);
+                            }
                         }
                     }
-                } else {
-                    Codon lastStopCodon = stopCodons.get(startCodons.size()-1);
-                    result.addPotentialOrfLocationToResult(createCompletedOrf(contig, earliestStartCodon, lastStopCodon));
+                }
+            }
+
+            // If at the end of all of this there is still an ORF to be made, construct it, then remove the components.
+            if(startCodons.size() > 0 && stopCodons.size() > 0){
+                // Since we're sweeping through the lists in passes, make sure the Start and Stop Codons are somewhat aligned
+                if(startCodons.get(0).getContigStartIndex() < stopCodons.get(0).getContigStartIndex()){
+                    // If there is only one Start Codon left, we only need to use the last Stop Codon. Removing the final
+                    // Start Codon will end this loop even if we leave all Stop Codons in the list.
+                    if(startCodons.size() == 1){
+                        result.addPotentialOrfLocationToResult(createCompletedOrf(contig, startCodons.get(0), stopCodons.get(stopCodons.size()-1), frameNumberModifier));
+                    } else {
+                        result.addPotentialOrfLocationToResult(createCompletedOrf(contig, startCodons.get(0), stopCodons.get(0), frameNumberModifier));
+                        stopCodons.remove(0);
+                    }
+                    startCodons.remove(0);
                 }
             }
         }
+
         return result;
     }
 
-    private OpenReadingFrameLocation createCompletedOrf(String contig, Codon startCodon, Codon stopCodon){
+    private OpenReadingFrameLocation createCompletedOrf(String contig, Codon startCodon, Codon stopCodon, int frameNumberModifier) {
         OpenReadingFrameLocation completedOrf = new OpenReadingFrameLocation(
-                contig.substring(startCodon.getContigStartIndex(), stopCodon.getContigStartIndex() +3),
-                startCodon.getContigStartIndex(), stopCodon.getContigStartIndex() +3);
+                contig.substring((startCodon.getContigStartIndex() - frameNumberModifier), stopCodon.getContigStartIndex() + (3 - frameNumberModifier)),
+                startCodon.getContigStartIndex(), stopCodon.getContigStartIndex() + 2);
 
         return completedOrf;
     }

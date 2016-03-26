@@ -5,28 +5,53 @@ package toolkit.domain;
  */
 public class OpenReadingFrameLocation {
     private String _orfCharacters;
-    private int _startCodon;
-    private int _stopCodon;
+    private int _orfStartIndex;
+    private int _orfStopIndex;
 
-    public OpenReadingFrameLocation(String orfCharacters, int startCodon, int stopCodon){
+    public OpenReadingFrameLocation(String orfCharacters, int orfStartIndex, int orfStopIndex){
         _orfCharacters = orfCharacters;
-        _startCodon = startCodon;
-        _stopCodon = stopCodon;
+        _orfStartIndex = orfStartIndex;
+        _orfStopIndex = orfStopIndex;
     }
 
     public String getOrfCharacters() {
         return _orfCharacters;
     }
 
+    // +1 to stop Index as the index is the last character, and we're interested in the full length
     public int orfLength(){
-        return _stopCodon - _startCodon;
+        return (_orfStopIndex + 1) - _orfStartIndex;
     }
 
-    public int getStopCodon() {
-        return _stopCodon;
+    public int getOrfStopIndex() {
+        return _orfStopIndex;
     }
 
-    public int getStartCodon() {
-        return _startCodon;
+    public int getOrfStartIndex() {
+        return _orfStartIndex;
+    }
+
+    @Override
+    public boolean equals(Object obj) {
+
+        if (obj == null) {
+            return false;
+        }
+        if (!OpenReadingFrameLocation.class.isAssignableFrom(obj.getClass())) {
+            return false;
+        }
+
+        final OpenReadingFrameLocation other = (OpenReadingFrameLocation) obj;
+        if(!this._orfCharacters.equalsIgnoreCase(other._orfCharacters)){
+            return false;
+        }
+
+        if (this._orfStartIndex != other._orfStartIndex) {
+            return false;
+        }
+        if (this._orfStopIndex != other._orfStopIndex) {
+            return false;
+        }
+        return true;
     }
 }
