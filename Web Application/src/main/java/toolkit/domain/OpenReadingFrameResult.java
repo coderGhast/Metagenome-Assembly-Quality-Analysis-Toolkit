@@ -21,17 +21,18 @@ public class OpenReadingFrameResult {
         return _potentialOrfLocations;
     }
 
-    public OpenReadingFrameLocation getLongestOrf(){
-        if(_potentialOrfLocations.size() > 0){
-            OpenReadingFrameLocation longest = _potentialOrfLocations.get(0);
-            for (OpenReadingFrameLocation potentialOrfResult: _potentialOrfLocations) {
-                if(potentialOrfResult.orfLength() > longest.orfLength()){
-                    longest = potentialOrfResult;
+    public void removeLowerThanThresholdOrfLocations(int orfLengthThreshold){
+        ArrayList<OpenReadingFrameLocation> toRemove = new ArrayList<>();
+        for (OpenReadingFrameLocation location : _potentialOrfLocations) {
+            if(orfLengthThreshold > 0){
+                if(location.orfLength() < orfLengthThreshold){
+                    toRemove.add(location);
                 }
             }
-            return longest;
-        } else {
-            return null;
+        }
+
+        for(OpenReadingFrameLocation location: toRemove){
+            _potentialOrfLocations.remove(location);
         }
     }
 }

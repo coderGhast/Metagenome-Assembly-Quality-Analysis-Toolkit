@@ -7,11 +7,13 @@ public class OpenReadingFrameLocation {
     private String _orfCharacters;
     private int _orfStartIndex;
     private int _orfStopIndex;
+    private String _frameIndicator;
 
-    public OpenReadingFrameLocation(String orfCharacters, int orfStartIndex, int orfStopIndex){
+    public OpenReadingFrameLocation(String orfCharacters, int orfStartIndex, int orfStopIndex, String frameIndicator){
         _orfCharacters = orfCharacters;
         _orfStartIndex = orfStartIndex;
         _orfStopIndex = orfStopIndex;
+        _frameIndicator = frameIndicator;
     }
 
     public String getOrfCharacters() {
@@ -30,6 +32,8 @@ public class OpenReadingFrameLocation {
     public int getOrfStartIndex() {
         return _orfStartIndex;
     }
+
+    public String getFrameIndicator(){ return _frameIndicator; }
 
     @Override
     public boolean equals(Object obj) {

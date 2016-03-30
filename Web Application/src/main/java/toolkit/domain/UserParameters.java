@@ -9,6 +9,7 @@ public class UserParameters {
     private int _gcWindowSize = 0;
     private String _fileName = "";
     private int _contigLengthThreshold = 100;
+    private int _orfLengthThreshold = 0;
 
     public int getContigLengthThreshold() {
         return _contigLengthThreshold;
@@ -17,6 +18,12 @@ public class UserParameters {
     public void setContigLengthThreshold(int contigLengthThreshold) {
         this._contigLengthThreshold = contigLengthThreshold;
     }
+
+    public void setOrfLengthThreshold(int orfLengthThreshold){
+        this._orfLengthThreshold = orfLengthThreshold;
+    }
+
+    public int getOrfLengthThreshold() { return _orfLengthThreshold; }
 
     public double getAwayFromAverageThreshold() {
         return _awayFromAverageThreshold;

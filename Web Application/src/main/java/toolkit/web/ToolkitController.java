@@ -26,7 +26,8 @@ public class ToolkitController {
     @RequestMapping(value="/", method = RequestMethod.POST)
     public String dataInput(@ModelAttribute UserParameters params, Model model) {
         params.setFileName("./src/main/resources/static/contig.1274754.fa");
-        GcResult result = new QualityToolkit().run(params.getFileName(), params.getGcWindowSize(), params.getContigLengthThreshold());
+        GcResult result = new QualityToolkit().run(params.getFileName(), params.getGcWindowSize(), params.getContigLengthThreshold(),
+                params.getOrfLengthThreshold());
         model.addAttribute("gcResult", new GraphDataBuilder().getGcChartData(result, params));
 
         model.addAttribute("userparameters", params);

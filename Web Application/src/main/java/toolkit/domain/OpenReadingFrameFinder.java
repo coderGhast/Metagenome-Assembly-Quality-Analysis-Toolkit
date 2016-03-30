@@ -1,5 +1,7 @@
 package toolkit.domain;
 
+import toolkit.utilities.SequenceUtilities;
+
 import java.util.ArrayList;
 
 /**
@@ -8,10 +10,14 @@ import java.util.ArrayList;
 public class OpenReadingFrameFinder {
     public OpenReadingFrameResult findPotentialOrfLocations(String contig) {
 
-        OpenReadingFrameResult frameOneResult = getOrfResultFromFrame(contig, 0);
-        OpenReadingFrameResult frameTwoResult = getOrfResultFromFrame(contig.substring(1), 1);
-        OpenReadingFrameResult frameThreeResult = getOrfResultFromFrame(contig.substring(2), 2);
-        //TODO: Convert contig characters to base pairs, reverse the sequence and then carry out 3 frame checks again
+        OpenReadingFrameResult frameOneResult = getOrfResultFromFrame(contig, 0, "+1");
+        OpenReadingFrameResult frameTwoResult = getOrfResultFromFrame(contig.substring(1), 1, "+2");
+        OpenReadingFrameResult frameThreeResult = getOrfResultFromFrame(contig.substring(2), 2, "+3");
+        // TODO: Indicate the frames that are Positive and Negative as well as frame number!!!!
+        // TODO: This should be reflected in their character location in the contig length
+        OpenReadingFrameResult frameFourResult = getOrfResultFromFrame(SequenceUtilities.getReverseSequence(contig), 0, "-1");
+        OpenReadingFrameResult frameFiveResult = getOrfResultFromFrame(SequenceUtilities.getReverseSequence(contig).substring(1), 1, "-2");
+        OpenReadingFrameResult frameSixResult = getOrfResultFromFrame(SequenceUtilities.getReverseSequence(contig).substring(2), 2, "-3");
 
         OpenReadingFrameResult result = new OpenReadingFrameResult();
         for (int i = 0; i < frameOneResult.getPotentialOrfLocations().size(); i++) {
@@ -26,11 +32,25 @@ public class OpenReadingFrameFinder {
             result.addPotentialOrfLocationToResult(frameThreeResult.getPotentialOrfLocations().get(i));
         }
 
+        for (int i = 0; i < frameFourResult.getPotentialOrfLocations().size(); i++) {
+            result.addPotentialOrfLocationToResult(frameFourResult.getPotentialOrfLocations().get(i));
+        }
+
+        for (int i = 0; i < frameFiveResult.getPotentialOrfLocations().size(); i++) {
+            result.addPotentialOrfLocationToResult(frameFiveResult.getPotentialOrfLocations().get(i));
+        }
+
+        for (int i = 0; i < frameSixResult.getPotentialOrfLocations().size(); i++) {
+            result.addPotentialOrfLocationToResult(frameSixResult.getPotentialOrfLocations().get(i));
+        }
+
 
         return result;
     }
 
-    private OpenReadingFrameResult getOrfResultFromFrame(String contigFrame, int frameNumberModifier) {
+    // Gets all of the Start and Stop Codons in a contig frame and then calls the method to find the ORF Locations
+    // using those codons.
+    private OpenReadingFrameResult getOrfResultFromFrame(String contigFrame, int frameNumberModifier, String frameIndicator) {
         OpenReadingFrameResult result;
 
         ArrayList<Codon> startCodons = new ArrayList<>();
@@ -53,10 +73,11 @@ public class OpenReadingFrameFinder {
             }
         }
 
-        result = constructOrfsFromCodons(startCodons, stopCodons, contigFrame, frameNumberModifier);
+        result = constructOrfsFromCodons(startCodons, stopCodons, contigFrame, frameNumberModifier, frameIndicator);
         return result;
     }
 
+    // Return if the provided string is a Stop Codon.
     private boolean stopCodonDetected(String codon) {
         boolean stopCodonDetected = false;
         if (codon.equalsIgnoreCase("TAG")) {
@@ -72,8 +93,9 @@ public class OpenReadingFrameFinder {
         return stopCodonDetected;
     }
 
+    // Through using the Start and Stop Codons list of a contig, finds the longest ORF Locations and returns the results
     private OpenReadingFrameResult constructOrfsFromCodons(ArrayList<Codon> startCodons, ArrayList<Codon> stopCodons,
-                                                           String contig, int frameNumberModifier) {
+                                                           String contig, int frameNumberModifier, String frameIndicator) {
         OpenReadingFrameResult result = new OpenReadingFrameResult();
 
         // Deal with each and every Start and Stop Codon to build our ORF Locations
@@ -121,12 +143,17 @@ public class OpenReadingFrameFinder {
                 if(startCodons.get(0).getContigStartIndex() < stopCodons.get(0).getContigStartIndex()){
                     // If there is only one Start Codon left, we only need to use the last Stop Codon. Removing the final
                     // Start Codon will end this loop even if we leave all Stop Codons in the list.
+                    OpenReadingFrameLocation newLocation;
                     if(startCodons.size() == 1){
-                        result.addPotentialOrfLocationToResult(createCompletedOrf(contig, startCodons.get(0), stopCodons.get(stopCodons.size()-1), frameNumberModifier));
+                        newLocation = createCompletedOrf(contig, startCodons.get(0), stopCodons.get(stopCodons.size()-1),
+                                frameNumberModifier, frameIndicator);
+
                     } else {
-                        result.addPotentialOrfLocationToResult(createCompletedOrf(contig, startCodons.get(0), stopCodons.get(0), frameNumberModifier));
+                        newLocation = createCompletedOrf(contig, startCodons.get(0), stopCodons.get(0), frameNumberModifier,
+                                frameIndicator);
                         stopCodons.remove(0);
                     }
+                    result.addPotentialOrfLocationToResult(newLocation);
                     startCodons.remove(0);
                 }
             }
@@ -135,10 +162,12 @@ public class OpenReadingFrameFinder {
         return result;
     }
 
-    private OpenReadingFrameLocation createCompletedOrf(String contig, Codon startCodon, Codon stopCodon, int frameNumberModifier) {
+    // Assembles an OpenReadingFrameLocation with the required components.
+    private OpenReadingFrameLocation createCompletedOrf(String contig, Codon startCodon, Codon stopCodon,
+                                                        int frameNumberModifier, String frameIndicator) {
         OpenReadingFrameLocation completedOrf = new OpenReadingFrameLocation(
                 contig.substring((startCodon.getContigStartIndex() - frameNumberModifier), stopCodon.getContigStartIndex() + (3 - frameNumberModifier)),
-                startCodon.getContigStartIndex(), stopCodon.getContigStartIndex() + 2);
+                startCodon.getContigStartIndex(), stopCodon.getContigStartIndex() + 2, frameIndicator);
 
         return completedOrf;
     }

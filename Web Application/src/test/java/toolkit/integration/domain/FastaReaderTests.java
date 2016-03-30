@@ -20,7 +20,7 @@ public class FastaReaderTests {
 
     @Test
     public void readFileShouldReturnExpectedGcResultWithTestFile(){
-        GcResult result = _sut.readFile("./src/test/resources/static/test.fa", 4, 101);
+        GcResult result = _sut.readFile("./src/test/resources/static/test.fa", 4, 101, 100);
         assertEquals(result.getWindowSize(), 4);
         assertEquals(result.getTotalCount(), 30);
         assertEquals(result.getTotalCCount(), 4);

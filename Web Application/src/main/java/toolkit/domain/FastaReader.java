@@ -10,9 +10,8 @@ import java.io.IOException;
  */
 public class FastaReader{
     private GcContentCounter gcContentCounter = new GcContentCounter();
-    private OpenReadingFrameFinder orfFinder = new OpenReadingFrameFinder();
 
-    public GcResult readFile(String fileLocation, int windowSize, int contigLengthThreshold){
+    public GcResult readFile(String fileLocation, int windowSize, int contigLengthThreshold, int orfLengthThrshold){
         StringBuilder fastaFileContentBuilder = new StringBuilder();
 
         try {
@@ -25,7 +24,7 @@ public class FastaReader{
                     if(currentContig.getContigInformation() != null){
                         currentContig.setContigContext(fastaFileContentBuilder.toString());
                         if(fastaFileContentBuilder.length() > contigLengthThreshold){
-                            qualityAssess(currentContig, windowSize);
+                            qualityAssess(currentContig, windowSize, orfLengthThrshold);
                         } else {
                             System.out.println("Skipped: " + currentContig.getContigInformation());
                         }
@@ -40,7 +39,7 @@ public class FastaReader{
             }
             // Assess the final contig
             currentContig.setContigContext(fastaFileContentBuilder.toString());
-            return qualityAssess(currentContig, windowSize);
+            return qualityAssess(currentContig, windowSize, orfLengthThrshold);
         } catch (FileNotFoundException e) {
             e.printStackTrace();
         }catch (IOException e) {
@@ -49,12 +48,12 @@ public class FastaReader{
         return null;
     }
 
-    private GcResult qualityAssess(ContiguousRead currentContig, int windowSize){
+    private GcResult qualityAssess(ContiguousRead currentContig, int windowSize, int orfLengthThreshold){
         GcResult gcResult = gcContentCounter.countGcContent(currentContig.getContigContext(), windowSize);
         OpenReadingFrameResult orfResult = new OpenReadingFrameFinder().findPotentialOrfLocations(currentContig.getContigContext());
+        orfResult.removeLowerThanThresholdOrfLocations(orfLengthThreshold);
+        System.out.println(orfResult.getPotentialOrfLocations().size());
 
-        System.out.println("Contig: " + currentContig.getContigInformation());
-        System.out.println(currentContig.getContigContext());
 
         return gcResult;
     }

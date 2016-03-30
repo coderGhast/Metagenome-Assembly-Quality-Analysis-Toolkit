@@ -12,6 +12,8 @@
             <input type="text" th:field="*{gcWindowSize}" th:value="*{gcWindowSize}" /></p>
         <p>Length of contiguous read length be in order to be considered:<br/>
             <input type="text" th:field="*{contigLengthThreshold}" th:value="*{contigLengthThreshold}" /></p>
+        <p>How long should an Open Reading Frame location be to be considered? ('0' will allow any length):<br/>
+            <input type="text" th:field="*{orfLengthThreshold}" th:value="*{orfLengthThreshold}" /></p>
         <p><input type="submit" value="Submit" /></p>
     </form>
 </div>
