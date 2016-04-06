@@ -25,6 +25,8 @@ public class ToolkitController {
 
     @RequestMapping(value="/", method = RequestMethod.POST)
     public String dataInput(@ModelAttribute UserParameters params, Model model) {
+        // TODO: User pasting of input
+        // TODO: Own generated files
         params.setFileName("./src/main/resources/static/contig.1274754.fa");
         GcResult result = new QualityToolkit().run(params.getFileName(), params.getGcWindowSize(), params.getContigLengthThreshold(),
                 params.getOrfLengthThreshold());

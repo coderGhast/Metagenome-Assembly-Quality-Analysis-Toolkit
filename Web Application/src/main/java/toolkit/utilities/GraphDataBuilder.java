@@ -30,6 +30,7 @@ public class GraphDataBuilder {
         return gcResultViewData;
     }
 
+    // Set the desired bar colours for the GC Content % chart based on if the content % is above or below the set threshold
     private ArrayList<String> assignBarColours(ArrayList<Double> gcContentPercentages, double mean, double awayFromAverageThreshold){
         double threshold = StandardDeviationCalculator.calculateStandardDeviation(gcContentPercentages, mean);
         // Multiply the threshold by the amount of times the user wants the standard deviation away from the mean.

@@ -13,7 +13,6 @@ public class OpenReadingFrameFinder {
         OpenReadingFrameResult frameOneResult = getOrfResultFromFrame(contig, 0, "+1");
         OpenReadingFrameResult frameTwoResult = getOrfResultFromFrame(contig.substring(1), 1, "+2");
         OpenReadingFrameResult frameThreeResult = getOrfResultFromFrame(contig.substring(2), 2, "+3");
-        // TODO: Indicate the frames that are Positive and Negative as well as frame number!!!!
         // TODO: This should be reflected in their character location in the contig length
         OpenReadingFrameResult frameFourResult = getOrfResultFromFrame(SequenceUtilities.getReverseSequence(contig), 0, "-1");
         OpenReadingFrameResult frameFiveResult = getOrfResultFromFrame(SequenceUtilities.getReverseSequence(contig).substring(1), 1, "-2");
