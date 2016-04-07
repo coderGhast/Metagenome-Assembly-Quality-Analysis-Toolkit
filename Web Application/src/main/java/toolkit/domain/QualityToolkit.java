@@ -10,11 +10,11 @@ public class QualityToolkit {
         _reader = new FastaReader();
     }
 
-    public GcResult runInput(UserParameters params){
+    public QualitySummary runInput(UserParameters params){
         return _reader.readUserContent(params);
     }
 
-    public GcResult runFile(UserParameters params){
+    public QualitySummary runFile(UserParameters params){
         return _reader.readFile(params);
     }
 }

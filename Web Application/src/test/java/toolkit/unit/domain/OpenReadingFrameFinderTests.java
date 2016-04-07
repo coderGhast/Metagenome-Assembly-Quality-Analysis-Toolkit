@@ -41,32 +41,32 @@ public class OpenReadingFrameFinderTests {
     public static Collection parameters(){
 
         ArrayList<OpenReadingFrameLocation> testCaseZero = new ArrayList<>();
-        testCaseZero.add(new OpenReadingFrameLocation("ATGAAGAGCTAA",0,11, ""));
+        testCaseZero.add(new OpenReadingFrameLocation("ATGAAGAGCTAA",0,11, 0));
 
         ArrayList<OpenReadingFrameLocation> testCaseOne = new ArrayList<>();
-        testCaseOne.add(new OpenReadingFrameLocation("ATGAAGAGCTAA",0, 11, "+1"));
+        testCaseOne.add(new OpenReadingFrameLocation("ATGAAGAGCTAA",0, 11, 0));
 
         ArrayList<OpenReadingFrameLocation> testCaseTwo = new ArrayList<>();
-        testCaseTwo.add(new OpenReadingFrameLocation("ATGAAGAGCTAA", 1, 12, "+2"));
+        testCaseTwo.add(new OpenReadingFrameLocation("ATGAAGAGCTAA", 1, 12, 1));
 
         ArrayList<OpenReadingFrameLocation> testCaseThree = new ArrayList<>();
-        testCaseThree.add(new OpenReadingFrameLocation("ATGAAGAGCTAA",0,11, "+1"));
-        testCaseThree.add(new OpenReadingFrameLocation("ATGCCATAA", 15, 23, "+1"));
+        testCaseThree.add(new OpenReadingFrameLocation("ATGAAGAGCTAA",0,11, 0));
+        testCaseThree.add(new OpenReadingFrameLocation("ATGCCATAA", 15, 23, 0));
 
         ArrayList<OpenReadingFrameLocation> testCaseFour = new ArrayList<>();
-        testCaseFour.add(new OpenReadingFrameLocation("ATGGCGCCCGTAATGGACGGCTAG", 2, 25, "+3"));
+        testCaseFour.add(new OpenReadingFrameLocation("ATGGCGCCCGTAATGGACGGCTAG", 2, 25, 2));
 
         ArrayList<OpenReadingFrameLocation> testCaseFive = new ArrayList<>();
-        testCaseFive.add(new OpenReadingFrameLocation("ATGGCGATGGCGATGGCGTAATTTTAG", 15, 41, "+1"));
-        testCaseFive.add(new OpenReadingFrameLocation("ATGATAGCGTGA", 45, 56, "+1"));
-        testCaseFive.add(new OpenReadingFrameLocation("ATGATGGCGATCTAGTGACGCTAA", 60, 83, "+1"));
+        testCaseFive.add(new OpenReadingFrameLocation("ATGGCGATGGCGATGGCGTAATTTTAG", 15, 41, 0));
+        testCaseFive.add(new OpenReadingFrameLocation("ATGATAGCGTGA", 45, 56, 0));
+        testCaseFive.add(new OpenReadingFrameLocation("ATGATGGCGATCTAGTGACGCTAA", 60, 83, 0));
 
         ArrayList<OpenReadingFrameLocation> testCaseSix = new ArrayList<>();
-        testCaseSix.add(new OpenReadingFrameLocation("ATGGCATGA", 0, 8, "+1"));
-        testCaseSix.add(new OpenReadingFrameLocation("ATGAGGCGCTAA", 5, 16, "+3"));
+        testCaseSix.add(new OpenReadingFrameLocation("ATGGCATGA", 0, 8, 0));
+        testCaseSix.add(new OpenReadingFrameLocation("ATGAGGCGCTAA", 5, 16, 2));
 
         ArrayList<OpenReadingFrameLocation> testCaseSeven = new ArrayList<>();
-        testCaseSeven.add(new OpenReadingFrameLocation("ATGCCCGGGTGA", 0, 11, "-1"));
+        testCaseSeven.add(new OpenReadingFrameLocation("ATGCCCGGGTGA", 0, 11, 3));
 
         // Expected ORF Locations in upper case for ease of viewing
         return Arrays.asList(new Object[][] {

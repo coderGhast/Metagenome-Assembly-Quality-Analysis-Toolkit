@@ -14,7 +14,7 @@ public class OpenReadingFrameLocationTests {
 
     @Before
     public void setup(){
-        _sut = new OpenReadingFrameLocation("ATGCCCCCCCTAG", 0, 12, "-1");
+        _sut = new OpenReadingFrameLocation("ATGCCCCCCCTAG", 0, 12, 3);
     }
 
     @Test

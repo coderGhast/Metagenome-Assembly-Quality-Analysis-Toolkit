@@ -1,8 +1,6 @@
 package toolkit.utilities;
 
-import toolkit.domain.GcResult;
-import toolkit.domain.GcResultViewData;
-import toolkit.domain.UserParameters;
+import toolkit.domain.*;
 
 import java.util.ArrayList;
 
@@ -11,7 +9,14 @@ import java.util.ArrayList;
  */
 public class GraphDataBuilder {
 
-    public GcResultViewData getGcChartData(GcResult result, UserParameters params){
+    public static OpenReadingFrameViewData getOrfChartData(OpenReadingFrameResult result){
+        OpenReadingFrameViewData orfResultViewData = new OpenReadingFrameViewData();
+
+
+        return new OpenReadingFrameViewData();
+    }
+
+    public static GcResultViewData getGcChartData(GcResult result, UserParameters params){
         GcResultViewData gcResultViewData = new GcResultViewData();
         gcResultViewData.gcPercentages =  result.getGCContentPercentages();
 
@@ -31,7 +36,7 @@ public class GraphDataBuilder {
     }
 
     // Set the desired bar colours for the GC Content % chart based on if the content % is above or below the set threshold
-    private ArrayList<String> assignBarColours(ArrayList<Double> gcContentPercentages, double mean, double awayFromAverageThreshold){
+    private static ArrayList<String> assignBarColours(ArrayList<Double> gcContentPercentages, double mean, double awayFromAverageThreshold){
         double threshold = StandardDeviationCalculator.calculateStandardDeviation(gcContentPercentages, mean);
         // Multiply the threshold by the amount of times the user wants the standard deviation away from the mean.
         threshold = threshold * awayFromAverageThreshold;

@@ -11,22 +11,18 @@ import java.io.IOException;
 public class FastaReader{
     private GcContentCounter gcContentCounter = new GcContentCounter();
 
-    public GcResult readUserContent(UserParameters params){
-        StringBuilder fastaFileContentBuilder = new StringBuilder();
+    public QualitySummary readUserContent(UserParameters params){
         ContiguousRead currentContig = new ContiguousRead();
 
-        String contig = params.getUserContent();
-        String contigContent = contig.replace('\n', ' ');
+        String contig = params.getUserContent().trim();
+        currentContig.setContigInformation(contig.substring(0, contig.indexOf('\n')));
+        contig = contig.substring(contig.indexOf('\n') + 1, contig.length() -1);
+        currentContig.setContigContext(contig.replace("\n", "").replace("\r", ""));
 
-        currentContig.setContigContext(fastaFileContentBuilder.toString());
-        System.out.println(currentContig.getContigInformation());
-        System.out.print(contigContent);
-
-        return new GcResult(1);
-       //return qualityAssess(currentContig,params.getGcWindowSize(), params.getOrfLengthThreshold());
+        return qualityAssess(currentContig,params.getGcWindowSize(), params.getOrfLengthThreshold());
     }
 
-    public GcResult readFile(UserParameters params){
+    public QualitySummary readFile(UserParameters params){
         StringBuilder fastaFileContentBuilder = new StringBuilder();
 
         try {
@@ -48,8 +44,7 @@ public class FastaReader{
                     currentContig = new ContiguousRead();
                     currentContig.setContigInformation(line);
                 } else {
-                    FastaLineCleaner.cleanLine(line);
-                    fastaFileContentBuilder.append(line);
+                    fastaFileContentBuilder.append(line.trim());
                 }
             }
             // Assess the final contig
@@ -64,13 +59,18 @@ public class FastaReader{
     }
 
     // TODO: Should just return 'QualityResult', with GC Result as part of it, not GcResult as returned object
-    private GcResult qualityAssess(ContiguousRead currentContig, int windowSize, int orfLengthThreshold){
+    private QualitySummary qualityAssess(ContiguousRead currentContig, int windowSize, int orfLengthThreshold){
+        QualitySummary summary = new QualitySummary();
+
         GcResult gcResult = gcContentCounter.countGcContent(currentContig.getContigContext(), windowSize);
+        summary.addGcResult(gcResult);
+
         OpenReadingFrameResult orfResult = new OpenReadingFrameFinder().findPotentialOrfLocations(currentContig.getContigContext());
         orfResult.removeLowerThanThresholdOrfLocations(orfLengthThreshold);
-        System.out.println(orfResult.getPotentialOrfLocations().size());
+
+        summary.addOrfResult(orfResult);
 
 
-        return gcResult;
+        return summary;
     }
 }
