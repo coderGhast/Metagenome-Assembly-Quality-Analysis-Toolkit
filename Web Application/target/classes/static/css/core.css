@@ -46,6 +46,11 @@ h1{
     padding:10px;
 }
 
+#userContent{
+    width:500px;
+    height:200px;
+}
+
 #gccontentchart{
     width:80%;
     height:450px;

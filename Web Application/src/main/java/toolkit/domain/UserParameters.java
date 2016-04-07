@@ -4,12 +4,18 @@ package toolkit.domain;
  * Created by James Euesden on 09/03/2016.
  */
 public class UserParameters {
-
-    private double _awayFromAverageThreshold = 0;
-    private int _gcWindowSize = 0;
+    private String _userContent = "";
+    private double _awayFromAverageThreshold = 1;
+    private int _gcWindowSize = 300;
     private String _fileName = "";
-    private int _contigLengthThreshold = 100;
+    private int _contigLengthThreshold = 101;
     private int _orfLengthThreshold = 0;
+
+    public String getUserContent(){ return _userContent; }
+
+    public void setUserContent(String userContent){
+        this._userContent = userContent;
+    }
 
     public int getContigLengthThreshold() {
         return _contigLengthThreshold;

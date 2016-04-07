@@ -6,6 +6,8 @@
 <div class="QualityParameters" th:fragment="qualityparameters">
     <h2>Quality Parameters</h2>
     <form action="#" th:action="@{/}" th:object="${userparameters}" method="post">
+        <p>Input your sequence in FASTA format here:<br />
+            <textarea rows="10" cols="50" th:field="*{userContent}" th:value="*{userContent}" id="userContent"/></p>
         <p>Standard deviations away from the average of the GC Content % you wish to highlight:<br />
             <input type="text" th:field="*{awayFromAverageThreshold}" th:value="*{awayFromAverageThreshold}"/></p>
         <p>The size of the GC Content windows to analyse:<br/>

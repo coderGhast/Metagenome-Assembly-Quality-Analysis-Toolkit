@@ -4,6 +4,7 @@ import org.junit.Before;
 import org.junit.Test;
 import toolkit.domain.FastaReader;
 import toolkit.domain.GcResult;
+import toolkit.domain.UserParameters;
 
 import static org.junit.Assert.assertEquals;
 
@@ -20,7 +21,14 @@ public class FastaReaderTests {
 
     @Test
     public void readFileShouldReturnExpectedGcResultWithTestFile(){
-        GcResult result = _sut.readFile("./src/test/resources/static/test.fa", 4, 101, 100);
+        UserParameters params = new UserParameters();
+        params.setFileName("./src/test/resources/static/test.fa");
+        params.setContigLengthThreshold(101);
+        params.setAwayFromAverageThreshold(1);
+        params.setGcWindowSize(4);
+        params.setOrfLengthThreshold(100);
+
+        GcResult result = _sut.readFile(params);
         assertEquals(result.getWindowSize(), 4);
         assertEquals(result.getTotalCount(), 30);
         assertEquals(result.getTotalCCount(), 4);
