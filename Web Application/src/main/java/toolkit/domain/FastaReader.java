@@ -1,76 +1,110 @@
 package toolkit.domain;
 
+import toolkit.utilities.UserContentValidator;
+
 import java.io.BufferedReader;
 import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.IOException;
+import java.util.ArrayList;
 
 /**
  * Created by James Euesden on 2/10/2016.
  */
 public class FastaReader{
-    private GcContentCounter gcContentCounter = new GcContentCounter();
+    private UserContentValidator _validator;
+    private StringBuilder _sb;
+    private ArrayList<ContiguousRead> _contigsList;
 
-    public QualitySummary readUserContent(UserParameters params){
-        ContiguousRead currentContig = new ContiguousRead();
-
-        String contig = params.getUserContent().trim();
-        currentContig.setContigInformation(contig.substring(0, contig.indexOf('\n')));
-        contig = contig.substring(contig.indexOf('\n') + 1, contig.length() -1);
-        currentContig.setContigContext(contig.replace("\n", "").replace("\r", ""));
-
-        return qualityAssess(currentContig,params.getGcWindowSize(), params.getOrfLengthThreshold());
+    public FastaReader(){
+        _validator = new UserContentValidator();
+        _sb = new StringBuilder();
+        _contigsList = new ArrayList<>();
     }
 
-    public QualitySummary readFile(UserParameters params){
-        StringBuilder fastaFileContentBuilder = new StringBuilder();
+    public ArrayList<ContiguousRead> readSequenceInput(UserParameters params){
+        if(_validator.validateUserContent(params.getUserContent())){
+            return readUserInput(params.getUserContent(), params.getContigLengthThreshold());
+        } else {
+            // TODO: Own generated files - This is a temporary measure
+            params.setFileName("./src/main/resources/static/contig.1274754.fa");
+            return readFile(params.getFileName(), params.getContigLengthThreshold());
+        }
+    }
 
+    public ArrayList<ContiguousRead> readUserInput(String userContent, int lengthThreshold){
+        ContiguousRead currentContig = new ContiguousRead();
+        String contig = userContent.trim();
+        String[] contigCompontents = contig.split("\\n");
+
+        for(int i= 0; i < contigCompontents.length; i ++){
+            String line = contigCompontents[i];
+            if (line.startsWith(">")) {
+                if (currentContig.getContigInformation() != null) {
+                    currentContig.setContigContext(_sb.toString());
+                    if (_sb.length() > lengthThreshold || lengthThreshold == 0) {
+                        currentContig.setContigLength(_sb.length());
+                        _contigsList.add(currentContig);
+                    }
+                    _sb.setLength(0);
+                }
+                currentContig = new ContiguousRead();
+                currentContig.setContigInformation(line);
+            } else {
+                _sb.append(line.trim());
+            }
+
+        }
+        // Assess the final contig
+        currentContig.setContigContext(_sb.toString());
+        currentContig.setContigLength(_sb.length());
+        if(_sb.length() > lengthThreshold || lengthThreshold == 0) {
+            _contigsList.add(currentContig);
+
+        }
+
+        return _contigsList;
+    }
+
+    public ArrayList<ContiguousRead> readFile(String fileName, int lengthThreshold){
         try {
-            BufferedReader in = new BufferedReader(new FileReader(params.getFileName()));
+            BufferedReader in = new BufferedReader(new FileReader(fileName));
             ContiguousRead currentContig = new ContiguousRead();
 
             String line;
             while((line = in.readLine())!= null){
-                if(line.startsWith(">")) {
-                    if(currentContig.getContigInformation() != null){
-                        currentContig.setContigContext(fastaFileContentBuilder.toString());
-                        if(fastaFileContentBuilder.length() > params.getContigLengthThreshold()){
-                            qualityAssess(currentContig, params.getGcWindowSize(), params.getOrfLengthThreshold());
-                        } else {
-                            System.out.println("Skipped: " + currentContig.getContigInformation());
+                    if (line.startsWith(">")) {
+                        if (currentContig.getContigInformation() != null) {
+                            currentContig.setContigContext(_sb.toString());
+                            if (_sb.length() > lengthThreshold || lengthThreshold == 0) {
+                                currentContig.setContigLength(_sb.length());
+                                _contigsList.add(currentContig);
+                            }
+                            _sb.setLength(0);
                         }
-                        fastaFileContentBuilder.setLength(0);
+                        currentContig = new ContiguousRead();
+                        currentContig.setContigInformation(line);
+                    } else {
+                        _sb.append(line.trim());
                     }
-                    currentContig = new ContiguousRead();
-                    currentContig.setContigInformation(line);
-                } else {
-                    fastaFileContentBuilder.append(line.trim());
-                }
+
             }
             // Assess the final contig
-            currentContig.setContigContext(fastaFileContentBuilder.toString());
-            return qualityAssess(currentContig, params.getGcWindowSize(), params.getOrfLengthThreshold());
+            currentContig.setContigContext(_sb.toString());
+            currentContig.setContigLength(_sb.length());
+            if(_sb.length() > lengthThreshold || lengthThreshold == 0) {
+                _contigsList.add(currentContig);
+            }
+
         } catch (FileNotFoundException e) {
             e.printStackTrace();
         }catch (IOException e) {
             e.printStackTrace();
         }
-        return null;
+
+        return _contigsList;
     }
 
-    // TODO: Should just return 'QualityResult', with GC Result as part of it, not GcResult as returned object
-    private QualitySummary qualityAssess(ContiguousRead currentContig, int windowSize, int orfLengthThreshold){
-        QualitySummary summary = new QualitySummary();
-
-        GcResult gcResult = gcContentCounter.countGcContent(currentContig.getContigContext(), windowSize);
-        summary.addGcResult(gcResult);
-
-        OpenReadingFrameResult orfResult = new OpenReadingFrameFinder().findPotentialOrfLocations(currentContig.getContigContext());
-        orfResult.removeLowerThanThresholdOrfLocations(orfLengthThreshold);
-
-        summary.addOrfResult(orfResult);
 
 
-        return summary;
-    }
 }

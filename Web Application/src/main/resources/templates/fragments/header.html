@@ -5,9 +5,11 @@
 
 <body>
 <div class="header" th:fragment="header">
-    <img src="../static/images/logo.png"
-         th:src="@{/images/logo.png}" alt="Site logo" id="logo" />
-    <h1 id="header-title">KHIMETA - Metagenome Quality Toolkit</h1>
+    <a th:href="@{/}" >
+        <img src="../static/images/logo.png"
+             th:src="@{/images/logo.png}" alt="Site logo" id="logo" />
+        <h1 id="header-title">KHIMETA - Metagenome Quality Toolkit</h1>
+    </a>
 </div>
 
 </body>

@@ -25,7 +25,7 @@ public class OpenReadingFrameResult {
         ArrayList<OpenReadingFrameLocation> toRemove = new ArrayList<>();
         for (OpenReadingFrameLocation location : _potentialOrfLocations) {
             if(orfLengthThreshold > 0){
-                if(location.orfLength() < orfLengthThreshold){
+                if(location.getOrfLength() < orfLengthThreshold){
                     toRemove.add(location);
                 }
             }

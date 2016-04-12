@@ -1,20 +1,22 @@
 package toolkit.domain;
 
 /**
- * Created by James Euesden on 2/10/2016.
+ * Created by James Euesden on 12/04/2016.
  */
 public class QualityToolkit {
-    private FastaReader _reader;
 
-    public QualityToolkit(){
-        _reader = new FastaReader();
-    }
+    public static QualitySummary qualityAssess(ContiguousRead currentContig, int windowSize, int orfLengthThreshold){
+        QualitySummary summary = new QualitySummary();
 
-    public QualitySummary runInput(UserParameters params){
-        return _reader.readUserContent(params);
-    }
+        GcResult gcResult = GcContentCounter.countGcContent(currentContig.getContigContext(), windowSize);
+        summary.addGcResult(gcResult);
 
-    public QualitySummary runFile(UserParameters params){
-        return _reader.readFile(params);
+        OpenReadingFrameResult orfResult = new OpenReadingFrameFinder().findPotentialOrfLocations(currentContig.getContigContext());
+        orfResult.removeLowerThanThresholdOrfLocations(orfLengthThreshold);
+
+        summary.addOrfResult(orfResult);
+        summary.setContiguousRead(currentContig);
+
+        return summary;
     }
 }

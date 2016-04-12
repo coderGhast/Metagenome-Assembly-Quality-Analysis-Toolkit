@@ -8,22 +8,21 @@ public class OpenReadingFrameLocation {
     private int _orfStartIndex;
     private int _orfStopIndex;
     private int _frameIndicator;
+    private int _orfLength;
 
     public OpenReadingFrameLocation(String orfCharacters, int orfStartIndex, int orfStopIndex, int frameIndicator){
         _orfCharacters = orfCharacters;
         _orfStartIndex = orfStartIndex;
         _orfStopIndex = orfStopIndex;
         _frameIndicator = frameIndicator;
+        _orfLength = (_orfStopIndex + 1) - _orfStartIndex;
     }
 
     public String getOrfCharacters() {
         return _orfCharacters;
     }
 
-    // +1 to stop Index as the index is the last character, and we're interested in the full length
-    public int orfLength(){
-        return (_orfStopIndex + 1) - _orfStartIndex;
-    }
+    public int getOrfLength() { return _orfLength; }
 
     public int getOrfStopIndex() {
         return _orfStopIndex;

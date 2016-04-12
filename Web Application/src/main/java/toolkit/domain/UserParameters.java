@@ -8,7 +8,7 @@ public class UserParameters {
     private double _awayFromAverageThreshold = 1;
     private int _gcWindowSize = 300;
     private String _fileName = "";
-    private int _contigLengthThreshold = 101;
+    private int _contigLengthThreshold = 0;
     private int _orfLengthThreshold = 0;
 
     public String getUserContent(){ return _userContent; }

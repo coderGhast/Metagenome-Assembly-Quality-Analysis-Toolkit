@@ -15,7 +15,15 @@
 <div th:replace="fragments/header :: header"></div>
 <div class="page">
     <div id="content">
-        <div><p><a th:href="@{/}" >Enter another sequence.</a></p></div>
+        <div><p><a th:href="@{/}" >Submit other data.</a></p></div>
+        <div><p><a th:href="@{/list}" method="POST">Back to contiguous reads list.</a></p></div>
+        <div th:inline="text" ><h2>
+            [[${contiguousread.contigInformation}]]
+        </h2>
+            <p>
+                Contig Length: [[${contiguousread.contigLength}]]
+            </p>
+        </div>
         <div id="gccontentchart"></div>
         <canvas id="orfcanvas" width="500" height="500" style="border:1px solid #000000;">
         </canvas>
@@ -30,6 +38,9 @@
     var gcColours = [[${gcResult.gcBarColours}]];
     var gcMeanForAllWindows = [[${gcResult.gcMeanForAllWindows}]];
     var windowSize = [[${userparameters.gcWindowSize}]];
+    var contigLength= [[${contiguousread.contigLength}]];
+    var contigName = [[${contiguousread.contigInformation}]];
+    var contigContent = [[${contiguousread.contigContext}]];
 
     var orfData = [[${orfResult}]];
 
@@ -52,7 +63,7 @@ function drawGcChart(){
 
     var data = [dataForm1, dataForm2];
 
-    var gcContentTitleTemplatePartOne =  'GC Content Percentages of (filename here) in window size of ';
+    var gcContentTitleTemplatePartOne =  'GC Content Percentages in window size of ';
     var gcContentTitle = gcContentTitleTemplatePartOne.concat(windowSize);
 
     var layout = {
@@ -134,7 +145,7 @@ function checkIfWithinORFLocation(x, y, frameNumber){
         if(orfData[i].frameIndicator == frameNumber){
                 if( x >= (10) + (orfData[i].orfStartIndex / orfLocationIndicatorMarkerTranslation) &&
                     x <= (10) + (orfData[i].orfStopIndex / orfLocationIndicatorMarkerTranslation)){
-                alert("Within ORF Location, Frame: " + (frameNumber + 1) + " ORF: " + i);
+                alert("Within ORF Location, Frame: " + (frameNumber + 1) + " ORF: " + i + " Length: " + orfData[i].orfLength);
             }
         }
     }
