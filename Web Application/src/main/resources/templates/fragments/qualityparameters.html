@@ -14,5 +14,23 @@
         <p><input type="submit" value="Update Parameters" /></p>
     </form>
 </td>
+
+<div th:id="'inspectbox ' + ${iterationInfo.index}" th:fragment="inspectbox" style="display:none;">
+    <form action="#" th:action="@{/result}" th:object="${contiguousread}" method="post">
+        <input type="hidden" th:name="contigInformation" th:value= "${currentcontig.contigInformation}" />
+        <input type="hidden" th:name="contigLength" th:value= "${currentcontig.contigLength}" />
+        <input type="hidden" th:name="contigContext" th:value= "${currentcontig.contigContext}" />
+
+        Standard deviations away from the average of the GC Content % you wish to highlight:<br />
+        <input type="text" th:field="*{awayFromAverageThreshold}" th:value="*{awayFromAverageThreshold}"/><br/>
+        The size of the GC Content windows to analyse:<br/>
+        <input type="text" th:field="*{gcWindowSize}" th:value="*{gcWindowSize}" /><br/>
+        How long should an Open Reading Frame location be to be considered? ('0' will allow any length):<br/>
+        <input type="text" th:field="*{orfLengthThreshold}" th:value="*{orfLengthThreshold}" /><br/>
+
+        <input type="submit" value="Submit" />
+    </form>
+</div>
+
 </body>
 </html>
