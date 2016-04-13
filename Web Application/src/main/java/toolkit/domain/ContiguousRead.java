@@ -7,6 +7,9 @@ public class ContiguousRead {
     private String _contigContext;
     private String _contigInformation;
     private int _contigLength;
+    private double _awayFromAverageThreshold = 1;
+    private int _gcWindowSize = 300;
+    private int _orfLengthThreshold = 0;
 
 
     public String getContigContext() {
@@ -28,4 +31,26 @@ public class ContiguousRead {
     public int getContigLength() { return _contigLength; }
 
     public void setContigLength(int length) { this._contigLength = length; }
+
+    public void setOrfLengthThreshold(int orfLengthThreshold){
+        this._orfLengthThreshold = orfLengthThreshold;
+    }
+
+    public int getOrfLengthThreshold() { return _orfLengthThreshold; }
+
+    public double getAwayFromAverageThreshold() {
+        return _awayFromAverageThreshold;
+    }
+
+    public void setAwayFromAverageThreshold(double awayFromAverageThreshold) {
+        this._awayFromAverageThreshold = awayFromAverageThreshold;
+    }
+
+    public int getGcWindowSize() {
+        return _gcWindowSize;
+    }
+
+    public void setGcWindowSize(int gcWindowSize) {
+        this._gcWindowSize = gcWindowSize;
+    }
 }

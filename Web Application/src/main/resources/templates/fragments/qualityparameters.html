@@ -3,21 +3,16 @@
 <head>
 </head>
 <body>
-<div class="QualityParameters" th:fragment="qualityparameters">
-    <h2>Quality Parameters</h2>
+<td class="QualityParameters" th:fragment="qualityparameters">
     <form action="#" th:action="@{/list}" th:object="${userparameters}" method="post">
-        <p>Input your sequence in FASTA format here:<br />
-            <textarea rows="10" cols="50" th:field="*{userContent}" th:value="*{userContent}" id="userContent"/></p>
         <p>Standard deviations away from the average of the GC Content % you wish to highlight:<br />
             <input type="text" th:field="*{awayFromAverageThreshold}" th:value="*{awayFromAverageThreshold}"/></p>
         <p>The size of the GC Content windows to analyse:<br/>
             <input type="text" th:field="*{gcWindowSize}" th:value="*{gcWindowSize}" /></p>
-        <p>Length of contiguous read length be in order to be considered ('0' will allow any length):<br/>
-            <input type="text" th:field="*{contigLengthThreshold}" th:value="*{contigLengthThreshold}" /></p>
         <p>How long should an Open Reading Frame location be to be considered? ('0' will allow any length):<br/>
             <input type="text" th:field="*{orfLengthThreshold}" th:value="*{orfLengthThreshold}" /></p>
-        <p><input type="submit" value="Submit" /></p>
+        <p><input type="submit" value="Update Parameters" /></p>
     </form>
-</div>
+</td>
 </body>
 </html>

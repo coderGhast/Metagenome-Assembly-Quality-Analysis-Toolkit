@@ -5,14 +5,14 @@ package toolkit.domain;
  */
 public class QualityToolkit {
 
-    public static QualitySummary qualityAssess(ContiguousRead currentContig, int windowSize, int orfLengthThreshold){
+    public static QualitySummary qualityAssess(ContiguousRead currentContig){
         QualitySummary summary = new QualitySummary();
 
-        GcResult gcResult = GcContentCounter.countGcContent(currentContig.getContigContext(), windowSize);
+        GcResult gcResult = GcContentCounter.countGcContent(currentContig.getContigContext(), currentContig.getGcWindowSize());
         summary.addGcResult(gcResult);
 
         OpenReadingFrameResult orfResult = new OpenReadingFrameFinder().findPotentialOrfLocations(currentContig.getContigContext());
-        orfResult.removeLowerThanThresholdOrfLocations(orfLengthThreshold);
+        orfResult.removeLowerThanThresholdOrfLocations(currentContig.getOrfLengthThreshold());
 
         summary.addOrfResult(orfResult);
         summary.setContiguousRead(currentContig);

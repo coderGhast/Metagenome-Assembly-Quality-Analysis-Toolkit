@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+</head>
+<body>
+<div class="SequencePasteBox" th:fragment="sequencepastebox">
+    <h2>Submit your sequence in FASTA below:</h2>
+    <form action="#" th:action="@{/list}" th:object="${userparameters}" method="post">
+        <p>
+            <textarea rows="10" cols="50" th:field="*{userContent}" th:value="*{userContent}" id="userContent"/>
+        </p>
+        <p>Length of contiguous read length be in order to be considered ('0' will allow any length):<br/>
+            <input type="text" th:field="*{contigLengthThreshold}" th:value="*{contigLengthThreshold}" /></p>
+        <p><input type="submit" value="Submit" /></p>
+    </form>
+</div>
+</body>
+</html>

@@ -4,10 +4,7 @@ import org.apache.catalina.startup.Tool;
 import org.springframework.boot.autoconfigure.web.ServerProperties;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
-import org.springframework.web.bind.annotation.ModelAttribute;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.bind.annotation.SessionAttributes;
+import org.springframework.web.bind.annotation.*;
 import toolkit.domain.*;
 import toolkit.utilities.GraphDataBuilder;
 import toolkit.utilities.UserContentValidator;
@@ -29,8 +26,7 @@ public class ToolkitController {
     @RequestMapping(value="/list", method = RequestMethod.GET)
     public String viewPreviousUserInput(@ModelAttribute(value = "userparameters") UserParameters params, Model model){
         model.addAttribute("contiguousread", new ContiguousRead());
-        model.addAttribute("userparameters", params);
-        return "contigs";
+        return "list";
     }
 
 
@@ -41,20 +37,18 @@ public class ToolkitController {
 
         model.addAttribute("contiglist", contigList);
         model.addAttribute("contiguousread", new ContiguousRead());
-        model.addAttribute("userparameters", params);
-        return "contigs";
+        return "list";
     }
 
     @RequestMapping(value="/result", method = RequestMethod.POST)
     public String dataResult(@ModelAttribute(value = "userparameters") UserParameters params,
                              ContiguousRead contig,
-                              Model model) {
-        QualitySummary result = QualityToolkit.qualityAssess(contig, params.getGcWindowSize(), params.getOrfLengthThreshold());
+                             Model model) {
+        QualitySummary result = QualityToolkit.qualityAssess(contig);
 
         model.addAttribute("contiguousread", contig);
-        model.addAttribute("gcResult", GraphDataBuilder.getGcChartData(result.getGcResults().get(0), params));
+        model.addAttribute("gcResult", GraphDataBuilder.getGcChartData(result.getGcResults().get(0), contig.getAwayFromAverageThreshold()));
         model.addAttribute("orfResult", result.getOrfResults().get(0).getPotentialOrfLocations());
-        model.addAttribute("userparameters", params);
         return "toolkit";
     }
 }

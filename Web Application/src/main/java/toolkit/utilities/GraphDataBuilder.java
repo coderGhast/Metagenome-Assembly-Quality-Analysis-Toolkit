@@ -16,7 +16,7 @@ public class GraphDataBuilder {
         return new OpenReadingFrameViewData();
     }
 
-    public static GcResultViewData getGcChartData(GcResult result, UserParameters params){
+    public static GcResultViewData getGcChartData(GcResult result, double awayFromAverageThreshold){
         GcResultViewData gcResultViewData = new GcResultViewData();
         gcResultViewData.gcPercentages =  result.getGCContentPercentages();
 
@@ -29,7 +29,7 @@ public class GraphDataBuilder {
         gcResultViewData.gcWindows = gcWindowNumbers;
         gcResultViewData.gcAverage = result.mean();
         gcResultViewData.gcBarColours = assignBarColours(gcResultViewData.gcPercentages,
-                gcResultViewData.gcAverage, params.getAwayFromAverageThreshold());
+                gcResultViewData.gcAverage, awayFromAverageThreshold);
         gcResultViewData.gcMeanForAllWindows = gcMeanForAllWindows;
 
         return gcResultViewData;

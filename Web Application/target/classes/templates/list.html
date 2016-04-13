@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <title>KHIMETA - Metagenome Quality Toolkit</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <link href="https://fonts.googleapis.com/css?family=Signika" rel="stylesheet" type="text/css" />
+    <link href="../static/css/core.css"
+          th:href="@{/css/core.css}"
+          rel="stylesheet" media="screen" />
+    <script src="../js/plotly-latest.min.js"
+            th:href="@{/js/plotly-latest.min.js}"></script>
+</head>
+
+<body>
+
+<div th:replace="fragments/header :: header"></div>
+<div class="page">
+    <div id="content">
+        <div><p><a th:href="@{/}" >Submit other data.</a></p></div>
+            <div id="contigslisttable">
+                <table>
+                    <td>
+                        <tr>
+                            <th><h3>Contiguous reads from your submission</h3></th>
+                        </tr>
+                        <tr>
+                            <th>Contig Header</th>
+                            <th>Length</th>
+                        </tr>
+                        <tr th:each="currentcontig,iterationInfo : ${contiglist}">
+                            <td th:text="${currentcontig.contigInformation}">Header</td>
+                            <td th:text="${currentcontig.contigLength}">Length</td>
+                            <td>
+
+                                <input th:id="${iterationInfo.index}" type="button" value="Inspect" onClick="inspect_clicked(this.id);" />
+                                <script th:inline="javascript">
+                                    /*<![CDATA[*/
+                                         function inspect_clicked(id)
+                                        {
+                                            document.getElementById('inspectbox ' + id).style.display='block';
+                                        }
+                                    /*]]>*/
+                                </script>
+                            </td>
+                            <div th:id="'inspectbox ' + ${iterationInfo.index}" style="display:none;">
+                                <form action="#" th:action="@{/result}" th:object="${contiguousread}" method="post">
+                                    <input type="hidden" th:name="contigInformation" th:value= "${currentcontig.contigInformation}" />
+                                    <input type="hidden" th:name="contigLength" th:value= "${currentcontig.contigLength}" />
+                                    <input type="hidden" th:name="contigContext" th:value= "${currentcontig.contigContext}" />
+
+                                    Standard deviations away from the average of the GC Content % you wish to highlight:<br />
+                                    <input type="text" th:field="*{awayFromAverageThreshold}" th:value="*{awayFromAverageThreshold}"/><br/>
+                                    The size of the GC Content windows to analyse:<br/>
+                                    <input type="text" th:field="*{gcWindowSize}" th:value="*{gcWindowSize}" /><br/>
+                                    How long should an Open Reading Frame location be to be considered? ('0' will allow any length):<br/>
+                                    <input type="text" th:field="*{orfLengthThreshold}" th:value="*{orfLengthThreshold}" /><br/>
+
+                                    <input type="submit" value="Submit" />
+                                </form>
+                            </div>
+                        </tr>
+                        <tr>
+                            <td>
+
+                            </td>
+                        </tr>
+                    </td>
+                </table>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>
