@@ -9,6 +9,8 @@
           rel="stylesheet" media="screen" />
     <script src="../js/plotly-latest.min.js"
             th:href="@{/js/plotly-latest.min.js}"></script>
+    <script src="../js/utilities.js"
+            th:href="@{/js/utilities.js}"></script>
 </head>
 
 <body>
@@ -39,16 +41,7 @@
                         <td>
                             <script th:inline="javascript">
                                 /*<![CDATA[*/
-                                     function inspect_clicked(id)
-                                    {
-                                        for(var i=0; i < [[${contiglist.size()}]]; i++){
-                                            if(id == i){
-                                                document.getElementById('inspectbox ' + id).style.display='block';
-                                            } else {
-                                                document.getElementById('inspectbox ' + i).style.display='none';
-                                            }
-                                        }
-                                    }
+                                    var contigListSize = [[${contiglist.size()}]];
                                 /*]]>*/
                             </script>
                             <input th:id="${iterationInfo.index}" type="button" value="Inspect" onClick="inspect_clicked(this.id);" />

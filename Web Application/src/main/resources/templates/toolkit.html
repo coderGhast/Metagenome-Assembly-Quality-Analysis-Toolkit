@@ -9,6 +9,12 @@
           rel="stylesheet" media="screen" />
     <script src="../js/plotly-latest.min.js"
             th:href="@{/js/plotly-latest.min.js}"></script>
+    <script src="../js/gc-chart.js"
+            th:href="@{/js/gc-chart.js}"></script>
+    <script src="../js/orf-chart.js"
+            th:href="@{/js/orf-chart.js}"></script>
+    <script src="../js/utilities.js"
+            th:href="@{/js/utilities.js}"></script>
 </head>
 
 <body>
@@ -31,6 +37,7 @@
 </div>
 
 <script th:inline="javascript">
+/* Setup data needed */
 /*<![CDATA[*/
     var windowdata = [[${gcResult.gcPercentages}]];
     var windownums = [[${gcResult.gcWindows}]];
@@ -41,142 +48,14 @@
     var contigLength= [[${contiguousread.contigLength}]];
     var contigName = [[${contiguousread.contigInformation}]];
     var contigContent = [[${contiguousread.contigContext}]];
-
     var orfData = [[${orfResult}]];
 
-function drawGcChart(){
-    var dataForm1 = {
-      x: windownums,
-      y: windowdata,
-      marker: {color: gcColours},
-      type: 'bar',
-      name: 'GC Content % Windows'
-    };
-
-    var dataForm2 = {
-        x: windownums,
-        y: gcMeanForAllWindows,
-        mode: 'lines',
-        marker: {color: 'rgba(17, 120, 120, 1)'},
-        name: 'GC Content % Average'
-    };
-
-    var data = [dataForm1, dataForm2];
-
-    var gcContentTitleTemplatePartOne =  'GC Content Percentages in window size of ';
-    var gcContentTitle = gcContentTitleTemplatePartOne.concat(windowSize);
-
-    var layout = {
-      title: gcContentTitle,
-      xaxis: {
-        title: 'Window Number',
-        titlefont: {
-          size: 16,
-          color: 'rgb(105, 105, 105)'
-        },
-        tickfont: {
-          size: 14,
-          color: 'rgb(105, 105, 105)'
-        }
-      },
-      yaxis: {
-        title: 'GC Content %',
-        titlefont: {
-          size: 16,
-          color: 'rgb(105, 105, 105)'
-        },
-        tickfont: {
-          size: 14,
-          color: 'rgb(105, 105, 105)'
-        }
-      },
-    };
-
-    Plotly.newPlot('gccontentchart', data, layout);
-}
-
-
-var canvas;
-var context;
-var orfDisplayWidth;
-var orfDisplayHeight = 40;
-var framePos = 10;
-var framePosMofidier = 50;
-// 1 percent of the size of the Orf display, so we can apply the data visuals to it easily
-var orfLocationIndicatorMarkerTranslation;
-
-function paintFrames(){
-    context.rect(10,framePos + (framePosMofidier * 0),orfDisplayWidth,orfDisplayHeight);
-    context.rect(10,framePos + (framePosMofidier * 1),orfDisplayWidth,orfDisplayHeight);
-    context.rect(10,framePos + (framePosMofidier * 2),orfDisplayWidth,orfDisplayHeight);
-    context.rect(10,framePos + (framePosMofidier * 3),orfDisplayWidth,orfDisplayHeight);
-    context.rect(10,framePos + (framePosMofidier * 4),orfDisplayWidth,orfDisplayHeight);
-    context.rect(10,framePos + (framePosMofidier * 5),orfDisplayWidth,orfDisplayHeight);
-
-        for (var i = 0; i < orfData.length; i++) {
-            context.fillStyle="#5E9DC8";
-            context.fillRect(
-                (10 + (  orfData[i].orfStartIndex / orfLocationIndicatorMarkerTranslation)),
-                framePos + (framePosMofidier * orfData[i].frameIndicator),
-                ((orfData[i].orfStopIndex / orfLocationIndicatorMarkerTranslation) - (orfData[i].orfStartIndex / orfLocationIndicatorMarkerTranslation)),
-                orfDisplayHeight);
-        };
-
-    context.stroke();
-}
-
-function init(){
-    canvas = document.getElementById("orfcanvas");
-    canvas.addEventListener("click", onClick, false);
-    canvas.width= 800
-    context = canvas.getContext("2d");
-    orfDisplayWidth = canvas.width-20;
-    orfLocationIndicatorMarkerTranslation = orfDisplayWidth / 100;
-
-    drawGcChart();
-    paintFrames();
-}
-
-
-function checkIfWithinORFLocation(x, y, frameNumber){
-    var pageY = event.pageY;
-    var pageX = event.pageX;
-    for(var i = 0; i < orfData.length; i++){
-        if(orfData[i].frameIndicator == frameNumber){
-                if( x >= (10) + (orfData[i].orfStartIndex / orfLocationIndicatorMarkerTranslation) &&
-                    x <= (10) + (orfData[i].orfStopIndex / orfLocationIndicatorMarkerTranslation)){
-                alert("Within ORF Location, Frame: " + (frameNumber + 1) + " ORF: " + i + " Length: " + orfData[i].orfLength);
-            }
-        }
-    }
-}
-
-function withinFrameLocations(x, y){
-    for (var i = 0; i < 6; i++) {
-        if((y >= (framePos) + (framePosMofidier * i)) &&
-         (y <= (framePos + orfDisplayHeight + (framePosMofidier * i)))){
-            checkIfWithinORFLocation(x, y, i);
-        }
-     };
-}
-
-function withinFrameVisual(x, y){
-    if(x >= (10)  && x <= (10) + orfDisplayWidth){
-        withinFrameLocations(x, y);
+    function init(){
+        drawGcChart();
+        setupOrfChart();
     }
 
-    return true;
-}
-
-function onClick(event) {
-    var clientBoundary = canvas.getBoundingClientRect();
-    var x = event.clientX - clientBoundary.left;
-    var y = event.clientY - clientBoundary.top;
-    withinFrameVisual(x, y);
-}
-
-init();
-
+    init();
 /*]]>*/
 
 </script>

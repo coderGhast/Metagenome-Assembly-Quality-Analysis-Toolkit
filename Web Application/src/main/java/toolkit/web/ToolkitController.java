@@ -20,12 +20,12 @@ public class ToolkitController {
     @RequestMapping(value="/", method = RequestMethod.GET)
     public String index(Model model) {
         model.addAttribute("userparameters", new UserParameters());
+        model.addAttribute("contiguousread", new ContiguousRead());
         return "welcome";
     }
 
     @RequestMapping(value="/list", method = RequestMethod.GET)
     public String viewPreviousUserInput(@ModelAttribute(value = "userparameters") UserParameters params, Model model){
-        model.addAttribute("contiguousread", new ContiguousRead());
         return "list";
     }
 
