@@ -9,41 +9,21 @@ var canvasWidth = 800;
 
 function paintFrames(){
     for(var i = 0; i < contextList.length; i++){
-        contextList[i].rect(0, 0,orfDisplayWidth,orfDisplayHeight);
+        contextList[i].fillStyle="#DADADA";
+        contextList[i].fillRect(0, 0,orfDisplayWidth,orfDisplayHeight);
+        contextList[i].stroke();
     }
 
     for (var i = 0; i < orfData.length; i++) {
-                var currentContext = contextList[orfData[i].frameIndicator];
-                currentContext.fillStyle="#5E9DC8";
-                currentContext.fillRect(
-                    (((orfData[i].orfStartIndex + orfData[i].frameIndicator) / contigLength) * canvasWidth),
-                    0,
-                    ((orfData[i].orfStopIndex / contigLength) * canvasWidth) - ((orfData[i].orfStartIndex / contigLength) * canvasWidth),
-                    orfDisplayHeight);
-                currentContext.stroke();
-            };
-
-    /*
-    context.rect(10,framePos + (framePosMofidier * 1),orfDisplayWidth,orfDisplayHeight);
-    context.rect(10,framePos + (framePosMofidier * 1),orfDisplayWidth,orfDisplayHeight);
-    context.rect(10,framePos + (framePosMofidier * 2),orfDisplayWidth,orfDisplayHeight);
-    context.rect(10,framePos + (framePosMofidier * 3),orfDisplayWidth,orfDisplayHeight);
-    context.rect(10,framePos + (framePosMofidier * 4),orfDisplayWidth,orfDisplayHeight);
-    context.rect(10,framePos + (framePosMofidier * 5),orfDisplayWidth,orfDisplayHeight);
-
-
-        for (var i = 0; i < orfData.length; i++) {
-            context.fillStyle="#5E9DC8";
-            context.fillRect(
-                (10 + (((orfData[i].orfStartIndex + orfData[i].frameIndicator) / contigLength) * frameLength) ),
-                framePos + (framePosMofidier * orfData[i].frameIndicator),
-                ((orfData[i].orfStopIndex / contigLength) * frameLength) - ((orfData[i].orfStartIndex / contigLength) * frameLength),
-                orfDisplayHeight);
-        };
-        context.stroke();
-
-        */
-
+        var currentContext = contextList[orfData[i].frameIndicator];
+        currentContext.fillStyle="#5E9DC8";
+        currentContext.fillRect(
+            (((orfData[i].orfStartIndex + orfData[i].frameIndicator) / contigLength) * canvasWidth),
+            0,
+            ((orfData[i].orfStopIndex / contigLength) * canvasWidth) - ((orfData[i].orfStartIndex / contigLength) * canvasWidth),
+            orfDisplayHeight);
+        currentContext.stroke();
+    };
 }
 
 function setupOrfChart(){

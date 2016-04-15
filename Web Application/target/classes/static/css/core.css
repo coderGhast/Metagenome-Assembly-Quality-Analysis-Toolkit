@@ -85,3 +85,23 @@ a{
 #orfLengthThreshold{
     width:15%;
 }
+
+#parambox{
+        margin-left: 15px;
+        padding: 6px;
+        border: solid #000000;
+        border-bottom: 1px solid;
+        border-left: 0px;
+        border-right: 0px;
+        border-top: 1px solid;
+}
+
+.parambox{
+        margin-left: 15px;
+        padding: 6px;
+        border: solid #000000;
+        border-bottom: 1px solid;
+        border-left: 0px;
+        border-right: 0px;
+        border-top: 1px solid;
+}

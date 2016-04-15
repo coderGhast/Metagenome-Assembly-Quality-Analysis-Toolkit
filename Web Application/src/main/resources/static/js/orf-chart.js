@@ -9,7 +9,9 @@ var canvasWidth = 800;
 
 function paintFrames(){
     for(var i = 0; i < contextList.length; i++){
-        contextList[i].rect(0, 0,orfDisplayWidth,orfDisplayHeight);
+        contextList[i].fillStyle="#DADADA";
+        contextList[i].fillRect(0, 0,orfDisplayWidth,orfDisplayHeight);
+        contextList[i].stroke();
     }
 
     for (var i = 0; i < orfData.length; i++) {
