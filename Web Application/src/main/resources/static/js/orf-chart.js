@@ -1,76 +1,98 @@
-var canvas;
-var context;
+var canvasList = new Array(6);
+var contextList = new Array(0);
+
 var orfDisplayWidth;
 var orfDisplayHeight = 40;
 var framePos = 10;
 var framePosMofidier = 50;
-// 1 percent of the size of the Orf display, so we can apply the data visuals to it easily
-var orfLocationIndicatorMarkerTranslation;
+var canvasWidth = 800;
 
 function paintFrames(){
-    context.rect(10,framePos + (framePosMofidier * 0),orfDisplayWidth,orfDisplayHeight);
+    for(var i = 0; i < contextList.length; i++){
+        contextList[i].rect(0, 0,orfDisplayWidth,orfDisplayHeight);
+    }
+
+    for (var i = 0; i < orfData.length; i++) {
+                var currentContext = contextList[orfData[i].frameIndicator];
+                currentContext.fillStyle="#5E9DC8";
+                currentContext.fillRect(
+                    (((orfData[i].orfStartIndex + orfData[i].frameIndicator) / contigLength) * canvasWidth),
+                    0,
+                    ((orfData[i].orfStopIndex / contigLength) * canvasWidth) - ((orfData[i].orfStartIndex / contigLength) * canvasWidth),
+                    orfDisplayHeight);
+                currentContext.stroke();
+            };
+
+    /*
+    context.rect(10,framePos + (framePosMofidier * 1),orfDisplayWidth,orfDisplayHeight);
     context.rect(10,framePos + (framePosMofidier * 1),orfDisplayWidth,orfDisplayHeight);
     context.rect(10,framePos + (framePosMofidier * 2),orfDisplayWidth,orfDisplayHeight);
     context.rect(10,framePos + (framePosMofidier * 3),orfDisplayWidth,orfDisplayHeight);
     context.rect(10,framePos + (framePosMofidier * 4),orfDisplayWidth,orfDisplayHeight);
     context.rect(10,framePos + (framePosMofidier * 5),orfDisplayWidth,orfDisplayHeight);
 
+
         for (var i = 0; i < orfData.length; i++) {
             context.fillStyle="#5E9DC8";
             context.fillRect(
-                (10 + (  orfData[i].orfStartIndex / orfLocationIndicatorMarkerTranslation)),
+                (10 + (((orfData[i].orfStartIndex + orfData[i].frameIndicator) / contigLength) * frameLength) ),
                 framePos + (framePosMofidier * orfData[i].frameIndicator),
-                ((orfData[i].orfStopIndex / orfLocationIndicatorMarkerTranslation) - (orfData[i].orfStartIndex / orfLocationIndicatorMarkerTranslation)),
+                ((orfData[i].orfStopIndex / contigLength) * frameLength) - ((orfData[i].orfStartIndex / contigLength) * frameLength),
                 orfDisplayHeight);
         };
+        context.stroke();
 
-    context.stroke();
+        */
+
 }
 
 function setupOrfChart(){
-    canvas = document.getElementById("orfcanvas");
-    canvas.addEventListener("click", onClick, false);
-    canvas.width= 800
-    context = canvas.getContext("2d");
-    orfDisplayWidth = canvas.width-20;
-    orfLocationIndicatorMarkerTranslation = orfDisplayWidth / 100;
+canvasList = [
+    document.getElementById("orfcanvas-frame1"),
+    document.getElementById("orfcanvas-frame2"),
+    document.getElementById("orfcanvas-frame3"),
+    document.getElementById("orfcanvas-frame4"),
+    document.getElementById("orfcanvas-frame5"),
+    document.getElementById("orfcanvas-frame6")
+    ];
+
+    for(var i=0; i < canvasList.length; i++){
+        canvasList[i].addEventListener("click", onClick, false);
+        canvasList[i].width = canvasWidth;
+        canvasList[i].height = orfDisplayHeight;
+        contextList.push(canvasList[i].getContext("2d"));
+    }
+    orfDisplayWidth = canvasList[0].width;
 
     paintFrames();
 }
 
-function checkIfWithinORFLocation(x, y, frameNumber){
-    var pageY = event.pageY;
-    var pageX = event.pageX;
+function checkIfWithinORFLocation(x, frameNumber){
     for(var i = 0; i < orfData.length; i++){
         if(orfData[i].frameIndicator == frameNumber){
-                if( x >= (10) + (orfData[i].orfStartIndex / orfLocationIndicatorMarkerTranslation) &&
-                    x <= (10) + (orfData[i].orfStopIndex / orfLocationIndicatorMarkerTranslation)){
-                alert("Within ORF Location, Frame: " + (frameNumber + 1) + " ORF: " + i + " Length: " + orfData[i].orfLength);
+                if( x >= (((orfData[i].orfStartIndex + orfData[i].frameIndicator) / contigLength) *  canvasWidth) &&
+                    x <= (((orfData[i].orfStopIndex + orfData[i].frameIndicator) / contigLength)) * canvasWidth) {
+                alert("Within ORF Location, Frame: " + (frameNumber + 1) + " ORF: " + i + " Length: " + orfData[i].orfLength +
+                " Start: " + orfData[i].orfStartIndex + " End: " + orfData[i].orfStopIndex);
             }
         }
     }
 }
 
-function withinFrameLocations(x, y){
-    for (var i = 0; i < 6; i++) {
-        if((y >= (framePos) + (framePosMofidier * i)) &&
-         (y <= (framePos + orfDisplayHeight + (framePosMofidier * i)))){
-            checkIfWithinORFLocation(x, y, i);
-        }
-     };
-}
-
-function withinFrameVisual(x, y){
-    if(x >= (10)  && x <= (10) + orfDisplayWidth){
-        withinFrameLocations(x, y);
+function onClick(event){
+    var eventTarget;
+    if (event.srcElement){
+        eventTarget = event.srcElement;
+    } else if (evt.target){
+        eventTarget = event.target;
     }
 
-    return true;
-}
-
-function onClick(event) {
-    var clientBoundary = canvas.getBoundingClientRect();
+    var clientBoundary = eventTarget.getBoundingClientRect();
     var x = event.clientX - clientBoundary.left;
     var y = event.clientY - clientBoundary.top;
-    withinFrameVisual(x, y);
+
+    var endOfIdCharacter = event.target.id.slice(event.target.id.length - 1);
+    var frameNumber = endOfIdCharacter - 1;
+
+    checkIfWithinORFLocation(x, frameNumber);
 }
