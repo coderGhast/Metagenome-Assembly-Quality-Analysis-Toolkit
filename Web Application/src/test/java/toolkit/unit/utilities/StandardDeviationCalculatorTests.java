@@ -1,6 +1,5 @@
 package toolkit.unit.utilities;
 
-import org.junit.Before;
 import org.junit.Test;
 import toolkit.utilities.StandardDeviationCalculator;
 

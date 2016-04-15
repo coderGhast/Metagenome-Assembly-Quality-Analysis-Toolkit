@@ -1,13 +1,10 @@
 package toolkit.web;
 
-import org.apache.catalina.startup.Tool;
-import org.springframework.boot.autoconfigure.web.ServerProperties;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
 import toolkit.domain.*;
 import toolkit.utilities.GraphDataBuilder;
-import toolkit.utilities.UserContentValidator;
 
 import java.util.ArrayList;
 
