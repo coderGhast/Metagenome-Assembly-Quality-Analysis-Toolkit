@@ -66,9 +66,15 @@ canvasList = [
 function displayOrfInformation(orfLocation, i){
     highlightedIndex = i;
     paintFrames();
-    // TODO: Display the information from the below Log, plus characters, in the page below the chart
-    console.log("Within ORF Location, Frame: " + (orfLocation.frameIndicator + 1) + " Length: " + orfLocation.orfLength +
-                      " Start: " + orfLocation.orfStartIndex + " End: " + orfLocation.orfStopIndex);
+
+    var data = "Frame: " +  (orfLocation.frameIndicator + 1) + "\r\n" +
+        "Length: " +  orfLocation.orfLength + "\r\n" +
+        "Start: "+ orfLocation.orfStartIndex + " End: " + orfLocation.orfStopIndex + "\r\n";
+
+    var div = document.getElementById("orfinfobox");
+    div.textContent = data;
+    div = document.getElementById("orfcharactersbox");
+    div.innerHTML = addWhiteSpace(orfLocation.orfCharacters);
 }
 
 function checkIfWithinORFLocation(x, frameNumber){

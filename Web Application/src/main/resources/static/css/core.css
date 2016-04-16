@@ -41,6 +41,15 @@ a{
     color:#155415;
 }
 
+.footer{
+    height:100px;
+    width:100%;
+    background-color:#DADADA;
+    color:#155415;
+    margin-top:30px;
+    clear:both;
+}
+
 #logo{
     float:left;
     height:80%;
@@ -106,4 +115,13 @@ a{
         border-left: 0px;
         border-right: 0px;
         border-top: 1px solid;
+}
+
+#orfinfobox{
+    white-space: pre;
+}
+
+#orfcharactersbox{
+   word-wrap:break-word;
+   width:65%;
 }

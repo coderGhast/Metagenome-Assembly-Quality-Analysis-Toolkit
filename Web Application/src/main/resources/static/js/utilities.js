@@ -10,3 +10,21 @@ function inspect_clicked(id)
         }
     }
 }
+
+function addWhiteSpace(sequence){
+    var spacedSequence = '<b><span style="color:#34532d">';
+    for(var i = 0; i < sequence.length; i++){
+        spacedSequence += sequence.charAt(i);
+        if((i+1) % 3 == 0){
+        spacedSequence += " ";
+        }
+        if(i == sequence.length - 4){
+            spacedSequence += '<span style="color:#fde234">';
+        }
+        if(i==2 || i >= sequence.length){
+             spacedSequence += "</span></b>";
+        }
+    }
+
+    return spacedSequence;
+}
