@@ -29,8 +29,13 @@
             How long should an Open Reading Frame location be to be considered? ('0' will allow any length):<br/>
             <input type="text" th:field="*{orfLengthThreshold}" th:value="*{orfLengthThreshold}" /><br/>
 
-            <input type="submit" value="Inspect" />
+            <input id="inspectloadbutton" type="submit" value="Inspect" onclick="loadingclick()"/>
         </form>
+        <script th:inline="javascript">
+            function loadingclick() {
+                document.getElementById("inspectloadbutton").value = "Loading...";
+            }
+        </script>
     </div>
 </div>
 

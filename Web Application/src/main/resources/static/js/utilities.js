@@ -11,19 +11,33 @@ function inspect_clicked(id)
     }
 }
 
-function addWhiteSpace(sequence){
-    var spacedSequence = '<b><span style="color:#34532d">';
+function formatOrfSequence(sequence, startIndex, frameIndicator){
+    var spacedSequence = '<p>'+ (startIndex) + ' <b><span style="color:#34532d">';
     for(var i = 0; i < sequence.length; i++){
         spacedSequence += sequence.charAt(i);
         if((i+1) % 3 == 0){
         spacedSequence += " ";
         }
+        if(i==2){
+            spacedSequence += "</span></b>";
+        }
+
+        // Every 20 lots of 3 characters, make a new paragraph and label with current character index.
+        if((i+1) % 45 == 0 && i <= sequence.length - 4){
+            if(frameIndicator >= 3){
+                spacedSequence += "</p><p>" + ((startIndex - 1) - i) + "   ";
+            } else {
+                spacedSequence += "</p><p>" + ((startIndex - 1) + i) + "   ";
+            }
+        }
+
         if(i == sequence.length - 4){
-            spacedSequence += '<span style="color:#fde234">';
+            spacedSequence += '<b><span style="color:#e60000">';
         }
-        if(i==2 || i >= sequence.length){
-             spacedSequence += "</span></b>";
-        }
+
+        if(i >= sequence.length){
+            spacedSequence += "</span></b></p>";
+         }
     }
 
     return spacedSequence;
