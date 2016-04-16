@@ -16,9 +16,9 @@ public class OpenReadingFrameLocation {
         _orfStopIndex = orfStopIndex;
         _frameIndicator = frameIndicator;
         if(frameIndicator >= 3){
-            _orfLength = (_orfStartIndex + 1) - _orfStopIndex;
+            _orfLength = _orfStartIndex - _orfStopIndex;
         } else {
-            _orfLength = (_orfStopIndex + 1) - _orfStartIndex;
+            _orfLength = _orfStopIndex - _orfStartIndex;
         }
     }
 

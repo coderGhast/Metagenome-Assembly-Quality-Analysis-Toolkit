@@ -71,7 +71,7 @@ a{
 }
 
 #contigslisttable{
-
+    width:100%;
 }
 
 #awayFromAverageThreshold{
@@ -86,18 +86,20 @@ a{
     width:15%;
 }
 
-#parambox{
-        margin-left: 15px;
-        padding: 6px;
-        border: solid #000000;
-        border-bottom: 1px solid;
-        border-left: 0px;
-        border-right: 0px;
-        border-top: 1px solid;
+.contigheader{
+    border-top: 1px solid;
+    width:94%;
+}
+
+.lengthbox{
+    float:left;
+}
+
+.inspectbutton{
+    float:left;
 }
 
 .parambox{
-        margin-left: 15px;
         padding: 6px;
         border: solid #000000;
         border-bottom: 1px solid;

@@ -6,6 +6,7 @@ var orfDisplayHeight = 40;
 var framePos = 10;
 var framePosMofidier = 50;
 var canvasWidth = 650;
+var highlightedIndex = -1;
 
 function paintFrames(){
     for(var i = 0; i < contextList.length; i++){
@@ -16,7 +17,12 @@ function paintFrames(){
 
     for (var i = 0; i < orfData.length; i++) {
         var currentContext = contextList[orfData[i].frameIndicator];
-        currentContext.fillStyle="#5E9DC8";
+        if(i == highlightedIndex){
+            currentContext.fillStyle="#DE2D26";
+        }
+        else {
+            currentContext.fillStyle="#5E9DC8";
+        }
         // For reverse frames, we swap the start and stop index to reflect the reverse.
         if(orfData[i].frameIndicator >= 3){
             currentContext.fillRect(
@@ -57,8 +63,11 @@ canvasList = [
     paintFrames();
 }
 
-function displayOrfInformation(orfLocation){
-    alert("Within ORF Location, Frame: " + (orfLocation.frameIndicator + 1) + " Length: " + orfLocation.orfLength +
+function displayOrfInformation(orfLocation, i){
+    highlightedIndex = i;
+    paintFrames();
+    // TODO: Display the information from the below Log, plus characters, in the page below the chart
+    console.log("Within ORF Location, Frame: " + (orfLocation.frameIndicator + 1) + " Length: " + orfLocation.orfLength +
                       " Start: " + orfLocation.orfStartIndex + " End: " + orfLocation.orfStopIndex);
 }
 
@@ -68,12 +77,12 @@ function checkIfWithinORFLocation(x, frameNumber){
             if(orfData[i].frameIndicator >=3){
                 if( x >= (((orfData[i].orfStopIndex + orfData[i].frameIndicator) / contigLength) *  canvasWidth) &&
                     x <= (((orfData[i].orfStartIndex + orfData[i].frameIndicator) / contigLength)) * canvasWidth) {
-                    displayOrfInformation(orfData[i]);
+                    displayOrfInformation(orfData[i], i);
                 }
             } else {
                 if( x >= (((orfData[i].orfStartIndex + orfData[i].frameIndicator) / contigLength) *  canvasWidth) &&
                     x <= (((orfData[i].orfStopIndex + orfData[i].frameIndicator) / contigLength)) * canvasWidth) {
-                    displayOrfInformation(orfData[i]);
+                    displayOrfInformation(orfData[i], i);
                 }
             }
         }
