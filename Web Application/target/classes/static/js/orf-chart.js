@@ -69,12 +69,12 @@ function displayOrfInformation(orfLocation, i){
 
     var data = "Frame: " +  (orfLocation.frameIndicator + 1) + "\r\n" +
         "Length: " +  orfLocation.orfLength + "\r\n" +
-        "Start: "+ orfLocation.orfStartIndex + " End: " + orfLocation.orfStopIndex + "\r\n";
+        "Start: "+ (orfLocation.orfStartIndex) + " End: " + orfLocation.orfStopIndex + "\r\n";
 
     var div = document.getElementById("orfinfobox");
     div.textContent = data;
     div = document.getElementById("orfcharactersbox");
-    div.innerHTML = addWhiteSpace(orfLocation.orfCharacters);
+    div.innerHTML = formatOrfSequence(orfLocation.orfCharacters, orfLocation.orfStartIndex, orfLocation.frameIndicator);
 }
 
 function checkIfWithinORFLocation(x, frameNumber){
