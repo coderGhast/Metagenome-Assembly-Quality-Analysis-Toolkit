@@ -141,7 +141,7 @@ public class OpenReadingFrameFinder {
                                                         int frameNumberModifier, int frameIndicator) {
         OpenReadingFrameLocation completedOrf = new OpenReadingFrameLocation(
                 contig.substring((startCodon.getContigStartIndex() - frameNumberModifier), stopCodon.getContigStartIndex() + (3 - frameNumberModifier)),
-                startCodon.getContigStartIndex(), stopCodon.getContigStartIndex() + 2, frameIndicator);
+                startCodon.getContigStartIndex(), stopCodon.getContigStartIndex() + 3, frameIndicator);
 
         return completedOrf;
     }

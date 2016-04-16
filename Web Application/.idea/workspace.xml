@@ -4,7 +4,16 @@
     <bookmark url="file://$PROJECT_DIR$/src/test/java/toolkit/unit/domain/GcResultTests.java" line="74" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2d0706c2-c12e-40d6-9032-19d66651f617" name="Default" comment="" />
+    <list default="true" id="2d0706c2-c12e-40d6-9032-19d66651f617" name="Default" comment="ORF display fixed, and fixed tests from the ORF Swap.&#10;&#10;Additionally, changed it so that the 'last character index' for the ORF Location is the character after the ORF. This corrects the length to be the actual expected length. Will see if this produces the proper expected results or needs more fixing! Tests say it's fine, but I have some doubts.">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/toolkit/domain/OpenReadingFrameFinder.class" afterPath="$PROJECT_DIR$/target/classes/toolkit/domain/OpenReadingFrameFinder.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/toolkit/domain/OpenReadingFrameLocation.class" afterPath="$PROJECT_DIR$/target/classes/toolkit/domain/OpenReadingFrameLocation.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/toolkit/domain/OpenReadingFrameFinder.java" afterPath="$PROJECT_DIR$/src/main/java/toolkit/domain/OpenReadingFrameFinder.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/toolkit/domain/OpenReadingFrameLocation.java" afterPath="$PROJECT_DIR$/src/main/java/toolkit/domain/OpenReadingFrameLocation.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/static/js/orf-chart.js" afterPath="$PROJECT_DIR$/src/main/resources/static/js/orf-chart.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/toolkit/unit/domain/OpenReadingFrameFinderTests.java" afterPath="$PROJECT_DIR$/src/test/java/toolkit/unit/domain/OpenReadingFrameFinderTests.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/static/js/orf-chart.js" afterPath="$PROJECT_DIR$/target/classes/static/js/orf-chart.js" />
+    </list>
     <ignored path="MetagenomeQualityToolkit.iws" />
     <ignored path=".idea/workspace.xml" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -40,11 +49,31 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="orf-chart.js" pinned="false" current-in-tab="true">
+      <file leaf-file-name="orf-chart.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/resources/static/js/orf-chart.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.7270341">
-              <caret line="29" column="42" selection-start-line="29" selection-start-column="42" selection-end-line="29" selection-end-column="42" />
+            <state vertical-scroll-proportion="0.0">
+              <caret line="7" column="21" selection-start-line="7" selection-start-column="21" selection-end-line="7" selection-end-column="21" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="OpenReadingFrameFinderTests.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/test/java/toolkit/unit/domain/OpenReadingFrameFinderTests.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="66" column="70" selection-start-line="66" selection-start-column="70" selection-end-line="66" selection-end-column="70" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="QualityToolkit.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/toolkit/domain/QualityToolkit.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="14" column="42" selection-start-line="14" selection-start-column="42" selection-end-line="14" selection-end-column="42" />
               <folding />
             </state>
           </provider>
@@ -60,24 +89,21 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="OpenReadingFrameResult.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/toolkit/domain/OpenReadingFrameResult.java">
+      <file leaf-file-name="OpenReadingFrameFinder.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/toolkit/domain/OpenReadingFrameFinder.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="22" column="9" selection-start-line="22" selection-start-column="9" selection-end-line="22" selection-end-column="9" />
-              <folding>
-                <element signature="e#753#754#0" expanded="true" />
-                <element signature="e#798#799#0" expanded="true" />
-              </folding>
+            <state vertical-scroll-proportion="0.18681319">
+              <caret line="6" column="0" selection-start-line="6" selection-start-column="0" selection-end-line="6" selection-end-column="0" />
+              <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="OpenReadingFrameFinder.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/toolkit/domain/OpenReadingFrameFinder.java">
+      <file leaf-file-name="OpenReadingFrameLocation.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/toolkit/domain/OpenReadingFrameLocation.java">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="157" column="79" selection-start-line="157" selection-start-column="79" selection-end-line="157" selection-end-column="79" />
+              <caret line="58" column="8" selection-start-line="58" selection-start-column="8" selection-end-line="58" selection-end-column="8" />
               <folding />
             </state>
           </provider>
@@ -93,6 +119,9 @@
         <option value="Enum" />
       </list>
     </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
   </component>
   <component name="GradleLocalSettings">
     <option name="externalProjectsViewState">
@@ -139,9 +168,7 @@
         <option value="$PROJECT_DIR$/src/main/java/toolkit/utilities/GraphDataBuilder.java" />
         <option value="$PROJECT_DIR$/src/main/resources/static/js/gc-chart.js" />
         <option value="$PROJECT_DIR$/src/main/java/toolkit/web/ToolkitController.java" />
-        <option value="$PROJECT_DIR$/src/main/java/toolkit/domain/OpenReadingFrameLocation.java" />
         <option value="$PROJECT_DIR$/src/main/java/toolkit/domain/OpenReadingFrameViewData.java" />
-        <option value="$PROJECT_DIR$/src/test/java/toolkit/unit/domain/OpenReadingFrameFinderTests.java" />
         <option value="$PROJECT_DIR$/src/test/java/toolkit/unit/utilities/StandardDeviationCalculatorTests.java" />
         <option value="$PROJECT_DIR$/src/main/resources/templates/toolkit.html" />
         <option value="$PROJECT_DIR$/src/main/resources/static/css/core.css" />
@@ -149,10 +176,12 @@
         <option value="$PROJECT_DIR$/src/main/resources/templates/list.html" />
         <option value="$PROJECT_DIR$/src/main/resources/templates/fragments/qualityparameters.html" />
         <option value="$PROJECT_DIR$/src/main/java/toolkit/domain/FrameDirection.java" />
-        <option value="$PROJECT_DIR$/src/main/java/toolkit/domain/OpenReadingFrameResult.java" />
         <option value="$PROJECT_DIR$/src/main/java/toolkit/domain/ContiguousRead.java" />
+        <option value="$PROJECT_DIR$/src/main/java/toolkit/domain/OpenReadingFrameResult.java" />
         <option value="$PROJECT_DIR$/src/main/resources/static/js/orf-chart.js" />
+        <option value="$PROJECT_DIR$/src/main/java/toolkit/domain/OpenReadingFrameLocation.java" />
         <option value="$PROJECT_DIR$/src/main/java/toolkit/domain/OpenReadingFrameFinder.java" />
+        <option value="$PROJECT_DIR$/src/test/java/toolkit/unit/domain/OpenReadingFrameFinderTests.java" />
       </list>
     </option>
   </component>
@@ -179,14 +208,14 @@
     <option name="width" value="1382" />
     <option name="height" value="744" />
   </component>
-  <component name="ProjectLevelVcsManager" settingsEditedManually="false">
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <OptionsSetting value="true" id="Add" />
     <OptionsSetting value="true" id="Remove" />
     <OptionsSetting value="true" id="Checkout" />
     <OptionsSetting value="true" id="Update" />
     <OptionsSetting value="true" id="Status" />
     <OptionsSetting value="true" id="Edit" />
-    <ConfirmationsSetting value="0" id="Add" />
+    <ConfirmationsSetting value="1" id="Add" />
     <ConfirmationsSetting value="0" id="Remove" />
   </component>
   <component name="ProjectView">
@@ -1105,8 +1134,8 @@
     </list>
     <recent_temporary>
       <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="Application.Main" />
-        <item index="1" class="java.lang.String" itemvalue="JUnit.All in Web Application" />
+        <item index="0" class="java.lang.String" itemvalue="JUnit.All in Web Application" />
+        <item index="1" class="java.lang.String" itemvalue="Application.Main" />
         <item index="2" class="java.lang.String" itemvalue="JUnit.FastaReaderTests" />
         <item index="3" class="java.lang.String" itemvalue="JUnit.FastaReaderTests.readFileShouldReturnListOfContiguousReads" />
         <item index="4" class="java.lang.String" itemvalue="JUnit.FastaReaderTests.readFileShouldReturnExpectedGcResultWithTestFile" />
@@ -1136,31 +1165,31 @@
     <history-entry file="All_in_Web_Application - 2016.04.16 at 11h 28m 28s.xml">
       <configuration name="All in Web Application" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="FastaReaderTests - 2016.04.12 at 14h 14m 51s.xml">
-      <configuration name="FastaReaderTests" configurationId="JUnit" />
+    <history-entry file="All_in_Web_Application - 2016.04.16 at 13h 26m 55s.xml">
+      <configuration name="All in Web Application" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="FastaReaderTests - 2016.04.12 at 14h 18m 58s.xml">
-      <configuration name="FastaReaderTests" configurationId="JUnit" />
+    <history-entry file="All_in_Web_Application - 2016.04.16 at 13h 29m 13s.xml">
+      <configuration name="All in Web Application" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="FastaReaderTests - 2016.04.12 at 14h 33m 15s.xml">
-      <configuration name="FastaReaderTests" configurationId="JUnit" />
+    <history-entry file="All_in_Web_Application - 2016.04.16 at 13h 36m 36s.xml">
+      <configuration name="All in Web Application" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="FastaReaderTests - 2016.04.12 at 14h 35m 14s.xml">
-      <configuration name="FastaReaderTests" configurationId="JUnit" />
+    <history-entry file="All_in_Web_Application - 2016.04.16 at 13h 38m 34s.xml">
+      <configuration name="All in Web Application" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="FastaReaderTests - 2016.04.12 at 14h 36m 23s.xml">
-      <configuration name="FastaReaderTests" configurationId="JUnit" />
+    <history-entry file="All_in_Web_Application - 2016.04.16 at 13h 40m 13s.xml">
+      <configuration name="All in Web Application" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="FastaReaderTests - 2016.04.12 at 14h 38m 05s.xml">
-      <configuration name="FastaReaderTests" configurationId="JUnit" />
+    <history-entry file="All_in_Web_Application - 2016.04.16 at 13h 41m 44s.xml">
+      <configuration name="All in Web Application" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="FastaReaderTests - 2016.04.12 at 14h 40m 29s.xml">
-      <configuration name="FastaReaderTests" configurationId="JUnit" />
+    <history-entry file="All_in_Web_Application - 2016.04.16 at 13h 42m 19s.xml">
+      <configuration name="All in Web Application" configurationId="JUnit" />
     </history-entry>
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
-    <editor active="true" />
+    <editor active="false" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -1169,8 +1198,8 @@
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.37777779" sideWeight="0.505295" order="10" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32980332" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2769231" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3008547" sideWeight="0.494705" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32991454" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.34188035" sideWeight="0.494705" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Coverage" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24962178" sideWeight="0.5096953" order="-1" side_tool="true" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32569557" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -1202,6 +1231,8 @@
     <ignored-roots>
       <path value="$PROJECT_DIR$/.." />
     </ignored-roots>
+    <MESSAGE value="ORF display fixed, and fixed tests from the ORF Swap.&#10;&#10;Additionally, changed it so that the 'last character index' for the ORF Location is the character after the ORF. This corrects the length to be the actual expected length. Will see if this produces the proper expected results or needs more fixing! Tests say it's fine, but I have some doubts." />
+    <option name="LAST_COMMIT_MESSAGE" value="ORF display fixed, and fixed tests from the ORF Swap.&#10;&#10;Additionally, changed it so that the 'last character index' for the ORF Location is the character after the ORF. This corrects the length to be the actual expected length. Will see if this produces the proper expected results or needs more fixing! Tests say it's fine, but I have some doubts." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1420,26 +1451,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/toolkit/domain/QualityToolkit.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.42728904">
-          <caret line="14" column="92" selection-start-line="14" selection-start-column="92" selection-end-line="14" selection-end-column="92" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/toolkit/web/ToolkitController.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="24" column="118" selection-start-line="24" selection-start-column="118" selection-end-line="24" selection-end-column="118" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/toolkit/domain/OpenReadingFrameLocation.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="54" column="8" selection-start-line="54" selection-start-column="8" selection-end-line="54" selection-end-column="8" />
           <folding />
         </state>
       </provider>
@@ -1480,16 +1495,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="1" column="0" selection-start-line="1" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/toolkit/unit/domain/OpenReadingFrameFinderTests.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="14" column="44" selection-start-line="14" selection-start-column="44" selection-end-line="14" selection-end-column="44" />
           <folding>
             <element signature="imports" expanded="false" />
           </folding>
@@ -1603,6 +1608,25 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/toolkit/domain/OpenReadingFrameResult.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.42465752">
+          <caret line="31" column="30" selection-start-line="31" selection-start-column="30" selection-end-line="31" selection-end-column="30" />
+          <folding>
+            <element signature="e#753#754#0" expanded="true" />
+            <element signature="e#798#799#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/toolkit/domain/QualityToolkit.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="14" column="42" selection-start-line="14" selection-start-column="42" selection-end-line="14" selection-end-column="42" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/toolkit/utilities/SequenceUtilities.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -1611,29 +1635,34 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/toolkit/domain/OpenReadingFrameResult.java">
+    <entry file="file://$PROJECT_DIR$/src/main/resources/static/js/orf-chart.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="22" column="9" selection-start-line="22" selection-start-column="9" selection-end-line="22" selection-end-column="9" />
-          <folding>
-            <element signature="e#753#754#0" expanded="true" />
-            <element signature="e#798#799#0" expanded="true" />
-          </folding>
+          <caret line="7" column="21" selection-start-line="7" selection-start-column="21" selection-end-line="7" selection-end-column="21" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/toolkit/unit/domain/OpenReadingFrameFinderTests.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="66" column="70" selection-start-line="66" selection-start-column="70" selection-end-line="66" selection-end-column="70" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/toolkit/domain/OpenReadingFrameLocation.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="58" column="8" selection-start-line="58" selection-start-column="8" selection-end-line="58" selection-end-column="8" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/toolkit/domain/OpenReadingFrameFinder.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="157" column="79" selection-start-line="157" selection-start-column="79" selection-end-line="157" selection-end-column="79" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/static/js/orf-chart.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.7270341">
-          <caret line="29" column="42" selection-start-line="29" selection-start-column="42" selection-end-line="29" selection-end-column="42" />
+        <state vertical-scroll-proportion="0.18681319">
+          <caret line="6" column="0" selection-start-line="6" selection-start-column="0" selection-end-line="6" selection-end-column="0" />
           <folding />
         </state>
       </provider>

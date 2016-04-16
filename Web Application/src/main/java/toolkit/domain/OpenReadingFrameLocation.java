@@ -15,7 +15,11 @@ public class OpenReadingFrameLocation {
         _orfStartIndex = orfStartIndex;
         _orfStopIndex = orfStopIndex;
         _frameIndicator = frameIndicator;
-        _orfLength = (_orfStopIndex + 1) - _orfStartIndex;
+        if(frameIndicator >= 3){
+            _orfLength = (_orfStartIndex + 1) - _orfStopIndex;
+        } else {
+            _orfLength = (_orfStopIndex + 1) - _orfStartIndex;
+        }
     }
 
     public String getOrfCharacters() {

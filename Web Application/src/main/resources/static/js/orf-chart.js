@@ -5,7 +5,7 @@ var orfDisplayWidth;
 var orfDisplayHeight = 40;
 var framePos = 10;
 var framePosMofidier = 50;
-var canvasWidth = 800;
+var canvasWidth = 650;
 
 function paintFrames(){
     for(var i = 0; i < contextList.length; i++){
@@ -17,12 +17,8 @@ function paintFrames(){
     for (var i = 0; i < orfData.length; i++) {
         var currentContext = contextList[orfData[i].frameIndicator];
         currentContext.fillStyle="#5E9DC8";
+        // For reverse frames, we swap the start and stop index to reflect the reverse.
         if(orfData[i].frameIndicator >= 3){
-            console.log("Here, frame: " + orfData[i].frameIndicator +
-                        " Start: " + orfData[i].orfStartIndex +
-                        " Stop: " + orfData[i].orfStopIndex) +
-                        " Actual Start: " + (((orfData[i].orfStopIndex + orfData[i].frameIndicator) / contigLength) * canvasWidth) +
-                        " Actual Width: " + ((orfData[i].orfStartIndex / contigLength) * canvasWidth) - ((orfData[i].orfStopIndex / contigLength) * canvasWidth));
             currentContext.fillRect(
                         (((orfData[i].orfStopIndex + orfData[i].frameIndicator) / contigLength) * canvasWidth),
                         0,
@@ -61,14 +57,24 @@ canvasList = [
     paintFrames();
 }
 
+function displayOrfInformation(orfLocation){
+    alert("Within ORF Location, Frame: " + (orfLocation.frameIndicator + 1) + " Length: " + orfLocation.orfLength +
+                      " Start: " + orfLocation.orfStartIndex + " End: " + orfLocation.orfStopIndex);
+}
+
 function checkIfWithinORFLocation(x, frameNumber){
     for(var i = 0; i < orfData.length; i++){
         if(orfData[i].frameIndicator == frameNumber){
+            if(orfData[i].frameIndicator >=3){
+                if( x >= (((orfData[i].orfStopIndex + orfData[i].frameIndicator) / contigLength) *  canvasWidth) &&
+                    x <= (((orfData[i].orfStartIndex + orfData[i].frameIndicator) / contigLength)) * canvasWidth) {
+                    displayOrfInformation(orfData[i]);
+                }
+            } else {
                 if( x >= (((orfData[i].orfStartIndex + orfData[i].frameIndicator) / contigLength) *  canvasWidth) &&
                     x <= (((orfData[i].orfStopIndex + orfData[i].frameIndicator) / contigLength)) * canvasWidth) {
-                    // TODO: This should be a display somewhere on the page
-                alert("Within ORF Location, Frame: " + (frameNumber + 1) + " ORF: " + i + " Length: " + orfData[i].orfLength +
-                " Start: " + orfData[i].orfStartIndex + " End: " + orfData[i].orfStopIndex);
+                    displayOrfInformation(orfData[i]);
+                }
             }
         }
     }
@@ -78,7 +84,7 @@ function onClick(event){
     var eventTarget;
     if (event.srcElement){
         eventTarget = event.srcElement;
-    } else if (evt.target){
+    } else if (event.target){
         eventTarget = event.target;
     }
 
