@@ -17,11 +17,25 @@ function paintFrames(){
     for (var i = 0; i < orfData.length; i++) {
         var currentContext = contextList[orfData[i].frameIndicator];
         currentContext.fillStyle="#5E9DC8";
-        currentContext.fillRect(
-            (((orfData[i].orfStartIndex + orfData[i].frameIndicator) / contigLength) * canvasWidth),
-            0,
-            ((orfData[i].orfStopIndex / contigLength) * canvasWidth) - ((orfData[i].orfStartIndex / contigLength) * canvasWidth),
-            orfDisplayHeight);
+        if(orfData[i].frameIndicator >= 3){
+            console.log("Here, frame: " + orfData[i].frameIndicator +
+                        " Start: " + orfData[i].orfStartIndex +
+                        " Stop: " + orfData[i].orfStopIndex) +
+                        " Actual Start: " + (((orfData[i].orfStopIndex + orfData[i].frameIndicator) / contigLength) * canvasWidth) +
+                        " Actual Width: " + ((orfData[i].orfStartIndex / contigLength) * canvasWidth) - ((orfData[i].orfStopIndex / contigLength) * canvasWidth));
+            currentContext.fillRect(
+                        (((orfData[i].orfStopIndex + orfData[i].frameIndicator) / contigLength) * canvasWidth),
+                        0,
+                        ((orfData[i].orfStartIndex / contigLength) * canvasWidth) - ((orfData[i].orfStopIndex / contigLength) * canvasWidth),
+                        orfDisplayHeight);
+        } else {
+            currentContext.fillRect(
+                        (((orfData[i].orfStartIndex + orfData[i].frameIndicator) / contigLength) * canvasWidth),
+                        0,
+                        ((orfData[i].orfStopIndex / contigLength) * canvasWidth) - ((orfData[i].orfStartIndex / contigLength) * canvasWidth),
+                        orfDisplayHeight);
+        }
+
         currentContext.stroke();
     };
 }
@@ -52,6 +66,7 @@ function checkIfWithinORFLocation(x, frameNumber){
         if(orfData[i].frameIndicator == frameNumber){
                 if( x >= (((orfData[i].orfStartIndex + orfData[i].frameIndicator) / contigLength) *  canvasWidth) &&
                     x <= (((orfData[i].orfStopIndex + orfData[i].frameIndicator) / contigLength)) * canvasWidth) {
+                    // TODO: This should be a display somewhere on the page
                 alert("Within ORF Location, Frame: " + (frameNumber + 1) + " ORF: " + i + " Length: " + orfData[i].orfLength +
                 " Start: " + orfData[i].orfStartIndex + " End: " + orfData[i].orfStopIndex);
             }

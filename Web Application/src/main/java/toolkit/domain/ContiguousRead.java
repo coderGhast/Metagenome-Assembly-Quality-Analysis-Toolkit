@@ -9,7 +9,7 @@ public class ContiguousRead {
     private int _contigLength;
     private double _awayFromAverageThreshold = 1;
     private int _gcWindowSize = 300;
-    private int _orfLengthThreshold = 0;
+    private int _orfLengthThreshold = 100;
 
 
     public String getContigContext() {

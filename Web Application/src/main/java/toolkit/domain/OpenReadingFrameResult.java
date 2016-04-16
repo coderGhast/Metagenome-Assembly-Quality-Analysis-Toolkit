@@ -17,6 +17,12 @@ public class OpenReadingFrameResult {
         _potentialOrfLocations.add(potentialOrf);
     }
 
+    public void addPotentialOrfLocationListToResult(ArrayList<OpenReadingFrameLocation> list){
+        for (int i = 0; i < list.size(); i++) {
+            this.addPotentialOrfLocationToResult(list.get(i));
+        }
+    }
+
     public ArrayList<OpenReadingFrameLocation> getPotentialOrfLocations(){
         return _potentialOrfLocations;
     }

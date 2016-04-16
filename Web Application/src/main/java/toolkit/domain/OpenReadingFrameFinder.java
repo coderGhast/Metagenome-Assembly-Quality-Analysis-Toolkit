@@ -9,41 +9,16 @@ import java.util.ArrayList;
  */
 public class OpenReadingFrameFinder {
     public OpenReadingFrameResult findPotentialOrfLocations(String contig) {
-
-        OpenReadingFrameResult frameOneResult = getOrfResultFromFrame(contig, 0, 0);
-        OpenReadingFrameResult frameTwoResult = getOrfResultFromFrame(contig.substring(1), 1, 1);
-        OpenReadingFrameResult frameThreeResult = getOrfResultFromFrame(contig.substring(2), 2, 2);
-        // TODO: This should be reflected in their character location in the contig length
-        OpenReadingFrameResult frameFourResult = getOrfResultFromFrame(SequenceUtilities.getReverseSequence(contig), 0, 3);
-        OpenReadingFrameResult frameFiveResult = getOrfResultFromFrame(SequenceUtilities.getReverseSequence(contig).substring(1), 1, 4);
-        OpenReadingFrameResult frameSixResult = getOrfResultFromFrame(SequenceUtilities.getReverseSequence(contig).substring(2), 2, 5);
-
         OpenReadingFrameResult result = new OpenReadingFrameResult();
-        for (int i = 0; i < frameOneResult.getPotentialOrfLocations().size(); i++) {
-            result.addPotentialOrfLocationToResult(frameOneResult.getPotentialOrfLocations().get(i));
+        String reverseSequence = SequenceUtilities.getReverseSequence(contig);
+        for(int i = 0; i < 3; i++){
+            OpenReadingFrameResult frameResult = getOrfResultFromFrame(contig.substring(i), i, i);
+            OpenReadingFrameResult reverseFrameResult = getOrfResultFromFrame(reverseSequence.substring(i), i, i+3);
+            reverseFrameResult = correctReverseFrameIndicies(reverseFrameResult, contig.length());
+
+            result.addPotentialOrfLocationListToResult(frameResult.getPotentialOrfLocations());
+            result.addPotentialOrfLocationListToResult(reverseFrameResult.getPotentialOrfLocations());
         }
-
-        for (int i = 0; i < frameTwoResult.getPotentialOrfLocations().size(); i++) {
-            result.addPotentialOrfLocationToResult(frameTwoResult.getPotentialOrfLocations().get(i));
-        }
-
-        for (int i = 0; i < frameThreeResult.getPotentialOrfLocations().size(); i++) {
-            result.addPotentialOrfLocationToResult(frameThreeResult.getPotentialOrfLocations().get(i));
-        }
-
-        for (int i = 0; i < frameFourResult.getPotentialOrfLocations().size(); i++) {
-            result.addPotentialOrfLocationToResult(frameFourResult.getPotentialOrfLocations().get(i));
-        }
-
-        for (int i = 0; i < frameFiveResult.getPotentialOrfLocations().size(); i++) {
-            result.addPotentialOrfLocationToResult(frameFiveResult.getPotentialOrfLocations().get(i));
-        }
-
-        for (int i = 0; i < frameSixResult.getPotentialOrfLocations().size(); i++) {
-            result.addPotentialOrfLocationToResult(frameSixResult.getPotentialOrfLocations().get(i));
-        }
-
-
         return result;
     }
 
@@ -169,5 +144,20 @@ public class OpenReadingFrameFinder {
                 startCodon.getContigStartIndex(), stopCodon.getContigStartIndex() + 2, frameIndicator);
 
         return completedOrf;
+    }
+
+    private OpenReadingFrameResult correctReverseFrameIndicies(OpenReadingFrameResult reverseFrame, int contigLength){
+        ArrayList<OpenReadingFrameLocation> orfLocations = reverseFrame.getPotentialOrfLocations();
+        OpenReadingFrameResult correctedResult = new OpenReadingFrameResult();
+        for(int i=0; i < orfLocations.size(); i++){
+            OpenReadingFrameLocation currentLocation = orfLocations.get(i);
+            OpenReadingFrameLocation correctedLocation = new OpenReadingFrameLocation(currentLocation.getOrfCharacters(),
+                    contigLength - currentLocation.getOrfStartIndex(),
+                    contigLength - currentLocation.getOrfStopIndex(),
+                    currentLocation.getFrameIndicator());
+            correctedResult.addPotentialOrfLocationToResult(correctedLocation);
+        }
+
+        return correctedResult;
     }
 }
