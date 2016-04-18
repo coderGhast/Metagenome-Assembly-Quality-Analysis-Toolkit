@@ -1,5 +1,7 @@
 package toolkit.domain;
 
+import java.math.BigDecimal;
+
 /**
  * Created by James Euesden on 2/22/2016.
  */
@@ -10,6 +12,8 @@ public class ContiguousRead {
     private double _awayFromAverageThreshold = 1;
     private int _gcWindowSize = 300;
     private int _orfLengthThreshold = 100;
+    private int _numberOfN = 0;
+    private double _percentageOfN = 0;
 
     public String getContigContext() {
         return _contigContext;
@@ -17,6 +21,8 @@ public class ContiguousRead {
 
     public void setContigContext(String contigContext) {
         this._contigContext = contigContext;
+        this._contigLength = _contigContext.length();
+        calculateNumberOfN();
     }
 
     public String getContigInformation() {
@@ -51,5 +57,26 @@ public class ContiguousRead {
 
     public void setGcWindowSize(int gcWindowSize) {
         this._gcWindowSize = gcWindowSize;
+    }
+
+    public int getNumberOfN(){ return _numberOfN; }
+
+    public void calculateNumberOfN(){
+        for(int i=0; i < _contigContext.length(); i++){
+            if(_contigContext.toLowerCase().charAt(i) == 'n'){
+                _numberOfN++;
+            }
+        }
+        if(_numberOfN > 0 && _contigLength > 0){
+            _percentageOfN = ((double) _numberOfN / (double) _contigLength) * 100;
+        }
+    }
+
+    public double getPercentageOfN(){
+        Double truncatedPercentageOfN = new BigDecimal(_percentageOfN)
+                .setScale(2, BigDecimal.ROUND_HALF_UP)
+                .doubleValue();
+
+        return truncatedPercentageOfN;
     }
 }
