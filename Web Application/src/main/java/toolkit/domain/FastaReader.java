@@ -27,8 +27,8 @@ public class FastaReader{
         if(_validator.validateUserContent(params.getUserContent())){
             contigResult = readUserInput(params.getUserContent(), params.getContigLengthThreshold());
         } else {
-            // TODO: Own generated files - This is a temporary measure
-            params.setFileName("./src/main/resources/static/contig.1274754.fa");
+            // Test file...
+            params.setFileName("./src/main/resources/static/artificialtestcontigs.fa");
             contigResult = readFile(params.getFileName(), params.getContigLengthThreshold());
         }
         return contigResult;

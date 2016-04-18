@@ -3,8 +3,16 @@ var superframecontext;
 var superframeheight = 80;
 var superframewidth = 700;
 
+function drawWindowLine(startX, endX, startY, endY){
+    superframecontext.fillStyle="#000000";
+    superframecontext.beginPath();
+    superframecontext.moveTo(startX, startY);
+    superframecontext.lineTo(endX, endY);
+    superframecontext.stroke();
+}
+
 function paintSuperFrame(){
-    superframecontext.fillStyle="#DADADA";
+    superframecontext.fillStyle="#CCCCCC";
     superframecontext.fillRect(0, 0,superframewidth,superframeheight);
     superframecontext.stroke();
 
@@ -17,6 +25,7 @@ function paintSuperFrame(){
                         0,
                         ((orfData[i].orfStartIndex / contigLength) * superframewidth) - ((orfData[i].orfStopIndex / contigLength) * superframewidth),
                         superframeheight / 2);
+            superframecontext.lineTo
         } else {
             superframecontext.fillRect(
                         (((orfData[i].orfStartIndex + orfData[i].frameIndicator) / contigLength) * superframewidth),
@@ -24,8 +33,9 @@ function paintSuperFrame(){
                         ((orfData[i].orfStopIndex / contigLength) * superframewidth) - ((orfData[i].orfStartIndex / contigLength) * superframewidth),
                         superframeheight / 2);
         }
+        superframecontext.stroke();
     }
-    superframecontext.stroke();
+
 
     for (var i = 0; i < windowdata.length; i++) {
         superframecontext.fillStyle= gcColours[i];
@@ -35,6 +45,12 @@ function paintSuperFrame(){
             superframeheight / 2,
             (windowSize / contigLength) * superframewidth,
             superframeheight / 2);
+
+        drawWindowLine(
+            ((i * windowSize) / contigLength) * superframewidth,
+            ((i * windowSize) / contigLength) * superframewidth,
+            0,
+            superframeheight);
     }
     superframecontext.stroke();
 }

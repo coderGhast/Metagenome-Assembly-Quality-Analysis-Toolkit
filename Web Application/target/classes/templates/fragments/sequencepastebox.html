@@ -4,7 +4,7 @@
 </head>
 <body>
 <div class="SequencePasteBox" th:fragment="sequencepastebox">
-    <h2>Submit your sequence in FASTA below:</h2>
+    <h2>Submit your sequence in FASTA format below:</h2>
     <form action="#" th:action="@{/list}" th:object="${userparameters}" method="post">
         <p>
             <textarea rows="10" cols="50" th:field="*{userContent}" th:value="*{userContent}" id="userContent"/>
