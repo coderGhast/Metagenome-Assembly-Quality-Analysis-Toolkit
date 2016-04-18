@@ -78,7 +78,10 @@ function displayOrfInformation(orfLocation, i){
     div.innerHTML = formatOrfSequence(orfLocation.orfCharacters, orfLocation.orfStartIndex, orfLocation.frameIndicator);
     div = document.getElementById("orf" + i);
     div.style.backgroundColor = "#5E9DC8";
-    document.getElementById("orf" + previousHighlightedIndex).style.backgroundColor = "transparent";
+    div = document.getElementById("orf" + previousHighlightedIndex);
+    if(div != null){
+        div.style.backgroundColor = "transparent";
+    }
 }
 
 function checkIfWithinORFLocation(x, frameNumber){

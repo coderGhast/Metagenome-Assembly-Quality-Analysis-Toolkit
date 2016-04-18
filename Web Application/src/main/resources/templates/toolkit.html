@@ -7,38 +7,21 @@
     <link href="../static/css/core.css"
           th:href="@{/css/core.css}"
           rel="stylesheet" media="screen" />
+    <script src="http://code.jquery.com/jquery-1.7.2.min.js"></script>
     <script src="/js/plotly-latest.min.js"
             th:src="@{/js/plotly-latest.min.js}"></script>
     <script src="/js/gc-chart.js"
             th:src="@{/js/gc-chart.js}"></script>
     <script src="/js/orf-chart.js"
             th:src="@{/js/orf-chart.js}"></script>
+    <script src="/js/superframe-chart.js"
+            th:src="@{/js/superframe-chart.js}"></script>
+    <script src="/js/toolkit.js"
+            th:src="@{/js/toolkit.js}"></script>
     <script src="/js/utilities.js"
             th:src="@{/js/utilities.js}"></script>
-    <script src="http://code.jquery.com/jquery-1.7.2.min.js"></script>
 </head>
 <body>
-<script th:inline="javascript">
-/* Code for tabs accreditted to http://red-team-design.com/css3-jquery-folder-tabs/ */
-$(document).ready(function() {
-    $("#tabscontent").find("[id^='tab']").hide(); // Hide all content
-    $("#tabs li:first").attr("id","current"); // Activate the first tab
-    $("#tabscontent #tab1").fadeIn(); // Show first tab's content
-
-    $('#tabs a').click(function(e) {
-        e.preventDefault();
-        if ($(this).closest("li").attr("id") == "current"){ //detection for current tab
-         return;
-        }
-        else{
-          $("#tabscontent").find("[id^='tab']").hide(); // Hide all content
-          $("#tabs li").attr("id",""); //Reset id's
-          $(this).parent().attr("id","current"); // Activate this
-          $('#' + $(this).attr('name')).fadeIn(); // Show content for the current tab
-        }
-    });
-});
-</script>
 
 <div th:replace="fragments/header :: header"></div>
 <div class="page">
@@ -64,7 +47,14 @@ $(document).ready(function() {
         </ul>
 
         <div id="tabscontent">
-            <div id="tab1"><div id="gccontentchart"></div></div>
+            <div id="tab1">
+                <p th:inline="text">
+                    <h3>GC Content %</h3>
+                    The lines in red indicate where a GC Content window is over or under the standard deviation threshold of
+                    [[${contiguousread.awayFromAverageThreshold}]]
+                    <div id="gccontentchart"></div>
+                </p>
+            </div>
             <div id="tab2">
                 <p>
                     <h3>Open Reading Frame Locations</h3>
@@ -114,8 +104,15 @@ $(document).ready(function() {
                         </td>
                     </tr>
                 </table>
-            <div id="tab3">...</div>
-        </div>
+            </div>
+            <div id="tab3">
+                <div id="superframecontainer">
+                    <div th:inline="text">0
+                        <canvas id="superframecanvas" width="500" height="20" style="border:1px solid #000000;" ></canvas>
+                        [[${contiguousread.contigLength}]]
+                    </div>
+                </div>
+            </div>
     </div>
 </div>
 <div th:replace="fragments/footer :: footer"></div>
@@ -137,6 +134,7 @@ $(document).ready(function() {
     function init(){
         drawGcChart();
         setupOrfChart();
+        setupSuperframeChart();
     }
     init();
 /*]]>*/
