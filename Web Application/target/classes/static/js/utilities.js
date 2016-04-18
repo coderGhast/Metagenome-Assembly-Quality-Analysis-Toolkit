@@ -1,4 +1,4 @@
-function inspect_clicked(id)
+function inspectclicked(id)
 {
     for(var i=0; i < contigListSize; i++){
         if(id == i){
@@ -11,8 +11,16 @@ function inspect_clicked(id)
     }
 }
 
+function vieworf(id){
+    alert("Click this orf: " + id);
+}
+
+function loadingclick() {
+    document.getElementById("inspectloadbutton").value = "Loading...";
+}
+
 function formatOrfSequence(sequence, startIndex, frameIndicator){
-    var spacedSequence = '<p>'+ (startIndex) + ' <b><span style="color:#34532d">';
+    var spacedSequence = '<p>'+ (startIndex) + ' <b><span style="color:#339933">';
     for(var i = 0; i < sequence.length; i++){
         spacedSequence += sequence.charAt(i);
         if((i+1) % 3 == 0){
