@@ -15,8 +15,8 @@ function vieworf(id){
     displayOrfInformation(orfData[id], id);
 }
 
-function loadingclick() {
-    document.getElementById("inspectloadbutton").value = "Loading...";
+function loadingclick(id) {
+    document.getElementById(id).value = "Loading...";
 }
 
 function formatOrfSequence(sequence, startIndex, frameIndicator){

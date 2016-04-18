@@ -64,6 +64,7 @@ canvasList = [
 }
 
 function displayOrfInformation(orfLocation, i){
+    var previousHighlightedIndex = highlightedIndex;
     highlightedIndex = i;
     paintFrames();
 
@@ -75,6 +76,9 @@ function displayOrfInformation(orfLocation, i){
     div.textContent = data;
     div = document.getElementById("orfcharactersbox");
     div.innerHTML = formatOrfSequence(orfLocation.orfCharacters, orfLocation.orfStartIndex, orfLocation.frameIndicator);
+    div = document.getElementById("orf" + i);
+    div.style.backgroundColor = "#5E9DC8";
+    document.getElementById("orf" + previousHighlightedIndex).style.backgroundColor = "transparent";
 }
 
 function checkIfWithinORFLocation(x, frameNumber){

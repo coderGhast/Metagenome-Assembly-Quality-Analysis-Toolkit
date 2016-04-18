@@ -92,16 +92,16 @@ $(document).ready(function() {
                                         <tbody>
                                         <td>
                                             <tr id="orftablelabels"><td>Frame</td><td>Start</td><td>Stop</td><td>Length</td></tr>
-                                            <tr th:each="currentorf,iterationInfo : ${orfResult}" >
+                                            <tr th:id="'orf' + ${iterationInfo.index}" th:each="currentorf,iterationInfo : ${orfResult}" >
                                                 <div th:switch="${currentorf.frameIndicator}">
-                                                    <td class="orfframeindicator" th:case="0">+1</td>
-                                                    <td class="orfframeindicator" th:case="1">+2</td>
-                                                    <td class="orfframeindicator" th:case="2">+3</td>
-                                                    <td class="orfframeindicator" th:case="3">-1</td>
-                                                    <td class="orfframeindicator" th:case="4">-2</td>
-                                                    <td class="orfframeindicator" th:case="5">-3</td>
+                                                    <td th:case="0">+1</td>
+                                                    <td th:case="1">+2</td>
+                                                    <td th:case="2">+3</td>
+                                                    <td th:case="3">-1</td>
+                                                    <td th:case="4">-2</td>
+                                                    <td th:case="5">-3</td>
                                                 </div>
-                                                <td th:text=" ${currentorf.orfStartIndex} + ' to... '"></td>
+                                                <td th:text=" ${currentorf.orfStartIndex} + '...'"></td>
                                                 <td th:text="${currentorf.orfStopIndex} "></td>
                                                 <td th:text=" ${currentorf.orfLength}"></td>
                                                 <td><input type="submit" value="View" th:id="${iterationInfo.index}" onClick="vieworf(this.id);" /></td>
