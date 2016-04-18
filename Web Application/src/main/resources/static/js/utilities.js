@@ -12,7 +12,7 @@ function inspectclicked(id)
 }
 
 function vieworf(id){
-    alert("Click this orf: " + id);
+    displayOrfInformation(orfData[id], id);
 }
 
 function loadingclick() {
@@ -40,9 +40,9 @@ function formatOrfSequence(sequence, startIndex, frameIndicator){
     for(var i=0; i < spacedSequence.length; i++){
         if(i % 15 == 0 && i > 0){
             if(frameIndicator >= 3){
-                spacedSequence[i] = spacedSequence[i] + "</p><p>" + (((startIndex * 3) - 1) - i) + "   ";
+                spacedSequence[i] = spacedSequence[i] + "</p><p>" + (((startIndex)) - (i*3)) + "   ";
             } else {
-                spacedSequence[i] = spacedSequence[i] + "</p><p>" + (((startIndex * 3) - 1) + i) + "   ";
+                spacedSequence[i] = spacedSequence[i] + "</p><p>" + (((startIndex)) + (i*3)) + "   ";
             }
         }
     }

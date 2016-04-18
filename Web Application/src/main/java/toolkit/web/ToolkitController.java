@@ -11,7 +11,7 @@ import java.util.ArrayList;
 /**
  * Created by James Euesden on 01/03/2016.
  */
-@SessionAttributes({ "userparameters", "contiglist", "gcResult", "orfResult", "contiguousread"})
+@SessionAttributes({ "userparameters", "contiglist", "discardedcontigcount", "gcResult", "orfResult", "contiguousread"})
 @Controller
 public class ToolkitController {
     @RequestMapping(value="/", method = RequestMethod.GET)
@@ -30,9 +30,11 @@ public class ToolkitController {
     @RequestMapping(value="/list", method = RequestMethod.POST)
     public String readUserInput(@ModelAttribute(value = "userparameters")  UserParameters params, Model model){
         FastaReader reader = new FastaReader();
-        ArrayList<ContiguousRead> contigList = reader.readSequenceInput(params);
+        ContigResult contigResult = reader.readSequenceInput(params);
+        ArrayList<ContiguousRead> contigList = contigResult.getContigList();
 
         model.addAttribute("contiglist", contigList);
+        model.addAttribute("discardedcontigcount", contigResult.getDiscardedContigCount());
         model.addAttribute("contiguousread", new ContiguousRead());
         return "list";
     }

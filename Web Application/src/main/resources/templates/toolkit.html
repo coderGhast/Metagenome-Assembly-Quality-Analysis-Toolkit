@@ -86,29 +86,31 @@ $(document).ready(function() {
                             <div id="orfcharactersbox"></div>
                         </td>
                         <td id="orftablelist">
-                            <table class="orflist">
-                                <tbody>
-                                <td>
-                                    <tr><td>Frame</td><td>Start</td><td>Stop</td><td>Length</td></tr>
-                                    <tr th:each="currentorf,iterationInfo : ${orfResult}" >
-                                        <a href="#">
-                                            <div th:switch="${currentorf.frameIndicator}">
-                                                <td th:case="0">+1</td>
-                                                <td th:case="1">+2</td>
-                                                <td th:case="2">+3</td>
-                                                <td th:case="3">-1</td>
-                                                <td th:case="4">-2</td>
-                                                <td th:case="5">-3</td>
-                                            </div>
-                                            <td th:text="${currentorf.orfStartIndex}"></td>
-                                            <td th:text="${currentorf.orfStopIndex}"></td>
-                                            <td th:text="${currentorf.orfLength}"></td>
-                                            <td><input type="submit" value="View" th:id="${iterationInfo.index}" onClick="vieworf(this.id);" /></td>
-                                        </a>
-                                    </tr>
-                                </td>
-                                </tbody>
-                            </table>
+                            <div id="orftablewrapper">
+                                <div id="orftablescroll">
+                                    <table class="orflist">
+                                        <tbody>
+                                        <td>
+                                            <tr id="orftablelabels"><td>Frame</td><td>Start</td><td>Stop</td><td>Length</td></tr>
+                                            <tr th:each="currentorf,iterationInfo : ${orfResult}" >
+                                                <div th:switch="${currentorf.frameIndicator}">
+                                                    <td th:case="0">+1</td>
+                                                    <td th:case="1">+2</td>
+                                                    <td th:case="2">+3</td>
+                                                    <td th:case="3">-1</td>
+                                                    <td th:case="4">-2</td>
+                                                    <td th:case="5">-3</td>
+                                                </div>
+                                                <td th:text="${currentorf.orfStartIndex}"></td>
+                                                <td th:text="${currentorf.orfStopIndex}"></td>
+                                                <td th:text="${currentorf.orfLength}"></td>
+                                                <td><input type="submit" value="View" th:id="${iterationInfo.index}" onClick="vieworf(this.id);" /></td>
+                                            </tr>
+                                        </td>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
                         </td>
                     </tr>
                 </table>

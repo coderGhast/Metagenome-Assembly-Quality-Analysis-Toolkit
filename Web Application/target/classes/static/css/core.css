@@ -29,9 +29,10 @@ a{
 }
 
 #header-title{
-    padding:25px;
-    padding-left:20%;
-    color:#155415;
+    font-size: 200%;
+    padding: 10px;
+    padding-left: 20%;
+    color: #155415;
 }
 
 .header{
@@ -41,6 +42,15 @@ a{
     color:#155415;
 }
 
+#logo{
+    float:left;
+    height:100%;
+    padding:0px;
+    padding-left:14%;
+    padding-top:0px;
+    margin:0px;
+}
+
 .footer{
     height:60px;
     width:100%;
@@ -48,15 +58,6 @@ a{
     color:#155415;
     margin-top:30px;
     clear:both;
-}
-
-#logo{
-    float:left;
-    height:60%;
-    padding:0px;
-    padding-left:14%;
-    padding-top:12px;
-    margin:0px;
 }
 
 .page{
@@ -117,12 +118,30 @@ a{
         border-top: 1px solid;
 }
 
+#contigcount{
+    display:inline;
+}
+
+#discardedcontigcount{
+    display:inline;
+    color:#e90000;
+}
+
 #orfinfobox{
     white-space: pre;
 }
 
-#orfcharactersbox{
+#orftablewrapper{
+    position:relative;
+    width: 18em;
+    height:20em;
+    background: #efefef;
+    padding-top: 2em;
+}
 
+#orftablescroll{
+    overflow:auto;
+    height:100%;
 }
 
 #orftable{
@@ -130,9 +149,14 @@ a{
     background: #ffffff;
 }
 
+#orftablelabels{
+    position:absolute;
+    margin-top:-3em;
+}
+
 #orftablechart{
     vertical-align:top;
-    width:700px;
+    width: 70%;
 }
 
 #orftablelist{
@@ -140,6 +164,7 @@ a{
 }
 .orflist{
     list-style:none;
+    margin-top: 1em;
 }
 
 /* Code for tabs accredited to: http://red-team-design.com/css3-jquery-folder-tabs/ */
@@ -205,6 +230,7 @@ a{
 #tabscontent {
   background: #efefef;
   padding: 2em;
+  padding-top:1em;
   position: relative;
   z-index: 2;
   border-radius: 0 5px 5px 5px;

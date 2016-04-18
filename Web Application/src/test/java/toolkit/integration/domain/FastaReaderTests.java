@@ -38,33 +38,41 @@ public class FastaReaderTests {
 
     @Test
     public void readUserInputShouldReturnListOfContiguousReads(){
-        ArrayList<ContiguousRead> result = _sut.readUserInput(_testContent, 0);
-        assertEquals(3, result.size());
-        assertEquals(">test_0", result.get(0).getContigInformation());
-        assertEquals(">test_1", result.get(1).getContigInformation());
-        assertEquals(">test_2", result.get(2).getContigInformation());
+        ContigResult result = _sut.readUserInput(_testContent, 0);
+        ArrayList<ContiguousRead> reads = result.getContigList();
+        assertEquals(0, result.getDiscardedContigCount());
+        assertEquals(3, reads.size());
+        assertEquals(">test_0", reads.get(0).getContigInformation());
+        assertEquals(">test_1", reads.get(1).getContigInformation());
+        assertEquals(">test_2", reads.get(2).getContigInformation());
     }
 
     @Test
     public void readUserContentShouldIgnoreContigsUnderLengthThreshold(){
-        ArrayList<ContiguousRead> result = _sut.readUserInput(_testContent, 40);
-        assertEquals(1, result.size());
-        assertEquals(">test_2", result.get(0).getContigInformation());
+        ContigResult result = _sut.readUserInput(_testContent, 40);
+        ArrayList<ContiguousRead> reads = result.getContigList();
+        assertEquals(2, result.getDiscardedContigCount());
+        assertEquals(1, reads.size());
+        assertEquals(">test_2", reads.get(0).getContigInformation());
     }
 
     @Test
     public void readFileShouldReturnListOfContiguousReads(){
-        ArrayList<ContiguousRead> result = _sut.readFile(_testFileLocation, 0);
-        assertEquals(3, result.size());
-        assertEquals(">test_0", result.get(0).getContigInformation());
-        assertEquals(">test_1", result.get(1).getContigInformation());
-        assertEquals(">test_2", result.get(2).getContigInformation());
+        ContigResult result = _sut.readFile(_testFileLocation, 0);
+        ArrayList<ContiguousRead> reads = result.getContigList();
+        assertEquals(0, result.getDiscardedContigCount());
+        assertEquals(3, reads.size());
+        assertEquals(">test_0", reads.get(0).getContigInformation());
+        assertEquals(">test_1", reads.get(1).getContigInformation());
+        assertEquals(">test_2", reads.get(2).getContigInformation());
     }
 
     @Test
     public void readFileShouldIgnoreContigsUnderLengthThreshold(){
-        ArrayList<ContiguousRead> result = _sut.readFile(_testFileLocation, 40);
-        assertEquals(1, result.size());
-        assertEquals(">test_2", result.get(0).getContigInformation());
+        ContigResult result = _sut.readFile(_testFileLocation, 40);
+        ArrayList<ContiguousRead> reads = result.getContigList();
+        assertEquals(2, result.getDiscardedContigCount());
+        assertEquals(1, reads.size());
+        assertEquals(">test_2", reads.get(0).getContigInformation());
     }
 }

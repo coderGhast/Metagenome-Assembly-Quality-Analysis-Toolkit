@@ -22,18 +22,21 @@ public class FastaReader{
         _contigsList = new ArrayList<>();
     }
 
-    public ArrayList<ContiguousRead> readSequenceInput(UserParameters params){
+    public ContigResult readSequenceInput(UserParameters params){
+        ContigResult contigResult;
         if(_validator.validateUserContent(params.getUserContent())){
-            return readUserInput(params.getUserContent(), params.getContigLengthThreshold());
+            contigResult = readUserInput(params.getUserContent(), params.getContigLengthThreshold());
         } else {
             // TODO: Own generated files - This is a temporary measure
             params.setFileName("./src/main/resources/static/contig.1274754.fa");
-            return readFile(params.getFileName(), params.getContigLengthThreshold());
+            contigResult = readFile(params.getFileName(), params.getContigLengthThreshold());
         }
+        return contigResult;
     }
 
-    public ArrayList<ContiguousRead> readUserInput(String userContent, int lengthThreshold){
+    public ContigResult readUserInput(String userContent, int lengthThreshold){
         ContiguousRead currentContig = new ContiguousRead();
+        int discardedContigs = 0;
         String contig = userContent.trim();
         String[] contigCompontents = contig.split("\\n");
 
@@ -45,6 +48,8 @@ public class FastaReader{
                     if (_sb.length() > lengthThreshold || lengthThreshold == 0) {
                         currentContig.setContigLength(_sb.length());
                         _contigsList.add(currentContig);
+                    } else {
+                        discardedContigs++;
                     }
                     _sb.setLength(0);
                 }
@@ -60,13 +65,18 @@ public class FastaReader{
         currentContig.setContigLength(_sb.length());
         if(_sb.length() > lengthThreshold || lengthThreshold == 0) {
             _contigsList.add(currentContig);
-
+        } else {
+            discardedContigs++;
         }
 
-        return _contigsList;
+        ContigResult result = new ContigResult();
+        result.setContigList(_contigsList);
+        result.setDiscardedContigCount(discardedContigs);
+        return result;
     }
 
-    public ArrayList<ContiguousRead> readFile(String fileName, int lengthThreshold){
+    public ContigResult readFile(String fileName, int lengthThreshold){
+        int discardedContigs = 0;
         try {
             BufferedReader in = new BufferedReader(new FileReader(fileName));
             ContiguousRead currentContig = new ContiguousRead();
@@ -79,6 +89,8 @@ public class FastaReader{
                             if (_sb.length() > lengthThreshold || lengthThreshold == 0) {
                                 currentContig.setContigLength(_sb.length());
                                 _contigsList.add(currentContig);
+                            } else {
+                                discardedContigs++;
                             }
                             _sb.setLength(0);
                         }
@@ -94,6 +106,8 @@ public class FastaReader{
             currentContig.setContigLength(_sb.length());
             if(_sb.length() > lengthThreshold || lengthThreshold == 0) {
                 _contigsList.add(currentContig);
+            } else {
+                discardedContigs++;
             }
 
         } catch (FileNotFoundException e) {
@@ -102,7 +116,10 @@ public class FastaReader{
             e.printStackTrace();
         }
 
-        return _contigsList;
+        ContigResult result = new ContigResult();
+        result.setContigList(_contigsList);
+        result.setDiscardedContigCount(discardedContigs);
+        return result;
     }
 
 
