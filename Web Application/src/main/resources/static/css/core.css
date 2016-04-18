@@ -136,7 +136,6 @@ a{
     width: 18em;
     height:20em;
     background: #efefef;
-    padding-top: 2em;
 }
 
 #orftablescroll{
@@ -150,8 +149,7 @@ a{
 }
 
 #orftablelabels{
-    position:absolute;
-    margin-top:-3em;
+
 }
 
 #orftablechart{
@@ -164,7 +162,10 @@ a{
 }
 .orflist{
     list-style:none;
-    margin-top: 1em;
+}
+
+.orfframeindicator{
+    padding-right:2em;
 }
 
 /* Code for tabs accredited to: http://red-team-design.com/css3-jquery-folder-tabs/ */
