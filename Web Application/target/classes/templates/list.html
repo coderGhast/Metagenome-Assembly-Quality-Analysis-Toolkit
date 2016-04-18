@@ -45,6 +45,8 @@
                         <tr>
                             <td class="lengthbox"><b>Sequence Length: </b>
                             <div th:text="${currentcontig.contigLength}" style="display:inline;">Length</div>
+                            <b>N characters: </b>
+                            <div th:text="${currentcontig.numberOfN} + ', % of total: ' + ${currentcontig.percentageOfN} + '%' " style="display:inline;"></div>
                             </td>
                         </tr>
                         <tr>
