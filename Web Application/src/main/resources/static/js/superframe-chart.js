@@ -1,7 +1,7 @@
 var superframecanvas;
 var superframecontext;
-var superframeheight = 100;
-var superframewidth = 500;
+var superframeheight = 80;
+var superframewidth = 700;
 
 function paintSuperFrame(){
     superframecontext.fillStyle="#DADADA";

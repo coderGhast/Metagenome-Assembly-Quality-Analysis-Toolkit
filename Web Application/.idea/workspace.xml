@@ -5,18 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="2d0706c2-c12e-40d6-9032-19d66651f617" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/static/js/superframe-chart.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/static/js/toolkit.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/static/js/orf-chart.js" afterPath="$PROJECT_DIR$/src/main/resources/static/js/orf-chart.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/static/js/superframe-chart.js" afterPath="$PROJECT_DIR$/src/main/resources/static/js/superframe-chart.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/templates/list.html" afterPath="$PROJECT_DIR$/src/main/resources/templates/list.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/templates/toolkit.html" afterPath="$PROJECT_DIR$/src/main/resources/templates/toolkit.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/static/css/core.css" afterPath="$PROJECT_DIR$/target/classes/static/css/core.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/static/js/orf-chart.js" afterPath="$PROJECT_DIR$/target/classes/static/js/orf-chart.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/static/js/utilities.js" afterPath="$PROJECT_DIR$/target/classes/static/js/utilities.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/templates/fragments/qualityparameters.html" afterPath="$PROJECT_DIR$/target/classes/templates/fragments/qualityparameters.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/templates/fragments/sequencepastebox.html" afterPath="$PROJECT_DIR$/target/classes/templates/fragments/sequencepastebox.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/templates/toolkit.html" afterPath="$PROJECT_DIR$/target/classes/templates/toolkit.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/templates/welcome.html" afterPath="$PROJECT_DIR$/target/classes/templates/welcome.html" />
     </list>
     <ignored path="MetagenomeQualityToolkit.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -44,8 +36,8 @@
       <file leaf-file-name="toolkit.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/resources/templates/toolkit.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-8.692307">
-              <caret line="136" column="31" selection-start-line="136" selection-start-column="31" selection-end-line="136" selection-end-column="31" />
+            <state vertical-scroll-proportion="-3.4615386">
+              <caret line="110" column="75" selection-start-line="110" selection-start-column="75" selection-end-line="110" selection-end-column="75" />
               <folding>
                 <element signature="n#style#0;n#canvas#0;n#div#0;n#div#0;n#td#0;n#tr#0;n#table#0;n#div#1;n#div#2;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#canvas#0;n#div#1;n#div#0;n#td#0;n#tr#0;n#table#0;n#div#1;n#div#2;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
@@ -59,11 +51,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="superframe-chart.js" pinned="false" current-in-tab="true">
+      <file leaf-file-name="superframe-chart.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/resources/static/js/superframe-chart.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.7005494">
-              <caret line="18" column="40" selection-start-line="18" selection-start-column="40" selection-end-line="18" selection-end-column="40" />
+            <state vertical-scroll-proportion="0.0">
+              <caret line="2" column="24" selection-start-line="2" selection-start-column="24" selection-end-line="2" selection-end-column="24" />
               <folding />
             </state>
           </provider>
@@ -85,6 +77,18 @@
             <state vertical-scroll-proportion="0.0">
               <caret line="15" column="5" selection-start-line="15" selection-start-column="5" selection-end-line="15" selection-end-column="5" />
               <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="list.html" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/resources/templates/list.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.80473375">
+              <caret line="48" column="46" selection-start-line="48" selection-start-column="46" selection-end-line="48" selection-end-column="46" />
+              <folding>
+                <element signature="n#style#0;n#div#0;n#td#0;n#tr#2;n#td#0;n#table#0;n#div#1;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -175,7 +179,6 @@
         <option value="$PROJECT_DIR$/src/main/java/toolkit/domain/OpenReadingFrameLocation.java" />
         <option value="$PROJECT_DIR$/src/test/java/toolkit/unit/domain/ContiguousReadTests.java" />
         <option value="$PROJECT_DIR$/src/main/java/toolkit/domain/ContiguousRead.java" />
-        <option value="$PROJECT_DIR$/src/main/resources/templates/list.html" />
         <option value="$PROJECT_DIR$/src/main/resources/static/css/core.css" />
         <option value="$PROJECT_DIR$/src/main/resources/templates/welcome.html" />
         <option value="$PROJECT_DIR$/src/main/resources/templates/fragments/sequencepastebox.html" />
@@ -183,8 +186,9 @@
         <option value="$PROJECT_DIR$/src/main/resources/static/js/utilities.js" />
         <option value="$PROJECT_DIR$/src/main/resources/static/js/toolkit.js" />
         <option value="$PROJECT_DIR$/src/main/resources/static/js/orf-chart.js" />
-        <option value="$PROJECT_DIR$/src/main/resources/templates/toolkit.html" />
         <option value="$PROJECT_DIR$/src/main/resources/static/js/superframe-chart.js" />
+        <option value="$PROJECT_DIR$/src/main/resources/templates/toolkit.html" />
+        <option value="$PROJECT_DIR$/src/main/resources/templates/list.html" />
       </list>
     </option>
   </component>
@@ -1258,7 +1262,13 @@
       <option name="project" value="LOCAL" />
       <updated>1461007928407</updated>
     </task>
-    <option name="localTasksCounter" value="18" />
+    <task id="LOCAL-00018" summary="Started the super frame&#10;&#10;Super frame is me attempting to demonstrate crossover and stand out areas between the GC Content and ORF Locations. It's a bit weird, and I don't know if it's even useful. I should blog about it. Im doing it anyway, and we'll see where that leads us. Horay.">
+      <created>1461013777235</created>
+      <option name="number" value="00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1461013777235</updated>
+    </task>
+    <option name="localTasksCounter" value="19" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -1351,7 +1361,8 @@
     <MESSAGE value="Keeping track of the number of N characters in a contig&#10;&#10;Now displaying the number of N characters in a contig on the contig list, and what percentage of the total size of the contig length that is. May help the user themselves decide if it's worth assessing that particular contig or not." />
     <MESSAGE value="Checking in the tests for the Number of N stuff.&#10;&#10;Version control didn't pick it up for some reason" />
     <MESSAGE value="Added highlighting to currently selected ORF Location&#10;&#10;When a user clicks to see an ORF Location, either from the list or through the chart, that particular ORF Location will now be highlighted, and non of the others. Just a nice usability feature" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added highlighting to currently selected ORF Location&#10;&#10;When a user clicks to see an ORF Location, either from the list or through the chart, that particular ORF Location will now be highlighted, and non of the others. Just a nice usability feature" />
+    <MESSAGE value="Started the super frame&#10;&#10;Super frame is me attempting to demonstrate crossover and stand out areas between the GC Content and ORF Locations. It's a bit weird, and I don't know if it's even useful. I should blog about it. Im doing it anyway, and we'll see where that leads us. Horay." />
+    <option name="LAST_COMMIT_MESSAGE" value="Started the super frame&#10;&#10;Super frame is me attempting to demonstrate crossover and stand out areas between the GC Content and ORF Locations. It's a bit weird, and I don't know if it's even useful. I should blog about it. Im doing it anyway, and we'll see where that leads us. Horay." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1674,16 +1685,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/list.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-1.7103659">
-          <caret line="9" column="0" selection-start-line="9" selection-start-column="0" selection-end-line="10" selection-end-column="50" />
-          <folding>
-            <element signature="n#style#0;n#div#0;n#td#0;n#tr#2;n#td#0;n#table#0;n#div#1;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/static/css/core.css">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.47175142">
@@ -1775,10 +1776,26 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/static/js/orf-chart.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="15" column="5" selection-start-line="15" selection-start-column="5" selection-end-line="15" selection-end-column="5" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/static/js/superframe-chart.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="2" column="24" selection-start-line="2" selection-start-column="24" selection-end-line="2" selection-end-column="24" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/templates/toolkit.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-8.692307">
-          <caret line="136" column="31" selection-start-line="136" selection-start-column="31" selection-end-line="136" selection-end-column="31" />
+        <state vertical-scroll-proportion="-3.4615386">
+          <caret line="110" column="75" selection-start-line="110" selection-start-column="75" selection-end-line="110" selection-end-column="75" />
           <folding>
             <element signature="n#style#0;n#canvas#0;n#div#0;n#div#0;n#td#0;n#tr#0;n#table#0;n#div#1;n#div#2;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#canvas#0;n#div#1;n#div#0;n#td#0;n#tr#0;n#table#0;n#div#1;n#div#2;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
@@ -1791,19 +1808,13 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/static/js/orf-chart.js">
+    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/list.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="15" column="5" selection-start-line="15" selection-start-column="5" selection-end-line="15" selection-end-column="5" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/static/js/superframe-chart.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.7005494">
-          <caret line="18" column="40" selection-start-line="18" selection-start-column="40" selection-end-line="18" selection-end-column="40" />
-          <folding />
+        <state vertical-scroll-proportion="0.80473375">
+          <caret line="48" column="46" selection-start-line="48" selection-start-column="46" selection-end-line="48" selection-end-column="46" />
+          <folding>
+            <element signature="n#style#0;n#div#0;n#td#0;n#tr#2;n#td#0;n#table#0;n#div#1;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
