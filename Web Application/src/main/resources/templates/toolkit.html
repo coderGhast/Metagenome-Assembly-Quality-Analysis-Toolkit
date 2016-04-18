@@ -15,39 +15,108 @@
             th:src="@{/js/orf-chart.js}"></script>
     <script src="/js/utilities.js"
             th:src="@{/js/utilities.js}"></script>
+    <script src="http://code.jquery.com/jquery-1.7.2.min.js"></script>
 </head>
-
 <body>
+<script th:inline="javascript">
+/* Code for tabs accreditted to http://red-team-design.com/css3-jquery-folder-tabs/ */
+$(document).ready(function() {
+    $("#tabscontent").find("[id^='tab']").hide(); // Hide all content
+    $("#tabs li:first").attr("id","current"); // Activate the first tab
+    $("#tabscontent #tab1").fadeIn(); // Show first tab's content
+
+    $('#tabs a').click(function(e) {
+        e.preventDefault();
+        if ($(this).closest("li").attr("id") == "current"){ //detection for current tab
+         return;
+        }
+        else{
+          $("#tabscontent").find("[id^='tab']").hide(); // Hide all content
+          $("#tabs li").attr("id",""); //Reset id's
+          $(this).parent().attr("id","current"); // Activate this
+          $('#' + $(this).attr('name')).fadeIn(); // Show content for the current tab
+        }
+    });
+});
+</script>
+
 <div th:replace="fragments/header :: header"></div>
 <div class="page">
     <div id="content">
-        <div><p><a th:href="@{/}" >Submit other data.</a></p></div>
-        <div><p><a th:href="@{/list}" method="POST">Back to contiguous reads list.</a></p></div>
-        <div th:inline="text" >
-            <h2>
-                [[${contiguousread.contigInformation}]]
-            </h2>
+        <div>
             <p>
+                <a th:href="@{/}" >Submit other data.</a> | <a th:href="@{/list}" method="POST">Back to contiguous reads list.</a>
+            </p>
+        </div>
+        <div th:inline="text" >
+            <p>
+                <h3>
+                    [[${contiguousread.contigInformation}]]
+                </h3>
                 Contig Length: [[${contiguousread.contigLength}]]
             </p>
         </div>
-        <div id="gccontentchart"></div>
 
-        <div id="orfchartcontainer">
-            <h2>Open Reading Frame Locations</h2>
-            <p>Click on any of the below Open Reading Frame (ORF) locations to view more information.</p>
-            <p>+1 <canvas id="orfcanvas-frame1" width="500" height="45" style="border:1px solid #000000;" ></canvas> +1</p>
-            <p>+2 <canvas id="orfcanvas-frame2" width="500" height="45" style="border:1px solid #000000;" ></canvas> +2</p>
-            <p>+3 <canvas id="orfcanvas-frame3" width="500" height="45" style="border:1px solid #000000;" ></canvas> +3</p>
-            <br/>
-            <p>-1 <canvas id="orfcanvas-frame4" width="500" height="45" style="border:1px solid #000000;" ></canvas> -1</p>
-            <p>-2 <canvas id="orfcanvas-frame5" width="500" height="45" style="border:1px solid #000000;" ></canvas> -2</p>
-            <p>-3 <canvas id="orfcanvas-frame6" width="500" height="45" style="border:1px solid #000000;" ></canvas> -3</p>
+        <ul id="tabs">
+            <li><a href="#" name="tab1">GC Content</a></li>
+            <li><a href="#" name="tab2">ORF Locations</a></li>
+            <li><a href="#" name="tab3">Superframe</a></li>
+        </ul>
+
+        <div id="tabscontent">
+            <div id="tab1"><div id="gccontentchart"></div></div>
+            <div id="tab2">
+                <p>
+                    <h3>Open Reading Frame Locations</h3>
+                    Click on any of the below Open Reading Frame (ORF) locations to view more information.
+                </p>
+                <table id="orftable">
+                    <tr>
+                        <td id="orftablechart">
+                            <div id="orfchartcontainer">
+                                <div>+1 <canvas id="orfcanvas-frame1" width="500" height="20" style="border:1px solid #000000;" ></canvas> +1</div>
+                                <div>+2 <canvas id="orfcanvas-frame2" width="500" height="20" style="border:1px solid #000000;" ></canvas> +2</div>
+                                <div>+3 <canvas id="orfcanvas-frame3" width="500" height="20" style="border:1px solid #000000;" ></canvas> +3</div>
+                                <br/>
+                                <div>-1 <canvas id="orfcanvas-frame4" width="500" height="20" style="border:1px solid #000000;" ></canvas> -1</div>
+                                <div>-2 <canvas id="orfcanvas-frame5" width="500" height="20" style="border:1px solid #000000;" ></canvas> -2</div>
+                                <div>-3 <canvas id="orfcanvas-frame6" width="500" height="20" style="border:1px solid #000000;" ></canvas> -3</div>
+                            </div>
+                            <div id="orfinfobox"></div>
+                            <div id="orfcharactersbox"></div>
+                        </td>
+                        <td id="orftablelist">
+                            <table class="orflist">
+                                <tbody>
+                                <td>
+                                    <tr><td>Frame</td><td>Start</td><td>Stop</td><td>Length</td></tr>
+                                    <tr th:each="currentorf,iterationInfo : ${orfResult}" >
+                                        <a href="#">
+                                            <div th:switch="${currentorf.frameIndicator}">
+                                                <td th:case="0">+1</td>
+                                                <td th:case="1">+2</td>
+                                                <td th:case="2">+3</td>
+                                                <td th:case="3">-1</td>
+                                                <td th:case="4">-2</td>
+                                                <td th:case="5">-3</td>
+                                            </div>
+                                            <td th:text="${currentorf.orfStartIndex}"></td>
+                                            <td th:text="${currentorf.orfStopIndex}"></td>
+                                            <td th:text="${currentorf.orfLength}"></td>
+                                            <td><input type="submit" value="View" th:id="${iterationInfo.index}" onClick="vieworf(this.id);" /></td>
+                                        </a>
+                                    </tr>
+                                </td>
+                                </tbody>
+                            </table>
+                        </td>
+                    </tr>
+                </table>
+            <div id="tab3">...</div>
         </div>
-        <div id="orfinfobox"></div>
-        <div id="orfcharactersbox"></div>
     </div>
-    <div th:replace="fragments/footer :: footer"></div>
+</div>
+<div th:replace="fragments/footer :: footer"></div>
 </div>
 
 <script th:inline="javascript">

@@ -2,10 +2,10 @@ var canvasList = new Array(6);
 var contextList = new Array(0);
 
 var orfDisplayWidth;
-var orfDisplayHeight = 40;
-var framePos = 10;
+var orfDisplayHeight = 20;
+var framePos = 5;
 var framePosMofidier = 50;
-var canvasWidth = 650;
+var canvasWidth = 500;
 var highlightedIndex = -1;
 
 function paintFrames(){

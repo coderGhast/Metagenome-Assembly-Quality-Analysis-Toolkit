@@ -6,7 +6,7 @@ package toolkit.domain;
 public class UserParameters {
     private String _userContent = "";
     private String _fileName = "";
-    private int _contigLengthThreshold = 0;
+    private int _contigLengthThreshold = 1000;
 
     public String getUserContent(){ return _userContent; }
 
