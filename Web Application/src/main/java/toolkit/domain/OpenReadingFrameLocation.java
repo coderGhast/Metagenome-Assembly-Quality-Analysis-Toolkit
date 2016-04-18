@@ -3,7 +3,7 @@ package toolkit.domain;
 /**
  * Created by James Euesden on 11-Mar-16.
  */
-public class OpenReadingFrameLocation {
+public class OpenReadingFrameLocation implements Comparable<OpenReadingFrameLocation>{
     private String _orfCharacters;
     private int _orfStartIndex;
     private int _orfStopIndex;
@@ -19,6 +19,17 @@ public class OpenReadingFrameLocation {
             _orfLength = _orfStartIndex - _orfStopIndex;
         } else {
             _orfLength = _orfStopIndex - _orfStartIndex;
+        }
+    }
+
+    @Override
+    public int compareTo(OpenReadingFrameLocation otherOrfLoc) {
+        if(otherOrfLoc.getOrfLength() > this.getOrfLength()){
+            return 1;
+        } else if (otherOrfLoc.getOrfLength() < this.getOrfLength()){
+            return -1;
+        } else {
+            return 0;
         }
     }
 

@@ -11,7 +11,6 @@ public class ContiguousRead {
     private int _gcWindowSize = 300;
     private int _orfLengthThreshold = 100;
 
-
     public String getContigContext() {
         return _contigContext;
     }

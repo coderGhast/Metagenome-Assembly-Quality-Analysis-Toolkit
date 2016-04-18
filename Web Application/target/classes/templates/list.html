@@ -9,6 +9,12 @@
           rel="stylesheet" media="screen" />
     <script src="../js/utilities.js"
             th:src="@{/js/utilities.js}"></script>
+
+    <script th:inline="javascript">
+        /*<![CDATA[*/
+            var contigListSize = [[${contiglist.size()}]];
+        /*]]>*/
+    </script>
 </head>
 
 <body>
@@ -26,7 +32,10 @@
                 <td>
                     <tr>
                         <th>
-                            <h3>Contiguous reads from your submission</h3>
+                            <h3>Contiguous reads from your submission:
+                                <div th:inline="text" id="contigcount" > [[${contiglist.size()}]], discarded: </div>
+                                <div th:inline="text" id="discardedcontigcount" >[[${discardedcontigcount}]]</div>
+                            </h3>
                         </th>
                     </tr>
                     <tr th:each="currentcontig,iterationInfo : ${contiglist}">
@@ -40,11 +49,6 @@
                         </tr>
                         <tr>
                             <td class="inspectbutton">
-                                <script th:inline="javascript">
-                                    /*<![CDATA[*/
-                                        var contigListSize = [[${contiglist.size()}]];
-                                    /*]]>*/
-                                </script>
                                 <input th:id="${iterationInfo.index}" type="button" value="Inspect" onClick="inspectclicked(this.id);" />
                                 <tr>
                                     <td>

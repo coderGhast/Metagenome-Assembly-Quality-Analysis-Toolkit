@@ -10,7 +10,7 @@ public class ContigResult {
     private int _discardedContigCount = 0;
 
     public ContigResult(){
-        _contigList = new ArrayList<ContiguousRead>();
+        _contigList = new ArrayList();
     }
 
     public void setContigList(ArrayList<ContiguousRead> contigList){

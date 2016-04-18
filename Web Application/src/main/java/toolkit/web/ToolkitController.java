@@ -7,6 +7,7 @@ import toolkit.domain.*;
 import toolkit.utilities.GraphDataBuilder;
 
 import java.util.ArrayList;
+import java.util.Collections;
 
 /**
  * Created by James Euesden on 01/03/2016.
@@ -47,6 +48,7 @@ public class ToolkitController {
 
         model.addAttribute("contiguousread", contig);
         model.addAttribute("gcResult", GraphDataBuilder.getGcChartData(result.getGcResults().get(0), contig.getAwayFromAverageThreshold()));
+        Collections.sort(result.getOrfResults().get(0).getPotentialOrfLocations());
         model.addAttribute("orfResult", result.getOrfResults().get(0).getPotentialOrfLocations());
         return "toolkit";
     }
