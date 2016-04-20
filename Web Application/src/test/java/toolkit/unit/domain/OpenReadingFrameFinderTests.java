@@ -56,9 +56,9 @@ public class OpenReadingFrameFinderTests {
         testCaseFour.add(new OpenReadingFrameLocation("ATGGCGCCCGTAATGGACGGCTAG", 2, 26, 2));
 
         ArrayList<OpenReadingFrameLocation> testCaseFive = new ArrayList<>();
-        testCaseFive.add(new OpenReadingFrameLocation("ATGGCGATGGCGATGGCGTAATTTTAG", 15, 42, 0));
+        testCaseFive.add(new OpenReadingFrameLocation("ATGGCGATGGCGATGGCGTAA", 15, 36, 0));
         testCaseFive.add(new OpenReadingFrameLocation("ATGATAGCGTGA", 45, 57, 0));
-        testCaseFive.add(new OpenReadingFrameLocation("ATGATGGCGATCTAGTGACGCTAA", 60, 84, 0));
+        testCaseFive.add(new OpenReadingFrameLocation("ATGATGGCGATCTAG", 60, 75, 0));
 
         ArrayList<OpenReadingFrameLocation> testCaseSix = new ArrayList<>();
         testCaseSix.add(new OpenReadingFrameLocation("ATGGCATGA", 0, 9, 0));

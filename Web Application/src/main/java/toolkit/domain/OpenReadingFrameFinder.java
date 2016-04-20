@@ -83,14 +83,21 @@ public class OpenReadingFrameFinder {
             }
 
             // Remove every Start Codon that comes after the current Start Codon but before the next Stop Codon
-            for(int i = 0; i < startCodons.size(); i++){
-                if(startCodons.size() > 1){
-                    Codon nextCodon = startCodons.get(1);
-                    if(nextCodon.getContigStartIndex() < stopCodons.get(0).getContigStartIndex()){
-                        startCodons.remove(nextCodon);
+            if(stopCodons.size() > 0){
+                for(int i = 0; i < startCodons.size(); i++){
+                    if(startCodons.size() > 1){
+                        Codon nextCodon = startCodons.get(1);
+                        if(nextCodon.getContigStartIndex() < stopCodons.get(0).getContigStartIndex()){
+                            startCodons.remove(nextCodon);
+                        }
                     }
                 }
             }
+
+
+            /* This logic is not needed. After receiving feedback from Amanda, I found that the first stop Codon IS the
+                last stop Codon, and so that's all we need. It's sad as all this logic together was pretty neat, so I'm
+                leaving it here for now as an interesting thing, but in reality it's completely useless.
 
             // If there is more than one Start Codon left, we need to remove any Stop Codons between the current Start
             // Codon and the last Stop Codon before the next Start Codon
@@ -110,25 +117,19 @@ public class OpenReadingFrameFinder {
                     }
                 }
             }
+            */
 
             // If at the end of all of this there is still an ORF to be made, construct it, then remove the components.
             if(startCodons.size() > 0 && stopCodons.size() > 0){
                 // Since we're sweeping through the lists in passes, make sure the Start and Stop Codons are somewhat aligned
                 if(startCodons.get(0).getContigStartIndex() < stopCodons.get(0).getContigStartIndex()){
-                    // If there is only one Start Codon left, we only need to use the last Stop Codon. Removing the final
-                    // Start Codon will end this loop even if we leave all Stop Codons in the list.
-                    OpenReadingFrameLocation newLocation;
-                    if(startCodons.size() == 1){
-                        newLocation = createCompletedOrf(contig, startCodons.get(0), stopCodons.get(stopCodons.size()-1),
-                                frameNumberModifier, frameIndicator);
-
-                    } else {
-                        newLocation = createCompletedOrf(contig, startCodons.get(0), stopCodons.get(0), frameNumberModifier,
+                    // We should now have the first Start Codon and the first Stop Codon to construct a full
+                    // ORF and being the cycle again
+                    OpenReadingFrameLocation newLocation = createCompletedOrf(contig, startCodons.get(0), stopCodons.get(0), frameNumberModifier,
                                 frameIndicator);
-                        stopCodons.remove(0);
-                    }
-                    result.addPotentialOrfLocationToResult(newLocation);
+                    stopCodons.remove(0);
                     startCodons.remove(0);
+                    result.addPotentialOrfLocationToResult(newLocation);
                 }
             }
         }
