@@ -1,7 +1,7 @@
 var superframecanvas;
 var superframecontext;
 var superframeheight = 80;
-var superframewidth = 700;
+var superframewidth = 900;
 
 function drawWindowLine(startX, endX, startY, endY){
     superframecontext.fillStyle="#000000";

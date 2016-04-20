@@ -1,5 +1,13 @@
 
 function drawGcChart(){
+    for(var i=0; i < windownums.length; i++){
+        if(i < windownums.length - 1){
+            windownums[i] = ((windownums[i] - 1) * 300) + " to " + (windownums[i] * windowSize);
+        } else {
+            windownums[i] = ((windownums[i] - 1) * 300) + " to " + contigLength;
+        }
+    }
+
     var dataForm1 = {
       x: windownums,
       y: windowdata,
@@ -24,13 +32,13 @@ function drawGcChart(){
     var layout = {
       title: gcContentTitle,
       xaxis: {
-        title: 'Window Number',
+        title: 'Character area',
         titlefont: {
-          size: 16,
+          size: 11,
           color: 'rgb(105, 105, 105)'
         },
         tickfont: {
-          size: 14,
+          size: 11,
           color: 'rgb(105, 105, 105)'
         }
       },

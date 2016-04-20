@@ -32,13 +32,13 @@ function drawGcChart(){
     var layout = {
       title: gcContentTitle,
       xaxis: {
-        title: 'Window Number',
+        title: 'Character area',
         titlefont: {
-          size: 16,
+          size: 11,
           color: 'rgb(105, 105, 105)'
         },
         tickfont: {
-          size: 14,
+          size: 11,
           color: 'rgb(105, 105, 105)'
         }
       },

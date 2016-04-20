@@ -114,6 +114,18 @@
                 </table>
             </div>
             <div id="tab3">
+                <p>'Superframe' is a tool for viewing the GC Content percentage windows aligned with the ORF Locations, where
+                    all 6 frames are overlaid.<br />
+                    Notes about the display:
+                    <ul>
+                        <li>The black lines separating areas of the chart below represent the borders between GC Content windows.</li>
+                        <li>The red segments are GC Content windows where the percentage was above or below the mean by your set standard deviation threshold</li>
+                        <li>The blue segments are the overlaid ORF Locations.</li>
+                        <li>Where there are red segments not opposite blue segments, it may be considered that there is an area to investigate where the assembler
+                        may have assembled the reads in such a way as to create a chimera, shown with varying GC Content percentage window differences and no ORF Location
+                        to potentially explain it as a gene encoding region.</li>
+                    </ul>
+                </p>
                 <div id="superframecontainer">
                     <div th:inline="text">0
                         <canvas id="superframecanvas" width="700" height="80" style="border:1px solid #000000;" ></canvas>
