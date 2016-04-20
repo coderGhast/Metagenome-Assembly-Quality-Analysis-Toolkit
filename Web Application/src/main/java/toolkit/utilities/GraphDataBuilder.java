@@ -16,7 +16,7 @@ public class GraphDataBuilder {
         return new OpenReadingFrameViewData();
     }
 
-    public static GcResultViewData getGcChartData(GcResult result, double awayFromAverageThreshold){
+    public static GcResultViewData getGcChartData(GcResult result, double awayFromMeanThreshold){
         GcResultViewData gcResultViewData = new GcResultViewData();
         gcResultViewData.gcPercentages =  result.getGCContentPercentages();
 
@@ -29,17 +29,17 @@ public class GraphDataBuilder {
         gcResultViewData.gcWindows = gcWindowNumbers;
         gcResultViewData.gcAverage = result.mean();
         gcResultViewData.gcBarColours = assignBarColours(gcResultViewData.gcPercentages,
-                gcResultViewData.gcAverage, awayFromAverageThreshold);
+                gcResultViewData.gcAverage, awayFromMeanThreshold);
         gcResultViewData.gcMeanForAllWindows = gcMeanForAllWindows;
 
         return gcResultViewData;
     }
 
     // Set the desired bar colours for the GC Content % chart based on if the content % is above or below the set threshold
-    private static ArrayList<String> assignBarColours(ArrayList<Double> gcContentPercentages, double mean, double awayFromAverageThreshold){
+    private static ArrayList<String> assignBarColours(ArrayList<Double> gcContentPercentages, double mean, double awayFromMeanThreshold){
         double threshold = StandardDeviationCalculator.calculateStandardDeviation(gcContentPercentages, mean);
         // Multiply the threshold by the amount of times the user wants the standard deviation away from the mean.
-        threshold = threshold * awayFromAverageThreshold;
+        threshold = threshold * awayFromMeanThreshold;
         ArrayList<String> barColours = new ArrayList<String>();
         for(Double currentWindowPercentage : gcContentPercentages){
             if(currentWindowPercentage > (mean + threshold) ||

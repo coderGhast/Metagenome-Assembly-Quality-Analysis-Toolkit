@@ -4,10 +4,25 @@
     <bookmark url="file://$PROJECT_DIR$/src/test/java/toolkit/unit/domain/GcResultTests.java" line="74" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2d0706c2-c12e-40d6-9032-19d66651f617" name="Default" comment="">
+    <list default="true" id="2d0706c2-c12e-40d6-9032-19d66651f617" name="Default" comment="Removed unnecessary ORF code for stop Codons based on feedback&#10;&#10;Feedback from Amanda made me realize that the first Stop Codon is the only stop Codon and I'd made a wrong assumption. Cleaned out the code that looked for all the other Stop Codons and corrected it and my tests. Seems alright now, and matches NCBI better, but is also a little sad as that code was nice, even if wrong hah.">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/static/js/list.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/toolkit/domain/ContiguousRead.class" afterPath="$PROJECT_DIR$/target/classes/toolkit/domain/ContiguousRead.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/toolkit/domain/OpenReadingFrameFinder.class" afterPath="$PROJECT_DIR$/target/classes/toolkit/domain/OpenReadingFrameFinder.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/toolkit/utilities/GraphDataBuilder.class" afterPath="$PROJECT_DIR$/target/classes/toolkit/utilities/GraphDataBuilder.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/toolkit/web/ToolkitController.class" afterPath="$PROJECT_DIR$/target/classes/toolkit/web/ToolkitController.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/test-classes/toolkit/unit/domain/OpenReadingFrameFinderTests.class" afterPath="$PROJECT_DIR$/target/test-classes/toolkit/unit/domain/OpenReadingFrameFinderTests.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/toolkit/domain/OpenReadingFrameFinder.java" afterPath="$PROJECT_DIR$/src/main/java/toolkit/domain/OpenReadingFrameFinder.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/toolkit/unit/domain/OpenReadingFrameFinderTests.java" afterPath="$PROJECT_DIR$/src/test/java/toolkit/unit/domain/OpenReadingFrameFinderTests.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/toolkit/domain/ContiguousRead.java" afterPath="$PROJECT_DIR$/src/main/java/toolkit/domain/ContiguousRead.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/toolkit/utilities/GraphDataBuilder.java" afterPath="$PROJECT_DIR$/src/main/java/toolkit/utilities/GraphDataBuilder.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/toolkit/web/ToolkitController.java" afterPath="$PROJECT_DIR$/src/main/java/toolkit/web/ToolkitController.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/static/css/core.css" afterPath="$PROJECT_DIR$/src/main/resources/static/css/core.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/templates/fragments/qualityparameters.html" afterPath="$PROJECT_DIR$/src/main/resources/templates/fragments/qualityparameters.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/templates/list.html" afterPath="$PROJECT_DIR$/src/main/resources/templates/list.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/templates/toolkit.html" afterPath="$PROJECT_DIR$/src/main/resources/templates/toolkit.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/static/css/core.css" afterPath="$PROJECT_DIR$/target/classes/static/css/core.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/templates/fragments/qualityparameters.html" afterPath="$PROJECT_DIR$/target/classes/templates/fragments/qualityparameters.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/templates/list.html" afterPath="$PROJECT_DIR$/target/classes/templates/list.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/templates/toolkit.html" afterPath="$PROJECT_DIR$/target/classes/templates/toolkit.html" />
     </list>
     <ignored path="MetagenomeQualityToolkit.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -32,11 +47,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="toolkit.html" pinned="false" current-in-tab="false">
+      <file leaf-file-name="toolkit.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/resources/templates/toolkit.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.115384616">
-              <caret line="44" column="62" selection-start-line="44" selection-start-column="62" selection-end-line="44" selection-end-column="62" />
+            <state vertical-scroll-proportion="1.683432">
+              <caret line="53" column="84" selection-start-line="53" selection-start-column="84" selection-end-line="53" selection-end-column="84" />
               <folding>
                 <element signature="n#style#0;n#canvas#0;n#div#0;n#div#0;n#td#0;n#tr#0;n#table#0;n#div#1;n#div#2;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#canvas#0;n#div#1;n#div#0;n#td#0;n#tr#0;n#table#0;n#div#1;n#div#2;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
@@ -50,31 +65,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="superframe-chart.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/resources/static/js/superframe-chart.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="14" column="40" selection-start-line="14" selection-start-column="40" selection-end-line="14" selection-end-column="40" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="core.css" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/resources/static/css/core.css">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="78" column="17" selection-start-line="78" selection-start-column="17" selection-end-line="78" selection-end-column="17" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="utilities.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/resources/static/js/utilities.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="8" column="61" selection-start-line="8" selection-start-column="54" selection-end-line="8" selection-end-column="61" />
+              <caret line="108" column="13" selection-start-line="108" selection-start-column="13" selection-end-line="108" selection-end-column="13" />
               <folding />
             </state>
           </provider>
@@ -85,19 +80,6 @@
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
               <caret line="9" column="3" selection-start-line="9" selection-start-column="3" selection-end-line="9" selection-end-column="3" />
-              <folding>
-                <element signature="e#332#333#0" expanded="true" />
-                <element signature="e#412#413#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="OpenReadingFrameFinder.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/java/toolkit/domain/OpenReadingFrameFinder.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-2.0150151">
-              <caret line="93" column="17" selection-start-line="93" selection-start-column="17" selection-end-line="93" selection-end-column="17" />
               <folding />
             </state>
           </provider>
@@ -125,7 +107,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/main/java/toolkit/utilities/StandardDeviationCalculator.java" />
         <option value="$PROJECT_DIR$/src/main/resources/application.properties" />
         <option value="C:/Program Files/Java/jdk1.8.0_60/jre/lib/rt.jar!/sun/reflect/DelegatingMethodAccessorImpl.class" />
         <option value="$PROJECT_DIR$/src/main/java/toolkit/domain/Codon.java" />
@@ -147,7 +128,6 @@
         <option value="$PROJECT_DIR$/src/test/java/toolkit/unit/web/ToolkitControllerTests.java" />
         <option value="$PROJECT_DIR$/src/main/resources/static/js/mainScript.js" />
         <option value="$PROJECT_DIR$/src/main/java/toolkit/domain/QualityToolkit.java" />
-        <option value="$PROJECT_DIR$/src/main/java/toolkit/utilities/GraphDataBuilder.java" />
         <option value="$PROJECT_DIR$/src/main/resources/static/js/gc-chart.js" />
         <option value="$PROJECT_DIR$/src/main/java/toolkit/domain/OpenReadingFrameViewData.java" />
         <option value="$PROJECT_DIR$/src/test/java/toolkit/unit/utilities/StandardDeviationCalculatorTests.java" />
@@ -159,23 +139,25 @@
         <option value="$PROJECT_DIR$/src/main/java/toolkit/domain/UserParameters.java" />
         <option value="$PROJECT_DIR$/src/test/java/toolkit/integration/domain/FastaReaderTests.java" />
         <option value="$PROJECT_DIR$/src/main/java/toolkit/domain/ContigResult.java" />
-        <option value="$PROJECT_DIR$/src/main/java/toolkit/web/ToolkitController.java" />
         <option value="$PROJECT_DIR$/src/main/java/toolkit/domain/OpenReadingFrameLocation.java" />
         <option value="$PROJECT_DIR$/src/test/java/toolkit/unit/domain/ContiguousReadTests.java" />
-        <option value="$PROJECT_DIR$/src/main/java/toolkit/domain/ContiguousRead.java" />
-        <option value="$PROJECT_DIR$/src/main/resources/templates/fragments/qualityparameters.html" />
         <option value="$PROJECT_DIR$/src/main/resources/static/js/utilities.js" />
         <option value="$PROJECT_DIR$/src/main/resources/static/js/toolkit.js" />
         <option value="$PROJECT_DIR$/src/main/resources/static/js/orf-chart.js" />
-        <option value="$PROJECT_DIR$/src/main/resources/templates/toolkit.html" />
-        <option value="$PROJECT_DIR$/src/main/resources/templates/list.html" />
         <option value="$PROJECT_DIR$/src/main/resources/static/js/superframe-chart.js" />
         <option value="$PROJECT_DIR$/src/main/resources/templates/fragments/sequencepastebox.html" />
-        <option value="$PROJECT_DIR$/src/main/resources/static/css/core.css" />
         <option value="$PROJECT_DIR$/src/main/resources/templates/welcome.html" />
         <option value="$PROJECT_DIR$/src/main/java/toolkit/domain/FastaReader.java" />
         <option value="$PROJECT_DIR$/src/test/java/toolkit/unit/domain/OpenReadingFrameFinderTests.java" />
         <option value="$PROJECT_DIR$/src/main/java/toolkit/domain/OpenReadingFrameFinder.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/static/js/list.js" />
+        <option value="$PROJECT_DIR$/src/main/resources/templates/list.html" />
+        <option value="$PROJECT_DIR$/src/main/resources/static/css/core.css" />
+        <option value="$PROJECT_DIR$/src/main/java/toolkit/domain/ContiguousRead.java" />
+        <option value="$PROJECT_DIR$/src/main/java/toolkit/utilities/GraphDataBuilder.java" />
+        <option value="$PROJECT_DIR$/src/main/java/toolkit/web/ToolkitController.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/templates/fragments/qualityparameters.html" />
+        <option value="$PROJECT_DIR$/src/main/resources/templates/toolkit.html" />
       </list>
     </option>
   </component>
@@ -1128,8 +1110,8 @@
     </list>
     <recent_temporary>
       <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="JUnit.All in Web Application" />
-        <item index="1" class="java.lang.String" itemvalue="Application.Main" />
+        <item index="0" class="java.lang.String" itemvalue="Application.Main" />
+        <item index="1" class="java.lang.String" itemvalue="JUnit.All in Web Application" />
         <item index="2" class="java.lang.String" itemvalue="JUnit.OpenReadingFrameFinderTests" />
         <item index="3" class="java.lang.String" itemvalue="JUnit.ContiguousReadTests" />
         <item index="4" class="java.lang.String" itemvalue="JUnit.ContiguousReadTests.WhenTheContextOfTheContigIsSetThePercentageOfNShouldBeCalculated" />
@@ -1273,11 +1255,20 @@
       <option name="project" value="LOCAL" />
       <updated>1461018538516</updated>
     </task>
-    <option name="localTasksCounter" value="22" />
+    <task id="LOCAL-00022" summary="Removed unnecessary ORF code for stop Codons based on feedback&#10;&#10;Feedback from Amanda made me realize that the first Stop Codon is the only stop Codon and I'd made a wrong assumption. Cleaned out the code that looked for all the other Stop Codons and corrected it and my tests. Seems alright now, and matches NCBI better, but is also a little sad as that code was nice, even if wrong hah.">
+      <created>1461149522155</created>
+      <option name="number" value="00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1461149522155</updated>
+    </task>
+    <option name="localTasksCounter" value="23" />
     <servers />
   </component>
   <component name="TestHistory">
     <history-entry file="All_in_Web_Application - 2016.04.20 at 11h 49m 54s.xml">
+      <configuration name="All in Web Application" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="All_in_Web_Application - 2016.04.20 at 13h 15m 02s.xml">
       <configuration name="All in Web Application" configurationId="JUnit" />
     </history-entry>
     <history-entry file="ContiguousReadTests - 2016.04.18 at 19h 42m 29s.xml">
@@ -1285,9 +1276,6 @@
     </history-entry>
     <history-entry file="ContiguousReadTests - 2016.04.18 at 19h 46m 39s.xml">
       <configuration name="ContiguousReadTests" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="ContiguousReadTests_WhenTheContextOfTheContigIsSetThePercentageOfNShouldBeCalculated - 2016.04.18 at 19h 39m 50s.xml">
-      <configuration name="ContiguousReadTests.WhenTheContextOfTheContigIsSetThePercentageOfNShouldBeCalculated" configurationId="JUnit" />
     </history-entry>
     <history-entry file="ContiguousReadTests_WhenTheContextOfTheContigIsSetThePercentageOfNShouldBeCalculated - 2016.04.18 at 19h 43m 32s.xml">
       <configuration name="ContiguousReadTests.WhenTheContextOfTheContigIsSetThePercentageOfNShouldBeCalculated" configurationId="JUnit" />
@@ -1319,13 +1307,13 @@
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.34700856" sideWeight="0.50832075" order="10" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32980332" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2769231" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32991454" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.382906" sideWeight="0.49167928" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32991454" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.382906" sideWeight="0.49167928" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Coverage" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24962178" sideWeight="0.5096953" order="0" side_tool="true" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32569557" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.18532526" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32820514" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.18532526" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.6034188" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24962178" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24962178" sideWeight="0.4903047" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -1370,7 +1358,8 @@
     <MESSAGE value="Misc css/word changes&#10;&#10;Very tiny word and css changes." />
     <MESSAGE value="Committing my test file, GC window lines on superframe and misc changes to welcome page&#10;&#10;Test file for seeing the expected results from each of the inspection results with known data (completely artificial, like TTTAAATTTAAA).&#10;Added lines to distinguish between different GC windows in the Super frame. Makes it a little easier to see where there are potentially issues.&#10;Changed welcome page to accommodate the inclusion of the application description later." />
     <MESSAGE value="Blog photo items&#10;&#10;Screenshots for the blog of progress at the time! Committing these as per usual just to have nice back ups of nice things." />
-    <option name="LAST_COMMIT_MESSAGE" value="Blog photo items&#10;&#10;Screenshots for the blog of progress at the time! Committing these as per usual just to have nice back ups of nice things." />
+    <MESSAGE value="Removed unnecessary ORF code for stop Codons based on feedback&#10;&#10;Feedback from Amanda made me realize that the first Stop Codon is the only stop Codon and I'd made a wrong assumption. Cleaned out the code that looked for all the other Stop Codons and corrected it and my tests. Seems alright now, and matches NCBI better, but is also a little sad as that code was nice, even if wrong hah." />
+    <option name="LAST_COMMIT_MESSAGE" value="Removed unnecessary ORF code for stop Codons based on feedback&#10;&#10;Feedback from Amanda made me realize that the first Stop Codon is the only stop Codon and I'd made a wrong assumption. Cleaned out the code that looked for all the other Stop Codons and corrected it and my tests. Seems alright now, and matches NCBI better, but is also a little sad as that code was nice, even if wrong hah." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1383,14 +1372,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/test/java/toolkit/unit/domain/GcResultTests.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.6478343">
-          <caret line="71" column="40" selection-start-line="71" selection-start-column="40" selection-end-line="71" selection-end-column="40" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/toolkit/utilities/StandardDeviationCalculator.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.2881356">
@@ -1669,52 +1650,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/fragments/qualityparameters.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-8.5">
-          <caret line="31" column="103" selection-start-line="31" selection-start-column="103" selection-end-line="31" selection-end-column="103" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/toolkit/domain/ContiguousRead.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.13559322">
-          <caret line="11" column="44" selection-start-line="11" selection-start-column="19" selection-end-line="11" selection-end-column="44" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/static/js/toolkit.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.86440676">
-          <caret line="18" column="3" selection-start-line="18" selection-start-column="3" selection-end-line="18" selection-end-column="3" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/list.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.67160493">
-          <caret line="48" column="46" selection-start-line="48" selection-start-column="46" selection-end-line="48" selection-end-column="46" />
-          <folding>
-            <element signature="n#style#0;n#div#0;n#td#0;n#tr#2;n#td#0;n#table#0;n#div#1;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/static/js/gc-chart.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-1.0510441">
           <caret line="4" column="19" selection-start-line="4" selection-start-column="9" selection-end-line="4" selection-end-column="19" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/toolkit/utilities/GraphDataBuilder.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.6220238">
-          <caret line="48" column="54" selection-start-line="48" selection-start-column="54" selection-end-line="48" selection-end-column="54" />
           <folding />
         </state>
       </provider>
@@ -1735,67 +1674,11 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/toolkit/web/ToolkitController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="1.2351191">
-          <caret line="34" column="26" selection-start-line="34" selection-start-column="26" selection-end-line="34" selection-end-column="26" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/templates/welcome.html">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.5064516">
           <caret line="21" column="14" selection-start-line="21" selection-start-column="14" selection-end-line="21" selection-end-column="14" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/static/js/superframe-chart.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="14" column="40" selection-start-line="14" selection-start-column="40" selection-end-line="14" selection-end-column="40" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/static/js/orf-chart.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.20238096">
-          <caret line="15" column="5" selection-start-line="15" selection-start-column="5" selection-end-line="15" selection-end-column="5" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/static/css/core.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="78" column="17" selection-start-line="78" selection-start-column="17" selection-end-line="78" selection-end-column="17" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/static/js/utilities.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="8" column="61" selection-start-line="8" selection-start-column="54" selection-end-line="8" selection-end-column="61" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/toolkit.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.115384616">
-          <caret line="44" column="62" selection-start-line="44" selection-start-column="62" selection-end-line="44" selection-end-column="62" />
-          <folding>
-            <element signature="n#style#0;n#canvas#0;n#div#0;n#div#0;n#td#0;n#tr#0;n#table#0;n#div#1;n#div#2;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#canvas#0;n#div#1;n#div#0;n#td#0;n#tr#0;n#table#0;n#div#1;n#div#2;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#canvas#0;n#div#2;n#div#0;n#td#0;n#tr#0;n#table#0;n#div#1;n#div#2;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#canvas#0;n#div#3;n#div#0;n#td#0;n#tr#0;n#table#0;n#div#1;n#div#2;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#canvas#0;n#div#4;n#div#0;n#td#0;n#tr#0;n#table#0;n#div#1;n#div#2;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#canvas#0;n#div#5;n#div#0;n#td#0;n#tr#0;n#table#0;n#div#1;n#div#2;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#canvas#0;n#div#0;n#div#0;n#div#2;n#div#2;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1807,22 +1690,129 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/toolkit/Main.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/toolkit/domain/OpenReadingFrameFinder.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="9" column="3" selection-start-line="9" selection-start-column="3" selection-end-line="9" selection-end-column="3" />
+        <state vertical-scroll-proportion="-1.8434066">
+          <caret line="93" column="17" selection-start-line="93" selection-start-column="17" selection-end-line="93" selection-end-column="17" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/static/js/utilities.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-1.2252252">
+          <caret line="18" column="53" selection-start-line="18" selection-start-column="4" selection-end-line="18" selection-end-column="53" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/static/js/toolkit.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.9189189">
+          <caret line="18" column="3" selection-start-line="18" selection-start-column="3" selection-end-line="18" selection-end-column="3" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/static/js/superframe-chart.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.6516517">
+          <caret line="14" column="40" selection-start-line="14" selection-start-column="40" selection-end-line="14" selection-end-column="40" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/static/js/orf-chart.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-2.6036036">
+          <caret line="15" column="5" selection-start-line="15" selection-start-column="5" selection-end-line="15" selection-end-column="5" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/static/js/list.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.25525525">
+          <caret line="5" column="66" selection-start-line="5" selection-start-column="66" selection-end-line="5" selection-end-column="66" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/list.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-4.6538463">
+          <caret line="34" column="137" selection-start-line="34" selection-start-column="134" selection-end-line="34" selection-end-column="137" />
           <folding>
-            <element signature="e#332#333#0" expanded="true" />
-            <element signature="e#412#413#0" expanded="true" />
+            <element signature="n#style#0;n#div#1;n#div#0;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#td#0;n#tr#2;n#td#0;n#table#0;n#div#1;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/toolkit/domain/OpenReadingFrameFinder.java">
+    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/fragments/qualityparameters.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-2.0150151">
-          <caret line="93" column="17" selection-start-line="93" selection-start-column="17" selection-end-line="93" selection-end-column="17" />
+        <state vertical-scroll-proportion="0.732899">
+          <caret line="25" column="100" selection-start-line="25" selection-start-column="100" selection-end-line="25" selection-end-column="100" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/toolkit/utilities/GraphDataBuilder.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.4084084">
+          <caret line="31" column="65" selection-start-line="31" selection-start-column="65" selection-end-line="31" selection-end-column="65" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/toolkit/domain/ContiguousRead.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.3063063">
+          <caret line="47" column="5" selection-start-line="47" selection-start-column="5" selection-end-line="47" selection-end-column="5" />
+          <folding>
+            <element signature="e#1299#1300#0" expanded="true" />
+            <element signature="e#1344#1345#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/toolkit/Main.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="9" column="3" selection-start-line="9" selection-start-column="3" selection-end-line="9" selection-end-column="3" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/static/css/core.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="108" column="13" selection-start-line="108" selection-start-column="13" selection-end-line="108" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/toolkit/web/ToolkitController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.5915916">
+          <caret line="53" column="5" selection-start-line="53" selection-start-column="5" selection-end-line="53" selection-end-column="5" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/toolkit.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="1.683432">
+          <caret line="53" column="84" selection-start-line="53" selection-start-column="84" selection-end-line="53" selection-end-column="84" />
+          <folding>
+            <element signature="n#style#0;n#canvas#0;n#div#0;n#div#0;n#td#0;n#tr#0;n#table#0;n#div#1;n#div#2;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#canvas#0;n#div#1;n#div#0;n#td#0;n#tr#0;n#table#0;n#div#1;n#div#2;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#canvas#0;n#div#2;n#div#0;n#td#0;n#tr#0;n#table#0;n#div#1;n#div#2;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#canvas#0;n#div#3;n#div#0;n#td#0;n#tr#0;n#table#0;n#div#1;n#div#2;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#canvas#0;n#div#4;n#div#0;n#td#0;n#tr#0;n#table#0;n#div#1;n#div#2;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#canvas#0;n#div#5;n#div#0;n#td#0;n#tr#0;n#table#0;n#div#1;n#div#2;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#canvas#0;n#div#0;n#div#0;n#div#2;n#div#2;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

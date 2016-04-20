@@ -9,6 +9,8 @@
           rel="stylesheet" media="screen" />
     <script src="../js/utilities.js"
             th:src="@{/js/utilities.js}"></script>
+    <script src="../js/list.js"
+            th:src="@{/js/list.js}"></script>
 
     <script th:inline="javascript">
         /*<![CDATA[*/
@@ -23,9 +25,26 @@
 <div class="page">
     <div id="content">
         <div>
-            <p>
-                <a th:href="@{/}" >Submit other data.</a>
-            </p>
+                <a th:href="@{/}" >Submit other data.</a> <br />
+                <div onclick="viewinspectionexplanation();" id="explanationindicator">
+                    show inspection explanation >>
+                </div>
+
+            <div id="inspectionexplanation" style="display:none;">
+                <h3>Quality Inspection Information</h3>
+                <p>When looking at the contiguous reads in your input, you may consider the list below and how many contiguous reads have been discarded due to
+                    their length. Likewise, it is worth considering how many contiguous reads have a high percentage of unknown ('N/n') characters, potentially
+                    indicating areas where the assembler struggled to make a good quality genome from your metagenomic data.</p>
+                <p>Once you have chosen a contiguous read to investigate further, click inspect and input your parameter settings
+                    based on what would best suit the contiguous read you are viewing and the results you wish to try and see.</p>
+                <p>The inspection will calculate the GC Content percentage in set window sizes across the data. Set the window size that suits the
+                    contiguous read you are inspecting. You can also set a threshold for displaying when a GC Content percentage window
+                    is above or below the mean percentage of the full contiguous read, defined by standard deviations away.</p>
+                <p>The Open Reading Frame locations within the contiguous read will also be found and displayed. You may
+                    set the minimum length for a location to be displayed to you. Using the GC Content percentages and ORF locations
+                    you may be able to see areas where the GC Content percentage is out of the mean threshold you set, and not explainable
+                    by being part of a gene encoding region highlighted by ORF Locations.</p>
+            </div>
         </div>
         <div>
             <table id="contigslisttable">
@@ -33,8 +52,8 @@
                     <tr>
                         <th>
                             <h3>Contiguous reads from your submission:
-                                <div th:inline="text" id="contigcount" > [[${contiglist.size()}]], discarded: </div>
-                                <div th:inline="text" id="discardedcontigcount" >[[${discardedcontigcount}]]</div>
+                                <div th:inline="text" id="contigcount" > [[${contiglist.size()}]], discarded:
+                                <div th:inline="text" id="discardedcontigcount" >[[${discardedcontigcount}]]</div> due to length threshold.</div>
                             </h3>
                         </th>
                     </tr>
