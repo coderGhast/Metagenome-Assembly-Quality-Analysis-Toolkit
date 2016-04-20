@@ -1179,7 +1179,13 @@
       <option name="project" value="LOCAL" />
       <updated>1461167240325</updated>
     </task>
-    <option name="localTasksCounter" value="27" />
+    <task id="LOCAL-00027" summary="Basic labelling and highlighting of WIndow segments in superframe&#10;&#10;As title says, now highlighting which window the user has clicked on, and providing some of the GC Content data about it. I don't feel like it's useful enough yet, and the application as a whole feels lacking without the support of k-mer frequency analysis, but I'm running out of time and not sure how else I can talk about the GC Content vs ORF aside running artifical chimera data to see if any results come from it when looking at the visuals.">
+      <created>1461169867141</created>
+      <option name="number" value="00027" />
+      <option name="project" value="LOCAL" />
+      <updated>1461169867141</updated>
+    </task>
+    <option name="localTasksCounter" value="28" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -1281,7 +1287,8 @@
     <MESSAGE value="Improved GC Content chart labelling&#10;&#10;Improved the lables on the GC content chart to show 'character to character' rather than window number. Helps to show the user their actual windows so they can find them in their sequence if they wish. Added more description of the GC Content chart." />
     <MESSAGE value="More visual improvements&#10;&#10;More labelling on ORF and Superframe components. Made the GC Content chart a bit bigger" />
     <MESSAGE value="Code for clicking on Superframe window segments&#10;&#10;Put in the JS needed to allow a user to click the window segments in the Superframe viewer. Doesn't display the information yet, just need to write the html format for that and JS to get the relevant information and then make it appear like magic. Horay. Once the labelling of the superframe is done I may be able to move onto other things aside code for a bit." />
-    <option name="LAST_COMMIT_MESSAGE" value="Code for clicking on Superframe window segments&#10;&#10;Put in the JS needed to allow a user to click the window segments in the Superframe viewer. Doesn't display the information yet, just need to write the html format for that and JS to get the relevant information and then make it appear like magic. Horay. Once the labelling of the superframe is done I may be able to move onto other things aside code for a bit." />
+    <MESSAGE value="Basic labelling and highlighting of WIndow segments in superframe&#10;&#10;As title says, now highlighting which window the user has clicked on, and providing some of the GC Content data about it. I don't feel like it's useful enough yet, and the application as a whole feels lacking without the support of k-mer frequency analysis, but I'm running out of time and not sure how else I can talk about the GC Content vs ORF aside running artifical chimera data to see if any results come from it when looking at the visuals." />
+    <option name="LAST_COMMIT_MESSAGE" value="Basic labelling and highlighting of WIndow segments in superframe&#10;&#10;As title says, now highlighting which window the user has clicked on, and providing some of the GC Content data about it. I don't feel like it's useful enough yet, and the application as a whole feels lacking without the support of k-mer frequency analysis, but I'm running out of time and not sure how else I can talk about the GC Content vs ORF aside running artifical chimera data to see if any results come from it when looking at the visuals." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

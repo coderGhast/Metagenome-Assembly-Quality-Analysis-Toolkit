@@ -1,4 +1,4 @@
-
+/* Draw the GC Content chart using Plotly.js */
 function drawGcChart(){
     for(var i=0; i < windownums.length; i++){
         if(i < windownums.length - 1){

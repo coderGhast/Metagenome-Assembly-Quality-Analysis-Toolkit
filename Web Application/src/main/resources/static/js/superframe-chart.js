@@ -3,14 +3,28 @@ var superframecontext;
 var superframeheight = 80;
 var superframewidth = 750;
 
+// Draw a line using the passed parameters. Used for window segment separation.
 function drawWindowLine(startX, endX, startY, endY){
-    superframecontext.fillStyle="#000000";
     superframecontext.beginPath();
     superframecontext.moveTo(startX, startY);
     superframecontext.lineTo(endX, endY);
     superframecontext.stroke();
 }
 
+// Fills a small rectangle at the bottom of a window segment to display the currently highlighted window segment.
+function highlightBox(windowNumber){
+    paintSuperFrame();
+    superframecontext.fillStyle="#145214";
+    superframecontext.fillRect(
+                ((windowNumber * windowSize) / contigLength) * superframewidth,
+                superframeheight - superframeheight / 10,
+                (windowSize / contigLength) * superframewidth,
+                superframeheight / 10);
+
+    superframecontext.stroke();
+}
+
+// Paints the necessary components of the superframe canvas to display ORF and GC Content data.
 function paintSuperFrame(){
     superframecontext.fillStyle="#CCCCCC";
     superframecontext.fillRect(0, 0,superframewidth,superframeheight);
@@ -45,6 +59,7 @@ function paintSuperFrame(){
             (windowSize / contigLength) * superframewidth,
             superframeheight / 2);
 
+        superframecontext.fillStyle="#000000";
         drawWindowLine(
             ((i * windowSize) / contigLength) * superframewidth,
             ((i * windowSize) / contigLength) * superframewidth,
@@ -54,6 +69,7 @@ function paintSuperFrame(){
     superframecontext.stroke();
 }
 
+// Sets up the initial data needed for the superframe canvas
 function setupSuperframeChart(){
 superframecanvas = document.getElementById("superframecanvas");
 
@@ -67,15 +83,26 @@ superframecanvas = document.getElementById("superframecanvas");
     paintSuperFrame();
 }
 
+// Creates HTML code to do into the div for the super frame segment information display.
+function displaysuperframesegment(i){
+    var framesegment = document.getElementById("superframesegment");
+    superframesegment.innerHTML = "<b>Window number:</b> " + i + "<br />" +
+        "<b>Character index:</b> " + windownums[i] + "<br />" +
+        "<b>GC Content Percentage:</b> " + windowdata[i];
+}
+
+// Check which window segement the user has clicked in.
 function findSuperframeWindowClicked(x){
     for(var i = 0; i < windowdata.length; i++){
         if(((i * windowSize) / contigLength) * superframewidth < x &&
             (((i + 1) * windowSize) / contigLength) * superframewidth > x){
-            console.log(i + " x: " + x);
+                displaysuperframesegment(i);
+                highlightBox(i)
         }
     }
 }
 
+// React to a click event from the user on a super frame segment.
 function superFrameClicked(event){
         var eventTarget;
         if (event.srcElement){
