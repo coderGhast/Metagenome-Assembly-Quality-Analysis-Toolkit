@@ -1,5 +1,13 @@
 
 function drawGcChart(){
+    for(var i=0; i < windownums.length; i++){
+        if(i < windownums.length - 1){
+            windownums[i] = ((windownums[i] - 1) * 300) + " to " + (windownums[i] * windowSize);
+        } else {
+            windownums[i] = ((windownums[i] - 1) * 300) + " to " + contigLength;
+        }
+    }
+
     var dataForm1 = {
       x: windownums,
       y: windowdata,

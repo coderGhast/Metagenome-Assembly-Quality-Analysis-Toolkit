@@ -52,13 +52,21 @@
                     <h3>GC Content %</h3>
                     The bars in red indicate where a GC Content window is over or under the mean threshold by
                     [[${contiguousread.awayFromMeanThreshold}]] standard deviations.
+                </p>
+                <p>You may scroll through the bar chart using your mouse, and look closer at areas by clicking and holding your
+                mouse on an area. To return to the originally displayed chart, double click. There are options for zooming and settings
+                available when hovering over the top right of the chart.</p>
+                <p>Note that the last bar may
+                    contain far less characters as the window reaches the end of the contiguous read.
                     <div id="gccontentchart"></div>
                 </p>
             </div>
             <div id="tab2">
                 <p>
                     <h3>Open Reading Frame Locations</h3>
-                    Click on any of the below Open Reading Frame (ORF) locations to view more information.
+                    Click on any of the below Open Reading Frame (ORF) locations to view more information.<br />
+                    Start Codons are displayed in <span style="color:#339933">green</span> while the Stop Codons are displayed in
+                    <span style="color:#e60000">red</span>.
                 </p>
                 <table id="orftable">
                     <tr>

@@ -90,6 +90,7 @@ a{
     display:inline;
     color: #145214;
     font-size:0.8em;
+    text-decoration:underline;
 }
 
 #inspectionexplanation{
