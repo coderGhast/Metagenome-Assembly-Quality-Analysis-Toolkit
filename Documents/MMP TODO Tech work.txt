@@ -1,0 +1,41 @@
+CORE
+6. Information about what the tool does on welcome page
+7. More tests (incl. Test Table)
+8. JavaDoc
+9. REPORT
+
+MAYBE CORE
+1. New display for drastic changing in GC Content % - e.g. Half and Half species contig. Easy to see, but to detect in code?
+2. Dirty k-mer analysis in code, even if not displayed.
+Hosting requirements
+Data upload limit
+
+x -Self-created FASTA files - Completely artifical to test GC / ORF examples, and actual data of 3-5 species mixed together
+	this is to help see if we end up with some results like "Ah, mixed species" or not
+x -Label Superframe (comparisson)
+x -Make SUPER FRAME comparisson for GC and ORF location (use yellow for highlighting).
+x -Sort list of contigs for Length using Comparable and collection.Sort()
+x -ORF Location list down the side of the page
+x -ORF Location information of highlighted ORF
+x -Use Tabs for displaying the GC, ORF and Superframe comparisson.
+x -Loading Button when loading contig inspection
+x -Flip reverse frames
+x -ORF Location labelling - Colour the highlighted one when info displayed
+x -Move JS into JS files with includes
+x -Parameters on List page when clicking 'Inspect', not on submission page
+x -ORF Location fix (Doesn't match 100%s...)
+
+NICE TO HAVE
+Reformat ORF Location context data into tables with <td> rather than paragraphs and spaces. Ensures line is always equal
+Gracefully handle errors
+Submitting files not just pasting
+Validate user input in FASTA box - See guide
+Error page with explanation
+404 page
+'ContigParameters' tie in with CurrentContig - per contig gc size suggestion 
+List of contigs that were skipped in QA due to under length threshold - dont need to make Obj, just
+	 String name + length and display
+Suggest GC Window size to user per contig based on length
+Footer on pages
+Site icon
+

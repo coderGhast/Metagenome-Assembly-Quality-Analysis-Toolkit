@@ -47,9 +47,9 @@ public class ToolkitController {
         QualitySummary result = QualityToolkit.qualityAssess(contig);
 
         model.addAttribute("contiguousread", contig);
-        model.addAttribute("gcResult", GraphDataBuilder.getGcChartData(result.getGcResults().get(0), contig.getAwayFromMeanThreshold()));
-        Collections.sort(result.getOrfResults().get(0).getPotentialOrfLocations());
-        model.addAttribute("orfResult", result.getOrfResults().get(0).getPotentialOrfLocations());
+        model.addAttribute("gcResult", GraphDataBuilder.getGcChartData(result.getGcResults(), contig.getAwayFromMeanThreshold()));
+        Collections.sort(result.getOrfResults().getPotentialOrfLocations());
+        model.addAttribute("orfResult", result.getOrfResults().getPotentialOrfLocations());
         return "toolkit";
     }
 }

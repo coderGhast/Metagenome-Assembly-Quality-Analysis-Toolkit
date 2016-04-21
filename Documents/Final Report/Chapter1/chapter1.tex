@@ -1,0 +1,74 @@
+\chapter{Background \& Objectives}
+
+% This section should discuss your preparation for the project, including background reading, your analysis of the problem and the process or method you have followed to help structure your work.  It is likely that you will reuse part of your outline project % specification, but at this point in the project you should have more to talk about. 
+
+
+
+\section{Background}
+Talk about background stuff here, what did I know about the topic before hand, what didn't I know? How did I prepare for the project - Talking to Sam, talking to Amanda, reading papers on metagenomics, reading papers on quality in genonmics. Show the links to these papers. What was my motivation? Did I find string manipulation and processing interesting, bringing together tools and processes, is genomics interesting? 
+
+\subsection{Metagenomics}
+What is metagenomics? Why is it interesting. How do we get the assemblies and why are they potentially bad? What makes good and bad quality? Chimeras? Talk about this stuff and show you understand the issues and why this project is something useful to have. 
+
+Are there existing system for metagenomics? What about genomics in general? NCBI database and GC/ORF finding tools. k-mer counting as an effective solution and extended task for my project, Jellyfish and BFC with bloom filter. What did I want to achieve? A visual tool for reporting on quality using techniques like comparing GC Content percentage changes and using ORF location finding to see if these areas can be explained or not. Bringing techniques together. Ground work for a tool that can be expanded upon for future ideas.
+
+% What was your background preparation for the project? What similar systems did you assess? What was your motivation and interest in this project? 
+
+\section{Analysis}
+Analysis of the problem - What is it that needed to be done? What tasks were suitable? Making a user interface with some kind of report using charts and texts. Would it be helpful to do a confidence factor, or leave the user to decide? What sort of interface and data would the user be inputting? Is there a solution to the problem that gives a direct answer? Is it worth writing my own software or consuming results from others software?
+
+My analysis helped to decide that I wanted to write my own software. While solutions exist, their APIs were either depreciated or too much to use, and the output I wished to display would be better when I wrote my own software. I wanted the technical challenge of writing my own software, and enabling the application to be maintainable and expanded upon in the future rather than relying on third party support applications in order to process a users input.
+
+The alternative approach is the already mentioned method of just consuming output from other applications. While potentially faster to build an application, the risk of the application becoming defunct if the other applications changed the way they output, removed their API or I needed a different form of data meant that it would potentially be a bad idea in the long run, as I wanted to envision this application as something that could have work carried forward and be built upon with additional techniques. It is for this reason I chose to self-implement the techniques, and through that also build on my domain understanding and develop a full application.
+
+\subsection{Objectives}
+\begin{itemize}
+\item Produce a visual report on a users input assembly data
+\item Inspect components of individual contiguous reads in the assembly data
+\item Include GC Content Percentage in set windows for looking at changes outside of a set threshold that may indicate a chimera
+\item Include Open Reading Frame Locations within the contiguous reads
+\item Include comparissons between the GC Content Percentages where there are areas out of a users set threshold and ORF  Locations, allowing a user to see areas where there may be not be issues if the GC Content was out of the set threshold but within an ORF Location that may explain the difference.
+\item Include k-mer frequency analysis  in set windows for looking at changes outside of a set threshold that may indicate a chimera
+\item Allow the user to request contiguous reads under certain lengths to be ignored, and told how many were removed in this way
+\item Allow the user to select their own sizes of windows for the GC Content Percentages, and allow them to select the minimum length of ORF Locations to ignore any they deem too small for their contiguous read
+\end{itemize}
+
+Include USE CASE DIAGRAM of these things here, and how a user interacts with them.
+
+The list was built up through what would seem possible to be done in the time available, producing an application that had room to grow, for example comparing sections and full contiguous reads with known sequences via BLAST/the NCBI database, while providing useful information to users about their assembly file and the particular contiguous reads within them. The report was decided that while it might not be able to give a definite answer of good or bad quality, it may allow the user to see where there could be issues through highlighting sections of contiguous reads and information about the content of the sequences of them, such as how many characters did the assembly struggle to discern ('n' characters).
+
+After much reading of papers, I decide this list was enough to work on, and additional features would have to be left out. I started working on the list with techniques such as the GC Content percentage in mind as I believed the feature would be a simple technique to include to get me started on the project, and allow me to learn more of the domain as I worked on later features. This included the ORF Location finding later, and I believed would lead to the k-mer frequency analysis feature. I knew that the report was necessary and a core part of the problem. I could see the problem broken down into domain understanding, model data and processing and viewing and reporting, and so I considered these objectives enough to work on for my solution to the topic problem.
+
+% Taking into account the problem and what you learned from the background work, what was your analysis of the problem? How  did your analysis help to decompose the problem into the main tasks that you would undertake? Were there alternative  approaches? Why did you choose one approach compared to the alternatives? 
+
+% There should be a clear statement of the objectives of the work, which you will evaluate at the end of the work. 
+
+%In most cases, the agreed objectives or requirements will be the result of a compromise between what would ideally have been  produced and what was felt to be possible in the time available. A discussion of the process of arriving at the final list is usually  appropriate.
+
+\section{Process}
+While my project could well follow a plan driven approach, such as waterfall or the spiral model, I believed that an agile approach would be suitable for building it, as I developed the different techniques through breaking them down into tasks. I chose to use Scrum for my framework, and used aspect of Extreme Programming for my daily development cycle adapted to a one person project. I may also have used a feature driven methodology, as I was aware of the features I wished to implement, however, I believed a Scrum approach with weekly sprint iterations would better suit my work flow.
+
+\subsection{Scrum}
+I felt I could produce the best work by working iteratively, using Scrum and having weekly Sprints. A Sprint is -what is a Sprint- and it would be useful to the project because -why is a Sprint useful here-. I held my sprint planning and retrospectives every Tuesday after meeting with my supervisor. 
+
+The Scrum framework had me taking my initial Objectives mentioned in the previous section and turning them into `epic' Stories. Stories are -write about Stories and tasks here, including examples of Sprints-
+
+Task break downs helped me focus on what was important, and gauge what needed to be done and how much effort vs time it would take -include image of whiteboard with task here-. The Scrum framework was naturally adapted to a single person project, as there was no external scum master, client or manager, and these roles were all filled by my own motivation and discipline to be fullfilled.
+
+Daily stand-ups with peers, and how this would help. Adapted from normally discussing Yesterday/Today/Blockers with those who could help, instead to discussing in order to improve motivation and sounding boards.
+
+\subsection{Extreme Programming}
+Extreme programming -is what? references and explanation here-. Through choosing XP, I found while I couldn't implement every technique, I took the benefits of Test Driven Development and Refactoring
+
+Test Driven Development is ... it would be useful for iteratively building upon my application, and help with refactoring later. TDD helps with the design of the application, in structure and in what needs to be developed next, and helps with time constraints through forcing only what needs to be developed to be developed and no more. - Include examples of some of my tests here, going red, green, red, green-
+
+Refactoring is... With the knowledge that I wanted my application to be something that could be built upon in the future, refactoring was vital for cleaning up the code structure as I built it with TDD, making it maintainable by others in the future, ensuring that the code is readable and cutting out clutter and duplicate code. While it may be seen as a time consuing and unnecessary task by some, when looking at an application life cycle it is vital to a projects success in the long term.
+
+\subsection{Pomodoro Technique}
+Additionally, I found it useful to break my development work into small cycles, using the Pomodoro technique (cite needed), in order to increase my focus and productivity while doing work. The aim of the pomodoro technique is to spend 25 minutes with full focus on the work, and then giving yourself 5 minutes to stop and have a break. They are also useful for keeping track of work done and visually seeing how much time has been invested into the project for the day -include image of pomodoro day here, and link to the website-
+Due to the short length of each pomodoro, it was also seen as an effective method for squeezing in work where there was time. By quantifying time into small slots, it made it possible to consider how much time I might have between other events in the day and work out where it could be possible to put in a single pomodoros worth of work, instead of perhaps not working because I felt I did not have the time, or working and eating into other daily activities if I didn't block out the time and be aware of when to stop.
+
+\subsection{Project blog}
+While developing my application I kept a blog about my project, any milestones I reached or interesting sections. While I did not designate a particular time to blog, I believed it would be a useful tool in reflecting on the work done when writing this report, something for my supervisor to be able to check upon my progress between meetings and give me the time to reflect on the work done and any upcoming tasks to help me mentally process where the project was in its lifecycle against the planned objects.
+
+% You need to describe briefly the life cycle model or research method that you used. You do not need to write about all of the different process models that you are aware of. Focus on the process model that you have used. It is possible that you needed to adapt an existing process model to suit your project; clearly identify what you used and how you adapted it for your needs.

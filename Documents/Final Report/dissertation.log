@@ -1,0 +1,487 @@
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9) (preloaded format=pdflatex 2013.11.17)  21 APR 2016 19:21
+entering extended mode
+**D:/Users/James/University*Documents/Modules/Major*Project/Metagenome-Assembly
+-Quality-Analysis-Toolkit/Documents/Final*Report/dissertation.tex
+
+("D:/Users/James/University Documents/Modules/Major Project/Metagenome-Assembly
+-Quality-Analysis-Toolkit/Documents/Final Report/dissertation.tex"
+LaTeX2e <2011/06/27>
+Babel <v3.8m> and hyphenation patterns for english, afrikaans, ancientgreek, ar
+abic, armenian, assamese, basque, bengali, bokmal, bulgarian, catalan, coptic, 
+croatian, czech, danish, dutch, esperanto, estonian, farsi, finnish, french, ga
+lician, german, german-x-2013-05-26, greek, gujarati, hindi, hungarian, iceland
+ic, indonesian, interlingua, irish, italian, kannada, kurmanji, latin, latvian,
+ lithuanian, malayalam, marathi, mongolian, mongolianlmc, monogreek, ngerman, n
+german-x-2013-05-26, nynorsk, oriya, panjabi, pinyin, polish, portuguese, roman
+ian, russian, sanskrit, serbian, slovak, slovenian, spanish, swedish, swissgerm
+an, tamil, telugu, turkish, turkmen, ukenglish, ukrainian, uppersorbian, usengl
+ishmax, welsh, loaded.
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\base\report.cls"
+Document Class: report 2007/10/19 v1.4h Standard LaTeX document class
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\base\size11.clo"
+File: size11.clo 2007/10/19 v1.4h Standard LaTeX file (size option)
+)
+\c@part=\count79
+\c@chapter=\count80
+\c@section=\count81
+\c@subsection=\count82
+\c@subsubsection=\count83
+\c@paragraph=\count84
+\c@subparagraph=\count85
+\c@figure=\count86
+\c@table=\count87
+\abovecaptionskip=\skip41
+\belowcaptionskip=\skip42
+\bibindent=\dimen102
+)
+("D:\Users\James\University Documents\Modules\Major Project\Metagenome-Assembly
+-Quality-Analysis-Toolkit\Documents\Final Report\mmp.sty"
+Package: mmp 
+
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\graphics\graphicx.sty"
+Package: graphicx 1999/02/16 v1.0f Enhanced LaTeX Graphics (DPC,SPQR)
+
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\graphics\keyval.sty"
+Package: keyval 1999/03/16 v1.13 key=value parser (DPC)
+\KV@toks@=\toks14
+)
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\graphics\graphics.sty"
+Package: graphics 2009/02/05 v1.0o Standard LaTeX Graphics (DPC,SPQR)
+
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\graphics\trig.sty"
+Package: trig 1999/03/16 v1.09 sin cos tan (DPC)
+)
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\00miktex\graphics.cfg"
+File: graphics.cfg 2007/01/18 v1.5 graphics configuration of teTeX/TeXLive
+)
+Package graphics Info: Driver file: pdftex.def on input line 91.
+
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\pdftex-def\pdftex.def"
+File: pdftex.def 2011/05/27 v0.06d Graphics/color for pdfTeX
+
+("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\oberdiek\infwarerr.sty"
+Package: infwarerr 2010/04/08 v1.3 Providing info/warning/error messages (HO)
+)
+("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\oberdiek\ltxcmds.sty"
+Package: ltxcmds 2011/11/09 v1.22 LaTeX kernel commands for general use (HO)
+)
+\Gread@gobject=\count88
+))
+\Gin@req@height=\dimen103
+\Gin@req@width=\dimen104
+)
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\psnfss\palatino.sty"
+Package: palatino 2005/04/12 PSNFSS-v9.2a (SPQR) 
+)
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\carlisle\plain.sty"
+Package: plain 1996/04/22 Plain TeX emulation (DPC)
+\tabs@latex=\box26
+\tabsyet@latex=\box27
+\tabsdone@latex=\box28
+)
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\amsmath\amsmath.sty"
+Package: amsmath 2013/01/14 v2.14 AMS math features
+\@mathmargin=\skip43
+
+For additional information on amsmath, use the `?' option.
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\amsmath\amstext.sty"
+Package: amstext 2000/06/29 v2.01
+
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\amsmath\amsgen.sty"
+File: amsgen.sty 1999/11/30 v2.0
+\@emptytoks=\toks15
+\ex@=\dimen105
+))
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\amsmath\amsbsy.sty"
+Package: amsbsy 1999/11/29 v1.2d
+\pmbraise@=\dimen106
+)
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\amsmath\amsopn.sty"
+Package: amsopn 1999/12/14 v2.01 operator names
+)
+\inf@bad=\count89
+LaTeX Info: Redefining \frac on input line 210.
+\uproot@=\count90
+\leftroot@=\count91
+LaTeX Info: Redefining \overline on input line 306.
+\classnum@=\count92
+\DOTSCASE@=\count93
+LaTeX Info: Redefining \ldots on input line 378.
+LaTeX Info: Redefining \dots on input line 381.
+LaTeX Info: Redefining \cdots on input line 466.
+\Mathstrutbox@=\box29
+\strutbox@=\box30
+\big@size=\dimen107
+LaTeX Font Info:    Redeclaring font encoding OML on input line 566.
+LaTeX Font Info:    Redeclaring font encoding OMS on input line 567.
+\macc@depth=\count94
+\c@MaxMatrixCols=\count95
+\dotsspace@=\muskip10
+\c@parentequation=\count96
+\dspbrk@lvl=\count97
+\tag@help=\toks16
+\row@=\count98
+\column@=\count99
+\maxfields@=\count100
+\andhelp@=\toks17
+\eqnshift@=\dimen108
+\alignsep@=\dimen109
+\tagshift@=\dimen110
+\tagwidth@=\dimen111
+\totwidth@=\dimen112
+\lineht@=\dimen113
+\@envbody=\toks18
+\multlinegap=\skip44
+\multlinetaggap=\skip45
+\mathdisplay@stack=\toks19
+LaTeX Info: Redefining \[ on input line 2665.
+LaTeX Info: Redefining \] on input line 2666.
+)
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\amsfonts\amsfonts.sty"
+Package: amsfonts 2013/01/14 v3.01 Basic AMSFonts support
+\symAMSa=\mathgroup4
+\symAMSb=\mathgroup5
+LaTeX Font Info:    Overwriting math alphabet `\mathfrak' in version `bold'
+(Font)                  U/euf/m/n --> U/euf/b/n on input line 106.
+)
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\amsfonts\amssymb.sty"
+Package: amssymb 2013/01/14 v3.01 AMS font symbols
+)
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\subfigure\subfigure.sty"
+Package: subfigure 2002/07/30 v2.1.4 subfigure package
+\subfigtopskip=\skip46
+\subfigcapskip=\skip47
+\subfigcaptopadj=\dimen114
+\subfigbottomskip=\skip48
+\subfigcapmargin=\dimen115
+\subfiglabelskip=\skip49
+\c@subfigure=\count101
+\c@lofdepth=\count102
+\c@subtable=\count103
+\c@lotdepth=\count104
+
+****************************************
+* Local config file subfigure.cfg used *
+****************************************
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\subfigure\subfigure.cfg")
+\subfig@top=\skip50
+\subfig@bottom=\skip51
+)
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\float\float.sty"
+Package: float 2001/11/08 v1.3d Float enhancements (AL)
+\c@float@type=\count105
+\float@exts=\toks20
+\float@box=\box31
+\@float@everytoks=\toks21
+\@floatcapt=\box32
+)
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\psnfss\times.sty"
+Package: times 2005/04/12 PSNFSS-v9.2a (SPQR) 
+)
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\fancyhdr\fancyhdr.sty"
+\fancy@headwidth=\skip52
+\f@ncyO@elh=\skip53
+\f@ncyO@erh=\skip54
+\f@ncyO@olh=\skip55
+\f@ncyO@orh=\skip56
+\f@ncyO@elf=\skip57
+\f@ncyO@erf=\skip58
+\f@ncyO@olf=\skip59
+\f@ncyO@orf=\skip60
+)
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\lastpage\lastpage.sty"
+Package: lastpage 2013/01/28 v1.2l Refers to last page's name (HMM; JPG)
+)
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\url\url.sty"
+\Urlmuskip=\muskip11
+Package: url 2006/04/12  ver 3.3  Verb mode for urls, etc.
+))
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\cite\cite.sty"
+LaTeX Info: Redefining \cite on input line 302.
+LaTeX Info: Redefining \nocite on input line 373.
+Package: cite 2010/09/10  v 5.3
+)
+("D:\Users\James\University Documents\Modules\Major Project\Metagenome-Assembly
+-Quality-Analysis-Toolkit\Documents\Final Report\dissertation.aux"
+("D:\Users\James\University Documents\Modules\Major Project\Metagenome-Assembly
+-Quality-Analysis-Toolkit\Documents\Final Report\cover.aux")
+("D:\Users\James\University Documents\Modules\Major Project\Metagenome-Assembly
+-Quality-Analysis-Toolkit\Documents\Final Report\declaration.aux")
+("D:\Users\James\University Documents\Modules\Major Project\Metagenome-Assembly
+-Quality-Analysis-Toolkit\Documents\Final Report\acknowledgements.aux")
+("D:\Users\James\University Documents\Modules\Major Project\Metagenome-Assembly
+-Quality-Analysis-Toolkit\Documents\Final Report\abstract.aux")
+("D:\Users\James\University Documents\Modules\Major Project\Metagenome-Assembly
+-Quality-Analysis-Toolkit\Documents\Final Report\Chapter1/chapter1.aux")
+("D:\Users\James\University Documents\Modules\Major Project\Metagenome-Assembly
+-Quality-Analysis-Toolkit\Documents\Final Report\Chapter2/chapter2.aux")
+("D:\Users\James\University Documents\Modules\Major Project\Metagenome-Assembly
+-Quality-Analysis-Toolkit\Documents\Final Report\Chapter3/chapter3.aux")
+("D:\Users\James\University Documents\Modules\Major Project\Metagenome-Assembly
+-Quality-Analysis-Toolkit\Documents\Final Report\Chapter4/chapter4.aux")
+("D:\Users\James\University Documents\Modules\Major Project\Metagenome-Assembly
+-Quality-Analysis-Toolkit\Documents\Final Report\Chapter5/chapter5.aux")
+("D:\Users\James\University Documents\Modules\Major Project\Metagenome-Assembly
+-Quality-Analysis-Toolkit\Documents\Final Report\Appendix1/appendix1.aux")
+("D:\Users\James\University Documents\Modules\Major Project\Metagenome-Assembly
+-Quality-Analysis-Toolkit\Documents\Final Report\Appendix2/appendix2.aux")
+("D:\Users\James\University Documents\Modules\Major Project\Metagenome-Assembly
+-Quality-Analysis-Toolkit\Documents\Final Report\Appendix3/appendix3.aux"))
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 34.
+LaTeX Font Info:    ... okay on input line 34.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 34.
+LaTeX Font Info:    ... okay on input line 34.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 34.
+LaTeX Font Info:    ... okay on input line 34.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 34.
+LaTeX Font Info:    ... okay on input line 34.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 34.
+LaTeX Font Info:    ... okay on input line 34.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 34.
+LaTeX Font Info:    ... okay on input line 34.
+LaTeX Font Info:    Try loading font information for OT1+ptm on input line 34.
+
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\psnfss\ot1ptm.fd"
+File: ot1ptm.fd 2001/06/04 font definitions for OT1/ptm.
+)
+("C:\Program Files (x86)\MiKTeX 2.9\tex\context\base\supp-pdf.mkii"
+[Loading MPS to PDF converter (version 2006.09.02).]
+\scratchcounter=\count106
+\scratchdimen=\dimen116
+\scratchbox=\box33
+\nofMPsegments=\count107
+\nofMParguments=\count108
+\everyMPshowfont=\toks22
+\MPscratchCnt=\count109
+\MPscratchDim=\dimen117
+\MPnumerator=\count110
+\makeMPintoPDFobject=\count111
+\everyMPtoPDFconversion=\toks23
+)
+Package lastpage Info: Please have a look at the pageslts package at
+(lastpage)             http://www.ctan.org/tex-archive/ 
+(lastpage)             macros/latex/contrib/pageslts/ 
+(lastpage)             or
+(lastpage)             http://www.ctan.org/tex-archive/ 
+(lastpage)             install/macros/latex/contrib/pageslts.tds.zip
+(lastpage)             ! on input line 34.
+
+("D:\Users\James\University Documents\Modules\Major Project\Metagenome-Assembly
+-Quality-Analysis-Toolkit\Documents\Final Report\cover.tex"
+LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <14.4> not available
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 28.
+LaTeX Font Info:    Try loading font information for U+msa on input line 28.
+
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\amsfonts\umsa.fd"
+File: umsa.fd 2013/01/14 v3.01 AMS symbols A
+)
+LaTeX Font Info:    Try loading font information for U+msb on input line 28.
+
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\amsfonts\umsb.fd"
+File: umsb.fd 2013/01/14 v3.01 AMS symbols B
+) [0
+
+
+{C:/ProgramData/MiKTeX/2.9/pdftex/config/pdftex.map}])
+("D:\Users\James\University Documents\Modules\Major Project\Metagenome-Assembly
+-Quality-Analysis-Toolkit\Documents\Final Report\declaration.tex"
+LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <17.28> not available
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 7.
+
+Underfull \hbox (badness 10000) in paragraph at lines 31--32
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 34--35
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 54--55
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 57--58
+
+ []
+
+) [1
+
+
+]
+("D:\Users\James\University Documents\Modules\Major Project\Metagenome-Assembly
+-Quality-Analysis-Toolkit\Documents\Final Report\acknowledgements.tex")
+[2
+
+
+]
+("D:\Users\James\University Documents\Modules\Major Project\Metagenome-Assembly
+-Quality-Analysis-Toolkit\Documents\Final Report\abstract.tex") [3
+
+
+]
+("D:\Users\James\University Documents\Modules\Major Project\Metagenome-Assembly
+-Quality-Analysis-Toolkit\Documents\Final Report\dissertation.toc"
+LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <10.95> not available
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 1.
+)
+\tf@toc=\write3
+ [1
+
+]
+("D:\Users\James\University Documents\Modules\Major Project\Metagenome-Assembly
+-Quality-Analysis-Toolkit\Documents\Final Report\dissertation.lof")
+\tf@lof=\write4
+ [2]
+("D:\Users\James\University Documents\Modules\Major Project\Metagenome-Assembly
+-Quality-Analysis-Toolkit\Documents\Final Report\dissertation.lot")
+\tf@lot=\write5
+ [3]
+("D:\Users\James\University Documents\Modules\Major Project\Metagenome-Assembly
+-Quality-Analysis-Toolkit\Documents\Final Report\Chapter1/chapter1.tex"
+Chapter 1.
+LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <20.74> not available
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 1.
+LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <24.88> not available
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 1.
+LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <12> not available
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 10.
+
+Overfull \hbox (0.97037pt too wide) in paragraph at lines 13--14
+[]\OT1/ptm/m/n/10.95 Are there ex-ist-ing sys-tem for metage-nomics? What about
+ ge-nomics in gen-eral? NCBI database
+ []
+
+[1
+
+
+] [2] [3]) [4]
+("D:\Users\James\University Documents\Modules\Major Project\Metagenome-Assembly
+-Quality-Analysis-Toolkit\Documents\Final Report\Chapter2/chapter2.tex"
+Chapter 2.
+[5
+
+
+
+] [6] [7]) [8]
+("D:\Users\James\University Documents\Modules\Major Project\Metagenome-Assembly
+-Quality-Analysis-Toolkit\Documents\Final Report\Chapter3/chapter3.tex"
+Chapter 3.
+) [9
+
+
+
+]
+("D:\Users\James\University Documents\Modules\Major Project\Metagenome-Assembly
+-Quality-Analysis-Toolkit\Documents\Final Report\Chapter4/chapter4.tex"
+Chapter 4.
+Missing character: There is no Õ in font ptmr7t!
+Missing character: There is no Õ in font ptmr7t!
+) [10
+
+
+
+]
+("D:\Users\James\University Documents\Modules\Major Project\Metagenome-Assembly
+-Quality-Analysis-Toolkit\Documents\Final Report\Chapter5/chapter5.tex"
+Chapter 5.
+) [11
+
+
+
+] [12
+
+
+]
+("D:\Users\James\University Documents\Modules\Major Project\Metagenome-Assembly
+-Quality-Analysis-Toolkit\Documents\Final Report\Appendix1/appendix1.tex"
+Appendix A.
+Missing character: There is no Ð in font ptmr7t!
+Missing character: There is no Õ in font ptmr7t!
+) [13
+
+
+]
+("D:\Users\James\University Documents\Modules\Major Project\Metagenome-Assembly
+-Quality-Analysis-Toolkit\Documents\Final Report\Appendix2/appendix2.tex"
+Appendix B.
+) [14
+
+
+
+]
+("D:\Users\James\University Documents\Modules\Major Project\Metagenome-Assembly
+-Quality-Analysis-Toolkit\Documents\Final Report\Appendix3/appendix3.tex"
+Appendix C.
+LaTeX Font Info:    Try loading font information for OT1+pcr on input line 7.
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\psnfss\ot1pcr.fd"
+File: ot1pcr.fd 2001/06/04 font definitions for OT1/pcr.
+) [15
+
+
+
+] [16])
+[17]
+("D:\Users\James\University Documents\Modules\Major Project\Metagenome-Assembly
+-Quality-Analysis-Toolkit\Documents\Final Report\dissertation.bbl"
+Underfull \hbox (badness 1661) in paragraph at lines 22--24
+[]\OT1/ptm/m/n/10.95 Apache Soft-ware Foun-da-tion, ``Apache Li-cense, Ver-sion
+ 2.0,'' $http : / / www . apache . org /$
+ []
+
+) 
+AED: lastpage setting LastPage
+[18
+
+
+]
+("D:\Users\James\University Documents\Modules\Major Project\Metagenome-Assembly
+-Quality-Analysis-Toolkit\Documents\Final Report\dissertation.aux"
+("D:\Users\James\University Documents\Modules\Major Project\Metagenome-Assembly
+-Quality-Analysis-Toolkit\Documents\Final Report\cover.aux")
+("D:\Users\James\University Documents\Modules\Major Project\Metagenome-Assembly
+-Quality-Analysis-Toolkit\Documents\Final Report\declaration.aux")
+("D:\Users\James\University Documents\Modules\Major Project\Metagenome-Assembly
+-Quality-Analysis-Toolkit\Documents\Final Report\acknowledgements.aux")
+("D:\Users\James\University Documents\Modules\Major Project\Metagenome-Assembly
+-Quality-Analysis-Toolkit\Documents\Final Report\abstract.aux")
+("D:\Users\James\University Documents\Modules\Major Project\Metagenome-Assembly
+-Quality-Analysis-Toolkit\Documents\Final Report\Chapter1/chapter1.aux")
+("D:\Users\James\University Documents\Modules\Major Project\Metagenome-Assembly
+-Quality-Analysis-Toolkit\Documents\Final Report\Chapter2/chapter2.aux")
+("D:\Users\James\University Documents\Modules\Major Project\Metagenome-Assembly
+-Quality-Analysis-Toolkit\Documents\Final Report\Chapter3/chapter3.aux")
+("D:\Users\James\University Documents\Modules\Major Project\Metagenome-Assembly
+-Quality-Analysis-Toolkit\Documents\Final Report\Chapter4/chapter4.aux")
+("D:\Users\James\University Documents\Modules\Major Project\Metagenome-Assembly
+-Quality-Analysis-Toolkit\Documents\Final Report\Chapter5/chapter5.aux")
+("D:\Users\James\University Documents\Modules\Major Project\Metagenome-Assembly
+-Quality-Analysis-Toolkit\Documents\Final Report\Appendix1/appendix1.aux")
+("D:\Users\James\University Documents\Modules\Major Project\Metagenome-Assembly
+-Quality-Analysis-Toolkit\Documents\Final Report\Appendix2/appendix2.aux")
+("D:\Users\James\University Documents\Modules\Major Project\Metagenome-Assembly
+-Quality-Analysis-Toolkit\Documents\Final Report\Appendix3/appendix3.aux")) ) 
+Here is how much of TeX's memory you used:
+ 2936 strings out of 493921
+ 49542 string characters out of 3144875
+ 96483 words of memory out of 3000000
+ 6072 multiletter control sequences out of 15000+200000
+ 26005 words of font info for 57 fonts, out of 3000000 for 9000
+ 841 hyphenation exceptions out of 8191
+ 34i,10n,45p,973b,403s stack positions out of 5000i,500n,10000p,200000b,50000s
+{C
+:/Program Files (x86)/MiKTeX 2.9/fonts/enc/dvips/fontname/8r.enc}<C:/Program Fi
+les (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Program File
+s (x86)/MiKTeX 2.9/fonts/type1/urw/courier/ucrr8a.pfb><C:/Program Files (x86)/M
+iKTeX 2.9/fonts/type1/urw/times/utmb8a.pfb><C:/Program Files (x86)/MiKTeX 2.9/f
+onts/type1/urw/times/utmr8a.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/
+urw/times/utmr8a.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/urw/times/u
+tmri8a.pfb>
+Output written on dissertation.pdf (25 pages, 128935 bytes).
+PDF statistics:
+ 108 PDF objects out of 1000 (max. 8388607)
+ 0 named destinations out of 1000 (max. 500000)
+ 1 words of extra memory for PDF output out of 10000 (max. 10000000)
+
