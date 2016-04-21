@@ -10,18 +10,32 @@ import java.util.ArrayList;
 
 /**
  * Created by James Euesden on 2/10/2016.
+ *
+ * Understands how to process a FASTA file to create an ArrayList of ContiguousReads from users input.
  */
 public class FastaReader{
     private UserContentValidator _validator;
     private StringBuilder _sb;
     private ArrayList<ContiguousRead> _contigsList;
 
+    /**
+     * Initializes the required components.
+     */
     public FastaReader(){
         _validator = new UserContentValidator();
         _sb = new StringBuilder();
         _contigsList = new ArrayList<>();
     }
 
+    /**
+     * Reads the input from the user parameters (looking for user pasted data) and calls to the correct method.
+     * Currently, the application does not allow users to upload files, and leaving the input paste box empty or pasting
+     * invalid content will return them the test file results while my system was under development. This method is left
+     * in order to be expanded upon later to allow users to upload their files rather than paste them.
+     * @param params UserParameters of user input, contains the pasted assembly data and what is the minimum
+     *               size of a contiguous read to be considered.
+     * @return A ContigResult that holds the contiguous reads from the user input.
+     */
     public ContigResult readSequenceInput(UserParameters params){
         ContigResult contigResult;
         if(_validator.validateUserContent(params.getUserContent())){
@@ -34,7 +48,14 @@ public class FastaReader{
         return contigResult;
     }
 
-    public ContigResult readUserInput(String userContent, int lengthThreshold){
+    /**
+     * Handles extracting the contiguous reads and their content from the user pasted input, and ignoring any
+     * under the users set minimum length threshold.
+     * @param userContent The pasted assembly content from the user.
+     * @param minimumLengthThreshold The users set threshold for the minimum size a contiguous read can be to be shown.
+     * @return A ContigResult containing the contiguous reads from the users input.
+     */
+    public ContigResult readUserInput(String userContent, int minimumLengthThreshold){
         ContiguousRead currentContig = new ContiguousRead();
         int discardedContigs = 0;
         String contig = userContent.trim();
@@ -45,8 +66,7 @@ public class FastaReader{
             if (line.startsWith(">")) {
                 if (currentContig.getContigInformation() != null) {
                     currentContig.setContigContext(_sb.toString());
-                    if (_sb.length() > lengthThreshold || lengthThreshold == 0) {
-                        currentContig.setContigLength(_sb.length());
+                    if (_sb.length() > minimumLengthThreshold || minimumLengthThreshold == 0) {
                         _contigsList.add(currentContig);
                     } else {
                         discardedContigs++;
@@ -60,10 +80,9 @@ public class FastaReader{
             }
 
         }
-        // Assess the final contig
+        // Create the final contiguous read
         currentContig.setContigContext(_sb.toString());
-        currentContig.setContigLength(_sb.length());
-        if(_sb.length() > lengthThreshold || lengthThreshold == 0) {
+        if(_sb.length() > minimumLengthThreshold || minimumLengthThreshold == 0) {
             _contigsList.add(currentContig);
         } else {
             discardedContigs++;
@@ -75,7 +94,15 @@ public class FastaReader{
         return result;
     }
 
-    public ContigResult readFile(String fileName, int lengthThreshold){
+
+    /**
+     * Handles extracting the contiguous reads and their content from the user file, and ignoring any
+     * under the users set minimum length threshold.
+     * @param fileName The name of the file to be processed.
+     * @param minimumLengthThreshold The users set threshold for the minimum size a contiguous read can be to be shown.
+     * @return A ContigResult containing the contiguous reads from the users input.
+     */
+    public ContigResult readFile(String fileName, int minimumLengthThreshold){
         int discardedContigs = 0;
         try {
             BufferedReader in = new BufferedReader(new FileReader(fileName));
@@ -86,8 +113,7 @@ public class FastaReader{
                     if (line.startsWith(">")) {
                         if (currentContig.getContigInformation() != null) {
                             currentContig.setContigContext(_sb.toString());
-                            if (_sb.length() > lengthThreshold || lengthThreshold == 0) {
-                                currentContig.setContigLength(_sb.length());
+                            if (_sb.length() > minimumLengthThreshold || minimumLengthThreshold == 0) {
                                 _contigsList.add(currentContig);
                             } else {
                                 discardedContigs++;
@@ -101,10 +127,9 @@ public class FastaReader{
                     }
 
             }
-            // Assess the final contig
+            // Create the final contig
             currentContig.setContigContext(_sb.toString());
-            currentContig.setContigLength(_sb.length());
-            if(_sb.length() > lengthThreshold || lengthThreshold == 0) {
+            if(_sb.length() > minimumLengthThreshold || minimumLengthThreshold == 0) {
                 _contigsList.add(currentContig);
             } else {
                 discardedContigs++;
@@ -121,7 +146,4 @@ public class FastaReader{
         result.setDiscardedContigCount(discardedContigs);
         return result;
     }
-
-
-
 }

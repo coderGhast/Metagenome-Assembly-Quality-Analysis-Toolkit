@@ -8,7 +8,7 @@ import org.springframework.context.ApplicationContext;
 /**
  * Created by James Euesden on 26/02/2016.
  *
- * Main method for running the MAQAT tool 'Khimeta'.
+ * Main method for running the tool 'Khimeta'.
  */
 @SpringBootApplication
 public class Main {

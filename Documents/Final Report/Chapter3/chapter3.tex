@@ -1,3 +1,41 @@
 \chapter{Implementation}
+\subsection{Development Environment}
+What did I develop it in? My laptop, IntelliJ, Windows 10, PC specs
 
-The implementation should look at any issues you encountered as you tried to implement your design. During the work, you might have found that elements of your design were unnecessary or overly complex; perhaps third party libraries were available that simplified some of the functions that you intended to implement. If things were easier in some areas, then how did you adapt your project to take account of your findings?It is more likely that things were more complex than you first thought. In particular, were there any problems or difficulties that you found during implementation that you had to address? Did such problems simply delay you or were they more significant? You can conclude this section by reviewing the end of the implementation stage against the planned requirements. 
+\subsection{Features}
+\subsubsection{Reading User Input}
+\textbf{Implementation}
+What did I do to implement this? Did I do one  thing and find it worked for everything? Did I change my implementation. Think about changing from reading in a file to reading user input. Started with a couple of parameters, to big list of parameters, to the UserParameters class (could mention this in Design section too).
+\textbf{Issues}
+What issues did I encounter, if any? The file names, file sizes being large, formatting of the file and escape characters in user input, symbols in the file? ATGC and default anything else to N. Originally during the reading of the input, would then do the quality assess per contig here, instead moved it to pass back a list of contigs and quality asses on request by controller. Better way of data flow and less class responsibility
+
+\subsubsection{Counting GC Content \& Percentage}
+
+\subsubsection{Displaying GC Content percentage}
+Prototyped with Plotly. Issues getting data to actually display as I was unfamiliar with plotly and thymeleaf getting data from Objects.
+Getting the Mean line to show, and setting the colours from within the application - Is this bad? Should probably be done in the View and the model just outputs the data. Decided instead to calculate this in the model itself and output the colours directly. Can still be consumed by parts of the view, and later if a change happens the data is still output
+
+\subsubsection{Finding Open Reading Frames}
+Understanding what they were, how they are built. How do I find them in strings? Issues - Finding the longest, how to know when to stop. Originally had the wrong idea and believed all Stop Codons would be included up until the next Start Codon. Developed against this until feedback from Amanda made me realize the problem was far simpler. Lost developer time, but functionality to fix didn't take too much time. How do we now find ORFs, and store their data? What does it look like, zipping Start and Stop Codons together and getting substrings from within the full contig to create the ORF Location Object.
+
+\subsubsection{Displaying ORF Locations}
+Implementation through each ORF Location knowing where it starts and ends, the characters between in a list. Each has a frame indicator, allows them to be kept in a single array. Javascript goes through the list and uses HTML5 canvas to draw them out in 6 different canvases. Working on finding user clicks within the canvas objects, getting data from Thymeleaf to display it from the Objects. Formatting the display and using colour to highlight the start and stop codons.
+Issues included finding the clicks, highlighting both the menu and the item on canvas. Took some time to get the formatting in the table correct
+
+\subsubsection{Superframe Comparisson}
+Making the view of superframe to help the user compare the ORF and GC content. Able to be built upon with k-mer frequency analysis and other techniques as added. The overall 'compare all' chart. Borrowed code from the ORF canvases. Breaking things up into windows from the GC content.
+
+Not really any issues, just trying to find the best way to display it to the user and convey any areas where things don't line up properly. Would like to work on this more and develop a system to detect where the issues really are. Need more techniques.
+
+\subsubsection{User Interface Organisation}
+User input section originally having all parameters was messy, only dealing with one contig, then multiple contigs, having parameters appear underneath any contig you wish to inspect, having all charts on the toolbox page displayed in one long list looked ugly, implemented tabs from (credit to the guy here).
+
+\subsection{Implementation Review}
+Found that GC Content percentage and ORF Location finding took a lot longer than expected, especially considering that I implemented an additional part of ORF Finding that wasn't needed, and got refactored 3 times until I reached that point. Delayed me to the point I felt I wouldn't have time to implement k-mer frequency analysis. 
+User interface design and programming also took a lot longer. Wanted to present the information in a clean and useful way, without cluttering the page. Getting used to Thymeleaf and how it took the data from the Objects took a while to get used to. Felt that my implementation process was acceptable but issues slowed me down significantly. Everything else I felt I would implement got implemented, but the Superframe needs additional consideration. A lot of the quality assessment is still on the user to look at the produced reports and their content to consider whether they themselves feel their assembly file is good or not through factors highlighted by my application.
+
+% The implementation should look at any issues you encountered as you tried to implement your design. During the work, you might have found that elements of your design were unnecessary or overly complex; perhaps third party libraries were available that simplified some of the functions that you intended to implement. If things were easier in some areas, then how did you adapt your project to take account of your findings?
+
+% It is more likely that things were more complex than you first thought. In particular, were there any problems or difficulties that you found during implementation that you had to address? Did such problems simply delay you or were they more significant? 
+
+% You can conclude this section by reviewing the end of the implementation stage against the planned requirements. 

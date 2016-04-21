@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9) (preloaded format=pdflatex 2013.11.17)  21 APR 2016 19:21
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9) (preloaded format=pdflatex 2013.11.17)  21 APR 2016 22:05
 entering extended mode
 **D:/Users/James/University*Documents/Modules/Major*Project/Metagenome-Assembly
 -Quality-Analysis-Toolkit/Documents/Final*Report/dissertation.tex
@@ -369,29 +369,27 @@ Chapter 2.
 ("D:\Users\James\University Documents\Modules\Major Project\Metagenome-Assembly
 -Quality-Analysis-Toolkit\Documents\Final Report\Chapter3/chapter3.tex"
 Chapter 3.
-) [9
+[9
 
 
 
-]
+]) [10] [11]
 ("D:\Users\James\University Documents\Modules\Major Project\Metagenome-Assembly
 -Quality-Analysis-Toolkit\Documents\Final Report\Chapter4/chapter4.tex"
 Chapter 4.
-Missing character: There is no Õ in font ptmr7t!
-Missing character: There is no Õ in font ptmr7t!
-) [10
+) [12
 
 
 
-]
+] [13]
 ("D:\Users\James\University Documents\Modules\Major Project\Metagenome-Assembly
 -Quality-Analysis-Toolkit\Documents\Final Report\Chapter5/chapter5.tex"
 Chapter 5.
-) [11
+) [14
 
 
 
-] [12
+] [15
 
 
 ]
@@ -400,14 +398,14 @@ Chapter 5.
 Appendix A.
 Missing character: There is no Ð in font ptmr7t!
 Missing character: There is no Õ in font ptmr7t!
-) [13
+) [16
 
 
 ]
 ("D:\Users\James\University Documents\Modules\Major Project\Metagenome-Assembly
 -Quality-Analysis-Toolkit\Documents\Final Report\Appendix2/appendix2.tex"
 Appendix B.
-) [14
+) [17
 
 
 
@@ -418,12 +416,12 @@ Appendix C.
 LaTeX Font Info:    Try loading font information for OT1+pcr on input line 7.
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\psnfss\ot1pcr.fd"
 File: ot1pcr.fd 2001/06/04 font definitions for OT1/pcr.
-) [15
+) [18
 
 
 
-] [16])
-[17]
+] [19])
+[20]
 ("D:\Users\James\University Documents\Modules\Major Project\Metagenome-Assembly
 -Quality-Analysis-Toolkit\Documents\Final Report\dissertation.bbl"
 Underfull \hbox (badness 1661) in paragraph at lines 22--24
@@ -433,7 +431,7 @@ Underfull \hbox (badness 1661) in paragraph at lines 22--24
 
 ) 
 AED: lastpage setting LastPage
-[18
+[21
 
 
 ]
@@ -479,9 +477,9 @@ iKTeX 2.9/fonts/type1/urw/times/utmb8a.pfb><C:/Program Files (x86)/MiKTeX 2.9/f
 onts/type1/urw/times/utmr8a.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/
 urw/times/utmr8a.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/urw/times/u
 tmri8a.pfb>
-Output written on dissertation.pdf (25 pages, 128935 bytes).
+Output written on dissertation.pdf (28 pages, 135506 bytes).
 PDF statistics:
- 108 PDF objects out of 1000 (max. 8388607)
+ 117 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
  1 words of extra memory for PDF output out of 10000 (max. 10000000)
 
