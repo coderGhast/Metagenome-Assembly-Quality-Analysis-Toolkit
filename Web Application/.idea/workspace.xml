@@ -5,13 +5,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="2d0706c2-c12e-40d6-9032-19d66651f617" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/toolkit/Main.class" afterPath="$PROJECT_DIR$/target/classes/toolkit/Main.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Documents/Outline Project Specification/mmp.log" afterPath="$PROJECT_DIR$/../Documents/Outline Project Specification/mmp.log" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/toolkit/Main.java" afterPath="$PROJECT_DIR$/src/main/java/toolkit/Main.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/static/css/core.css" afterPath="$PROJECT_DIR$/src/main/resources/static/css/core.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/static/js/gc-chart.js" afterPath="$PROJECT_DIR$/src/main/resources/static/js/gc-chart.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/static/js/orf-chart.js" afterPath="$PROJECT_DIR$/src/main/resources/static/js/orf-chart.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/static/js/superframe-chart.js" afterPath="$PROJECT_DIR$/src/main/resources/static/js/superframe-chart.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/templates/toolkit.html" afterPath="$PROJECT_DIR$/src/main/resources/templates/toolkit.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/static/js/gc-chart.js" afterPath="$PROJECT_DIR$/target/classes/static/js/gc-chart.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/static/js/orf-chart.js" afterPath="$PROJECT_DIR$/target/classes/static/js/orf-chart.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/templates/toolkit.html" afterPath="$PROJECT_DIR$/target/classes/templates/toolkit.html" />
     </list>
     <ignored path="MetagenomeQualityToolkit.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -102,12 +101,12 @@
         <option value="$PROJECT_DIR$/src/main/resources/templates/fragments/qualityparameters.html" />
         <option value="$PROJECT_DIR$/src/main/resources/static/js/utilities.js" />
         <option value="$PROJECT_DIR$/src/main/resources/static/js/toolkit.js" />
-        <option value="$PROJECT_DIR$/src/main/resources/templates/toolkit.html" />
         <option value="$PROJECT_DIR$/src/main/resources/static/css/core.css" />
         <option value="$PROJECT_DIR$/src/main/resources/static/js/gc-chart.js" />
         <option value="$PROJECT_DIR$/src/main/resources/static/js/superframe-chart.js" />
         <option value="$PROJECT_DIR$/src/main/resources/static/js/orf-chart.js" />
         <option value="$PROJECT_DIR$/src/main/java/toolkit/Main.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/templates/toolkit.html" />
       </list>
     </option>
   </component>
@@ -349,6 +348,32 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="resources" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="MetagenomeQualityToolkit" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Web Application" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="resources" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="templates" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -1185,7 +1210,25 @@
       <option name="project" value="LOCAL" />
       <updated>1461169867141</updated>
     </task>
-    <option name="localTasksCounter" value="28" />
+    <task id="LOCAL-00028" summary="Basic labelling and highlighting of WIndow segments in superframe&#10;&#10;As title says, now highlighting which window the user has clicked on, and providing some of the GC Content data about it. I don't feel like it's useful enough yet, and the application as a whole feels lacking without the support of k-mer frequency analysis, but I'm running out of time and not sure how else I can talk about the GC Content vs ORF aside running artifical chimera data to see if any results come from it when looking at the visuals.">
+      <created>1461169884661</created>
+      <option name="number" value="00028" />
+      <option name="project" value="LOCAL" />
+      <updated>1461169884661</updated>
+    </task>
+    <task id="LOCAL-00029" summary="Blog items and seemingly missed files in last commit.">
+      <created>1461170032007</created>
+      <option name="number" value="00029" />
+      <option name="project" value="LOCAL" />
+      <updated>1461170032007</updated>
+    </task>
+    <task id="LOCAL-00030" summary="Further info on GC&#10;&#10;When testing with an interesting mixed species file I found the chart visual show the obvious chimera, but the standard deviation obviously wouldn't pick this up. &#10;Wrote a small bit of text to notify the user to look for this. Wondering if I can find these and highlight the difference in actual code for use in Superframe somehow, but running out of time to do my documentation so perhaps not.">
+      <created>1461171452971</created>
+      <option name="number" value="00030" />
+      <option name="project" value="LOCAL" />
+      <updated>1461171452971</updated>
+    </task>
+    <option name="localTasksCounter" value="31" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -1264,7 +1307,6 @@
     <ignored-roots>
       <path value="$PROJECT_DIR$/.." />
     </ignored-roots>
-    <MESSAGE value="ORF display fixed, and fixed tests from the ORF Swap.&#10;&#10;Additionally, changed it so that the 'last character index' for the ORF Location is the character after the ORF. This corrects the length to be the actual expected length. Will see if this produces the proper expected results or needs more fixing! Tests say it's fine, but I have some doubts." />
     <MESSAGE value="Misc display quality changes&#10;&#10;Changed the presentation of the list a little bit again, and highlighting of the selected ORF on the contig inspection page. Just QoL things and preparing for the next step of displaying the full list of ORF Locations." />
     <MESSAGE value="ORF Info display and more presentation improvements&#10;&#10;More improvements on presentation (footer, moved around some items for ORF chart). &#10;Mainly though, when a user clicks an ORF Location now, they can see information about it below the ORF Location chart, including frame number, length, start, end and characters." />
     <MESSAGE value="ORF Location index labels and loading button on Inspect&#10;&#10;Clicking Inspect after the parameter settings will now change the value of the button to say 'Loading...', just to give the user some feedback that they have actually clicked the button. A dedicated loading page would be better, but is out of scope for this project.&#10;Also, I've added labels for the current index for the first character of each line in the display of the ORF Location characters. Just makes it look a little nicer. Along with this, I cleaned up the colouring of the first and last character as there were a few instances where the colouring would be misplace/missed entirely, caused by the ordering of the conditional statements in the code." />
@@ -1288,7 +1330,9 @@
     <MESSAGE value="More visual improvements&#10;&#10;More labelling on ORF and Superframe components. Made the GC Content chart a bit bigger" />
     <MESSAGE value="Code for clicking on Superframe window segments&#10;&#10;Put in the JS needed to allow a user to click the window segments in the Superframe viewer. Doesn't display the information yet, just need to write the html format for that and JS to get the relevant information and then make it appear like magic. Horay. Once the labelling of the superframe is done I may be able to move onto other things aside code for a bit." />
     <MESSAGE value="Basic labelling and highlighting of WIndow segments in superframe&#10;&#10;As title says, now highlighting which window the user has clicked on, and providing some of the GC Content data about it. I don't feel like it's useful enough yet, and the application as a whole feels lacking without the support of k-mer frequency analysis, but I'm running out of time and not sure how else I can talk about the GC Content vs ORF aside running artifical chimera data to see if any results come from it when looking at the visuals." />
-    <option name="LAST_COMMIT_MESSAGE" value="Basic labelling and highlighting of WIndow segments in superframe&#10;&#10;As title says, now highlighting which window the user has clicked on, and providing some of the GC Content data about it. I don't feel like it's useful enough yet, and the application as a whole feels lacking without the support of k-mer frequency analysis, but I'm running out of time and not sure how else I can talk about the GC Content vs ORF aside running artifical chimera data to see if any results come from it when looking at the visuals." />
+    <MESSAGE value="Blog items and seemingly missed files in last commit." />
+    <MESSAGE value="Further info on GC&#10;&#10;When testing with an interesting mixed species file I found the chart visual show the obvious chimera, but the standard deviation obviously wouldn't pick this up. &#10;Wrote a small bit of text to notify the user to look for this. Wondering if I can find these and highlight the difference in actual code for use in Superframe somehow, but running out of time to do my documentation so perhaps not." />
+    <option name="LAST_COMMIT_MESSAGE" value="Further info on GC&#10;&#10;When testing with an interesting mixed species file I found the chart visual show the obvious chimera, but the standard deviation obviously wouldn't pick this up. &#10;Wrote a small bit of text to notify the user to look for this. Wondering if I can find these and highlight the difference in actual code for use in Superframe somehow, but running out of time to do my documentation so perhaps not." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1731,8 +1775,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/templates/toolkit.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="7.47557">
-          <caret line="135" column="42" selection-start-line="135" selection-start-column="25" selection-end-line="135" selection-end-column="42" />
+        <state vertical-scroll-proportion="0.742671">
+          <caret line="60" column="108" selection-start-line="60" selection-start-column="108" selection-end-line="60" selection-end-column="108" />
           <folding>
             <element signature="n#style#0;n#span#0;n#div#1;n#div#2;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#span#1;n#div#1;n#div#2;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />

@@ -1,6 +1,5 @@
 var canvasList = new Array(6);
 var contextList = new Array(0);
-
 var orfDisplayWidth;
 var orfDisplayHeight = 20;
 var framePos = 5;
@@ -8,6 +7,7 @@ var framePosMofidier = 50;
 var canvasWidth = 500;
 var highlightedIndex = -1;
 
+// Paint the necessary data onto the canvases representing the different ORFs, including any ORF Locations
 function paintFrames(){
     for(var i = 0; i < contextList.length; i++){
         contextList[i].fillStyle="#DADADA";
@@ -42,6 +42,7 @@ function paintFrames(){
     };
 }
 
+// Initialize the canvases for each frame.
 function setupOrfChart(){
 canvasList = [
     document.getElementById("orfcanvas-frame1"),
@@ -63,6 +64,7 @@ canvasList = [
     paintFrames();
 }
 
+// Creates and displays HTML for the information about an ORF passed as a parameter.
 function displayOrfInformation(orfLocation, i){
     var previousHighlightedIndex = highlightedIndex;
     highlightedIndex = i;
@@ -84,6 +86,7 @@ function displayOrfInformation(orfLocation, i){
     }
 }
 
+// Look if the passed x coordinate and frame match with any ORF Locations
 function checkIfWithinORFLocation(x, frameNumber){
     for(var i = 0; i < orfData.length; i++){
         if(orfData[i].frameIndicator == frameNumber){
@@ -102,6 +105,7 @@ function checkIfWithinORFLocation(x, frameNumber){
     }
 }
 
+// Handle a click event on a canvas object representing a frame.
 function onClick(event){
     var eventTarget;
     if (event.srcElement){
