@@ -10,7 +10,13 @@
 </head>
 <body>
 <div th:replace="fragments/header :: header"></div>
-Error, sorry
+<div class="page">
+    <div id="content">
+        <a th:href="@{/}" >Submit other data.</a> <br />
+        <p>There has been an error, sorry. Have you submitted the correct data before coming to this page?
+            Please try again.</p>
+    </div>
+</div>
 <div th:replace="fragments/footer :: footer"></div>
 </body>
 </html>

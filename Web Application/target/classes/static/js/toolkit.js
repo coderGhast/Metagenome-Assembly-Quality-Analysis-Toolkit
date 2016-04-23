@@ -1,4 +1,4 @@
-/* Code for tabs accreditted to http://red-team-design.com/css3-jquery-folder-tabs/ */
+/* Code for tabs accredited to http://red-team-design.com/css3-jquery-folder-tabs/ */
 $(document).ready(function() {
     $("#tabscontent").find("[id^='tab']").hide(); // Hide all content
     $("#tabs li:first").attr("id","current"); // Activate the first tab
@@ -18,7 +18,13 @@ $(document).ready(function() {
     });
 });
 
+// Calls to display the data about an ORF Location
+function vieworf(id){
+    displayOrfInformation(orfData[id], id);
+}
 
+// Formats the data of an OpenReadingFrameLocation into HTML split into readable chunks, including highlighting of
+// Start and Stop Codons within the ORF Location characters.
 function formatOrfSequence(sequence, startIndex, frameIndicator){
     var spacedSequence = new Array();
     spacedSequence.push('<p>' + startIndex + " ");

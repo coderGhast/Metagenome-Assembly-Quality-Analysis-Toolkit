@@ -2,27 +2,35 @@ package toolkit.utilities;
 
 /**
  * Created by James Euesden on 30/03/2016.
+ *
+ * A class used to house utility methods for use with sequences.
  */
 public class SequenceUtilities {
-    public static String getReverseSequence(String contig){
-        StringBuilder reverseContig = new StringBuilder();
-        int i = contig.length() - 1;
+
+    /**
+     * Returns the reverse base pair sequences of a provided sequence of characters.
+     * @param sequence The sequence to return the reverse base pairs of.
+     * @return The reversed base pairs of the originally provided sequence.
+     */
+    public static String getReverseSequence(String sequence){
+        StringBuilder reverseSequence = new StringBuilder();
+        int i = sequence.length() - 1;
         while(i >= 0){
-            switch(contig.toLowerCase().charAt(i)){
-                case('t') : reverseContig.append('A');
+            switch(sequence.toLowerCase().charAt(i)){
+                case('t') : reverseSequence.append('A');
                     break;
-                case('a') : reverseContig.append('T');
+                case('a') : reverseSequence.append('T');
                     break;
-                case('g') : reverseContig.append('C');
+                case('g') : reverseSequence.append('C');
                     break;
-                case('c') : reverseContig.append('G');
+                case('c') : reverseSequence.append('G');
                     break;
-                default : reverseContig.append('N');
+                default : reverseSequence.append('N');
                     break;
             }
             i--;
         }
 
-        return reverseContig.toString();
+        return reverseSequence.toString();
     }
 }
