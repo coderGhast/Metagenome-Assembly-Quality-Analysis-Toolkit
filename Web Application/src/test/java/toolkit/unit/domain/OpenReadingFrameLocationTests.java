@@ -24,5 +24,21 @@ public class OpenReadingFrameLocationTests {
         assertEquals(12, _sut.getOrfStopIndex());
     }
 
+    @Test
+    public void compareOrfLocationsShouldReturnZeroWithEqualLengthOrfLocation(){
+        int result = _sut.compareTo(new OpenReadingFrameLocation("ATGCCCCCCCTAG", 0, 12, 3));
+        assertEquals(0, result);
+    }
 
+    @Test
+    public void compareOrfLocationsShouldReturnOneWithLargerLengthOrfLocation(){
+        int result = _sut.compareTo(new OpenReadingFrameLocation("ATGCCCCTAG", 0, 9, 3));
+        assertEquals(1, result);
+    }
+
+    @Test
+    public void compareOrfLocationsShouldReturnMinusOneWithShorterLengthOrfLocation(){
+        int result = _sut.compareTo(new OpenReadingFrameLocation("ATGCCCCCCCCCCTAG", 0, 15, 3));
+        assertEquals(-1, result);
+    }
 }

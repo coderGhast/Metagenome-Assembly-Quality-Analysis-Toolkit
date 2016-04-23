@@ -1,9 +1,12 @@
 package toolkit.integration.domain;
 
 import org.junit.Before;
+import org.junit.Rule;
 import org.junit.Test;
+import org.junit.rules.ExpectedException;
 import toolkit.domain.*;
 
+import java.io.FileNotFoundException;
 import java.util.ArrayList;
 
 import static org.junit.Assert.assertEquals;
@@ -34,6 +37,20 @@ public class FastaReaderTests {
                 "CTAGAGAGA\n" +
                 "TAGCGATGC\n" +
                 "GGCTATAGA";
+    }
+
+    @Test
+    public void readSequenceInputShouldReturnListOfContiguousReads(){
+        UserParameters testParameters = new UserParameters();
+        testParameters.setUserContent(_testContent);
+        testParameters.setContigLengthThreshold(0);
+        ContigResult result = _sut.readSequenceInput(testParameters);
+        ArrayList<ContiguousRead> reads = result.getContigList();
+        assertEquals(0, result.getDiscardedContigCount());
+        assertEquals(3, reads.size());
+        assertEquals(">test_0", reads.get(0).getContigInformation());
+        assertEquals(">test_1", reads.get(1).getContigInformation());
+        assertEquals(">test_2", reads.get(2).getContigInformation());
     }
 
     @Test
@@ -75,4 +92,15 @@ public class FastaReaderTests {
         assertEquals(1, reads.size());
         assertEquals(">test_2", reads.get(0).getContigInformation());
     }
+
+    @Test
+    public void readFileShouldThrowExceptionWhenFileMissing() {
+        try{
+            _sut.readFile("doesntexist.fa", 0);
+        } catch(Exception e){
+            assertEquals(e.getMessage(), "doesntexist.fa (The system cannot find the file specified)");
+        }
+    }
 }
+
+
