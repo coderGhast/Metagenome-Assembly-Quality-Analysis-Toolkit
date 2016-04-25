@@ -14,7 +14,7 @@ My first step was trying to understand what exactly it was I was expected to pro
 \subsection{Metagenomics}
 Metagenomics is the study of environmental samples of genomic data where the contents of the data are potentially unknown and unclear. It can be described as `Open-ended sequencing of nucleic acids recovered directly from samples without culture or target-specific enrichment or amplification; usually applies to the study of microbial communities.'\cite{citeulike:14021056} It can be used in the findings of what an animal gut may contain, what viruses are within a sample when looking into outbreaks and finding what microbial communities exist in a sample area.
 
-Metagenomics is a hot and interesting topic in the bioinformatics field, and its uses grow as more is learned, but there is the issue of quality, and how a metagenomic sample should be processed. I read articles that attempted to provided ways of analysing metagenomic data to get the best quality results at the end.\cite{citeulike:11448654}
+Metagenomics is a hot and interesting topic in the bioinformatics field, and its uses grow as more is learned, but there is the issue of quality, and how a metagenomic sample should be processed. I read articles that attempted to provided ways of analyzing metagenomic data to get the best quality results at the end.\cite{citeulike:11448654}
 
 \subsection{Understanding Quality}
 
@@ -30,13 +30,67 @@ It was not just tools for metagenomic quality assessment I looked into. I also f
 % What was your background preparation for the project? What similar systems did you assess? What was your motivation and interest in this project? 
 
 \section{Analysis}
-After understanding the project topic and problem a little better, I decided upon a number of requirements of the application to begin with. Some of these were definite goals, some stretch goals and some future development tasks if I were to finish all else or were to continue the application after the project deadline.
+After understanding the project topic and problem a little better, I decided upon a number of requirements of the application to begin with. Some of these were definite goals, some stretch goals and some future development tasks if I were to finish all else or were to continue the application after the project deadline. I broke the problem down into its two core components steps, the analysis and the report. 
 
-Analysis of the problem - What is it that needed to be done? What tasks were suitable? Making a user interface with some kind of report using charts and texts. Would it be helpful to do a confidence factor, or leave the user to decide? What sort of interface and data would the user be inputting? Is there a solution to the problem that gives a direct answer? Is it worth writing my own software or consuming results from others software?
+\subsection{Quality assessment}
+The quality assessment had to use a number of methods suitable enough to produce some data or statistics that could indicate to the user a measure of quality of their assembly data. For this end, I decided upon a number of objectives:
 
-My analysis helped to decide that I wanted to write my own software. While solutions exist, their APIs were either depreciated or too much to use, and the output I wished to display would be better when I wrote my own software. I wanted the technical challenge of writing my own software, and enabling the application to be maintainable and expanded upon in the future rather than relying on third party support applications in order to process a users input.
+\subsubsection{Contig length}
+`Give the user control over the minimum length a contig should be to be considered.'
 
-The alternative approach is the already mentioned method of just consuming output from other applications. While potentially faster to build an application, the risk of the application becoming defunct if the other applications changed the way they output, removed their API or I needed a different form of data meant that it would potentially be a bad idea in the long run, as I wanted to envision this application as something that could have work carried forward and be built upon with additional techniques. It is for this reason I chose to self-implement the techniques, and through that also build on my domain understanding and develop a full application.
+This measure would be good in displaying where an assembler could not find any reads to match with the current read and so didn't do anything more with it than output it. However, this would most likely indicate that it is of no use to a user, as a contig the size of a read length is unlikely to contain any useful genome data. Allowing a user to set the minimum length threshold lets them set their own size, be it the known read length size of their data, or a size they think would be appropriate to start seeing some usable data from contigs with length over a particular amount/number of read lengths.
+
+\subsubsection{Number of unknown characters}
+`The application should count the number of unknown N characters within a contig.'
+
+When an assembler cannot understand what to do with a character, or a sequence of characters, it may insert an `N' character. Indicating to a user how many of these exist in a contig, and what percentage of the whole they make up is a helpful indication of whether their data is of good quality or not, with the less or no unknowns the better the quality.
+
+\subsubsection{GC Content}
+`Conduct a GC Content percentage analysis in sliding windows of a size set by the user.'
+
+The GC content is the percentage of `G' (guanine) and `C' (cytosine) characters within a sequence\cite{citeulike:14021291}. When the application takes a contig, it should break the contig up into windows of a size set by the user. If a contig was of length 30,000, they might break it into 100 windows of 300, for example. These window sizes should then have their GC content percentage calculated, and the mean of the entire contigs GC content worked out. Using these values it then becomes possible to detect potential anomalies in the percentages of individual windows that have a percentage value drastically different than the mean.
+
+\subsubsection{Open Reading Frame Locations}
+`To confirm if a GC window is outside of the mean by misalign, Open Reading Frame (ORF) Locations should be found where the GC content would naturally be higher.'
+
+This addition to the requirements came later in the projects development as I came to understand GC content and how a window that looks like an area of a misalign may actually not be. We can look at a contiguous read and find protein coding regions through the use of Open Reading Frames\cite{orfdefinition}, where the GC content percentage is often naturally higher than outside of these regions.
+
+By finding the ORF Locations, we can use these in the quality report to match up to windows that may at first seem like anomalies in the contig where it is instead actually a natural occurrence. There is a preexisting tool for this ORF finding functionality by NCBI\cite{orffinder}. While it might not be the case that an ORF Location matches with an out of threshold GC content window, or that they do match but it is still in fact an anomaly, it was a requirement of the application I wished to include in order to give the user another tool to use for inspecting their data.
+
+\subsubsection{K-mer frequency analysis}
+`The application should conduct a k-mer frequency analysis, or use output of k-mer frequency analysis tools.'
+
+Conducting k-mer frequency analysis in window sizes has a similar output as GC content, except we look for the frequency of particular `k-mer' (where `k' is a number of how many characters to be considered, e.g. 3mer `ATG', 4mer `ATGA'). Through measuring the frequency in windows we could see if there was an even distribution of frequencies across a contig, and if any windows had large changes in the frequencies that could indicate a potentially bad quality contig.
+
+This was set as a stretch requirement, as the process of efficiently conducting k-mer frequency analysis and the research into the possibility of writing my own software to do it or consuming output of another application was expected to take over the time for the project, after my background reading and understanding was completed and the other features previously mentioned implemented.
+
+\subsubsection{NCBI reference data}
+`The application should compare the contiguous read data to known reference data in the NCBI database with BLAST.'
+
+Using the known reference data, much like with MEGAN, it would be possible to see if any of the contigs in the user data match to known reference data and so can be considered good quality. This was a stretch requirement though, with the idea more in mind for if the application were to be continued to be developed after the project deadline.
+
+\subsection{Quality report and data input}
+
+\subsubsection{Read user input in FASTA format}
+
+\subsubsection{Display a list of the contigs}
+
+\subsubsection{User control over GC Content, ORF Location and k-mer frequency analysis paramters}
+
+\subsubsection{Visual report on GC Content}
+
+\subsubsection{Visual report on ORF Locations}
+
+\subsubsection{Visual report of matches between GC Content and ORF Locations}
+
+\subsubsection{Visual report on k-mer frequency analysis}
+
+
+Based on the requirements I had selected, I decided that I wanted to write my own software for each functional component. While solutions for each component exists individually, I felt there would be more benefit to a user if I could produce just my own software to support the functionality over requiring them to user third part software in order to use my application too.
+
+Additionally to this, I wanted the technical challenge of writing my own software, and enabling the application to be maintainable and expanded upon in the future rather than relying on third party support applications in order to process a users input. The process of developing the application from scratch would also give me the opportunity to learn more about the domain and technologies for development than just consuming output of other existing applications, even if achieving the end result would take more time.
+
+While I knew the project would come to a close on development at the end of the semester, I also wanted to envision this as a project that could be taken forward in the future to be further developed and maintained. For this reason it also made sense to develop my own application without consuming output from third party software, excluding the FASTA files from an assembler. If one of these third party applications was no longer available or their output changed, it would render my application unusable or require more future modification to adapt to changes by outside sources.
 
 \subsection{Objectives}
 What actual requirements did I come up with for my application, based on my Background reading.

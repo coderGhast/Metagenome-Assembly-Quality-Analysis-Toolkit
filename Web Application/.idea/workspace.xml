@@ -1,7 +1,27 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="2d0706c2-c12e-40d6-9032-19d66651f617" name="Default" comment="" />
+    <list default="true" id="2d0706c2-c12e-40d6-9032-19d66651f617" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Documents/Final Report/dissertation.pdf" afterPath="$PROJECT_DIR$/../Documents/Final Report/dissertation.pdf" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Documents/Final Report/dissertation.synctex.gz" afterPath="$PROJECT_DIR$/../Documents/Final Report/dissertation.synctex.gz" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Documents/Final Report/Appendix1/appendix1.aux" afterPath="$PROJECT_DIR$/../Documents/Final Report/Appendix1/appendix1.aux" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Documents/Final Report/Appendix2/appendix2.aux" afterPath="$PROJECT_DIR$/../Documents/Final Report/Appendix2/appendix2.aux" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Documents/Final Report/Appendix3/appendix3.aux" afterPath="$PROJECT_DIR$/../Documents/Final Report/Appendix3/appendix3.aux" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Documents/Final Report/Chapter1/chapter1.aux" afterPath="$PROJECT_DIR$/../Documents/Final Report/Chapter1/chapter1.aux" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Documents/Final Report/Chapter1/chapter1.log" afterPath="$PROJECT_DIR$/../Documents/Final Report/Chapter1/chapter1.log" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Documents/Final Report/Chapter1/chapter1.tex" afterPath="$PROJECT_DIR$/../Documents/Final Report/Chapter1/chapter1.tex" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Documents/Final Report/Chapter2/chapter2.aux" afterPath="$PROJECT_DIR$/../Documents/Final Report/Chapter2/chapter2.aux" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Documents/Final Report/Chapter3/chapter3.aux" afterPath="$PROJECT_DIR$/../Documents/Final Report/Chapter3/chapter3.aux" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Documents/Final Report/Chapter4/chapter4.aux" afterPath="$PROJECT_DIR$/../Documents/Final Report/Chapter4/chapter4.aux" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Documents/Final Report/Chapter5/chapter5.aux" afterPath="$PROJECT_DIR$/../Documents/Final Report/Chapter5/chapter5.aux" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Documents/Final Report/References/references.bib" afterPath="$PROJECT_DIR$/../Documents/Final Report/References/references.bib" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Documents/Final Report/dissertation.aux" afterPath="$PROJECT_DIR$/../Documents/Final Report/dissertation.aux" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Documents/Final Report/dissertation.bbl" afterPath="$PROJECT_DIR$/../Documents/Final Report/dissertation.bbl" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Documents/Final Report/dissertation.blg" afterPath="$PROJECT_DIR$/../Documents/Final Report/dissertation.blg" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Documents/Final Report/dissertation.log" afterPath="$PROJECT_DIR$/../Documents/Final Report/dissertation.log" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Documents/Final Report/dissertation.toc" afterPath="$PROJECT_DIR$/../Documents/Final Report/dissertation.toc" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+    </list>
     <ignored path="MetagenomeQualityToolkit.iws" />
     <ignored path=".idea/workspace.xml" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -151,7 +171,9 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="PackagesPane" />
+      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -576,8 +598,6 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scratches" />
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -1258,27 +1278,27 @@
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32307693" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.382906" sideWeight="0.51134646" order="10" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32980332" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4010239" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.8188034" sideWeight="0.48865354" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Coverage" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.37291983" sideWeight="0.5096953" order="0" side_tool="true" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32569557" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.27685326" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.23418804" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24962178" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24962178" sideWeight="0.4903047" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.37777779" sideWeight="0.49394855" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32307693" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2769231" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.8188034" sideWeight="0.48865354" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Coverage" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.37291983" sideWeight="0.5096953" order="0" side_tool="true" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="3" side_tool="false" content_ui="combo" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.23418804" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.37777779" sideWeight="0.49394855" order="3" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
   <component name="Vcs.Log.UiProperties">
@@ -1542,7 +1562,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-0.8779174">
           <caret line="0" column="45" selection-start-line="0" selection-start-column="45" selection-end-line="0" selection-end-column="45" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1550,7 +1569,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="3.2657092">
           <caret line="107" column="64" selection-start-line="107" selection-start-column="64" selection-end-line="107" selection-end-column="64" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1558,7 +1576,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1566,7 +1583,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="3.1741471">
           <caret line="104" column="65" selection-start-line="104" selection-start-column="65" selection-end-line="104" selection-end-column="65" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1574,7 +1590,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.8978979">
           <caret line="28" column="1" selection-start-line="28" selection-start-column="1" selection-end-line="28" selection-end-column="1" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1582,7 +1597,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.14714715">
           <caret line="18" column="3" selection-start-line="18" selection-start-column="3" selection-end-line="18" selection-end-column="3" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1590,7 +1604,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>

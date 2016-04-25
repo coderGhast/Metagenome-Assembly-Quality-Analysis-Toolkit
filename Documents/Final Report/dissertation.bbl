@@ -1,4 +1,4 @@
-\begin{thebibliography}{1}
+\begin{thebibliography}{10}
 \providecommand{\url}[1]{#1}
 \csname url@rmstyle\endcsname
 \providecommand{\newblock}{\relax}
@@ -19,12 +19,9 @@
 #2}}
 
 \bibitem{citeulike:11826724}
-\BIBentryALTinterwordspacing
 N.~C. B. I.~R. Coordinators, ``{Database resources of the National Center for
   Biotechnology Information},'' \emph{Nucleic Acids Research}, vol.~41, no.~D1,
-  pp. D8--D20, Jan. 2013. [Online]. Available:
-  \url{http://dx.doi.org/10.1093/nar/gks1189}
-\BIBentrySTDinterwordspacing
+  pp. D8--D20, Jan. 2013.
  \begin{quotation}\noindent The NCBI database and resources was extremely
   useful to me while developing my application. It gave me access to papers and
   research articles, data sets for downloading sequences to play with and
@@ -34,13 +31,10 @@ N.~C. B. I.~R. Coordinators, ``{Database resources of the National Center for
   \end{quotation}
 
 \bibitem{citeulike:10457549}
-\BIBentryALTinterwordspacing
 D.~Huson and S.~Mitra, ``{Introduction to the Analysis of Environmental
   Sequences: Metagenomics with MEGAN},'' in \emph{Evolutionary Genomics}, ser.
   Methods in Molecular Biology, M.~Anisimova, Ed.\hskip 1em plus 0.5em minus
-  0.4em\relax Humana Press, 2012, vol. 856, pp. 415--429. [Online]. Available:
-  \url{http://dx.doi.org/10.1007/978-1-61779-585-5\_17}
-\BIBentrySTDinterwordspacing
+  0.4em\relax Humana Press, 2012, vol. 856, pp. 415--429.
  \begin{quotation}\noindent A useful chapter in reading about a tool that has
   its own attempt at analysing metagenomic data. While the tool does not look
   at the quality, it looks at what the user provides and indicates to them if
@@ -50,12 +44,9 @@ D.~Huson and S.~Mitra, ``{Introduction to the Analysis of Environmental
   we know it is most likely not chimeric. \end{quotation}
 
 \bibitem{citeulike:3746363}
-\BIBentryALTinterwordspacing
 V.~Kunin, A.~Copeland, A.~Lapidus, K.~Mavromatis, and P.~Hugenholtz, ``{A
   Bioinformatician's Guide to Metagenomics},'' \emph{Microbiology and Molecular
-  Biology Reviews}, vol.~72, no.~4, pp. 557--578, Dec. 2008. [Online].
-  Available: \url{http://dx.doi.org/10.1128/mmbr.00009-08}
-\BIBentrySTDinterwordspacing
+  Biology Reviews}, vol.~72, no.~4, pp. 557--578, Dec. 2008.
  \begin{quotation}\noindent This paper was invaluable to me at the beginning of
   the project, understanding what metagenomics is, and how the quality of an
   assembly can be full of errors, and why. While much of the paper was not
@@ -64,48 +55,36 @@ V.~Kunin, A.~Copeland, A.~Lapidus, K.~Mavromatis, and P.~Hugenholtz, ``{A
   useful. \end{quotation}
 
 \bibitem{citeulike:14021056}
-\BIBentryALTinterwordspacing
 N.~J. Loman, C.~Constantinidou, M.~Christner, H.~Rohde, J.~Z.~M. Chan,
   J.~Quick, J.~C. Weir, C.~Quince, G.~P. Smith, J.~R. Betley, M.~Aepfelbacher,
   and M.~J. Pallen, ``{A Culture-Independent Sequence-Based Metagenomics
   Approach to the Investigation of an Outbreak of Shiga-Toxigenic Escherichia
   coli O104:H4},'' \emph{JAMA}, vol. 309, no.~14, pp. 1502+, Apr. 2013.
-  [Online]. Available: \url{http://dx.doi.org/10.1001/jama.2013.3231}
-\BIBentrySTDinterwordspacing
  \begin{quotation}\noindent This paper was useful in understanding what the
   study of metagenomics can be used for, and so helped me better understand
   what metagenomics is and how it could be useful to have a tool for quality
   control. \end{quotation}
 
 \bibitem{citeulike:8643499}
-\BIBentryALTinterwordspacing
 G.~Mar\c{c}ais and C.~Kingsford, ``{A fast, lock-free approach for efficient
   parallel counting of occurrences of k-mers},'' \emph{Bioinformatics},
-  vol.~27, no.~6, pp. 764--770, Mar. 2011. [Online]. Available:
-  \url{http://dx.doi.org/10.1093/bioinformatics/btr011}
-\BIBentrySTDinterwordspacing
+  vol.~27, no.~6, pp. 764--770, Mar. 2011.
  \begin{quotation}\noindent Jellyfish, a tool for k-mer frequency anaylsis. A
   tool I looked into briefly at the beginning of my project when considering
   what techniques to use for my application. \end{quotation}
 
 \bibitem{citeulike:9639487}
-\BIBentryALTinterwordspacing
 P.~Melsted and J.~K. Pritchard, ``{Efficient counting of k-mers in DNA
   sequences using a bloom filter},'' \emph{BMC Bioinformatics}, vol.~12, no.~1,
-  pp. 333+, 2011. [Online]. Available:
-  \url{http://dx.doi.org/10.1186/1471-2105-12-333}
-\BIBentrySTDinterwordspacing
+  pp. 333+, 2011.
  \begin{quotation}\noindent BFCounter, for k-mer frequency analysis. A tool I
   considered when thinking about the requirements and techniques involved in
   the development of my application. \end{quotation}
 
 \bibitem{citeulike:8714996}
-\BIBentryALTinterwordspacing
 R.~Schmieder and R.~Edwards, ``{Quality control and preprocessing of
   metagenomic datasets},'' \emph{Bioinformatics}, vol.~27, no.~6, pp.
-  btr026--864, Jan. 2011. [Online]. Available:
-  \url{http://dx.doi.org/10.1093/bioinformatics/btr026}
-\BIBentrySTDinterwordspacing
+  btr026--864, Jan. 2011.
  \begin{quotation}\noindent A tool that does what my project topic describes,
   with more understanding than I had at the start of my project. An interesting
   look at what other software is out there to do what my application also
@@ -113,13 +92,39 @@ R.~Schmieder and R.~Edwards, ``{Quality control and preprocessing of
   may wish to use to give the user of my own application a report on the
   quality of their assembly. \end{quotation}
 
+\bibitem{citeulike:14021291}
+J.~C. Segen, \emph{{The dictionary of modern medicine}}.\hskip 1em plus 0.5em
+  minus 0.4em\relax Parthenon Pub. Group, 1992, 1850703213.
+ \begin{quotation}\noindent For the reference of what GC Content is. The most
+  referenced link seen else where online (e.g. from Wikipedia) is to a web link
+  that no longer exists. This reference backs up the description of GC Content,
+  and is how I understand what GC Content is outside of Wikipedia's reference
+  to the missing web link. \end{quotation}
+
+\bibitem{orffinder}
+{Tatiana Tatusov and Roman Tatusov}, ``{ORF Finder},'' [Online] Available:
+  \url{http://www.ncbi.nlm.nih.gov/projects/gorf/}, 2016, {[Accessed on: 25
+  April 2016]}.
+ \begin{quotation}\noindent A tool from NCBI for finding Open Reading Frames
+  within a pasted sequences. I liked using this to compare my own ORF results
+  against and get an idea of how I might want to display my own results in the
+  quality report too. It was also nice to use for helping me understand what an
+  Open Reading Frame actually is. \end{quotation}
+
+\bibitem{orfdefinition}
+{The Board of Regents of the University of Wisconsin System}, ``{Translation
+  and Open Reading Frames},'' [Online] Available:
+  \url{http://bioweb.uwlax.edu/GenWeb/Molecular/Seq\_Anal/Translation/translation.html},
+  2008, {[Accessed on: 25 April 2016]}.
+ \begin{quotation}\noindent I started to understand what an Open Reading Frame
+  was from reading this web page. It helped me get a grasp of what ORFs were,
+  how they were constructed and what I should do to write code for my own
+  application in how to find ORF Locations. \end{quotation}
+
 \bibitem{citeulike:11448654}
-\BIBentryALTinterwordspacing
 T.~Thomas, J.~Gilbert, and F.~Meyer, ``{Metagenomics - a guide from sampling to
   data analysis.}'' \emph{Microbial informatics and experimentation}, vol.~2,
-  no.~1, pp.~3+, 2012. [Online]. Available:
-  \url{http://dx.doi.org/10.1186/2042-5783-2-3}
-\BIBentrySTDinterwordspacing
+  no.~1, pp.~3+, 2012.
  \begin{quotation}\noindent A useful article in understanding what metagenomic
   study was. It was helpful to read as I tried to understand metagenomics at
   the beginning of the project. \end{quotation}
