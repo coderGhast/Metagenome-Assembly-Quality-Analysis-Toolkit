@@ -5,9 +5,10 @@
 \section{Introduction}
 The project aim was to create an application that could report on the quality of a metagenome assemblies  provided by the user, presenting them with feedback about the contiguous reads contained in their data. The requirements for the project topic were very open, as there are multiple techniques for attempting to report the quality of a single species genome assembly, and while some can be used for metagenome assemblies, it was believed that no one tool covered this area yet with numerous techniques. Likewise, the way in which the results could be presented to the user was not established and open to my own interpretation.
 
+%======= BACKGROUND ==========
 
 \section{Background}
-Before the project began, my knowledge of metagenomics was very limited, close to non. However, I was liked the project title and description and thought it would be an interesting and challenging topic, to learn new domain knowledge, use different technologies and attempt to implement an application where I had to learn from the ground up. On top of this, I find DNA to be an intriguing topic even with my limited knowledge, I was curious to learn more as I worked on this project.
+Before the project began, my knowledge of metagenomics was very limited, close to none. However, I was liked the project title and description and thought it would be an interesting and challenging topic, to learn new domain knowledge, use different technologies and attempt to implement an application where I had to learn from the ground up. On top of this, I find DNA to be an intriguing topic even with my limited knowledge, I was curious to learn more as I worked on this project.
 
 My first step was trying to understand what exactly it was I was expected to produce at the end of the project. As the requirements of the resulting application were so open, it was up to me to research what metagenomics is, what is meant by `quality' within the subject, how this quality might be found and reported on, what technologies would be appropriate and what quality techniques could be used.
 
@@ -27,10 +28,10 @@ There are a number of tools I discovered in my background research that attempt 
 
 It was not just tools for metagenomic quality assessment I looked into. I also found the NCBI database and their BLAST tool\cite{citeulike:11826724}, and kept in mind these may be useful as I progressed through my applications development, and through reading an article that discussed the advantages of k-mer frequency analysis for quality assessment, I looked into the Jellyfish\cite{citeulike:8643499} and BFCounter\cite{citeulike:9639487} tools for just this role where I could potentially consume the output of their processing, although they took a step back in my mind while I considered what it was I actually wanted my application to be and worked out the requirements.
 
-% What was your background preparation for the project? What similar systems did you assess? What was your motivation and interest in this project? 
+%========== ANALYSIS =============
 
 \section{Analysis}
-After understanding the project topic and problem a little better, I decided upon a number of requirements of the application to begin with. Some of these were definite goals, some stretch goals and some future development tasks if I were to finish all else or were to continue the application after the project deadline. I broke the problem down into its two core components steps, the analysis and the report. 
+After understanding the project topic and problem a little better, I decided upon a number of requirements of the application to begin with. Some of these were definite goals, some stretch goals and some future development tasks if I were to finish all else or were to continue the application after the project deadline. I broke the problem down into its two core components steps, the analysis and the report. I felt that the resulting list that can be seen below was enough to work with based on the knowledge I had gained from my background reading and what I thought would be appropriate for the time allotted for the project.
 
 \subsection{Quality assessment}
 The quality assessment had to use a number of methods suitable enough to produce some data or statistics that could indicate to the user a measure of quality of their assembly data. For this end, I decided upon a number of objectives:
@@ -70,52 +71,44 @@ This was set as a stretch requirement, as the process of efficiently conducting 
 Using the known reference data, much like with MEGAN, it would be possible to see if any of the contigs in the user data match to known reference data and so can be considered good quality. This was a stretch requirement though, with the idea more in mind for if the application were to be continued to be developed after the project deadline.
 
 \subsection{Quality report and data input}
-
 \subsubsection{Read user input in FASTA format}
+`A user should be able to paste or upload their data in FASTA format.'
+
+The FASTA format is a commonly used format for genomic data. It is `a text-based format for representing either nucleotide sequences or peptide sequences' \cite{fastaformat}. It is formatted in the way that can be seen in figure 1 below. I set myself the task for allowing the upload and paste of data, beginning with pasting the data into a form, as uploading data could add a larger realm of security and data size issues and so I wanted to have the simplest thing possible first.
+
+For the FASTA format my application accepted, I planned for it to begin only taking into account ATGC \& N as characters to deal with, where N was `unknown/unclear' and the other characters were valid. Uppercase and lowercase characters would be preserved in any output display of the application, but capitalization would not taken into account for any of the processes as they did not make a difference.
 
 \subsubsection{Display a list of the contigs}
+`A user should be able to see the contiguous reads listed in their FASTA data.'
 
-\subsubsection{User control over GC Content, ORF Location and k-mer frequency analysis paramters}
+I decided it would be a good idea to display to the user the list of contigs that their file contained, with small bits of relevant information, such as the size of the contig, the header of it and the previously mentioned `N' count and percentage. From here a user would be able to select a contig they wish to further inspect for quality issues.
 
-\subsubsection{Visual report on GC Content}
+\subsubsection{User control over GC Content, ORF Location and k-mer frequency analysis parameters}
+`When conducting a quality inspection, a user should be able to adjust the parameters of the methods based upon their expectations, data input and choice.'
 
-\subsubsection{Visual report on ORF Locations}
+Since the data uploaded by a user would have been assembled from reads of a particular length, the appropriate size of GC content and k-mer frequency windows, minimum size of ORF Location lengths and minim length of contigs should be set by them. It could have been a possibility to attempt to guess what a good size would be for the user (i.e. find the shorted contig in the data and consider that that might be the size of a single read, and suggest length parameters based on that).
 
-\subsubsection{Visual report of matches between GC Content and ORF Locations}
+\subsubsection{Visual reports of the quality inspection methods}
+`A user should be able to see a visual representation of a contigs GC content and any anomalies.'
 
-\subsubsection{Visual report on k-mer frequency analysis}
+In order for a user to be shown whether their data is of good quality or not, visualizations would be required that highlight any problem areas, or if areas are not highlighted, at least give them a broad sense of the layout of the results of the quality inspection to allow them to analyze the results from themselves. This should include displays for GC content in windows, ORF Locations broken into individual frames, k-mer frequency analysis in windows and a comparison shown between the GC content and ORF Locations.
 
+I did consider how I could potentially provided a quality confidence factor to a user, or how I might demonstrate to them in a statistical way that their data was of good or bad quality. However, with the amount of methods that could be used, the unclarity of the data itself and the users expectations, I felt that it would be better to instead provide the user with visuals to analyze the results of my application themselves, and I would instead try to highlight problem areas without necessarily saying clearly `This is/is not a problem area'.
 
+\begin{figure}[H]
+ \centering
+\caption{A use case diagram demonstrating the expected functionality for a user based on the functional requirements.}
+\includegraphics[width=0.5\textwidth]{images/usecase}
+\end{figure}
+
+\subsection{Implementation}
 Based on the requirements I had selected, I decided that I wanted to write my own software for each functional component. While solutions for each component exists individually, I felt there would be more benefit to a user if I could produce just my own software to support the functionality over requiring them to user third part software in order to use my application too.
 
 Additionally to this, I wanted the technical challenge of writing my own software, and enabling the application to be maintainable and expanded upon in the future rather than relying on third party support applications in order to process a users input. The process of developing the application from scratch would also give me the opportunity to learn more about the domain and technologies for development than just consuming output of other existing applications, even if achieving the end result would take more time.
 
 While I knew the project would come to a close on development at the end of the semester, I also wanted to envision this as a project that could be taken forward in the future to be further developed and maintained. For this reason it also made sense to develop my own application without consuming output from third party software, excluding the FASTA files from an assembler. If one of these third party applications was no longer available or their output changed, it would render my application unusable or require more future modification to adapt to changes by outside sources.
 
-\subsection{Objectives}
-What actual requirements did I come up with for my application, based on my Background reading.
-\begin{itemize}
-\item Produce a visual report on a users input assembly data
-\item Inspect components of individual contiguous reads in the assembly data
-\item Include GC Content Percentage in set windows for looking at changes outside of a set threshold that may indicate a chimera
-\item Include Open Reading Frame Locations within the contiguous reads
-\item Include comparissons between the GC Content Percentages where there are areas out of a users set threshold and ORF  Locations, allowing a user to see areas where there may be not be issues if the GC Content was out of the set threshold but within an ORF Location that may explain the difference.
-\item Include k-mer frequency analysis  in set windows for looking at changes outside of a set threshold that may indicate a chimera
-\item Allow the user to request contiguous reads under certain lengths to be ignored, and told how many were removed in this way
-\item Allow the user to select their own sizes of windows for the GC Content Percentages, and allow them to select the minimum length of ORF Locations to ignore any they deem too small for their contiguous read
-\end{itemize}
-
-Include USE CASE DIAGRAM of these things here, and how a user interacts with them.
-
-The list was built up through what would seem possible to be done in the time available, producing an application that had room to grow, for example comparing sections and full contiguous reads with known sequences via BLAST/the NCBI database, while providing useful information to users about their assembly file and the particular contiguous reads within them. The report was decided that while it might not be able to give a definite answer of good or bad quality, it may allow the user to see where there could be issues through highlighting sections of contiguous reads and information about the content of the sequences of them, such as how many characters did the assembly struggle to discern ('n' characters).
-
-After much reading of papers, I decide this list was enough to work on, and additional features would have to be left out. I started working on the list with techniques such as the GC Content percentage in mind as I believed the feature would be a simple technique to include to get me started on the project, and allow me to learn more of the domain as I worked on later features. This included the ORF Location finding later, and I believed would lead to the k-mer frequency analysis feature. I knew that the report was necessary and a core part of the problem. I could see the problem broken down into domain understanding, model data and processing and viewing and reporting, and so I considered these objectives enough to work on for my solution to the topic problem.
-
-% Taking into account the problem and what you learned from the background work, what was your analysis of the problem? How  did your analysis help to decompose the problem into the main tasks that you would undertake? Were there alternative  approaches? Why did you choose one approach compared to the alternatives? 
-
-% There should be a clear statement of the objectives of the work, which you will evaluate at the end of the work. 
-
-%In most cases, the agreed objectives or requirements will be the result of a compromise between what would ideally have been  produced and what was felt to be possible in the time available. A discussion of the process of arriving at the final list is usually  appropriate.
+%======== PROCESS ==========
 
 \section{Process}
 While my project could well follow a plan driven approach, such as waterfall or the spiral model, I believed that an agile approach would be suitable for building it, as I developed the different techniques through breaking them down into tasks. I chose to use Scrum for my framework, and used aspect of Extreme Programming for my daily development cycle adapted to a one person project. I may also have used a feature driven methodology, as I was aware of the features I wished to implement, however, I believed a Scrum approach with weekly sprint iterations would better suit my work flow.

@@ -15,16 +15,13 @@
 \contentsline {subsection}{\numberline {1.3.2}Quality report and data input}{5}{subsection.1.3.2}
 \contentsline {subsubsection}{\numberline {1.3.2.1}Read user input in FASTA format}{5}{subsubsection.1.3.2.1}
 \contentsline {subsubsection}{\numberline {1.3.2.2}Display a list of the contigs}{5}{subsubsection.1.3.2.2}
-\contentsline {subsubsection}{\numberline {1.3.2.3}User control over GC Content, ORF Location and k-mer frequency analysis paramters}{5}{subsubsection.1.3.2.3}
-\contentsline {subsubsection}{\numberline {1.3.2.4}Visual report on GC Content}{5}{subsubsection.1.3.2.4}
-\contentsline {subsubsection}{\numberline {1.3.2.5}Visual report on ORF Locations}{5}{subsubsection.1.3.2.5}
-\contentsline {subsubsection}{\numberline {1.3.2.6}Visual report of matches between GC Content and ORF Locations}{5}{subsubsection.1.3.2.6}
-\contentsline {subsubsection}{\numberline {1.3.2.7}Visual report on k-mer frequency analysis}{5}{subsubsection.1.3.2.7}
-\contentsline {subsection}{\numberline {1.3.3}Objectives}{5}{subsection.1.3.3}
-\contentsline {section}{\numberline {1.4}Process}{6}{section.1.4}
+\contentsline {subsubsection}{\numberline {1.3.2.3}User control over GC Content, ORF Location and k-mer frequency analysis parameters}{5}{subsubsection.1.3.2.3}
+\contentsline {subsubsection}{\numberline {1.3.2.4}Visual reports of the quality inspection methods}{5}{subsubsection.1.3.2.4}
+\contentsline {subsection}{\numberline {1.3.3}Implementation}{6}{subsection.1.3.3}
+\contentsline {section}{\numberline {1.4}Process}{7}{section.1.4}
 \contentsline {subsection}{\numberline {1.4.1}Scrum}{7}{subsection.1.4.1}
 \contentsline {subsection}{\numberline {1.4.2}Extreme Programming}{7}{subsection.1.4.2}
-\contentsline {subsection}{\numberline {1.4.3}Pomodoro Technique}{7}{subsection.1.4.3}
+\contentsline {subsection}{\numberline {1.4.3}Pomodoro Technique}{8}{subsection.1.4.3}
 \contentsline {subsection}{\numberline {1.4.4}Project blog}{8}{subsection.1.4.4}
 \contentsline {chapter}{\numberline {2}Design}{9}{chapter.2}
 \contentsline {section}{\numberline {2.1}Overall Architecture}{9}{section.2.1}
