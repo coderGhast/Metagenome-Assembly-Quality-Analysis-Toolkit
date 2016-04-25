@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9) (preloaded format=pdflatex 2013.11.17)  21 APR 2016 22:05
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9) (preloaded format=pdflatex 2013.11.17)  25 APR 2016 13:44
 entering extended mode
 **D:/Users/James/University*Documents/Modules/Major*Project/Metagenome-Assembly
 -Quality-Analysis-Toolkit/Documents/Final*Report/dissertation.tex
@@ -147,29 +147,31 @@ LaTeX Font Info:    Overwriting math alphabet `\mathfrak' in version `bold'
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\amsfonts\amssymb.sty"
 Package: amssymb 2013/01/14 v3.01 AMS font symbols
 )
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\subfigure\subfigure.sty"
-Package: subfigure 2002/07/30 v2.1.4 subfigure package
-\subfigtopskip=\skip46
-\subfigcapskip=\skip47
-\subfigcaptopadj=\dimen114
-\subfigbottomskip=\skip48
-\subfigcapmargin=\dimen115
-\subfiglabelskip=\skip49
-\c@subfigure=\count101
-\c@lofdepth=\count102
-\c@subtable=\count103
-\c@lotdepth=\count104
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\caption\subcaption.sty"
+Package: subcaption 2013/02/03 v1.1-62 Sub-captions (AR)
 
-****************************************
-* Local config file subfigure.cfg used *
-****************************************
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\subfigure\subfigure.cfg")
-\subfig@top=\skip50
-\subfig@bottom=\skip51
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\caption\caption.sty"
+Package: caption 2013/05/02 v3.3-89 Customizing captions (AR)
+
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\caption\caption3.sty"
+Package: caption3 2013/05/02 v1.6-88 caption3 kernel (AR)
+Package caption3 Info: TeX engine: e-TeX on input line 57.
+\captionmargin=\dimen114
+\captionmargin@=\dimen115
+\captionwidth=\dimen116
+\caption@tempdima=\dimen117
+\caption@indent=\dimen118
+\caption@parindent=\dimen119
+\caption@hangindent=\dimen120
+)
+\c@ContinuedFloat=\count101
+)
+\c@subfigure=\count102
+\c@subtable=\count103
 )
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\float\float.sty"
 Package: float 2001/11/08 v1.3d Float enhancements (AL)
-\c@float@type=\count105
+\c@float@type=\count104
 \float@exts=\toks20
 \float@box=\box31
 \@float@everytoks=\toks21
@@ -179,15 +181,15 @@ Package: float 2001/11/08 v1.3d Float enhancements (AL)
 Package: times 2005/04/12 PSNFSS-v9.2a (SPQR) 
 )
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\fancyhdr\fancyhdr.sty"
-\fancy@headwidth=\skip52
-\f@ncyO@elh=\skip53
-\f@ncyO@erh=\skip54
-\f@ncyO@olh=\skip55
-\f@ncyO@orh=\skip56
-\f@ncyO@elf=\skip57
-\f@ncyO@erf=\skip58
-\f@ncyO@olf=\skip59
-\f@ncyO@orf=\skip60
+\fancy@headwidth=\skip46
+\f@ncyO@elh=\skip47
+\f@ncyO@erh=\skip48
+\f@ncyO@olh=\skip49
+\f@ncyO@orh=\skip50
+\f@ncyO@elf=\skip51
+\f@ncyO@erf=\skip52
+\f@ncyO@olf=\skip53
+\f@ncyO@orf=\skip54
 )
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\lastpage\lastpage.sty"
 Package: lastpage 2013/01/28 v1.2l Refers to last page's name (HMM; JPG)
@@ -246,18 +248,21 @@ File: ot1ptm.fd 2001/06/04 font definitions for OT1/ptm.
 )
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\context\base\supp-pdf.mkii"
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count106
-\scratchdimen=\dimen116
+\scratchcounter=\count105
+\scratchdimen=\dimen121
 \scratchbox=\box33
-\nofMPsegments=\count107
-\nofMParguments=\count108
+\nofMPsegments=\count106
+\nofMParguments=\count107
 \everyMPshowfont=\toks22
-\MPscratchCnt=\count109
-\MPscratchDim=\dimen117
-\MPnumerator=\count110
-\makeMPintoPDFobject=\count111
+\MPscratchCnt=\count108
+\MPscratchDim=\dimen122
+\MPnumerator=\count109
+\makeMPintoPDFobject=\count110
 \everyMPtoPDFconversion=\toks23
 )
+Package caption Info: Begin \AtBeginDocument code.
+Package caption Info: float package is loaded.
+Package caption Info: End \AtBeginDocument code.
 Package lastpage Info: Please have a look at the pageslts package at
 (lastpage)             http://www.ctan.org/tex-archive/ 
 (lastpage)             macros/latex/contrib/pageslts/ 
@@ -326,19 +331,20 @@ Underfull \hbox (badness 10000) in paragraph at lines 57--58
 -Quality-Analysis-Toolkit\Documents\Final Report\dissertation.toc"
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <10.95> not available
 (Font)              Font shape `OT1/ptm/b/n' tried instead on input line 1.
-)
-\tf@toc=\write3
  [1
 
-]
+])
+\tf@toc=\write3
+
+[2]
 ("D:\Users\James\University Documents\Modules\Major Project\Metagenome-Assembly
 -Quality-Analysis-Toolkit\Documents\Final Report\dissertation.lof")
 \tf@lof=\write4
- [2]
+ [3]
 ("D:\Users\James\University Documents\Modules\Major Project\Metagenome-Assembly
 -Quality-Analysis-Toolkit\Documents\Final Report\dissertation.lot")
 \tf@lot=\write5
- [3]
+ [4]
 ("D:\Users\James\University Documents\Modules\Major Project\Metagenome-Assembly
 -Quality-Analysis-Toolkit\Documents\Final Report\Chapter1/chapter1.tex"
 Chapter 1.
@@ -347,49 +353,43 @@ LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <20.74> not available
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <24.88> not available
 (Font)              Font shape `OT1/ptm/b/n' tried instead on input line 1.
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <12> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 10.
-
-Overfull \hbox (0.97037pt too wide) in paragraph at lines 13--14
-[]\OT1/ptm/m/n/10.95 Are there ex-ist-ing sys-tem for metage-nomics? What about
- ge-nomics in gen-eral? NCBI database
- []
-
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 14.
 [1
 
 
-] [2] [3]) [4]
+] [2] [3] [4]) [5]
 ("D:\Users\James\University Documents\Modules\Major Project\Metagenome-Assembly
 -Quality-Analysis-Toolkit\Documents\Final Report\Chapter2/chapter2.tex"
 Chapter 2.
-[5
+[6
 
 
 
-] [6] [7]) [8]
+] [7] [8]) [9]
 ("D:\Users\James\University Documents\Modules\Major Project\Metagenome-Assembly
 -Quality-Analysis-Toolkit\Documents\Final Report\Chapter3/chapter3.tex"
 Chapter 3.
-[9
+[10
 
 
 
-]) [10] [11]
+]) [11] [12]
 ("D:\Users\James\University Documents\Modules\Major Project\Metagenome-Assembly
 -Quality-Analysis-Toolkit\Documents\Final Report\Chapter4/chapter4.tex"
 Chapter 4.
-) [12
+) [13
 
 
 
-] [13]
+] [14]
 ("D:\Users\James\University Documents\Modules\Major Project\Metagenome-Assembly
 -Quality-Analysis-Toolkit\Documents\Final Report\Chapter5/chapter5.tex"
 Chapter 5.
-) [14
+) [15
 
 
 
-] [15
+] [16
 
 
 ]
@@ -398,14 +398,21 @@ Chapter 5.
 Appendix A.
 Missing character: There is no Ð in font ptmr7t!
 Missing character: There is no Õ in font ptmr7t!
-) [16
+
+LaTeX Warning: Citation `apache_poi' on page 17 undefined on input line 12.
+
+
+LaTeX Warning: Citation `apache_license' on page 17 undefined on input line 13.
+
+
+) [17
 
 
 ]
 ("D:\Users\James\University Documents\Modules\Major Project\Metagenome-Assembly
 -Quality-Analysis-Toolkit\Documents\Final Report\Appendix2/appendix2.tex"
 Appendix B.
-) [17
+) [18
 
 
 
@@ -413,28 +420,27 @@ Appendix B.
 ("D:\Users\James\University Documents\Modules\Major Project\Metagenome-Assembly
 -Quality-Analysis-Toolkit\Documents\Final Report\Appendix3/appendix3.tex"
 Appendix C.
+
+LaTeX Warning: Citation `NumericalRecipes' on page 19 undefined on input line 5
+.
+
 LaTeX Font Info:    Try loading font information for OT1+pcr on input line 7.
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\psnfss\ot1pcr.fd"
 File: ot1pcr.fd 2001/06/04 font definitions for OT1/pcr.
-) [18
+) [19
 
 
 
-] [19])
-[20]
+] [20])
+[21]
 ("D:\Users\James\University Documents\Modules\Major Project\Metagenome-Assembly
--Quality-Analysis-Toolkit\Documents\Final Report\dissertation.bbl"
-Underfull \hbox (badness 1661) in paragraph at lines 22--24
-[]\OT1/ptm/m/n/10.95 Apache Soft-ware Foun-da-tion, ``Apache Li-cense, Ver-sion
- 2.0,'' $http : / / www . apache . org /$
- []
+-Quality-Analysis-Toolkit\Documents\Final Report\dissertation.bbl" [22
 
-) 
+
+])
+
 AED: lastpage setting LastPage
-[21
-
-
-]
+[23]
 ("D:\Users\James\University Documents\Modules\Major Project\Metagenome-Assembly
 -Quality-Analysis-Toolkit\Documents\Final Report\dissertation.aux"
 ("D:\Users\James\University Documents\Modules\Major Project\Metagenome-Assembly
@@ -460,26 +466,29 @@ AED: lastpage setting LastPage
 ("D:\Users\James\University Documents\Modules\Major Project\Metagenome-Assembly
 -Quality-Analysis-Toolkit\Documents\Final Report\Appendix2/appendix2.aux")
 ("D:\Users\James\University Documents\Modules\Major Project\Metagenome-Assembly
--Quality-Analysis-Toolkit\Documents\Final Report\Appendix3/appendix3.aux")) ) 
+-Quality-Analysis-Toolkit\Documents\Final Report\Appendix3/appendix3.aux"))
+
+LaTeX Warning: There were undefined references.
+
+ ) 
 Here is how much of TeX's memory you used:
- 2936 strings out of 493921
- 49542 string characters out of 3144875
- 96483 words of memory out of 3000000
- 6072 multiletter control sequences out of 15000+200000
- 26005 words of font info for 57 fonts, out of 3000000 for 9000
+ 3860 strings out of 493921
+ 66978 string characters out of 3144875
+ 115298 words of memory out of 3000000
+ 6993 multiletter control sequences out of 15000+200000
+ 27019 words of font info for 59 fonts, out of 3000000 for 9000
  841 hyphenation exceptions out of 8191
- 34i,10n,45p,973b,403s stack positions out of 5000i,500n,10000p,200000b,50000s
-{C
-:/Program Files (x86)/MiKTeX 2.9/fonts/enc/dvips/fontname/8r.enc}<C:/Program Fi
-les (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Program File
-s (x86)/MiKTeX 2.9/fonts/type1/urw/courier/ucrr8a.pfb><C:/Program Files (x86)/M
-iKTeX 2.9/fonts/type1/urw/times/utmb8a.pfb><C:/Program Files (x86)/MiKTeX 2.9/f
-onts/type1/urw/times/utmr8a.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/
-urw/times/utmr8a.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/urw/times/u
-tmri8a.pfb>
-Output written on dissertation.pdf (28 pages, 135506 bytes).
+ 49i,10n,45p,999b,419s stack positions out of 5000i,500n,10000p,200000b,50000s
+{C:/Program Files (x86)/MiKTeX 2.9/fonts/enc/dvips/fontname/8r.enc}<C:/Progra
+m Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Program 
+Files (x86)/MiKTeX 2.9/fonts/type1/urw/courier/ucrr8a.pfb><C:/Program Files (x8
+6)/MiKTeX 2.9/fonts/type1/urw/times/utmb8a.pfb><C:/Program Files (x86)/MiKTeX 2
+.9/fonts/type1/urw/times/utmr8a.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/ty
+pe1/urw/times/utmr8a.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/urw/tim
+es/utmri8a.pfb>
+Output written on dissertation.pdf (31 pages, 145985 bytes).
 PDF statistics:
- 117 PDF objects out of 1000 (max. 8388607)
+ 127 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
  1 words of extra memory for PDF output out of 10000 (max. 10000000)
 

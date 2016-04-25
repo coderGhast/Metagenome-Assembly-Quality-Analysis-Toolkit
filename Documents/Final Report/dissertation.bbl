@@ -18,50 +18,110 @@
 \fi
 #2}}
 
-\bibitem{apache_license}
-{Apache Software Foundation}, ``{Apache License, Version 2.0},''
-  \url{http://www.apache.org/licenses/LICENSE-2.0}, 2004.
- \begin{quotation}\noindent This is my annotation. I should add in a
-  description here. \end{quotation}
+\bibitem{citeulike:11826724}
+\BIBentryALTinterwordspacing
+N.~C. B. I.~R. Coordinators, ``{Database resources of the National Center for
+  Biotechnology Information},'' \emph{Nucleic Acids Research}, vol.~41, no.~D1,
+  pp. D8--D20, Jan. 2013. [Online]. Available:
+  \url{http://dx.doi.org/10.1093/nar/gks1189}
+\BIBentrySTDinterwordspacing
+ \begin{quotation}\noindent The NCBI database and resources was extremely
+  useful to me while developing my application. It gave me access to papers and
+  research articles, data sets for downloading sequences to play with and
+  explore and tools for techniques I wanted to implement in my own application.
+  It's safe to say that without the existence of the NCBI resources, I would
+  have understood a lot less about my project while beginning my development.
+  \end{quotation}
 
-\bibitem{apache_poi}
-------, ``{Apache POI - the Java API for Microsoft Documents},''
-  \url{http://poi.apache.org}, 2014.
- \begin{quotation}\noindent This is my annotation. I should add in a
-  description here. \end{quotation}
+\bibitem{citeulike:10457549}
+\BIBentryALTinterwordspacing
+D.~Huson and S.~Mitra, ``{Introduction to the Analysis of Environmental
+  Sequences: Metagenomics with MEGAN},'' in \emph{Evolutionary Genomics}, ser.
+  Methods in Molecular Biology, M.~Anisimova, Ed.\hskip 1em plus 0.5em minus
+  0.4em\relax Humana Press, 2012, vol. 856, pp. 415--429. [Online]. Available:
+  \url{http://dx.doi.org/10.1007/978-1-61779-585-5\_17}
+\BIBentrySTDinterwordspacing
+ \begin{quotation}\noindent A useful chapter in reading about a tool that has
+  its own attempt at analysing metagenomic data. While the tool does not look
+  at the quality, it looks at what the user provides and indicates to them if
+  anything they have is already existing in reference data, and how their data
+  compares to similar sequences already known. This could be considered as a
+  quality measure, as if a sequence can be found to match a reference sequence,
+  we know it is most likely not chimeric. \end{quotation}
 
-\bibitem{HannahsPaper}
-H.~M. Dee and D.~C. Hogg, ``Navigational strategies in behaviour modelling,''
-  \emph{Artificial Intelligence}, vol. 173(2), pp. 329--342, 2009.
- \begin{quotation}\noindent This is my annotation. I should add in a
-  description here. \end{quotation}
+\bibitem{citeulike:3746363}
+\BIBentryALTinterwordspacing
+V.~Kunin, A.~Copeland, A.~Lapidus, K.~Mavromatis, and P.~Hugenholtz, ``{A
+  Bioinformatician's Guide to Metagenomics},'' \emph{Microbiology and Molecular
+  Biology Reviews}, vol.~72, no.~4, pp. 557--578, Dec. 2008. [Online].
+  Available: \url{http://dx.doi.org/10.1128/mmbr.00009-08}
+\BIBentrySTDinterwordspacing
+ \begin{quotation}\noindent This paper was invaluable to me at the beginning of
+  the project, understanding what metagenomics is, and how the quality of an
+  assembly can be full of errors, and why. While much of the paper was not
+  necessarily relevant to my project as it deals with the full process of
+  working with a metagenomic sample, for my background reading it was very
+  useful. \end{quotation}
 
-\bibitem{kittenpic_ref}
-S.~Duckworth, ``{A picture of a kitten at Hellifield Peel},''
-  \url{http://www.geograph.org.uk/photo/640959}, 2007, copyright Sylvia
-  Duckworth and licensed for reuse under a Creative Commons Attribution-Share
-  Alike 2.0 Generic Licence. Accessed August 2011.
- \begin{quotation}\noindent This is my annotation. I should add in a
-  description here. \end{quotation}
+\bibitem{citeulike:14021056}
+\BIBentryALTinterwordspacing
+N.~J. Loman, C.~Constantinidou, M.~Christner, H.~Rohde, J.~Z.~M. Chan,
+  J.~Quick, J.~C. Weir, C.~Quince, G.~P. Smith, J.~R. Betley, M.~Aepfelbacher,
+  and M.~J. Pallen, ``{A Culture-Independent Sequence-Based Metagenomics
+  Approach to the Investigation of an Outbreak of Shiga-Toxigenic Escherichia
+  coli O104:H4},'' \emph{JAMA}, vol. 309, no.~14, pp. 1502+, Apr. 2013.
+  [Online]. Available: \url{http://dx.doi.org/10.1001/jama.2013.3231}
+\BIBentrySTDinterwordspacing
+ \begin{quotation}\noindent This paper was useful in understanding what the
+  study of metagenomics can be used for, and so helped me better understand
+  what metagenomics is and how it could be useful to have a tool for quality
+  control. \end{quotation}
 
-\bibitem{MarksPaper}
-M.~Neal, J.~Feyereisl, R.~Rascun\`{a}, and X.~Wang, ``{Don't touch me, I'm
-  fine: Robot autonomy using an artificial innate immune system},'' in
-  \emph{Proceedings of the 5th International Conference on Artificial Immune
-  Systems}.\hskip 1em plus 0.5em minus 0.4em\relax Springer, 2006, pp.
-  349--361.
- \begin{quotation}\noindent This paper... \end{quotation}
+\bibitem{citeulike:8643499}
+\BIBentryALTinterwordspacing
+G.~Mar\c{c}ais and C.~Kingsford, ``{A fast, lock-free approach for efficient
+  parallel counting of occurrences of k-mers},'' \emph{Bioinformatics},
+  vol.~27, no.~6, pp. 764--770, Mar. 2011. [Online]. Available:
+  \url{http://dx.doi.org/10.1093/bioinformatics/btr011}
+\BIBentrySTDinterwordspacing
+ \begin{quotation}\noindent Jellyfish, a tool for k-mer frequency anaylsis. A
+  tool I looked into briefly at the beginning of my project when considering
+  what techniques to use for my application. \end{quotation}
 
-\bibitem{NumericalRecipes}
-W.~Press \emph{et~al.}, \emph{{Numerical recipes in C}}.\hskip 1em plus 0.5em
-  minus 0.4em\relax Cambridge University Press Cambridge, 1992, pp. 349--361.
- \begin{quotation}\noindent This is my annotation. I can add in comments that
-  are in \textbf{bold} and \em{italics} and then other content. \end{quotation}
+\bibitem{citeulike:9639487}
+\BIBentryALTinterwordspacing
+P.~Melsted and J.~K. Pritchard, ``{Efficient counting of k-mers in DNA
+  sequences using a bloom filter},'' \emph{BMC Bioinformatics}, vol.~12, no.~1,
+  pp. 333+, 2011. [Online]. Available:
+  \url{http://dx.doi.org/10.1186/1471-2105-12-333}
+\BIBentrySTDinterwordspacing
+ \begin{quotation}\noindent BFCounter, for k-mer frequency analysis. A tool I
+  considered when thinking about the requirements and techniques involved in
+  the development of my application. \end{quotation}
 
-\bibitem{FailBlog}
-Various, ``Fail blog,'' \url{http://www.failblog.org/}, Aug. 2011, accessed
-  August 2011.
- \begin{quotation}\noindent This is my annotation. I should add in a
-  description here. \end{quotation}
+\bibitem{citeulike:8714996}
+\BIBentryALTinterwordspacing
+R.~Schmieder and R.~Edwards, ``{Quality control and preprocessing of
+  metagenomic datasets},'' \emph{Bioinformatics}, vol.~27, no.~6, pp.
+  btr026--864, Jan. 2011. [Online]. Available:
+  \url{http://dx.doi.org/10.1093/bioinformatics/btr026}
+\BIBentrySTDinterwordspacing
+ \begin{quotation}\noindent A tool that does what my project topic describes,
+  with more understanding than I had at the start of my project. An interesting
+  look at what other software is out there to do what my application also
+  wanted to do and was a baseline for me analysising what sort of techniques I
+  may wish to use to give the user of my own application a report on the
+  quality of their assembly. \end{quotation}
+
+\bibitem{citeulike:11448654}
+\BIBentryALTinterwordspacing
+T.~Thomas, J.~Gilbert, and F.~Meyer, ``{Metagenomics - a guide from sampling to
+  data analysis.}'' \emph{Microbial informatics and experimentation}, vol.~2,
+  no.~1, pp.~3+, 2012. [Online]. Available:
+  \url{http://dx.doi.org/10.1186/2042-5783-2-3}
+\BIBentrySTDinterwordspacing
+ \begin{quotation}\noindent A useful article in understanding what metagenomic
+  study was. It was helpful to read as I tried to understand metagenomics at
+  the beginning of the project. \end{quotation}
 
 \end{thebibliography}

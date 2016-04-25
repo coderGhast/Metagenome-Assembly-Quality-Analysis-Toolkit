@@ -2,19 +2,36 @@
 
 % This section should discuss your preparation for the project, including background reading, your analysis of the problem and the process or method you have followed to help structure your work.  It is likely that you will reuse part of your outline project % specification, but at this point in the project you should have more to talk about. 
 
+\section{Introduction}
+The project aim was to create an application that could report on the quality of a metagenome assemblies  provided by the user, presenting them with feedback about the contiguous reads contained in their data. The requirements for the project topic were very open, as there are multiple techniques for attempting to report the quality of a single species genome assembly, and while some can be used for metagenome assemblies, it was believed that no one tool covered this area yet with numerous techniques. Likewise, the way in which the results could be presented to the user was not established and open to my own interpretation.
 
 
 \section{Background}
-Talk about background stuff here, what did I know about the topic before hand, what didn't I know? How did I prepare for the project - Talking to Sam, talking to Amanda, reading papers on metagenomics, reading papers on quality in genonmics. Show the links to these papers. What was my motivation? Did I find string manipulation and processing interesting, bringing together tools and processes, is genomics interesting? 
+Before the project began, my knowledge of metagenomics was very limited, close to non. However, I was liked the project title and description and thought it would be an interesting and challenging topic, to learn new domain knowledge, use different technologies and attempt to implement an application where I had to learn from the ground up. On top of this, I find DNA to be an intriguing topic even with my limited knowledge, I was curious to learn more as I worked on this project.
+
+My first step was trying to understand what exactly it was I was expected to produce at the end of the project. As the requirements of the resulting application were so open, it was up to me to research what metagenomics is, what is meant by `quality' within the subject, how this quality might be found and reported on, what technologies would be appropriate and what quality techniques could be used.
 
 \subsection{Metagenomics}
-What is metagenomics? Why is it interesting. How do we get the assemblies and why are they potentially bad? What makes good and bad quality? Chimeras? Talk about this stuff and show you understand the issues and why this project is something useful to have. 
+Metagenomics is the study of environmental samples of genomic data where the contents of the data are potentially unknown and unclear. It can be described as `Open-ended sequencing of nucleic acids recovered directly from samples without culture or target-specific enrichment or amplification; usually applies to the study of microbial communities.'\cite{citeulike:14021056} It can be used in the findings of what an animal gut may contain, what viruses are within a sample when looking into outbreaks and finding what microbial communities exist in a sample area.
 
-Are there existing system for metagenomics? What about genomics in general? NCBI database and GC/ORF finding tools. k-mer counting as an effective solution and extended task for my project, Jellyfish and BFC with bloom filter. What did I want to achieve? A visual tool for reporting on quality using techniques like comparing GC Content percentage changes and using ORF location finding to see if these areas can be explained or not. Bringing techniques together. Ground work for a tool that can be expanded upon for future ideas.
+Metagenomics is a hot and interesting topic in the bioinformatics field, and its uses grow as more is learned, but there is the issue of quality, and how a metagenomic sample should be processed. I read articles that attempted to provided ways of analysing metagenomic data to get the best quality results at the end.\cite{citeulike:11448654}
+
+\subsection{Understanding Quality}
+
+Considering the nature of metagenomics and the unknowns, it becomes clear quite quickly that when a sample you may have is run through an assembler in an attempt to create a genome for sequencing, without the proper tools to assess your data you cannot be sure if what you are creating is an actual thing that could exist in nature. The processes of taking a sample through to sequencing with metagenomic data can be very error prone, leading to misassemblies with duplicate or short reads, or combining reads together to make chimeric contiguous reads (contig).\cite{citeulike:3746363}
+
+A chimieric contig is an instance where an assembler has put together reads from a sample that it believed were part of the same whole, and yet were in fact of different species/sub-species, and so creates a contig that does not actually exist in nature. It can be understood then that if a user were to sequence this, unless that is the result they wanted, it won't be of any use to them, but without the proper tool how would they know that their assembly data contains chimeric contigs and are not just wasting their time and money?
+
+\subsection{Existing Software}
+There are a number of tools I discovered in my background research that attempt to aid in the quality assessment of metagenomic data, in particular MEGAN, a `next-generation metagenomic data, called MEtaGenomeANalyzer', which attempts to do a taxonomical analysis comparison to known reference data\cite{citeulike:10457549} and PRINSEQ, a tool which provides `summary statistics of FASTA (and QUAL) or FASTQ files in tabular and graphical form'\cite{citeulike:8714996}. When considering what my own application should do, I looked at the techniques used for PRINSEQ most, as these seemed to match up with what I thought would be useful to a user for my own application, and from discussing the topic with my supervisor I found techniques such as the GC Content distribution could be a good place to start.
+
+It was not just tools for metagenomic quality assessment I looked into. I also found the NCBI database and their BLAST tool\cite{citeulike:11826724}, and kept in mind these may be useful as I progressed through my applications development, and through reading an article that discussed the advantages of k-mer frequency analysis for quality assessment, I looked into the Jellyfish\cite{citeulike:8643499} and BFCounter\cite{citeulike:9639487} tools for just this role where I could potentially consume the output of their processing, although they took a step back in my mind while I considered what it was I actually wanted my application to be and worked out the requirements.
 
 % What was your background preparation for the project? What similar systems did you assess? What was your motivation and interest in this project? 
 
 \section{Analysis}
+After understanding the project topic and problem a little better, I decided upon a number of requirements of the application to begin with. Some of these were definite goals, some stretch goals and some future development tasks if I were to finish all else or were to continue the application after the project deadline.
+
 Analysis of the problem - What is it that needed to be done? What tasks were suitable? Making a user interface with some kind of report using charts and texts. Would it be helpful to do a confidence factor, or leave the user to decide? What sort of interface and data would the user be inputting? Is there a solution to the problem that gives a direct answer? Is it worth writing my own software or consuming results from others software?
 
 My analysis helped to decide that I wanted to write my own software. While solutions exist, their APIs were either depreciated or too much to use, and the output I wished to display would be better when I wrote my own software. I wanted the technical challenge of writing my own software, and enabling the application to be maintainable and expanded upon in the future rather than relying on third party support applications in order to process a users input.
@@ -22,6 +39,7 @@ My analysis helped to decide that I wanted to write my own software. While solut
 The alternative approach is the already mentioned method of just consuming output from other applications. While potentially faster to build an application, the risk of the application becoming defunct if the other applications changed the way they output, removed their API or I needed a different form of data meant that it would potentially be a bad idea in the long run, as I wanted to envision this application as something that could have work carried forward and be built upon with additional techniques. It is for this reason I chose to self-implement the techniques, and through that also build on my domain understanding and develop a full application.
 
 \subsection{Objectives}
+What actual requirements did I come up with for my application, based on my Background reading.
 \begin{itemize}
 \item Produce a visual report on a users input assembly data
 \item Inspect components of individual contiguous reads in the assembly data
