@@ -1,4 +1,51 @@
 \chapter{Examples and Extras}
 
 \section{Example User Story Breakdown}
+NOTE: This break down is from my blog entry at \url{http://users.aber.ac.uk/jee22/wordpress/?p=147}.
+\begin{verbatim}
+“As a researcher
+I want to get a report on the quality of my metagenome
+So that I know whether it is of good or bad quality”
+\end{verbatim}
+Okay, super high level. This can be broken down into:
+\begin{verbatim}
+“As a researcher
+I want to get a report on the GC content of my metagenome
+So that I can see where there might be inconsistencies”
+\end{verbatim}
+So, that could be explained better (i.e. what are ‘inconsistencies’? Areas where there might be a split/chimera, or just gene encoding regions and completely natural).
+\begin{verbatim}
+“As a researcher
+I want descriptions of the GC content of my metagenome
+So that I can pinpoint areas of interest”
+\end{verbatim}
+Perhaps a better way of making a story for GC content in this instance.
+What about the report?
+\begin{verbatim}
+“As a researcher
+I want a textual and graphical description of my metagenome quality
+So that I can see and understand where there might be quality issues”
+\end{verbatim}
+Again, quite high level, but not too bad. This could be broken down further.
+\begin{verbatim}
+“As a researcher
+I want a graph plotted to show me the GC content in my metagenome
+So I can visualise the distribution of GC content to better understand my metagenome assembly”
+\end{verbatim}
+From some of these, further tasks can be broken down, so, lets take one and do that with the last story I defined. I suppose, before we can do that though, since we don’t have an application developed, we might need some initial ‘setup’ stories.
+\begin{verbatim}
+“As a researcher
+I want an application to read in my metagenome assembly
+So I can see it outside of the FASTA file”
+\end{verbatim}
+Maybe that’s pushing it a little. There’s not really much to be gained from this in business value, but, as far as development goes it can give us some nice little tasks:
+\begin{verbatim}
+Read in FASTA file
+Output display of metagenome visually for researcher to understand
+\end{verbatim}
+That’s just two simple tasks. Read in a file type, and with the contents, display it. It might not be much, but it’s a start where we can say to a hypothetical researcher “Okay, we’ve taken your file, and we can show you that your metagenome looks like this. There’s no processing done to it, but you can see how with this visualisation, there’s the room for labelling and noting the interesting points later. What do you think?”
 
+This story with others could then help us propose a Sprint Goal, as below:
+
+Sprint Goal:
+To display a metagenome in an application after reading in a FASTA file, with the look at implementing GC Content counting should time allow.

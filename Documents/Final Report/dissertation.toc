@@ -58,6 +58,6 @@
 \contentsline {chapter}{Appendices}{20}{chapter.5}
 \contentsline {chapter}{\numberline {A}Third-Party Code and Libraries}{21}{appendix.A}
 \contentsline {chapter}{\numberline {B}Ethics Submission}{22}{appendix.B}
-\contentsline {chapter}{\numberline {C}Code Examples}{23}{appendix.C}
-\contentsline {section}{\numberline {3.1}Random Number Generator}{23}{section.C.1}
-\contentsline {chapter}{Annotated Bibliography}{26}{section.C.1}
+\contentsline {chapter}{\numberline {C}Examples and Extras}{23}{appendix.C}
+\contentsline {section}{\numberline {3.1}Example User Story Breakdown}{23}{section.C.1}
+\contentsline {chapter}{Annotated Bibliography}{25}{section.C.1}

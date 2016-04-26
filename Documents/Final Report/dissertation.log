@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9) (preloaded format=pdflatex 2013.11.17)  26 APR 2016 14:32
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9) (preloaded format=pdflatex 2013.11.17)  26 APR 2016 15:45
 entering extended mode
 **D:/Users/James/University*Documents/Modules/Major*Project/Metagenome-Assembly
 -Quality-Analysis-Toolkit/Documents/Final*Report/dissertation.tex
@@ -467,7 +467,7 @@ pdfTeX warning (ext4): destination with the same identifier (name{page.i}) has
 been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.61 ...mberline {C}Code Examples}{23}{appendix.C}
+l.61 ...ne {C}Examples and Extras}{23}{appendix.C}
                                                    [1
 
 ])
@@ -536,7 +536,12 @@ Underfull \hbox (badness 10000) in paragraph at lines 139--141
 
  []
 
-[8]) [9]
+[8]
+LaTeX Font Info:    Try loading font information for OT1+pcr on input line 152.
+
+ ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\psnfss\ot1pcr.fd"
+File: ot1pcr.fd 2001/06/04 font definitions for OT1/pcr.
+)) [9]
 ("D:\Users\James\University Documents\Modules\Major Project\Metagenome-Assembly
 -Quality-Analysis-Toolkit\Documents\Final Report\Chapter2/chapter2.tex"
 Chapter 2.
@@ -603,27 +608,128 @@ Appendix B.
 ("D:\Users\James\University Documents\Modules\Major Project\Metagenome-Assembly
 -Quality-Analysis-Toolkit\Documents\Final Report\Appendix3/appendix3.tex"
 Appendix C.
+Missing character: There is no â in font pcrr7t!
+Missing character: There is no € in font pcrr7t!
+Missing character: There is no œ in font pcrr7t!
+Missing character: There is no â in font pcrr7t!
+Missing character: There is no € in font pcrr7t!
+Missing character: There is no  in font pcrr7t!
+Missing character: There is no â in font pcrr7t!
+Missing character: There is no € in font pcrr7t!
+Missing character: There is no œ in font pcrr7t!
+Missing character: There is no â in font pcrr7t!
+Missing character: There is no € in font pcrr7t!
+Missing character: There is no  in font pcrr7t!
+Missing character: There is no â in font ptmr7t!
+Missing character: There is no € in font ptmr7t!
+Missing character: There is no ˜ in font ptmr7t!
+Missing character: There is no â in font ptmr7t!
+Missing character: There is no € in font ptmr7t!
+Missing character: There is no ™ in font ptmr7t!
+Missing character: There is no â in font pcrr7t!
+Missing character: There is no € in font pcrr7t!
+Missing character: There is no œ in font pcrr7t!
+Missing character: There is no â in font pcrr7t!
+Missing character: There is no € in font pcrr7t!
+Missing character: There is no  in font pcrr7t!
+Missing character: There is no â in font pcrr7t!
+Missing character: There is no € in font pcrr7t!
+Missing character: There is no œ in font pcrr7t!
 
-LaTeX Warning: Citation `NumericalRecipes' on page 23 undefined on input line 5
-.
+Overfull \hbox (13.39813pt too wide) in paragraph at lines 28--28
+[]\OT1/pcr/m/n/10.95 I want a textual and graphical description of my metagenom
+e quality[] 
+ []
 
-LaTeX Font Info:    Try loading font information for OT1+pcr on input line 7.
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\psnfss\ot1pcr.fd"
-File: ot1pcr.fd 2001/06/04 font definitions for OT1/pcr.
-) [23
+Missing character: There is no â in font pcrr7t!
+Missing character: There is no € in font pcrr7t!
+Missing character: There is no  in font pcrr7t!
 
+Overfull \hbox (19.96812pt too wide) in paragraph at lines 28--28
+[]\OT1/pcr/m/n/10.95 So that I can see and understand where there might be qual
+ity issues[] 
+ []
 
+Missing character: There is no â in font pcrr7t!
+Missing character: There is no € in font pcrr7t!
+Missing character: There is no œ in font pcrr7t!
 
-] [24])
-[25]
-("D:\Users\James\University Documents\Modules\Major Project\Metagenome-Assembly
--Quality-Analysis-Toolkit\Documents\Final Report\dissertation.bbl" [26
+Overfull \hbox (0.25815pt too wide) in paragraph at lines 34--34
+[]\OT1/pcr/m/n/10.95 I want a graph plotted to show me the GC content in my met
+agenome[] 
+ []
+
+Missing character: There is no â in font pcrr7t!
+Missing character: There is no € in font pcrr7t!
+Missing character: There is no  in font pcrr7t!
+
+Overfull \hbox (184.21793pt too wide) in paragraph at lines 34--34
+[]\OT1/pcr/m/n/10.95 So I can visualise the distribution of GC content to bette
+r understand my metagenome assembly[] 
+ []
+
+Missing character: There is no â in font ptmr7t!
+Missing character: There is no € in font ptmr7t!
+Missing character: There is no ™ in font ptmr7t!
+Missing character: There is no â in font ptmr7t!
+Missing character: There is no € in font ptmr7t!
+Missing character: There is no ˜ in font ptmr7t!
+Missing character: There is no â in font ptmr7t!
+Missing character: There is no € in font ptmr7t!
+Missing character: There is no ™ in font ptmr7t!
+[23
+
 
 
 ]
-[27]) 
+Missing character: There is no â in font pcrr7t!
+Missing character: There is no € in font pcrr7t!
+Missing character: There is no œ in font pcrr7t!
+Missing character: There is no â in font pcrr7t!
+Missing character: There is no € in font pcrr7t!
+Missing character: There is no  in font pcrr7t!
+Missing character: There is no â in font ptmr7t!
+Missing character: There is no € in font ptmr7t!
+Missing character: There is no ™ in font ptmr7t!
+Missing character: There is no â in font ptmr7t!
+Missing character: There is no € in font ptmr7t!
+Missing character: There is no ™ in font ptmr7t!
+
+Overfull \hbox (6.82814pt too wide) in paragraph at lines 45--45
+[]\OT1/pcr/m/n/10.95 Output display of metagenome visually for researcher to un
+derstand[] 
+ []
+
+Missing character: There is no â in font ptmr7t!
+Missing character: There is no € in font ptmr7t!
+Missing character: There is no ™ in font ptmr7t!
+Missing character: There is no â in font ptmr7t!
+Missing character: There is no € in font ptmr7t!
+Missing character: There is no ™ in font ptmr7t!
+Missing character: There is no â in font ptmr7t!
+Missing character: There is no € in font ptmr7t!
+Missing character: There is no œ in font ptmr7t!
+Missing character: There is no â in font ptmr7t!
+Missing character: There is no € in font ptmr7t!
+Missing character: There is no ™ in font ptmr7t!
+Missing character: There is no â in font ptmr7t!
+Missing character: There is no € in font ptmr7t!
+Missing character: There is no ™ in font ptmr7t!
+Missing character: There is no â in font ptmr7t!
+Missing character: There is no € in font ptmr7t!
+Missing character: There is no ™ in font ptmr7t!
+Missing character: There is no â in font ptmr7t!
+Missing character: There is no € in font ptmr7t!
+Missing character: There is no  in font ptmr7t!
+) [24]
+("D:\Users\James\University Documents\Modules\Major Project\Metagenome-Assembly
+-Quality-Analysis-Toolkit\Documents\Final Report\dissertation.bbl" [25
+
+
+]
+[26]) 
 AED: lastpage setting LastPage
-[28]
+[27]
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 131.
 Package atveryend Info: Empty hook `AfterLastShipout' on input line 131.
 
@@ -656,7 +762,7 @@ Package atveryend Info: Empty hook `AfterLastShipout' on input line 131.
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 131.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 131.
 Package rerunfilecheck Info: File `dissertation.out' has not changed.
-(rerunfilecheck)             Checksum: 7E94BB2A3DA77AE89001EAEB49EE0239;2761.
+(rerunfilecheck)             Checksum: E4A1E8DE1DC5CB752DB440225970AB26;2772.
 
 
 LaTeX Warning: There were undefined references.
@@ -664,10 +770,10 @@ LaTeX Warning: There were undefined references.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 131.
  ) 
 Here is how much of TeX's memory you used:
- 7723 strings out of 493921
- 127141 string characters out of 3144875
- 200650 words of memory out of 3000000
- 10692 multiletter control sequences out of 15000+200000
+ 7725 strings out of 493921
+ 127170 string characters out of 3144875
+ 200716 words of memory out of 3000000
+ 10693 multiletter control sequences out of 15000+200000
  27019 words of font info for 59 fonts, out of 3000000 for 9000
  841 hyphenation exceptions out of 8191
  49i,11n,45p,1030b,511s stack positions out of 5000i,500n,10000p,200000b,50000s
@@ -679,9 +785,9 @@ les (x86)/MiKTeX 2.9/fonts/type1/urw/courier/ucrr8a.pfb><C:/Program Files (x86)
 /fonts/type1/urw/times/utmr8a.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type
 1/urw/times/utmr8a.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/urw/times
 /utmri8a.pfb>
-Output written on dissertation.pdf (36 pages, 241224 bytes).
+Output written on dissertation.pdf (35 pages, 240632 bytes).
 PDF statistics:
- 515 PDF objects out of 1000 (max. 8388607)
- 116 named destinations out of 1000 (max. 500000)
+ 522 PDF objects out of 1000 (max. 8388607)
+ 117 named destinations out of 1000 (max. 500000)
  347 words of extra memory for PDF output out of 10000 (max. 10000000)
 

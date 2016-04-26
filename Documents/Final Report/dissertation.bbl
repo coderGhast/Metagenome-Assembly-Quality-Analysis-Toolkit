@@ -18,6 +18,11 @@
 \fi
 #2}}
 
+\bibitem{citeulike:14021988}
+
+ \begin{quotation}\noindent The pomodoro technique, used during the development
+  of my application for efficient time management. \end{quotation}
+
 \bibitem{citeulike:11826724}
 N.~C. B. I.~R. Coordinators, ``{Database resources of the National Center for
   Biotechnology Information},'' \emph{Nucleic Acids Research}, vol.~41, no.~D1,
@@ -81,8 +86,16 @@ P.~Melsted and J.~K. Pritchard, ``{Efficient counting of k-mers in DNA
   considered when thinking about the requirements and techniques involved in
   the development of my application. \end{quotation}
 
+\bibitem{xp}
+{Mike Cohn}, ``{Extreme Programming: A Gentle Introduction.}'' [Online]
+  Available: \url{http://www.extremeprogramming.org/}, 2016, {[Accessed on: 26
+  April 2016]}.
+ \begin{quotation}\noindent The description of Extreme Programming (XP) that
+  helped me understand the XP methodology and adapt it for my own use in this
+  one person project. \end{quotation}
+
 \bibitem{userstories}
-{Mike Cohn}, ``{User Stories and User Story Examples by Mike Cohn},'' [Online]
+------, ``{User Stories and User Story Examples by Mike Cohn},'' [Online]
   Available: \url{https://www.mountaingoatsoftware.com/agile/user-stories},
   2016, {[Accessed on: 26 April 2016]}.
  \begin{quotation}\noindent An explanation of how a User Story should look,
