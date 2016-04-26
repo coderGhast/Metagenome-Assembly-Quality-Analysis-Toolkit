@@ -21,7 +21,7 @@
 \contentsline {section}{\numberline {1.4}Process}{7}{section.1.4}
 \contentsline {subsection}{\numberline {1.4.1}Scrum}{8}{subsection.1.4.1}
 \contentsline {subsection}{\numberline {1.4.2}Extreme Programming}{8}{subsection.1.4.2}
-\contentsline {subsection}{\numberline {1.4.3}Pomodoro Technique}{8}{subsection.1.4.3}
+\contentsline {subsection}{\numberline {1.4.3}Pomodoro Technique}{9}{subsection.1.4.3}
 \contentsline {subsection}{\numberline {1.4.4}Project blog}{9}{subsection.1.4.4}
 \contentsline {chapter}{\numberline {2}Design}{10}{chapter.2}
 \contentsline {section}{\numberline {2.1}Overall Architecture}{10}{section.2.1}

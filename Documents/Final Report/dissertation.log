@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9) (preloaded format=pdflatex 2013.11.17)  26 APR 2016 11:42
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9) (preloaded format=pdflatex 2013.11.17)  26 APR 2016 14:32
 entering extended mode
 **D:/Users/James/University*Documents/Modules/Major*Project/Metagenome-Assembly
 -Quality-Analysis-Toolkit/Documents/Final*Report/dissertation.tex
@@ -519,8 +519,24 @@ File: images/usecase.png Graphic file (type png)
 Package pdftex.def Info: images/usecase.png used on input line 113.
 (pdftex.def)             Requested size: 213.39566pt x 177.0716pt.
  [6] [7 <D:/Users/James/University Documents/Modules/Major Project/Metagenome-A
-ssembly-Quality-Analysis-Toolkit/Documents/Final Report/images/usecase.png>] [8
-]) [9]
+ssembly-Quality-Analysis-Toolkit/Documents/Final Report/images/usecase.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 136--138
+
+ []
+
+LaTeX Font Info:    Try loading font information for OML+ptm on input line 139.
+
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\psnfss\omlptm.fd"
+File: omlptm.fd 
+)
+LaTeX Font Info:    Font shape `OML/ptm/m/n' in size <10.95> not available
+(Font)              Font shape `OML/cmm/m/it' tried instead on input line 139.
+
+Underfull \hbox (badness 10000) in paragraph at lines 139--141
+
+ []
+
+[8]) [9]
 ("D:\Users\James\University Documents\Modules\Major Project\Metagenome-Assembly
 -Quality-Analysis-Toolkit\Documents\Final Report\Chapter2/chapter2.tex"
 Chapter 2.
@@ -648,23 +664,24 @@ LaTeX Warning: There were undefined references.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 131.
  ) 
 Here is how much of TeX's memory you used:
- 7702 strings out of 493921
- 126791 string characters out of 3144875
- 200586 words of memory out of 3000000
- 10676 multiletter control sequences out of 15000+200000
+ 7723 strings out of 493921
+ 127141 string characters out of 3144875
+ 200650 words of memory out of 3000000
+ 10692 multiletter control sequences out of 15000+200000
  27019 words of font info for 59 fonts, out of 3000000 for 9000
  841 hyphenation exceptions out of 8191
- 49i,11n,45p,999b,505s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 49i,11n,45p,1030b,511s stack positions out of 5000i,500n,10000p,200000b,50000s
 {C:/Program Files (x86)/MiKTeX 2.9/fonts/enc/dvips/fontname/8r.enc}<C:/Progra
-m Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Program 
-Files (x86)/MiKTeX 2.9/fonts/type1/urw/courier/ucrr8a.pfb><C:/Program Files (x8
-6)/MiKTeX 2.9/fonts/type1/urw/times/utmb8a.pfb><C:/Program Files (x86)/MiKTeX 2
-.9/fonts/type1/urw/times/utmr8a.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/ty
-pe1/urw/times/utmr8a.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/urw/tim
-es/utmri8a.pfb>
-Output written on dissertation.pdf (36 pages, 231042 bytes).
+m Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Program 
+Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Program Fi
+les (x86)/MiKTeX 2.9/fonts/type1/urw/courier/ucrr8a.pfb><C:/Program Files (x86)
+/MiKTeX 2.9/fonts/type1/urw/times/utmb8a.pfb><C:/Program Files (x86)/MiKTeX 2.9
+/fonts/type1/urw/times/utmr8a.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type
+1/urw/times/utmr8a.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/urw/times
+/utmri8a.pfb>
+Output written on dissertation.pdf (36 pages, 241224 bytes).
 PDF statistics:
- 505 PDF objects out of 1000 (max. 8388607)
- 114 named destinations out of 1000 (max. 500000)
+ 515 PDF objects out of 1000 (max. 8388607)
+ 116 named destinations out of 1000 (max. 500000)
  347 words of extra memory for PDF output out of 10000 (max. 10000000)
 

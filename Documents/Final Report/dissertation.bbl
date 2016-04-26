@@ -81,6 +81,14 @@ P.~Melsted and J.~K. Pritchard, ``{Efficient counting of k-mers in DNA
   considered when thinking about the requirements and techniques involved in
   the development of my application. \end{quotation}
 
+\bibitem{userstories}
+{Mike Cohn}, ``{User Stories and User Story Examples by Mike Cohn},'' [Online]
+  Available: \url{https://www.mountaingoatsoftware.com/agile/user-stories},
+  2016, {[Accessed on: 26 April 2016]}.
+ \begin{quotation}\noindent An explanation of how a User Story should look,
+  when utilizing them to plan tasks for use with implementing functions of my
+  application. \end{quotation}
+
 \bibitem{citeulike:8714996}
 R.~Schmieder and R.~Edwards, ``{Quality control and preprocessing of
   metagenomic datasets},'' \emph{Bioinformatics}, vol.~27, no.~6, pp.
@@ -91,6 +99,11 @@ R.~Schmieder and R.~Edwards, ``{Quality control and preprocessing of
   wanted to do and was a baseline for me analysising what sort of techniques I
   may wish to use to give the user of my own application a report on the
   quality of their assembly. \end{quotation}
+
+\bibitem{Schw01a}
+K.~Schwaber and J.~Sutherland, ``The {Scrum} guide,'' 2001.
+ \begin{quotation}\noindent The Scrum Guide, useful for knowing how to use the
+  Scrum framework as part of my projects lifecycle model. \end{quotation}
 
 \bibitem{citeulike:14021291}
 J.~C. Segen, \emph{{The dictionary of modern medicine}}.\hskip 1em plus 0.5em
