@@ -2,10 +2,12 @@ package toolkit.web;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.*;
 import toolkit.domain.*;
 import toolkit.utilities.GraphDataBuilder;
 
+import javax.validation.Valid;
 import java.util.ArrayList;
 import java.util.Collections;
 
@@ -80,8 +82,13 @@ public class ToolkitController {
      */
     @RequestMapping(value="/result", method = RequestMethod.POST)
     public String dataResult(@ModelAttribute(value = "userparameters") UserParameters params,
-                             ContiguousRead contig,
+                             @Valid @ModelAttribute(value = "contiguousread") ContiguousRead contig,
+                             BindingResult bindingResult,
                              Model model) {
+        if (bindingResult.hasErrors()) {
+            return "list";
+        }
+
         QualitySummary result = QualityToolkit.qualityAssess(contig);
 
         model.addAttribute("contiguousread", contig);

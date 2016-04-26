@@ -18,18 +18,40 @@
 <div th:id="'inspectbox ' + ${iterationInfo.index}" th:fragment="inspectbox" style="display:none; background:#dadada;">
     <div class="parambox" >
         <form action="#" th:action="@{/result}" th:object="${contiguousread}" method="post">
+            <table><tr><td>
             <input type="hidden" th:name="contigInformation" th:value= "${currentcontig.contigInformation}" />
             <input type="hidden" th:name="contigLength" th:value= "${currentcontig.contigLength}" />
             <input type="hidden" th:name="contigContext" th:value= "${currentcontig.contigContext}" />
             <h3>Inspection Parameters</h3>
-            Mean threshold in standard deviations, for GC Content percentage:<br />
-            <input type="text" th:field="*{awayFromMeanThreshold}" th:value="*{awayFromMeanThreshold}"/><br/>
-            The size of the GC Content windows:<br/>
-            <input type="text" th:field="*{gcWindowSize}" th:value="*{gcWindowSize}" /><br/>
-            How long should an Open Reading Frame location be to be considered? ('0' will allow any length):<br/>
-            <input type="text" th:field="*{orfLengthThreshold}" th:value="*{orfLengthThreshold}" /><br/>
-
+            </td></tr><tr><td>
+            Mean threshold in standard deviations, for GC Content percentage:
+            </td></tr><tr>
+            <td>
+                <input type="text" th:field="*{awayFromMeanThreshold}" th:value="*{awayFromMeanThreshold}"/>
+            </td>
+            <td th:if="${#fields.hasErrors('awayFromMeanThreshold')}" th:errors="*{awayFromMeanThreshold}">Away from mean error</td>
+            </tr>
+            <tr>
+                <td>The size of the GC Content windows:</td>
+            </tr>
+            <tr>
+                <td>
+                    <input type="text" th:field="*{gcWindowSize}" th:value="*{gcWindowSize}" />
+                </td>
+            <td th:if="${#fields.hasErrors('gcWindowSize')}" th:errors="*{gcWindowSize}">GC Window size error</td>
+            </tr>
+            <tr>
+                <td>How long should an Open Reading Frame location be to be considered? ('0' will allow any length):</td>
+            </tr>
+            <tr>
+                <td>
+                    <input type="text" th:field="*{orfLengthThreshold}" th:value="*{orfLengthThreshold}" />
+                </td>
+                <td th:if="${#fields.hasErrors('orfLengthThreshold')}" th:errors="*{orfLengthThreshold}">ORF Length error</td>
+            </tr><tr><td>
             <input id="inspectloadbutton" type="submit" value="Inspect" onclick="loadingclick(this.id);"/>
+
+            </td></tr></table>
         </form>
     </div>
 </div>

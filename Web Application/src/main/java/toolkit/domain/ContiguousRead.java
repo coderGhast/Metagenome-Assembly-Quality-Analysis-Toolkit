@@ -1,5 +1,7 @@
 package toolkit.domain;
 
+import javax.validation.constraints.Min;
+import javax.validation.constraints.NotNull;
 import java.math.BigDecimal;
 
 /**
@@ -14,8 +16,14 @@ public class ContiguousRead {
     private String _contigContext;
     private String _contigInformation;
     private int _contigLength;
+    @NotNull
+    @Min(0)
     private double _awayFromMeanThreshold = 1;
+    @NotNull
+    @Min(3)
     private int _gcWindowSize = 300;
+    @NotNull
+    @Min(0)
     private int _orfLengthThreshold = 100;
     private int _numberOfN = 0;
     private double _percentageOfN = 0;

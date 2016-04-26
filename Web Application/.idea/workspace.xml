@@ -2,8 +2,25 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2d0706c2-c12e-40d6-9032-19d66651f617" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Documents/Final Report Sections Status.rtf" afterPath="$PROJECT_DIR$/../Documents/Final Report Sections Status.rtf" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Documents/Final Report/dissertation.pdf" afterPath="$PROJECT_DIR$/../Documents/Final Report/dissertation.pdf" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Documents/Final Report/dissertation.synctex.gz" afterPath="$PROJECT_DIR$/../Documents/Final Report/dissertation.synctex.gz" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Documents/Final Report/Appendix1/appendix1.aux" afterPath="$PROJECT_DIR$/../Documents/Final Report/Appendix1/appendix1.aux" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Documents/Final Report/Appendix2/appendix2.aux" afterPath="$PROJECT_DIR$/../Documents/Final Report/Appendix2/appendix2.aux" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Documents/Final Report/Appendix3/appendix3.aux" afterPath="$PROJECT_DIR$/../Documents/Final Report/Appendix3/appendix3.aux" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Documents/Final Report/Chapter1/chapter1.aux" afterPath="$PROJECT_DIR$/../Documents/Final Report/Chapter1/chapter1.aux" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Documents/Final Report/Chapter1/chapter1.tex" afterPath="$PROJECT_DIR$/../Documents/Final Report/Chapter1/chapter1.tex" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Documents/Final Report/Chapter2/chapter2.aux" afterPath="$PROJECT_DIR$/../Documents/Final Report/Chapter2/chapter2.aux" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Documents/Final Report/Chapter3/chapter3.aux" afterPath="$PROJECT_DIR$/../Documents/Final Report/Chapter3/chapter3.aux" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Documents/Final Report/Chapter4/chapter4.aux" afterPath="$PROJECT_DIR$/../Documents/Final Report/Chapter4/chapter4.aux" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Documents/Final Report/Chapter5/chapter5.aux" afterPath="$PROJECT_DIR$/../Documents/Final Report/Chapter5/chapter5.aux" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Documents/Final Report/dissertation.aux" afterPath="$PROJECT_DIR$/../Documents/Final Report/dissertation.aux" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Documents/Final Report/dissertation.lof" afterPath="$PROJECT_DIR$/../Documents/Final Report/dissertation.lof" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Documents/Final Report/dissertation.log" afterPath="$PROJECT_DIR$/../Documents/Final Report/dissertation.log" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Documents/Final Report/dissertation.out" afterPath="$PROJECT_DIR$/../Documents/Final Report/dissertation.out" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Documents/Final Report/dissertation.toc" afterPath="$PROJECT_DIR$/../Documents/Final Report/dissertation.toc" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/toolkit/domain/ContiguousRead.java" afterPath="$PROJECT_DIR$/src/main/java/toolkit/domain/ContiguousRead.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/toolkit/web/ToolkitController.java" afterPath="$PROJECT_DIR$/src/main/java/toolkit/web/ToolkitController.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/templates/fragments/qualityparameters.html" afterPath="$PROJECT_DIR$/src/main/resources/templates/fragments/qualityparameters.html" />
     </list>
     <ignored path="MetagenomeQualityToolkit.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -30,7 +47,40 @@
     <favorites_list name="MetagenomeQualityToolkit" />
   </component>
   <component name="FileEditorManager">
-    <leaf />
+    <leaf>
+      <file leaf-file-name="ContiguousRead.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/toolkit/domain/ContiguousRead.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="19" column="11" selection-start-line="19" selection-start-column="11" selection-end-line="19" selection-end-column="11" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ToolkitController.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/toolkit/web/ToolkitController.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.6845238">
+              <caret line="84" column="60" selection-start-line="84" selection-start-column="60" selection-end-line="84" selection-end-column="60" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="qualityparameters.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/resources/templates/fragments/qualityparameters.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-6.230769">
+              <caret line="40" column="103" selection-start-line="40" selection-start-column="103" selection-end-line="40" selection-end-column="103" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -63,7 +113,6 @@
         <option value="$PROJECT_DIR$/src/main/resources/templates/welcome.html" />
         <option value="$PROJECT_DIR$/src/test/java/toolkit/unit/domain/OpenReadingFrameFinderTests.java" />
         <option value="$PROJECT_DIR$/src/main/resources/templates/list.html" />
-        <option value="$PROJECT_DIR$/src/main/resources/templates/fragments/qualityparameters.html" />
         <option value="$PROJECT_DIR$/src/main/resources/static/css/core.css" />
         <option value="$PROJECT_DIR$/src/main/resources/static/js/gc-chart.js" />
         <option value="$PROJECT_DIR$/src/main/resources/static/js/superframe-chart.js" />
@@ -71,7 +120,6 @@
         <option value="$PROJECT_DIR$/src/main/resources/templates/toolkit.html" />
         <option value="$PROJECT_DIR$/src/main/java/toolkit/domain/Codon.java" />
         <option value="$PROJECT_DIR$/src/main/java/toolkit/domain/ContigResult.java" />
-        <option value="$PROJECT_DIR$/src/main/java/toolkit/domain/ContiguousRead.java" />
         <option value="$PROJECT_DIR$/src/main/java/toolkit/domain/FastaReader.java" />
         <option value="$PROJECT_DIR$/src/main/java/toolkit/domain/GcResult.java" />
         <option value="$PROJECT_DIR$/src/test/java/toolkit/unit/domain/GcResultTests.java" />
@@ -93,7 +141,6 @@
         <option value="$PROJECT_DIR$/src/main/resources/static/js/toolkit.js" />
         <option value="$PROJECT_DIR$/src/main/resources/static/js/list.js" />
         <option value="$PROJECT_DIR$/src/main/java/toolkit/web/GlobalControllerExceptionHandler.java" />
-        <option value="$PROJECT_DIR$/src/main/java/toolkit/web/ToolkitController.java" />
         <option value="$PROJECT_DIR$/src/main/java/toolkit/web/ExceptionController.java" />
         <option value="$PROJECT_DIR$/src/main/resources/templates/error.html" />
         <option value="$PROJECT_DIR$/src/main/java/toolkit/web/BasicErrorController.java" />
@@ -103,6 +150,9 @@
         <option value="$PROJECT_DIR$/src/test/java/toolkit/unit/domain/GcContentCounterTests.java" />
         <option value="$PROJECT_DIR$/src/test/java/toolkit/unit/domain/QualitySummaryTests.java" />
         <option value="$PROJECT_DIR$/src/test/java/toolkit/unit/domain/OpenReadingFrameLocationTests.java" />
+        <option value="$PROJECT_DIR$/src/main/java/toolkit/domain/ContiguousRead.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/templates/fragments/qualityparameters.html" />
+        <option value="$PROJECT_DIR$/src/main/java/toolkit/web/ToolkitController.java" />
       </list>
     </option>
   </component>
@@ -154,8 +204,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
-      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -398,6 +446,36 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
+              <option name="myItemId" value="templates" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="fragments" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="MetagenomeQualityToolkit" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Web Application" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="resources" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
               <option name="myItemId" value="static" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
@@ -580,7 +658,9 @@
           </PATH>
         </subPane>
       </pane>
+      <pane id="PackagesPane" />
       <pane id="Scratches" />
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -1253,7 +1333,7 @@
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
     <editor active="false" />
     <layout>
-      <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32307693" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -1262,10 +1342,10 @@
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4010239" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.37777779" sideWeight="0.48865354" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32569557" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.27685326" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.27685326" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24962178" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24962178" sideWeight="0.4903047" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24962178" sideWeight="0.4903047" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.37777779" sideWeight="0.49394855" order="3" side_tool="false" content_ui="tabs" />
@@ -1274,7 +1354,7 @@
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2769231" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Coverage" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.37291983" sideWeight="0.5096953" order="0" side_tool="true" content_ui="tabs" />
-      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="3" side_tool="false" content_ui="combo" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.23418804" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
@@ -1407,13 +1487,6 @@
         <state vertical-scroll-proportion="0.41843972">
           <caret line="60" column="79" selection-start-line="60" selection-start-column="79" selection-end-line="60" selection-end-column="79" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/fragments/qualityparameters.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.732899">
-          <caret line="25" column="100" selection-start-line="25" selection-start-column="100" selection-end-line="25" selection-end-column="100" />
         </state>
       </provider>
     </entry>
@@ -1604,22 +1677,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/list.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.9315961">
-          <caret line="27" column="16" selection-start-line="27" selection-start-column="16" selection-end-line="27" selection-end-column="64" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/toolkit/web/ToolkitController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.34534535">
-          <caret line="83" column="43" selection-start-line="83" selection-start-column="43" selection-end-line="83" selection-end-column="43" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/templates/error.html">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.72638434">
@@ -1651,7 +1708,7 @@
         <state vertical-scroll-proportion="0.18318318">
           <caret line="29" column="51" selection-start-line="29" selection-start-column="51" selection-end-line="29" selection-end-column="51" />
           <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="imports" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1661,18 +1718,10 @@
         <state vertical-scroll-proportion="1.1111112">
           <caret line="27" column="74" selection-start-line="27" selection-start-column="74" selection-end-line="27" selection-end-column="74" />
           <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#350#351#0" expanded="true" />
-            <element signature="e#399#400#0" expanded="true" />
+            <element signature="imports" expanded="false" />
+            <element signature="e#350#351#0" expanded="false" />
+            <element signature="e#399#400#0" expanded="false" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/toolkit/domain/ContiguousRead.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.18318318">
-          <caret line="139" column="16" selection-start-line="139" selection-start-column="16" selection-end-line="139" selection-end-column="16" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1705,7 +1754,7 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="45" column="5" selection-start-line="45" selection-start-column="5" selection-end-line="45" selection-end-column="5" />
           <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="imports" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1739,7 +1788,7 @@
         <state vertical-scroll-proportion="-0.078078076">
           <caret line="19" column="0" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
           <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="imports" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1764,6 +1813,40 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-0.7597598">
           <caret line="12" column="42" selection-start-line="12" selection-start-column="42" selection-end-line="12" selection-end-column="42" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/list.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="25.307692">
+          <caret line="27" column="16" selection-start-line="27" selection-start-column="16" selection-end-line="27" selection-end-column="64" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/toolkit/domain/ContiguousRead.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="19" column="11" selection-start-line="19" selection-start-column="11" selection-end-line="19" selection-end-column="11" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/fragments/qualityparameters.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-6.230769">
+          <caret line="40" column="103" selection-start-line="40" selection-start-column="103" selection-end-line="40" selection-end-column="103" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/toolkit/web/ToolkitController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.6845238">
+          <caret line="84" column="60" selection-start-line="84" selection-start-column="60" selection-end-line="84" selection-end-column="60" />
           <folding />
         </state>
       </provider>

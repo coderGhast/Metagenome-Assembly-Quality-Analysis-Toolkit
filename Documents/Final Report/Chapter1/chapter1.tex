@@ -23,6 +23,18 @@ Considering the nature of metagenomics and the unknowns, it becomes clear quite 
 
 A chimieric contig is an instance where an assembler has put together reads from a sample that it believed were part of the same whole, and yet were in fact of different species/sub-species, and so creates a contig that does not actually exist in nature. It can be understood then that if a user were to sequence this, unless that is the result they wanted, it won't be of any use to them, but without the proper tool how would they know that their assembly data contains chimeric contigs and are not just wasting their time and money?
 
+We can visualize this through  the diagram below, where we take a number of reads, put them through an assembler and the output is a number of contigs that the assembler believes it has created correctly, but may in fact be chimeric.
+
+\begin{figure}[H]
+	\centering
+\includegraphics[width=0.5\textwidth]{images/basicmetaassembly}
+	\caption{A very small example of a number of reads being taken into an assembler and the output of a contig where there may be a chimera.}
+\end{figure}
+
+If we imagine each of the colours representing an individual species (though in reality, there would be no colours, only the characters of data, and potentially hundred to thousands of different species and sub species in a sample) we could, by eye, see how we could extract some interesting genome data, for example taking all of the green in the order they are presented and finding the `green' genome. As naive as that is, it serves then to demonstrate that if we look at the output of the one contig shown in the figure, we can see how the  colours are aligned in a way that they are mixed.
+
+It is possible that the resulting contig is a valid genome that could be found in nature, where the particular sequences in the different coloured sections are shared between each colour `species' and so this contig could work. However, it is also likely that the different coloured sections are widly different than the natural connecting colours were this contig made up of a single colour (in this figure, all yellow, all blue, all red). This would then be a chimera. This demonstrates that without some quality assessment tools to attempt to report on where these misaligns have occurred, a user may never know if what they have is good quality data or not.
+
 \subsection{Existing Software}
 There are a number of tools I discovered in my background research that attempt to aid in the quality assessment of metagenomic data, in particular MEGAN, a `next-generation metagenomic data, called MEtaGenomeANalyzer', which attempts to do a taxonomical analysis comparison to known reference data\cite{citeulike:10457549} and PRINSEQ, a tool which provides `summary statistics of FASTA (and QUAL) or FASTQ files in tabular and graphical form'\cite{citeulike:8714996}. When considering what my own application should do, I looked at the techniques used for PRINSEQ most, as these seemed to match up with what I thought would be useful to a user for my own application, and from discussing the topic with my supervisor I found techniques such as the GC Content distribution could be a good place to start.
 
@@ -101,7 +113,7 @@ I did consider how I could potentially provided a quality confidence factor to a
 \includegraphics[width=0.5\textwidth]{images/usecase}
 \end{figure}
 
-\subsection{Implementation}
+\subsection{Implementation - 3rd Party vs Self-Created}
 Based on the requirements I had selected, I decided that I wanted to write my own software for each functional component. While solutions for each component exists individually, I felt there would be more benefit to a user if I could produce just my own software to support the functionality over requiring them to user third part software in order to use my application too.
 
 Additionally to this, I wanted the technical challenge of writing my own software, and enabling the application to be maintainable and expanded upon in the future rather than relying on third party support applications in order to process a users input. The process of developing the application from scratch would also give me the opportunity to learn more about the domain and technologies for development than just consuming output of other existing applications, even if achieving the end result would take more time.
