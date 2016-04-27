@@ -9,8 +9,18 @@
 \contentsline {figure}{\numberline {2.5}{\ignorespaces Class diagram for the `List Page', and what classes are used upon a Request for the page.\relax }}{15}{figure.caption.10}
 \contentsline {figure}{\numberline {2.6}{\ignorespaces Class diagram for the `Results Page', and what classes are used upon a Request for the page.\relax }}{16}{figure.caption.11}
 \contentsline {figure}{\numberline {2.7}{\ignorespaces The layout of the directory structure for the application.\relax }}{19}{figure.caption.12}
-\contentsline {figure}{\numberline {2.8}{\ignorespaces A number of the commits made to my major project repository.\relax }}{21}{figure.caption.13}
-\contentsline {figure}{\numberline {2.9}{\ignorespaces Examples of the continuous integration on CodeShip running my tests every time I committed to my repository.\relax }}{21}{figure.caption.14}
+\contentsline {figure}{\numberline {2.8}{\ignorespaces The `welcome' page that greets the user upon requesting the home page of the web service.\relax }}{20}{figure.caption.13}
+\contentsline {figure}{\numberline {2.9}{\ignorespaces The `list' page that is displayed after a user submits their (valid) assembly data in FASTA format.\relax }}{21}{figure.caption.14}
+\contentsline {figure}{\numberline {2.10}{\ignorespaces When a user clicks to inspect a contiguous read, this menu appears giving them options to alter the parameters of the quality assessment inspection.\relax }}{21}{figure.caption.15}
+\contentsline {figure}{\numberline {2.11}{\ignorespaces If the user clicks to see an explanation of the process, they can click the text that says to `Show explanation', and this text appears.\relax }}{22}{figure.caption.16}
+\contentsline {figure}{\numberline {2.12}{\ignorespaces If the user clicks to see an explanation of the process, they can click the text that says to `Show explanation', and this text appears.\relax }}{22}{figure.caption.17}
+\contentsline {figure}{\numberline {2.13}{\ignorespaces If the user clicks to see an explanation of the process, they can click the text that says to `Show explanation', and this text appears.\relax }}{23}{figure.caption.18}
+\contentsline {figure}{\numberline {2.14}{\ignorespaces If the user clicks to see an explanation of the process, they can click the text that says to `Show explanation', and this text appears.\relax }}{23}{figure.caption.19}
+\contentsline {figure}{\numberline {2.15}{\ignorespaces If the user clicks to see an explanation of the process, they can click the text that says to `Show explanation', and this text appears.\relax }}{24}{figure.caption.20}
+\contentsline {figure}{\numberline {2.16}{\ignorespaces If the user clicks to see an explanation of the process, they can click the text that says to `Show explanation', and this text appears.\relax }}{24}{figure.caption.21}
+\contentsline {figure}{\numberline {2.17}{\ignorespaces If an error occurs as the user is browsing the web service, i.e. they try to access a page when they do not have the required data submitted, they are presented with this page informing them of an issue.\relax }}{25}{figure.caption.22}
+\contentsline {figure}{\numberline {2.18}{\ignorespaces A number of the commits made to my major project repository.\relax }}{26}{figure.caption.23}
+\contentsline {figure}{\numberline {2.19}{\ignorespaces Examples of the continuous integration on CodeShip running my tests every time I committed to my repository.\relax }}{26}{figure.caption.24}
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \addvspace {10\p@ }

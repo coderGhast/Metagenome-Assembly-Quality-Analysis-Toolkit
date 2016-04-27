@@ -110,10 +110,82 @@ Within the `src/main/java' folder, there are the sub folders `domain', `utilitie
 \subsection{QualitySummary and Results}
 In the application, the quality assessment results are returned in a QualitySummary object. This QualitySummary contains references to GcResult and OpenReadingFrameResult. The is the option to have these two implement an interface that might be called QualityResults, and have just an array of QualityResults. This would allow us to add any type of result without needing to know what is in there. However, I chose not to do this as considering the way in which we serve data to the View it seemed okay to be able to have the View called results from the model directly, and through XP developing this any further would go against YAGNI. 
 
-I am aware that in the future if we allowed a user to select what type of processing they wish to use and as more techniques for quality assement are added, this technique would be very useful to implement. It would be possible to do this and in the View have it check for the existence of the expected results, or check if they were empty/null, and then only dynamically include fragments of results that are present. 
+I am aware that in the future if we allowed a user to select what type of processing they wish to use and as more techniques for quality assessment are added, this technique would be very useful to implement. It would be possible to do this and in the View have it check for the existence of the expected results, or check if they were empty/null, and then only dynamically include fragments of results that are present. 
 
 \section{User Interface}
-Framework mock ups of the user interface. Logo for kicks.
+Below is the finalized designs of the user interface, shown through screenshots, along with an explanation for the design choices in how the pages are laid out for the user to navigate through.
+% ==== Welcome ====
+\subsection{Welcome}
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.8\textwidth]{images/ui1}
+\caption{The `welcome' page that greets the user upon requesting the home page of the web service.}
+\end{figure}
+
+%==== List =====
+\subsection{List}
+\begin{figure}[H]
+	\centering
+\includegraphics[width=0.8\textwidth]{images/ui2}
+\caption{The `list' page that is displayed after a user submits their (valid) assembly data in FASTA format.}
+\end{figure}
+
+\begin{figure}[H]
+	\centering
+\includegraphics[width=0.8\textwidth]{images/ui3}
+\caption{When a user clicks to inspect a contiguous read, this menu appears giving them options to alter the parameters of the quality assessment inspection.}
+\end{figure}
+
+\begin{figure}[H]
+	\centering
+\includegraphics[width=0.8\textwidth]{images/ui4}
+\caption{If the user clicks to see an explanation of the process, they can click the text that says to `Show explanation', and this text appears.}
+\end{figure}
+
+%==== Results =====
+\subsection{Results}
+Each results on a tab of its own - why is this? The tab code is from (INSERT LINK FOR TAB CODE HERE)
+\subsubsection{GC Content}
+\begin{figure}[H]
+	\centering
+\includegraphics[width=0.8\textwidth]{images/ui5}
+\caption{If the user clicks to see an explanation of the process, they can click the text that says to `Show explanation', and this text appears.}
+\end{figure}
+\subsubsection{Open Reading Frames}
+\begin{figure}[H]
+	\centering
+\includegraphics[width=0.8\textwidth]{images/ui6}
+\caption{If the user clicks to see an explanation of the process, they can click the text that says to `Show explanation', and this text appears.}
+\end{figure}
+\begin{figure}[H]
+	\centering
+\includegraphics[width=0.8\textwidth]{images/ui7}
+\caption{If the user clicks to see an explanation of the process, they can click the text that says to `Show explanation', and this text appears.}
+\end{figure}
+\subsubsection{Superframe}
+
+
+\begin{figure}[H]
+	\centering
+\includegraphics[width=0.8\textwidth]{images/ui8}
+\caption{If the user clicks to see an explanation of the process, they can click the text that says to `Show explanation', and this text appears.}
+\end{figure}
+\begin{figure}[H]
+	\centering
+\includegraphics[width=0.8\textwidth]{images/ui9}
+\caption{If the user clicks to see an explanation of the process, they can click the text that says to `Show explanation', and this text appears.}
+\end{figure}
+
+%===== Error =====
+\subsection{Error}
+If a user makes an error on the website (attempting to access pages without first submitting data) or an error occurs with the processing of a users data, the page in the figure below will be shown.
+\begin{figure}[H]
+	\centering
+\includegraphics[width=0.8\textwidth]{images/ui10}
+\caption{If an error occurs as the user is browsing the web service, i.e. they try to access a page when they do not have the required data submitted, they are presented with this page informing them of an issue.}
+\end{figure}
+While note very descriptive, it serves to return the user back to data submission, which is the best place to start again if something bad went wrong or they somehow tried to access a page when they hadn't previously submitted the required data. If there were a future revision of this page, it could be more descriptive of the exact reason why the error occurred, but was out of scope for the current project to make a fully detailed error reasoning. There is an ErrorController class in place however that can deal with this functionality in the future if the application were to be continued. Currently any errors are run through the Error controller but it only returns this page to the user.
+
 
 - Input form, why is it this way?
 - List - Displaying each contig, why, framework, drop downs
