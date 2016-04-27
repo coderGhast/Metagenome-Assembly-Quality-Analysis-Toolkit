@@ -132,7 +132,7 @@ public class ContiguousRead {
      * is reduced by just counting and calculating it once and then returning the static number later, as the
      * context of the contiguous read should never change, so nor should this number.
      */
-    public void calculateNumberOfN(){
+    private void calculateNumberOfN(){
         for(int i=0; i < _contigContext.length(); i++){
             if(_contigContext.toLowerCase().charAt(i) == 'n'){
                 _numberOfN++;

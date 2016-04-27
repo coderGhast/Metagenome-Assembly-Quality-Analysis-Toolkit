@@ -6,9 +6,9 @@ package toolkit.domain;
  * Represents a window of the contiguous read for use in the GC Content calculation.
  */
 public class GcWindow {
-    private String windowContent;
-    private int gCount;
-    private int cCount;
+    private String _windowContent;
+    private int _gCount;
+    private int _cCount;
 
     /**
      * Initialized with the characters of the particular window this GcWindow represents. Calculates the G and C counts
@@ -17,7 +17,7 @@ public class GcWindow {
      * @param windowContent The characters of the window.
      */
     public GcWindow(String windowContent){
-        this.windowContent = windowContent;
+        this._windowContent = windowContent;
         calculateCounts();
     }
 
@@ -25,12 +25,12 @@ public class GcWindow {
      * Counts the number of Gs and Cs within the window.
      */
     private void calculateCounts(){
-        for(int i=0; i < windowContent.length(); i++){
-            if(windowContent.toLowerCase().charAt(i) == 'c'){
-                cCount++;
+        for(int i = 0; i < _windowContent.length(); i++){
+            if(_windowContent.toLowerCase().charAt(i) == 'c'){
+                _cCount++;
             }
-            if(windowContent.toLowerCase().charAt(i) == 'g'){
-                gCount++;
+            if(_windowContent.toLowerCase().charAt(i) == 'g'){
+                _gCount++;
             }
         }
     }
@@ -40,7 +40,7 @@ public class GcWindow {
      * @return The number of 'G' characters in the window.
      */
     public int getGCount(){
-        return gCount;
+        return _gCount;
     }
 
     /**
@@ -48,7 +48,7 @@ public class GcWindow {
      * @return The number of 'G' characters in the window.
      */
     public int getCCount(){
-        return cCount;
+        return _cCount;
     }
 
     /**
@@ -56,6 +56,6 @@ public class GcWindow {
      * @return The length of this window, based on the size of the String that has the characters of the window.
      */
     public int getWindowContentSize(){
-        return windowContent.length();
+        return _windowContent.length();
     }
 }

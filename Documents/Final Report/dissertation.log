@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9) (preloaded format=pdflatex 2013.11.17)  27 APR 2016 13:23
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9) (preloaded format=pdflatex 2013.11.17)  27 APR 2016 18:18
 entering extended mode
 **D:/Users/James/University*Documents/Modules/Major*Project/Metagenome-Assembly
 -Quality-Analysis-Toolkit/Documents/Final*Report/dissertation.tex
@@ -467,7 +467,7 @@ pdfTeX warning (ext4): destination with the same identifier (name{page.i}) has
 been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.61 ...line {B}Ethics Submission}{25}{appendix.B}
+l.61 ...line {B}Ethics Submission}{29}{appendix.B}
                                                    [1
 
 ])
@@ -503,7 +503,7 @@ LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <12> not available
 [1
 
 
-] <images/basicmetaassembly.png, id=282, 401.5pt x 247.92625pt>
+] <images/basicmetaassembly.png, id=298, 401.5pt x 247.92625pt>
 File: images/basicmetaassembly.png Graphic file (type png)
 
 <use images/basicmetaassembly.png>
@@ -512,7 +512,7 @@ Package pdftex.def Info: images/basicmetaassembly.png used on input line 30.
  [2 <D:/Users/James/University Documents/Modules/Major Project/Metagenome-Assem
 bly-Quality-Analysis-Toolkit/Documents/Final Report/images/basicmetaassembly.pn
 g>] [3] [4] [5]
-<images/usecase.png, id=333, 424.58624pt x 352.31625pt>
+<images/usecase.png, id=349, 424.58624pt x 352.31625pt>
 File: images/usecase.png Graphic file (type png)
 
 <use images/usecase.png>
@@ -550,21 +550,21 @@ Chapter 2.
 
 
 
-] <images/addingtomodel.png, id=385, 602.25pt x 76.285pt>
+] <images/addingtomodel.png, id=401, 602.25pt x 76.285pt>
 File: images/addingtomodel.png Graphic file (type png)
 
 <use images/addingtomodel.png>
 Package pdftex.def Info: images/addingtomodel.png used on input line 32.
 (pdftex.def)             Requested size: 426.79134pt x 54.0626pt.
 
-<images/thymeleafinsert1.png, id=386, 590.205pt x 94.3525pt>
+<images/thymeleafinsert1.png, id=402, 590.205pt x 94.3525pt>
 File: images/thymeleafinsert1.png Graphic file (type png)
 
 <use images/thymeleafinsert1.png>
 Package pdftex.def Info: images/thymeleafinsert1.png used on input line 40.
 (pdftex.def)             Requested size: 426.79134pt x 68.2303pt.
 
-<images/thymeleafinsert2.png, id=387, 699.61375pt x 158.5925pt>
+<images/thymeleafinsert2.png, id=403, 699.61375pt x 158.5925pt>
 File: images/thymeleafinsert2.png Graphic file (type png)
 
 <use images/thymeleafinsert2.png>
@@ -574,10 +574,47 @@ Package pdftex.def Info: images/thymeleafinsert2.png used on input line 45.
 mbly-Quality-Analysis-Toolkit/Documents/Final Report/images/addingtomodel.png (
 PNG copy)> <D:/Users/James/University Documents/Modules/Major Project/Metagenom
 e-Assembly-Quality-Analysis-Toolkit/Documents/Final Report/images/thymeleafinse
-rt1.png (PNG copy)>] [13 <D:/Users/James/University Documents/Modules/Major Pro
-ject/Metagenome-Assembly-Quality-Analysis-Toolkit/Documents/Final Report/images
-/thymeleafinsert2.png (PNG copy)>] [14]
-[15]) [16]
+rt1.png (PNG copy)>]
+<images/umlwelcomepage.png, id=411, 406.6392pt x 451.9284pt>
+File: images/umlwelcomepage.png Graphic file (type png)
+
+<use images/umlwelcomepage.png>
+Package pdftex.def Info: images/umlwelcomepage.png used on input line 61.
+(pdftex.def)             Requested size: 298.75262pt x 332.03581pt.
+ [13 <D:/Users/James/University Documents/Modules/Major Project/Metagenome-Asse
+mbly-Quality-Analysis-Toolkit/Documents/Final Report/images/thymeleafinsert2.pn
+g (PNG copy)>]
+<images/umllistpage.png, id=418, 614.295pt x 415.5525pt>
+File: images/umllistpage.png Graphic file (type png)
+
+<use images/umllistpage.png>
+Package pdftex.def Info: images/umllistpage.png used on input line 67.
+(pdftex.def)             Requested size: 341.43436pt x 230.97043pt.
+ [14 <D:/Users/James/University Documents/Modules/Major Project/Metagenome-Asse
+mbly-Quality-Analysis-Toolkit/Documents/Final Report/images/umlwelcomepage.png>
+]
+<images/umlresultspageflip.png, id=424, 695.7192pt x 1264.725pt>
+File: images/umlresultspageflip.png Graphic file (type png)
+
+<use images/umlresultspageflip.png>
+Package pdftex.def Info: images/umlresultspageflip.png used on input line 73.
+(pdftex.def)             Requested size: 341.43436pt x 620.70488pt.
+ [15 <D:/Users/James/University Documents/Modules/Major Project/Metagenome-Asse
+mbly-Quality-Analysis-Toolkit/Documents/Final Report/images/umllistpage.png>]
+Overfull \vbox (6.33678pt too high) has occurred while \output is active []
+
+
+[16 <D:/Users/James/University Documents/Modules/Major Project/Metagenome-Assem
+bly-Quality-Analysis-Toolkit/Documents/Final Report/images/umlresultspageflip.p
+ng>] [17] <images/directorystructure.png, id=444, 364.36125pt x 591.20876pt>
+File: images/directorystructure.png Graphic file (type png)
+
+<use images/directorystructure.png>
+Package pdftex.def Info: images/directorystructure.png used on input line 106.
+(pdftex.def)             Requested size: 213.39566pt x 346.24814pt.
+ [18] [19 <D:/Users/James/University Documents/Modules/Major Project/Metagenome
+-Assembly-Quality-Analysis-Toolkit/Documents/Final Report/images/directorystruc
+ture.png (PNG copy)>]) [20]
 ("D:\Users\James\University Documents\Modules\Major Project\Metagenome-Assembly
 -Quality-Analysis-Toolkit\Documents\Final Report\Chapter3/chapter3.tex"
 Chapter 3.
@@ -585,27 +622,27 @@ Chapter 3.
 Package hyperref Warning: Difference (2) between bookmark levels is greater 
 (hyperref)                than one, level fixed on input line 2.
 
-[17
+[21
 
 
 
-]) [18] [19]
+]) [22] [23]
 ("D:\Users\James\University Documents\Modules\Major Project\Metagenome-Assembly
 -Quality-Analysis-Toolkit\Documents\Final Report\Chapter4/chapter4.tex"
 Chapter 4.
-) [20
+) [24
 
 
 
-] [21]
+] [25]
 ("D:\Users\James\University Documents\Modules\Major Project\Metagenome-Assembly
 -Quality-Analysis-Toolkit\Documents\Final Report\Chapter5/chapter5.tex"
 Chapter 5.
-) [22
+) [26
 
 
 
-] [23
+] [27
 
 
 ]
@@ -615,20 +652,20 @@ Appendix A.
 Missing character: There is no – in font ptmr7t!
 Missing character: There is no ’ in font ptmr7t!
 
-LaTeX Warning: Citation `apache_poi' on page 24 undefined on input line 12.
+LaTeX Warning: Citation `apache_poi' on page 28 undefined on input line 12.
 
 
-LaTeX Warning: Citation `apache_license' on page 24 undefined on input line 13.
+LaTeX Warning: Citation `apache_license' on page 28 undefined on input line 13.
 
 
-) [24
+) [28
 
 
 ]
 ("D:\Users\James\University Documents\Modules\Major Project\Metagenome-Assembly
 -Quality-Analysis-Toolkit\Documents\Final Report\Appendix2/appendix2.tex"
 Appendix B.
-) [25
+) [29
 
 
 
@@ -705,7 +742,7 @@ Missing character: There is no ò in font ptmr7t!
 Missing character: There is no ‚ in font ptmr7t!
 Missing character: There is no Ä in font ptmr7t!
 Missing character: There is no ô in font ptmr7t!
-[26
+[30
 
 
 
@@ -749,9 +786,9 @@ Missing character: There is no ô in font ptmr7t!
 Missing character: There is no ‚ in font ptmr7t!
 Missing character: There is no Ä in font ptmr7t!
 Missing character: There is no ù in font ptmr7t!
-) [27]
+) [31]
 ("D:\Users\James\University Documents\Modules\Major Project\Metagenome-Assembly
--Quality-Analysis-Toolkit\Documents\Final Report\dissertation.bbl" [28
+-Quality-Analysis-Toolkit\Documents\Final Report\dissertation.bbl" [32
 
 
 ]
@@ -760,7 +797,7 @@ Missing character: There is no © in font ptmr7t!
 Missing character: There is no √ in font ptmr7t!
 Missing character: There is no © in font ptmr7t!
 
-[29]
+[33]
 Underfull \hbox (badness 1199) in paragraph at lines 162--165
 []\OT1/ptm/m/n/10.95 The Thymeleaf Team, ``thymeleaf/thymeleaf,'' [On-line] Ava
 il-able: []$https : / / github . com /$
@@ -768,7 +805,7 @@ il-able: []$https : / / github . com /$
 
 ) 
 AED: lastpage setting LastPage
-[30]
+[34]
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 131.
 Package atveryend Info: Empty hook `AfterLastShipout' on input line 131.
 
@@ -801,7 +838,7 @@ Package atveryend Info: Empty hook `AfterLastShipout' on input line 131.
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 131.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 131.
 Package rerunfilecheck Info: File `dissertation.out' has not changed.
-(rerunfilecheck)             Checksum: BD8A8EDB73F8B6273C0250DCC6451C75;2860.
+(rerunfilecheck)             Checksum: 2BD54901E9DAF6F3641CBD728652C7A7;2922.
 
 
 LaTeX Warning: There were undefined references.
@@ -809,13 +846,13 @@ LaTeX Warning: There were undefined references.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 131.
  ) 
 Here is how much of TeX's memory you used:
- 7752 strings out of 493921
- 127752 string characters out of 3144875
- 200781 words of memory out of 3000000
- 10708 multiletter control sequences out of 15000+200000
+ 7781 strings out of 493921
+ 128434 string characters out of 3144875
+ 201781 words of memory out of 3000000
+ 10725 multiletter control sequences out of 15000+200000
  27019 words of font info for 59 fonts, out of 3000000 for 9000
  841 hyphenation exceptions out of 8191
- 49i,11n,45p,1030b,511s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 49i,11n,45p,1143b,511s stack positions out of 5000i,500n,10000p,200000b,50000s
 {C:/Program Files (x86)/MiKTeX 2.9/fonts/enc/dvips/fontname/8r.enc}<C:/Progra
 m Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Program 
 Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Program Fi
@@ -824,9 +861,9 @@ les (x86)/MiKTeX 2.9/fonts/type1/urw/courier/ucrr8a.pfb><C:/Program Files (x86)
 /fonts/type1/urw/times/utmr8a.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type
 1/urw/times/utmr8a.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/urw/times
 /utmri8a.pfb>
-Output written on dissertation.pdf (38 pages, 282818 bytes).
+Output written on dissertation.pdf (42 pages, 960084 bytes).
 PDF statistics:
- 569 PDF objects out of 1000 (max. 8388607)
- 126 named destinations out of 1000 (max. 500000)
- 370 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 611 PDF objects out of 1000 (max. 8388607)
+ 134 named destinations out of 1000 (max. 500000)
+ 398 words of extra memory for PDF output out of 10000 (max. 10000000)
 

@@ -5,6 +5,10 @@
 \contentsline {figure}{\numberline {2.1}{\ignorespaces Adding an object to the Model via the Controller to be accessed in the View. The View here is `list', which is a Thymeleaf template that will dynamically build the page using the data from the Model added here.\relax }}{12}{figure.caption.6}
 \contentsline {figure}{\numberline {2.2}{\ignorespaces Including a thymeleaf fragment in a page. You can see how the call is made from one `th:replace' with the name of the html fragment file and then the fragment to be included from that file, in this case `inspectbox'.\relax }}{12}{figure.caption.7}
 \contentsline {figure}{\numberline {2.3}{\ignorespaces Including a thymeleaf fragment in a page. This is the declaration of the fragment being included in the previous figure, declared as such through `th:fragment'.\relax }}{13}{figure.caption.8}
+\contentsline {figure}{\numberline {2.4}{\ignorespaces Class diagram for the `Welcome Page', and what classes are used upon a Request for the page.\relax }}{14}{figure.caption.9}
+\contentsline {figure}{\numberline {2.5}{\ignorespaces Class diagram for the `List Page', and what classes are used upon a Request for the page.\relax }}{15}{figure.caption.10}
+\contentsline {figure}{\numberline {2.6}{\ignorespaces Class diagram for the `Results Page', and what classes are used upon a Request for the page.\relax }}{16}{figure.caption.11}
+\contentsline {figure}{\numberline {2.7}{\ignorespaces The layout of the directory structure for the application.\relax }}{19}{figure.caption.12}
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \addvspace {10\p@ }

@@ -6,32 +6,32 @@ import java.util.ArrayList;
  * Created by James Euesden on 2/15/2016.
  */
 public class GcResult {
-    private int windowSize;
-    private double gcMean;
-    private boolean meanCalculated;
+    private int _windowSize;
+    private double _gcMean;
+    private boolean _meanCalculated;
     private ArrayList<Double> _percentages;
 
     public GcResult(int windowSize){
-        this.windowSize = windowSize;
+        this._windowSize = windowSize;
     }
 
     public int getWindowSize(){
-        return windowSize;
+        return _windowSize;
     }
 
     public double mean(){
-        if(!meanCalculated){
+        if(!_meanCalculated){
             double total = 0;
             ArrayList<Double> percentages = getGCContentPercentages();
             for (Double gcContentPercentage: percentages) {
                 total += gcContentPercentage;
             }
-            gcMean = total / percentages.size();
-            meanCalculated = true;
-            return gcMean;
+            _gcMean = total / percentages.size();
+            _meanCalculated = true;
+            return _gcMean;
         }
 
-        return gcMean;
+        return _gcMean;
     }
 
     public void setGcContentPercentages(ArrayList<Double> percentages){
