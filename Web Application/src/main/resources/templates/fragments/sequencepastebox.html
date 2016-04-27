@@ -5,10 +5,11 @@
 <body>
 <div class="SequencePasteBox" th:fragment="sequencepastebox">
     <h2>Submit your sequence in FASTA format below:</h2>
-    <form action="#" th:action="@{/list}" th:object="${userparameters}" method="post">
+    <form action="#" th:action="@{/list}" th:object="${userParameters}" method="post">
         <p>
             <textarea rows="10" cols="50" th:field="*{userContent}" th:value="*{userContent}" id="userContent"/>
         </p>
+
         <p>Length of contiguous read length be in order to be considered ('0' will allow any length):<br/>
             <input type="text" th:field="*{contigLengthThreshold}" th:value="*{contigLengthThreshold}" /></p>
         <p><input id="sequencepastesubmit" type="submit" value="Submit"  onclick="loadingclick(this.id);"/></p>

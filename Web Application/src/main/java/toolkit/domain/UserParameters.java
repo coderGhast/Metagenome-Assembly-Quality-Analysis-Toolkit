@@ -1,5 +1,9 @@
 package toolkit.domain;
 
+import javax.validation.constraints.Min;
+import javax.validation.constraints.NotNull;
+import javax.validation.constraints.Size;
+
 /**
  * Created by James Euesden on 09/03/2016.
  *
@@ -7,8 +11,12 @@ package toolkit.domain;
  * parameters for that initial data.
  */
 public class UserParameters {
+    @NotNull
+    @Size(min = 1)
     private String _userContent = "";
     private String _fileName = "";
+    @NotNull
+    @Min(0)
     private int _contigLengthThreshold = 1000;
 
     /**

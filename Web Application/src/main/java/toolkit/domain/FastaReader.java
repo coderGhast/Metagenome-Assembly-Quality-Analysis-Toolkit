@@ -36,14 +36,15 @@ public class FastaReader{
      *               size of a contiguous read to be considered.
      * @return A ContigResult that holds the contiguous reads from the user input.
      */
-    public ContigResult readSequenceInput(UserParameters params){
+    public ContigResult readSequenceInput(UserParameters params) throws Exception {
         ContigResult contigResult;
         if(_validator.validateUserContent(params.getUserContent())){
             contigResult = readUserInput(params.getUserContent(), params.getContigLengthThreshold());
         } else {
+            throw new Exception("User content cannot be null or invalid.");
             // Test file...
-            params.setFileName("./src/main/resources/static/artificialtestcontigs.fa");
-            contigResult = readFile(params.getFileName(), params.getContigLengthThreshold());
+            //params.setFileName("./src/main/resources/static/artificialtestcontigs.fa");
+            // contigResult = readFile(params.getFileName(), params.getContigLengthThreshold());
         }
         return contigResult;
     }

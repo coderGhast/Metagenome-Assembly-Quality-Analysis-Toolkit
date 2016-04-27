@@ -4,7 +4,7 @@
 </head>
 <body>
 <td class="QualityParameters" th:fragment="qualityparameters">
-    <form action="#" th:action="@{/list}" th:object="${userparameters}" method="post">
+    <form action="#" th:action="@{/list}" th:object="${userParameters}" method="post">
         <p>Standard deviations away from the average of the GC Content % you wish to highlight:<br />
             <input type="text" th:field="*{awayFromMeanThreshold}" th:value="*{awayFromMeanThreshold}"/></p>
         <p>The size of the GC Content windows to analyse:<br/>
