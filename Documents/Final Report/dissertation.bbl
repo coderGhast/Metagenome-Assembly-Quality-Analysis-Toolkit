@@ -24,6 +24,17 @@ F.~Cirillo, \emph{{The pomodoro technique}}.\hskip 1em plus 0.5em minus
  \begin{quotation}\noindent The pomodoro technique, used during the development
   of my application for efficient time management. \end{quotation}
 
+\bibitem{codeship}
+{Codeship Team}, ``{Continuous Delivery with Codeship: Fast, secure and fully
+  customizable.}'' [Online] Available: \url{https://codeship.com/}, 2016,
+  {[Accessed on: 27 April 2016]}.
+ \begin{quotation}\noindent CodeShip, the web service I used to help provide me
+  with contiurous integration for my project, connected to my GitHub repository
+  to be run every time I checked in to the repository. This was integral to
+  developing my application as it highlighted any time that I broke my build
+  through forgetting to modify tests when content was updated, or when I broke
+  parts of the application and so old tests would fail. \end{quotation}
+
 \bibitem{citeulike:11826724}
 N.~C. B. I.~R. Coordinators, ``{Database resources of the National Center for
   Biotechnology Information},'' \emph{Nucleic Acids Research}, vol.~41, no.~D1,
@@ -48,6 +59,13 @@ D.~Huson and S.~Mitra, ``{Introduction to the Analysis of Environmental
   compares to similar sequences already known. This could be considered as a
   quality measure, as if a sequence can be found to match a reference sequence,
   we know it is most likely not chimeric. \end{quotation}
+
+\bibitem{plotly}
+\BIBentryALTinterwordspacing
+P.~T. Inc. (2015) Collaborative data science. Montréal, QC. [Online].
+  Available: \url{https://plot.ly}
+\BIBentrySTDinterwordspacing
+
 
 \bibitem{citeulike:3746363}
 V.~Kunin, A.~Copeland, A.~Lapidus, K.~Mavromatis, and P.~Hugenholtz, ``{A
@@ -160,7 +178,7 @@ J.~C. Segen, \emph{{The dictionary of modern medicine}}.\hskip 1em plus 0.5em
 
 \bibitem{thymeleaf}
 {The Thymeleaf Team}, ``{thymeleaf/thymeleaf},'' [Online] Available:
-  \url{https://github.com/thymeleaf/thymeleafl}, 2016, {[Accessed on: 27 April
+  \url{https://github.com/thymeleaf/thymeleaf}, 2016, {[Accessed on: 27 April
   2016]}.
  \begin{quotation}\noindent The GitHub repository of Thymeleaf, for use with
   Java Spring Boot. Invaluable for me when accessing objects from the Model via

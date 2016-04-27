@@ -23,7 +23,7 @@
 \BOOKMARK [2][-]{subsection.2.1.6}{QualitySummary and Results}{section.2.1}% 23
 \BOOKMARK [1][-]{section.2.2}{User Interface}{chapter.2}% 24
 \BOOKMARK [1][-]{section.2.3}{Support Tools}{chapter.2}% 25
-\BOOKMARK [2][-]{subsection.2.3.1}{Version Control}{section.2.3}% 26
+\BOOKMARK [2][-]{subsection.2.3.1}{Version Control and Continuous Integration}{section.2.3}% 26
 \BOOKMARK [0][-]{chapter.3}{Implementation}{}% 27
 \BOOKMARK [1][-]{subsection.3.0.2}{Development Environment}{chapter.3}% 28
 \BOOKMARK [2][-]{subsection.3.0.3}{Features}{subsection.3.0.2}% 29

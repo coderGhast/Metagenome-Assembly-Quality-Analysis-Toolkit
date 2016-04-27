@@ -36,29 +36,29 @@
 \contentsline {subsection}{\numberline {2.1.6}QualitySummary and Results}{19}{subsection.2.1.6}
 \contentsline {section}{\numberline {2.2}User Interface}{20}{section.2.2}
 \contentsline {section}{\numberline {2.3}Support Tools}{20}{section.2.3}
-\contentsline {subsection}{\numberline {2.3.1}Version Control}{20}{subsection.2.3.1}
-\contentsline {chapter}{\numberline {3}Implementation}{21}{chapter.3}
-\contentsline {subsection}{\numberline {3.0.2}Development Environment}{21}{subsection.3.0.2}
-\contentsline {subsection}{\numberline {3.0.3}Features}{21}{subsection.3.0.3}
-\contentsline {subsubsection}{\numberline {3.0.3.1}Reading User Input}{21}{subsubsection.3.0.3.1}
-\contentsline {subsubsection}{\numberline {3.0.3.2}Counting GC Content \& Percentage}{21}{subsubsection.3.0.3.2}
-\contentsline {subsubsection}{\numberline {3.0.3.3}Displaying GC Content percentage}{21}{subsubsection.3.0.3.3}
-\contentsline {subsubsection}{\numberline {3.0.3.4}Finding Open Reading Frames}{21}{subsubsection.3.0.3.4}
-\contentsline {subsubsection}{\numberline {3.0.3.5}Displaying ORF Locations}{22}{subsubsection.3.0.3.5}
-\contentsline {subsubsection}{\numberline {3.0.3.6}Superframe Comparisson}{22}{subsubsection.3.0.3.6}
-\contentsline {subsubsection}{\numberline {3.0.3.7}User Interface Organisation}{22}{subsubsection.3.0.3.7}
-\contentsline {subsection}{\numberline {3.0.4}Implementation Review}{22}{subsection.3.0.4}
-\contentsline {chapter}{\numberline {4}Testing}{24}{chapter.4}
-\contentsline {section}{\numberline {4.1}Overall Approach to Testing}{24}{section.4.1}
-\contentsline {section}{\numberline {4.2}Automated Testing}{24}{section.4.2}
-\contentsline {subsection}{\numberline {4.2.1}Unit Tests}{24}{subsection.4.2.1}
-\contentsline {subsection}{\numberline {4.2.2}Integration Testing}{24}{subsection.4.2.2}
-\contentsline {subsection}{\numberline {4.2.3}User Interface Testing}{24}{subsection.4.2.3}
-\contentsline {subsection}{\numberline {4.2.4}Stress Test}{25}{subsection.4.2.4}
-\contentsline {chapter}{\numberline {5}Evaluation}{26}{chapter.5}
-\contentsline {chapter}{Appendices}{27}{chapter.5}
-\contentsline {chapter}{\numberline {A}Third-Party Code and Libraries}{28}{appendix.A}
-\contentsline {chapter}{\numberline {B}Ethics Submission}{29}{appendix.B}
-\contentsline {chapter}{\numberline {C}Examples and Extras}{30}{appendix.C}
-\contentsline {section}{\numberline {3.1}Example User Story Breakdown}{30}{section.C.1}
-\contentsline {chapter}{Annotated Bibliography}{32}{section.C.1}
+\contentsline {subsection}{\numberline {2.3.1}Version Control and Continuous Integration}{20}{subsection.2.3.1}
+\contentsline {chapter}{\numberline {3}Implementation}{22}{chapter.3}
+\contentsline {subsection}{\numberline {3.0.2}Development Environment}{22}{subsection.3.0.2}
+\contentsline {subsection}{\numberline {3.0.3}Features}{22}{subsection.3.0.3}
+\contentsline {subsubsection}{\numberline {3.0.3.1}Reading User Input}{22}{subsubsection.3.0.3.1}
+\contentsline {subsubsection}{\numberline {3.0.3.2}Counting GC Content \& Percentage}{22}{subsubsection.3.0.3.2}
+\contentsline {subsubsection}{\numberline {3.0.3.3}Displaying GC Content percentage}{22}{subsubsection.3.0.3.3}
+\contentsline {subsubsection}{\numberline {3.0.3.4}Finding Open Reading Frames}{22}{subsubsection.3.0.3.4}
+\contentsline {subsubsection}{\numberline {3.0.3.5}Displaying ORF Locations}{23}{subsubsection.3.0.3.5}
+\contentsline {subsubsection}{\numberline {3.0.3.6}Superframe Comparisson}{23}{subsubsection.3.0.3.6}
+\contentsline {subsubsection}{\numberline {3.0.3.7}User Interface Organisation}{23}{subsubsection.3.0.3.7}
+\contentsline {subsection}{\numberline {3.0.4}Implementation Review}{23}{subsection.3.0.4}
+\contentsline {chapter}{\numberline {4}Testing}{25}{chapter.4}
+\contentsline {section}{\numberline {4.1}Overall Approach to Testing}{25}{section.4.1}
+\contentsline {section}{\numberline {4.2}Automated Testing}{25}{section.4.2}
+\contentsline {subsection}{\numberline {4.2.1}Unit Tests}{25}{subsection.4.2.1}
+\contentsline {subsection}{\numberline {4.2.2}Integration Testing}{25}{subsection.4.2.2}
+\contentsline {subsection}{\numberline {4.2.3}User Interface Testing}{25}{subsection.4.2.3}
+\contentsline {subsection}{\numberline {4.2.4}Stress Test}{26}{subsection.4.2.4}
+\contentsline {chapter}{\numberline {5}Evaluation}{27}{chapter.5}
+\contentsline {chapter}{Appendices}{28}{chapter.5}
+\contentsline {chapter}{\numberline {A}Third-Party Code and Libraries}{29}{appendix.A}
+\contentsline {chapter}{\numberline {B}Ethics Submission}{30}{appendix.B}
+\contentsline {chapter}{\numberline {C}Examples and Extras}{31}{appendix.C}
+\contentsline {section}{\numberline {3.1}Example User Story Breakdown}{31}{section.C.1}
+\contentsline {chapter}{Annotated Bibliography}{33}{section.C.1}
