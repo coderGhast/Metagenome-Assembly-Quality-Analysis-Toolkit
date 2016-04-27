@@ -27,9 +27,24 @@ As the application developed and I started reading in files and outputting resul
 
 The conversion to Java Spring Boot was not a painful one, and only involved setting up a new Maven project and declaring it to run as a Spring Boot application in the pom.xml file, then copying over my previous code and structure into the new project, from there I could deploy the application as a web server using Tomcat and was back to my previous position of working out a UI. Thankfully, there is a package called Thymeleaf\cite{thymeleaf} that works with Spring Boot to allow access to Objects from within the Model of the Java code (placed there by the Controller) using the View dynamically as the View is generated through HTML templates and fragments.
 
-TODO: Figure of Thymeleaf template here and Object it is getting, showing Object being added to Model via Controller here too
+\begin{figure}[H]
+	\centering
+\includegraphics[width=1\textwidth]{images/addingtomodel}
+\caption{Adding an object to the Model via the Controller to be accessed in the View. The View here is `list', which is a Thymeleaf template that will dynamically build the page using the data from the Model added here.}
+\end{figure}
 
 On top of using Thymeleaf for accessing data put into the Model, it has the additional benefit of using fragments that can be imported into different HTML templates. This design choice made it so I was able to cut down on writing duplicates of code. For example, I wrote the header and footer of the UI design in a Thymeleaf HTML fragment, and then on each page just need to call one line in order to import it into that page, rather than built the entire thing again. An extra benefit to this is that it allowed me to keep the HTML templates clean and easier to maintain by reducing their size and separating out different aspects of the UI. Having the header, footer and a number of forms in Thymeleaf HTML templates meant that these sections could be edited without impacting any page they are imported into.
+
+\begin{figure}[H]
+	\centering
+\includegraphics[width=1\textwidth]{images/thymeleafinsert1}
+\caption{Including a thymeleaf fragment in a page. You can see how the call is made from one `th:replace' with the name of the html fragment file and then the fragment to be included from that file, in this case `inspectbox'.}
+\end{figure}
+\begin{figure}[H]
+\centering
+\includegraphics[width=1\textwidth]{images/thymeleafinsert2}
+\caption{Including a thymeleaf fragment in a page. This is the declaration of the fragment being included in the previous figure, declared as such through `th:fragment'.}
+\end{figure}
 
 For the GUI itself, I elected to use Plotly for representing my GC content charts for the level of detail and control it gives a user over inspecting charts, large and small, that worked no matter what GC window size the user selected. For the ORF Locations frames charts I wrote my own code using JavaScript and displayed it with HTML5 Canvas, as it allowed me control over what should be shown depending what a user clicks upon and I could work with the data from the Model in ways I saw fit.
 

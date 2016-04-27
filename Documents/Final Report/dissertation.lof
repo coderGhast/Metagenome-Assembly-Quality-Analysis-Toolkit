@@ -2,6 +2,9 @@
 \contentsline {figure}{\numberline {1.1}{\ignorespaces A very small example of a number of reads being taken into an assembler and the output of a contig where there may be a chimera.\relax }}{2}{figure.caption.4}
 \contentsline {figure}{\numberline {1.2}{\ignorespaces A use case diagram demonstrating the expected functionality for a user based on the functional requirements.\relax }}{7}{figure.caption.5}
 \addvspace {10\p@ }
+\contentsline {figure}{\numberline {2.1}{\ignorespaces Adding an object to the Model via the Controller to be accessed in the View. The View here is `list', which is a Thymeleaf template that will dynamically build the page using the data from the Model added here.\relax }}{12}{figure.caption.6}
+\contentsline {figure}{\numberline {2.2}{\ignorespaces Including a thymeleaf fragment in a page. You can see how the call is made from one `th:replace' with the name of the html fragment file and then the fragment to be included from that file, in this case `inspectbox'.\relax }}{12}{figure.caption.7}
+\contentsline {figure}{\numberline {2.3}{\ignorespaces Including a thymeleaf fragment in a page. This is the declaration of the fragment being included in the previous figure, declared as such through `th:fragment'.\relax }}{13}{figure.caption.8}
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \addvspace {10\p@ }
