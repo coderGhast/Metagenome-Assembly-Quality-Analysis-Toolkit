@@ -19,7 +19,8 @@
 #2}}
 
 \bibitem{citeulike:14021988}
-
+F.~Cirillo, \emph{{The pomodoro technique}}.\hskip 1em plus 0.5em minus
+  0.4em\relax Lulu, 2009, 1445219948.
  \begin{quotation}\noindent The pomodoro technique, used during the development
   of my application for efficient time management. \end{quotation}
 
@@ -102,6 +103,16 @@ P.~Melsted and J.~K. Pritchard, ``{Efficient counting of k-mers in DNA
   when utilizing them to plan tasks for use with implementing functions of my
   application. \end{quotation}
 
+\bibitem{springboot}
+{Phillip Webb, Dave Syer, Josh Long, Stéphane Nicoll, Rob Winch, Andy
+  Wilkinson, Marcel Overdijk, Christian Dupuis, Sébastien Deleuze},
+  ``{spring-projects/spring-boot},'' [Online] Available:
+  \url{https://github.com/spring-projects/spring-bootl}, 2016, {[Accessed on:
+  27 April 2016]}.
+ \begin{quotation}\noindent The GitHub repository of Spring Boot and
+  documentation for using Spring Boot. Used by me in order to build my
+  application as a web service with Java using Spring. \end{quotation}
+
 \bibitem{citeulike:8714996}
 R.~Schmieder and R.~Edwards, ``{Quality control and preprocessing of
   metagenomic datasets},'' \emph{Bioinformatics}, vol.~27, no.~6, pp.
@@ -146,6 +157,14 @@ J.~C. Segen, \emph{{The dictionary of modern medicine}}.\hskip 1em plus 0.5em
   was from reading this web page. It helped me get a grasp of what ORFs were,
   how they were constructed and what I should do to write code for my own
   application in how to find ORF Locations. \end{quotation}
+
+\bibitem{thymeleaf}
+{The Thymeleaf Team}, ``{thymeleaf/thymeleaf},'' [Online] Available:
+  \url{https://github.com/thymeleaf/thymeleafl}, 2016, {[Accessed on: 27 April
+  2016]}.
+ \begin{quotation}\noindent The GitHub repository of Thymeleaf, for use with
+  Java Spring Boot. Invaluable for me when accessing objects from the Model via
+  the View of my web service. \end{quotation}
 
 \bibitem{citeulike:11448654}
 T.~Thomas, J.~Gilbert, and F.~Meyer, ``{Metagenomics - a guide from sampling to

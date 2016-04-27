@@ -13,22 +13,12 @@ A level-1 auxiliary file: Appendix2/appendix2.aux
 A level-1 auxiliary file: Appendix3/appendix3.aux
 The style file: IEEEannot.bst
 Database file #1: References/references.bib
-I was expecting a `,' or a `}'---line 194 of file References/references.bib
- :     
- :     abstract = {{"For many people, time is an enemy. The anxiety triggered by 'the ticking clock', in particular when a deadline is involved, leads to ineffective work and study behaviour which in turn elicits the tendency to procrastinate. The Pomodoro Technique was created with the aim of using time as a valuable ally to accomplish what we want to do the way we want to do it, and to empower us to continually improve our work or study processes"--Introduction.}},
-(Error may have been on previous line)
-I'm skipping whatever remains of this entry
 Warning--I didn't find a database entry for "apache_poi"
 Warning--I didn't find a database entry for "apache_license"
 -- IEEEtranS.bst version 1.11 (2003/04/02) by Michael Shell.
 -- http://www.ctan.org/tex-archive/macros/latex/contrib/supported/IEEEtran/
 -- See the "IEEEtran_bst_HOWTO.pdf" manual for usage information.
 ** Sorting version - not for use with work to be submitted to the IEEE.
-Warning--to sort, need author, editor, or key in citeulike:14021988
-Warning--empty author and editor in citeulike:14021988
-Warning--empty title in citeulike:14021988
-Warning--missing publisher in citeulike:14021988
-Warning--empty year in citeulike:14021988
 
 Done.
-(There was 1 error message)
+(There were 2 warnings)

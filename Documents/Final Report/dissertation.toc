@@ -26,38 +26,39 @@
 \contentsline {chapter}{\numberline {2}Design}{11}{chapter.2}
 \contentsline {section}{\numberline {2.1}Overall Architecture}{11}{section.2.1}
 \contentsline {subsection}{\numberline {2.1.1}Choice of technologies}{11}{subsection.2.1.1}
-\contentsline {subsection}{\numberline {2.1.2}MVC Framework}{12}{subsection.2.1.2}
-\contentsline {subsubsection}{\numberline {2.1.2.1}Model}{12}{subsubsection.2.1.2.1}
-\contentsline {subsubsection}{\numberline {2.1.2.2}View}{12}{subsubsection.2.1.2.2}
-\contentsline {subsubsection}{\numberline {2.1.2.3}Controller}{12}{subsubsection.2.1.2.3}
-\contentsline {subsubsection}{\numberline {2.1.2.4}User Input}{12}{subsubsection.2.1.2.4}
-\contentsline {subsection}{\numberline {2.1.3}Directory Structure}{13}{subsection.2.1.3}
-\contentsline {subsection}{\numberline {2.1.4}QualitySummary}{13}{subsection.2.1.4}
-\contentsline {section}{\numberline {2.2}User Interface}{13}{section.2.2}
-\contentsline {section}{\numberline {2.3}Support Tools}{14}{section.2.3}
-\contentsline {subsection}{\numberline {2.3.1}Version Control}{14}{subsection.2.3.1}
-\contentsline {chapter}{\numberline {3}Implementation}{15}{chapter.3}
-\contentsline {subsection}{\numberline {3.0.2}Development Environment}{15}{subsection.3.0.2}
-\contentsline {subsection}{\numberline {3.0.3}Features}{15}{subsection.3.0.3}
-\contentsline {subsubsection}{\numberline {3.0.3.1}Reading User Input}{15}{subsubsection.3.0.3.1}
-\contentsline {subsubsection}{\numberline {3.0.3.2}Counting GC Content \& Percentage}{15}{subsubsection.3.0.3.2}
-\contentsline {subsubsection}{\numberline {3.0.3.3}Displaying GC Content percentage}{15}{subsubsection.3.0.3.3}
-\contentsline {subsubsection}{\numberline {3.0.3.4}Finding Open Reading Frames}{15}{subsubsection.3.0.3.4}
-\contentsline {subsubsection}{\numberline {3.0.3.5}Displaying ORF Locations}{16}{subsubsection.3.0.3.5}
-\contentsline {subsubsection}{\numberline {3.0.3.6}Superframe Comparisson}{16}{subsubsection.3.0.3.6}
-\contentsline {subsubsection}{\numberline {3.0.3.7}User Interface Organisation}{16}{subsubsection.3.0.3.7}
-\contentsline {subsection}{\numberline {3.0.4}Implementation Review}{16}{subsection.3.0.4}
-\contentsline {chapter}{\numberline {4}Testing}{18}{chapter.4}
-\contentsline {section}{\numberline {4.1}Overall Approach to Testing}{18}{section.4.1}
-\contentsline {section}{\numberline {4.2}Automated Testing}{18}{section.4.2}
-\contentsline {subsection}{\numberline {4.2.1}Unit Tests}{18}{subsection.4.2.1}
-\contentsline {subsection}{\numberline {4.2.2}Integration Testing}{18}{subsection.4.2.2}
-\contentsline {subsection}{\numberline {4.2.3}User Interface Testing}{18}{subsection.4.2.3}
-\contentsline {subsection}{\numberline {4.2.4}Stress Test}{19}{subsection.4.2.4}
-\contentsline {chapter}{\numberline {5}Evaluation}{20}{chapter.5}
-\contentsline {chapter}{Appendices}{21}{chapter.5}
-\contentsline {chapter}{\numberline {A}Third-Party Code and Libraries}{22}{appendix.A}
-\contentsline {chapter}{\numberline {B}Ethics Submission}{23}{appendix.B}
-\contentsline {chapter}{\numberline {C}Examples and Extras}{24}{appendix.C}
-\contentsline {section}{\numberline {3.1}Example User Story Breakdown}{24}{section.C.1}
-\contentsline {chapter}{Annotated Bibliography}{26}{section.C.1}
+\contentsline {subsection}{\numberline {2.1.2}MVC Framework}{13}{subsection.2.1.2}
+\contentsline {subsubsection}{\numberline {2.1.2.1}Model}{13}{subsubsection.2.1.2.1}
+\contentsline {subsubsection}{\numberline {2.1.2.2}View}{13}{subsubsection.2.1.2.2}
+\contentsline {subsubsection}{\numberline {2.1.2.3}Controller}{13}{subsubsection.2.1.2.3}
+\contentsline {subsection}{\numberline {2.1.3}Object Oriented and Method Naming}{13}{subsection.2.1.3}
+\contentsline {subsubsection}{\numberline {2.1.3.1}User Input}{13}{subsubsection.2.1.3.1}
+\contentsline {subsection}{\numberline {2.1.4}Directory Structure}{14}{subsection.2.1.4}
+\contentsline {subsection}{\numberline {2.1.5}QualitySummary}{14}{subsection.2.1.5}
+\contentsline {section}{\numberline {2.2}User Interface}{14}{section.2.2}
+\contentsline {section}{\numberline {2.3}Support Tools}{15}{section.2.3}
+\contentsline {subsection}{\numberline {2.3.1}Version Control}{15}{subsection.2.3.1}
+\contentsline {chapter}{\numberline {3}Implementation}{16}{chapter.3}
+\contentsline {subsection}{\numberline {3.0.2}Development Environment}{16}{subsection.3.0.2}
+\contentsline {subsection}{\numberline {3.0.3}Features}{16}{subsection.3.0.3}
+\contentsline {subsubsection}{\numberline {3.0.3.1}Reading User Input}{16}{subsubsection.3.0.3.1}
+\contentsline {subsubsection}{\numberline {3.0.3.2}Counting GC Content \& Percentage}{16}{subsubsection.3.0.3.2}
+\contentsline {subsubsection}{\numberline {3.0.3.3}Displaying GC Content percentage}{16}{subsubsection.3.0.3.3}
+\contentsline {subsubsection}{\numberline {3.0.3.4}Finding Open Reading Frames}{16}{subsubsection.3.0.3.4}
+\contentsline {subsubsection}{\numberline {3.0.3.5}Displaying ORF Locations}{17}{subsubsection.3.0.3.5}
+\contentsline {subsubsection}{\numberline {3.0.3.6}Superframe Comparisson}{17}{subsubsection.3.0.3.6}
+\contentsline {subsubsection}{\numberline {3.0.3.7}User Interface Organisation}{17}{subsubsection.3.0.3.7}
+\contentsline {subsection}{\numberline {3.0.4}Implementation Review}{17}{subsection.3.0.4}
+\contentsline {chapter}{\numberline {4}Testing}{19}{chapter.4}
+\contentsline {section}{\numberline {4.1}Overall Approach to Testing}{19}{section.4.1}
+\contentsline {section}{\numberline {4.2}Automated Testing}{19}{section.4.2}
+\contentsline {subsection}{\numberline {4.2.1}Unit Tests}{19}{subsection.4.2.1}
+\contentsline {subsection}{\numberline {4.2.2}Integration Testing}{19}{subsection.4.2.2}
+\contentsline {subsection}{\numberline {4.2.3}User Interface Testing}{19}{subsection.4.2.3}
+\contentsline {subsection}{\numberline {4.2.4}Stress Test}{20}{subsection.4.2.4}
+\contentsline {chapter}{\numberline {5}Evaluation}{21}{chapter.5}
+\contentsline {chapter}{Appendices}{22}{chapter.5}
+\contentsline {chapter}{\numberline {A}Third-Party Code and Libraries}{23}{appendix.A}
+\contentsline {chapter}{\numberline {B}Ethics Submission}{24}{appendix.B}
+\contentsline {chapter}{\numberline {C}Examples and Extras}{25}{appendix.C}
+\contentsline {section}{\numberline {3.1}Example User Story Breakdown}{25}{section.C.1}
+\contentsline {chapter}{Annotated Bibliography}{27}{section.C.1}
