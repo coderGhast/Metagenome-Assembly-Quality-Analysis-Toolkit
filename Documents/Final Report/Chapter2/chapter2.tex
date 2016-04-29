@@ -51,6 +51,12 @@ For the GUI itself, I elected to use Plotly.js\cite{plotly} for representing my 
 \subsection{MVC Framework}
 As I was building an application with a GUI, the application was built using a Model View Controller framework design, separating out the components into their different types. This helped the separation of code and responsibilities. The class diagrams presented in this chapter are based on the final product design and based on a page per page view from the UI and what classes are used on the HTML request of that page.
 
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.9\textwidth]{images/mvcframework}
+\caption{The MVC framework the application is designed upon. The data flows between the Model and the View via the Controller, based on the user requests and interaction.}
+\end{figure}
+
 \subsubsection{Model}
 The Model was designed to contain the data and methods for processing a users input. This contains the data structures and objects for handling a users data as they traverse from page to page of the view. I designed the Model in a way that certain objects would be Bean objects (classes with getters and setters for their properties) that could be accessed by the View in the way that Thymeleaf required.
 
