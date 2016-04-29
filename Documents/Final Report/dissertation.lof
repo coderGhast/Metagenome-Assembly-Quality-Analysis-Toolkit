@@ -13,14 +13,14 @@
 \contentsline {figure}{\numberline {2.9}{\ignorespaces The `list' page that is displayed after a user submits their (valid) assembly data in FASTA format.\relax }}{21}{figure.caption.14}
 \contentsline {figure}{\numberline {2.10}{\ignorespaces When a user clicks to inspect a contiguous read, this menu appears giving them options to alter the parameters of the quality assessment inspection.\relax }}{22}{figure.caption.15}
 \contentsline {figure}{\numberline {2.11}{\ignorespaces If the user clicks to see an explanation of the process, they can click the text that says to `Show explanation', and this text appears.\relax }}{22}{figure.caption.16}
-\contentsline {figure}{\numberline {2.12}{\ignorespaces The GC result tab shown to the user on inspection of a contig. The browser has been zoomed out in order to display the page in full.\relax }}{23}{figure.caption.17}
-\contentsline {figure}{\numberline {2.13}{\ignorespaces The Open Reading Frame results view tab.\relax }}{24}{figure.caption.18}
-\contentsline {figure}{\numberline {2.14}{\ignorespaces The Open Reading Frame results view tab, displaying that when a user clicks on a different ORF Location, the highlight on the frame chart and list changes to reflect this.\relax }}{24}{figure.caption.19}
-\contentsline {figure}{\numberline {2.15}{\ignorespaces If the user clicks to see an explanation of the process, they can click the text that says to `Show explanation', and this text appears.\relax }}{25}{figure.caption.20}
-\contentsline {figure}{\numberline {2.16}{\ignorespaces If the user clicks to see an explanation of the process, they can click the text that says to `Show explanation', and this text appears.\relax }}{25}{figure.caption.21}
-\contentsline {figure}{\numberline {2.17}{\ignorespaces If an error occurs as the user is browsing the web service, i.e. they try to access a page when they do not have the required data submitted, they are presented with this page informing them of an issue.\relax }}{26}{figure.caption.22}
-\contentsline {figure}{\numberline {2.18}{\ignorespaces A few of the commits made to my major project repository.\relax }}{27}{figure.caption.23}
-\contentsline {figure}{\numberline {2.19}{\ignorespaces Examples of the continuous integration on CodeShip running my tests every time I committed to my repository.\relax }}{27}{figure.caption.24}
+\contentsline {figure}{\numberline {2.12}{\ignorespaces The GC result tab shown to the user on inspection of a contig. The browser has been zoomed out in order to display the page in full.\relax }}{24}{figure.caption.17}
+\contentsline {figure}{\numberline {2.13}{\ignorespaces The Open Reading Frame results view tab.\relax }}{25}{figure.caption.18}
+\contentsline {figure}{\numberline {2.14}{\ignorespaces The Open Reading Frame results view tab, displaying that when a user clicks on a different ORF Location, the highlight on the frame chart and list changes to reflect this.\relax }}{26}{figure.caption.19}
+\contentsline {figure}{\numberline {2.15}{\ignorespaces The `Superframe', a comparison between the ORF Locations within the contig and the GC content windows that are above the threshold..\relax }}{26}{figure.caption.20}
+\contentsline {figure}{\numberline {2.16}{\ignorespaces The result of when a user clicks to view a window data, they can see the particular percentage of the GC content of that window, and where that window starts and finishes, if they wished to inspect the contig themselves using those numbers.\relax }}{27}{figure.caption.21}
+\contentsline {figure}{\numberline {2.17}{\ignorespaces If an error occurs as the user is browsing the web service, i.e. they try to access a page when they do not have the required data submitted, they are presented with this page informing them of an issue.\relax }}{28}{figure.caption.22}
+\contentsline {figure}{\numberline {2.18}{\ignorespaces A few of the commits made to my major project repository.\relax }}{29}{figure.caption.23}
+\contentsline {figure}{\numberline {2.19}{\ignorespaces Examples of the continuous integration on CodeShip running my tests every time I committed to my repository.\relax }}{29}{figure.caption.24}
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \addvspace {10\p@ }

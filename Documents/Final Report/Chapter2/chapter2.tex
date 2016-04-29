@@ -154,6 +154,15 @@ In order for a user to understand what the inspection process is, I included a b
 \caption{If the user clicks to see an explanation of the process, they can click the text that says to `Show explanation', and this text appears.}
 \end{figure}
 
+\subsubsection{Parameter choices}
+The choice of parameters that the user can modify were selected based upon what could be altered about the inspection processes. For example, allowing a user to change the minimum length of an Open Reading Frame location gives them control over what size they think is important, based upon what their assembly data is. It could be that they care about any sized potential protein coding region, or that they only wish to see ones of size 1000 or above, as they know that anything less is unlikely to be an actual protein coding region. Giving them this parameter choice allows them to decide this for themselves, as the application won't know what is the best size for the user.
+
+Similarly, the GC content window size should be set by the user, again based on what they think is a reasonable size. If a user were to think that they might want windows of size 100, that probably wouldn't return them great results on a large contig, as the GC content could vary so much between windows where the data is just too small to be useful. Likewise if the window size is too big, this data may also be useless, as they cannot properly compare their GC window sizes to the expected size of what they want to see from protein coding regions.
+
+A reasonable window and minimum ORF Location size can only be selected by the user, and so the choice was made to allow the user to select their own choices, even allowing them to select values to high or too low, it is their decision to make based upon the data they have provided. In future versions of the application, it would be interested to infer a decent window size for the user and suggest it to them, but for the purpose of this project it was out of scope for the time allotted with the other functionality to be implemented.
+
+The final parameter is how many standard deviations away from the mean of all GC content windows the user would like to consider is enough to warrant highlighting a window as being a potential issue. I selected standard deviation as it is a standard way of determining a value away from the mean that could be useful to inspect. Whether the user cares how much or how little this value actually is is irrelevant. The user may select what number of these they feel is useful to consider just for highlighting bars in the results chart.
+
 %==== Results =====
 \subsection{Results}
 For the display of the inspection results, the user is shown a set of labeled tabs, that correspond to the techniques used. It is designed this way so that more tabs can be added in the future as more techniques are set in the inspection process, and to keep the page from being too crowded with results that would require a large amount of scrolling. The code for making the tabs themselves work is credited to Catalin Rosu\cite{tabcode} and their original code can be seen in the appendices.
@@ -184,6 +193,8 @@ I designed it in a way that allows the user to view the full list of ORF Locatio
 
 The choice to display the ORF Location information was out of interest to the user if they wish to use the tool to look at the protein coding regions. The information displayed about an ORF Location includes the length, start and stop point and the characters within the ORF Location. While these might not be useful to the user for determining quality, the information is used in the comparison for GC content to find if the GC content is explained by an ORF Location, and so I believed the information might be useful to display to a user either way.
 
+Each frame has its own canvas element, and they are aligned using a HTML table. I tried a design where each of the 6 frames was made up in a single canvas, and while this worked, it restricted the amount of formatting that could be done around each frame and had much more code for detecting whether a user has clicked within a frame, delaying the response a user got when clicking.
+
 \begin{figure}[H]
 	\centering
 \includegraphics[width=0.8\textwidth]{images/ui7}
@@ -196,7 +207,7 @@ Superframe is where the GC content and ORF Location charts are compared in order
 \begin{figure}[H]
 	\centering
 \includegraphics[width=0.8\textwidth]{images/ui8}
-\caption{If the user clicks to see an explanation of the process, they can click the text that says to `Show explanation', and this text appears.}
+\caption{The `Superframe', a comparison between the ORF Locations within the contig and the GC content windows that are above the threshold..}
 \end{figure}
 
 If the user clicks on a particular window, they can see information about what window that is (where it starts and ends) and the GC content percentage. I felt this tool could be useful for a user to be able to determine themselves if they felt there were enough individual windows of GC content that were out of the mean threshold and not explainable by ORF Locations and so felt the quality of the contig was or was not good. I attempt to explain this with the description above the chart.
@@ -206,26 +217,18 @@ It is worth noting, the GC content areas highlighted for the Superframe are only
 \begin{figure}[H]
 	\centering
 \includegraphics[width=0.8\textwidth]{images/ui9}
-\caption{If the user clicks to see an explanation of the process, they can click the text that says to `Show explanation', and this text appears.}
+\caption{The result of when a user clicks to view a window data, they can see the particular percentage of the GC content of that window, and where that window starts and finishes, if they wished to inspect the contig themselves using those numbers.}
 \end{figure}
 
 %===== Error =====
 \subsection{Error}
-If a user makes an error on the website (attempting to access pages without first submitting data) or an error occurs with the processing of a users data, the page in the figure below will be shown.
+If a user encounters an error on the website, such as attempting to access pages without first submitting data) the page in the figure below will be shown.
 \begin{figure}[H]
 	\centering
 \includegraphics[width=0.8\textwidth]{images/ui10}
 \caption{If an error occurs as the user is browsing the web service, i.e. they try to access a page when they do not have the required data submitted, they are presented with this page informing them of an issue.}
 \end{figure}
-While note very descriptive, it serves to return the user back to data submission, which is the best place to start again if something bad went wrong or they somehow tried to access a page when they hadn't previously submitted the required data. If there were a future revision of this page, it could be more descriptive of the exact reason why the error occurred, but was out of scope for the current project to make a fully detailed error reasoning. There is an ErrorController class in place however that can deal with this functionality in the future if the application were to be continued. Currently any errors are run through the Error controller but it only returns this page to the user.
-
-
-- Input form, why is it this way?
-- List - Displaying each contig, why, framework, drop downs
-- Paramters - Why did I pick these Paramters, what use are these for the user? Why GC content windows and what size is reasonable? Can demonstrate domain knowledge about the choice of parameters. Up to the user, allowing them to put in stupid numbers, but their results are their own.
-- GC Chart - Why does it look like this - Choice of standard deviation and mean, why? What use does this actually have  in showing the user error areas? What about just visually seeing the data? Show the screenshots of areas out of GC content threshold, show the areas where obvious chimera (50/50 example)
-- ORF Location - Why did I develop it to look like this? Representing each of the 6 frames, demonstrate the reverse frames are displayed in the correct direction. How did I achieve this and why display it this way and the inner detail? Other approaches? What about the NCBIs version? Ability to click. Also the list? Why have both? They're both useful to have, as a user may want to look at the shortest ORF Location but not be sure where it is even when they read what frame it is. Likewise they may want to see where an ORF Location lies in the list organized into longest to shortest. Why organized into length. Useful to the user to get an idea to further inspect. Why 6 different canvases for the frames? Easier to modify and display on the page.
-- Superframe - What is it and why did I consider it. Showing overlaps and where the Red areas may be areas of errors and what to look for. The explanation of it, why explain it this way? 
+While not very descriptive, it serves to return the user back to data submission, which is the best place to start again if something bad went wrong or they somehow tried to access a page when they hadn't previously submitted the required data. If there were a future revision of this page, it could be more descriptive of the exact reason why the error occurred, but was out of scope for the current project to make a fully detailed error reasoning. There is an ErrorController class in place however that can deal with this functionality in the future if the application were to be continued. Currently any errors are run through the Error controller but it only returns this page to the user.
 
 \section{Support Tools}
 For writing the code, I used JetBrains IntelliJ Community Edition IDE. This included writing all the code be it Java, HTML, CSS, Javascript, ThymeLeaf and any additional properties for setting up Spring Boot. This was very useful for text highlighting, debugging the code, and tied into my version control, using Git and hosted on GitHub. I also used \url{http://www.tomato.es/} for counting my pomodoros.
