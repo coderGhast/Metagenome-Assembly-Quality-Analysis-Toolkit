@@ -49,9 +49,21 @@ In principle this is, and was, an easy task, yet took me longer to complete beca
 \subsubsection{Implementation}
 I began to attempt to implement GC content viewing with Plotly.js right from the beginning, and so I had a prototype up and running fairly quickly where I manually took the results from the console output of the Java application and pasted them into the final containing my Plotly.js prototype to be used as data. 
 
-Next I worked this in with Thymeleaf to get the results directly from my Java application, then turned them into JavaScript and used the data from that for the chart. The x axis labelling for the chart is manually created in order to represent where the GC window for each bar starts and finishes. The earlier design had window numbers along the x-axis, populated by Plotly.js. These were of no use to a user though, as if they wanted to find out what GC window they were looking at they would have to manually work out where the window started and ended from their window size multiplied by the window number of interest.
+Next I worked this in with Thymeleaf to get the results directly from my Java application, then turned them into JavaScript and used the data from that for the chart. The x axis labeling for the chart is manually created in order to represent where the GC window for each bar starts and finishes. The earlier design had window numbers along the x-axis, populated by Plotly.js. These were of no use to a user though, as if they wanted to find out what GC window they were looking at they would have to manually work out where the window started and ended from their window size multiplied by the window number of interest.
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.6\textwidth]{images/thymeleafdata}
+\caption{Extracting the data from the Model, provided by the Controller to the View, using Thymeleaf's inline tag to be able to use CDATA to convert the Thymeleaf extracts into JavaScript.}
+\end{figure}
 
 The red bars of the GC chart displaying where the percentage of a window is over or under the threshold of the mean of all GC window percentages was implemented as a useful aid to the user, and the colours are set in the Model rather than made in the View. The reasoning for this was to implement a system that would provided the View with what it needed and not needing the View to calculate anything, only consume the values (in this case the GC window data and RGB data) to display results.
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.6\textwidth]{images/gcviewdata}
+\caption{`GcContentViewData', the object provided to the View in order to display the GC content data to the user.}
+\end{figure}
 
 The final thing to add was the Mean line. This is just displaying to the user where the mean of all the GC windows lie, and helps with the visualization of if any windows of their contiguous read look like they might have issues.
 \subsubsection{Issues}
@@ -61,6 +73,11 @@ The next issue was trying to get the line for the Mean to show. The way I got th
 
 \subsection{Finding Open Reading Frames}
 \subsubsection{Implementation}
+The implementation of Open Reading Frames happened in a few steps, with the design and code evolving as I understood more what they were and how best to present the results. At first, I was only finding a single, longest ORF Location, as I did not fully comprehend what an ORF was. This was just looking at a contig and finding the first start Codon of ATG and the last stop Codon of TAG/TAA/TGA. Once I understood them though, the process became about how to find whatever ORF Locations I could. Using Test Driven Development was extremely useful for this step, as I wrote tests for finding specific ORF Locations in small sequences I created myself and ran the code against them.
+
+After a number of attempts at trying to find the ORF Locations within a contig frame, I settled on a method of going through the entire frame, breaking it up into characters of 3 and only keeping the start and stop Codons in lists of each. Each Codon was stored with data about where it starts and ends, in order to be able to later reconstruct the contig between a start and stop Codon based on the character positions.
+
+Through this process, it made it possible to find which Codons came before and after which within the contiguous read in order to find which would construct the longest ORF Locations, which Start Codons were redundant (as they were between an earlier start Codon and the next Stop Codon), and in my first completed version of the algorithm, where the last Stop Codon before the next Start Codon was. At this time, I still had a misunderstanding about protein coding regions, in that I believed the end of an ORF Location was at the last stop Codon before the next start Codon, when in fact it should have been the first stop Codon it reaches is the end of the current Codon. 
 \subsubsection{Issues}
 Understanding what they were, how they are built. How do I find them in strings? Issues - Finding the longest, how to know when to stop. Originally had the wrong idea and believed all Stop Codons would be included up until the next Start Codon. Developed against this until feedback from Amanda made me realize the problem was far simpler. Lost developer time, but functionality to fix didn't take too much time. How do we now find ORFs, and store their data? What does it look like, zipping Start and Stop Codons together and getting substrings from within the full contig to create the ORF Location Object.
 
