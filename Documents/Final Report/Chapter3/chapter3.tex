@@ -13,12 +13,12 @@ Originally it dealt with only one contig at a time, but was then expanded to be 
 
 \begin{figure}[H]
 \centering
-\includegraphics[width=0.8\textwidth]{images/readuserdata}
+\includegraphics[width=0.9\textwidth]{images/readuserdata}
 \caption{Part of the code for reading in a users data when they have pasted it into the text area of the web service. Deals with creating new ContiguousRead objects and adding them to a ContigResult every time it finds a new header for a contig (or reaches the end of the input).}
 \end{figure}
 
 \subsubsection{Issues}
-I found during implementation of the reading user data that there weren't that many issues. It took some time to deal with the formatting of the file and knowing when one contiguous read starts and one ends. There was some issue with the escape/return characters in the dealing of pasted content by a user, but this was solved by breaking the pasted content into an array of its components.
+It took some time to deal with the formatting of the file and knowing when one contiguous read starts and one ends. There was some issue with the escape/return characters in the dealing of pasted content by a user, but this was solved by breaking the pasted content into an array of its components.
 
 While not an issue as such, the original version of the application would carry out the quality assessment of each contig as and when they were read in, to avoid holding too much data in memory. As the design evolved this was no longer a possibility, as it didn't allow the user to see their contigs before they were processed, or do any additional inspection on the contigs without holding the entire user data submitted in memory and going through it a second time upon an inspection request to find the contig they wanted. This option is still a possibility, but is an optimization aspect that wasn't in scope for the project. Additionally, the separation of responsibilities is better in this version of the code after being refactored from the time when the read class both read and assessed the contigs.
 
@@ -26,13 +26,38 @@ It did take longer to implement this than I had anticipated due to me changing f
 
 \subsection{Counting GC Content \& Percentage}
 \subsubsection{Implementation}
+Counting the GC content of the application involved breaking up the contig characters into sizes based on the set window length by the user, then working out the percentage of G and C characters in each of those windows. Each part of the contig that is split is put into a `GcWindow' object, that has methods for counting the number of G and C characters within it.
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.9\textwidth]{images/splitgcwindows}
+\caption{The code for splitting a contiguous read into windows available for calculating the GC content window percentages.}
+\end{figure}
+
+Once split, the GcWindows are passed to have their percentages calculated and added to an ArrayList of Doubles This is used for calculation with the mean, standard deviation and for returning results to the user for use in the View.
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.9\textwidth]{images/calcgcpercentage}
+\caption{The code for calculating the GC content percentages for each window passed into the method.}
+\end{figure}
+
 \subsubsection{Issues}
+In principle this is, and was, an easy task, yet took me longer to complete because my domain knowledge was still somewhat lacking and I got caught up on the little details that kept me from progressing, even though I didn't need to know of them or use them in the process of working out the GC content windows. Overall there were no issues with the implementation once I got my head around why it was worth doing this and how it should be presented as a quality measure to the user.
 
 \subsection{Displaying GC Content percentage}
 \subsubsection{Implementation}
+I began to attempt to implement GC content viewing with Plotly.js right from the beginning, and so I had a prototype up and running fairly quickly where I manually took the results from the console output of the Java application and pasted them into the final containing my Plotly.js prototype to be used as data. 
+
+Next I worked this in with Thymeleaf to get the results directly from my Java application, then turned them into JavaScript and used the data from that for the chart. The x axis labelling for the chart is manually created in order to represent where the GC window for each bar starts and finishes. The earlier design had window numbers along the x-axis, populated by Plotly.js. These were of no use to a user though, as if they wanted to find out what GC window they were looking at they would have to manually work out where the window started and ended from their window size multiplied by the window number of interest.
+
+The red bars of the GC chart displaying where the percentage of a window is over or under the threshold of the mean of all GC window percentages was implemented as a useful aid to the user, and the colours are set in the Model rather than made in the View. The reasoning for this was to implement a system that would provided the View with what it needed and not needing the View to calculate anything, only consume the values (in this case the GC window data and RGB data) to display results.
+
+The final thing to add was the Mean line. This is just displaying to the user where the mean of all the GC windows lie, and helps with the visualization of if any windows of their contiguous read look like they might have issues.
 \subsubsection{Issues}
-Prototyped with Plotly. Issues getting data to actually display as I was unfamiliar with plotly and thymeleaf getting data from Objects.
-Getting the Mean line to show, and setting the colours from within the application - Is this bad? Should probably be done in the View and the model just outputs the data. Decided instead to calculate this in the model itself and output the colours directly. Can still be consumed by parts of the view, and later if a change happens the data is still output
+The main issue I had with displaying the GC content percentages with Plotly.js was getting data to actually display as I was unfamiliar with Plotly.js and Thymeleaf once I started using Spring Boot. Thymeleaf makes getting data from the Objects in the Model very easy and simple, but since I was trying to integrate two technologies together that I had never used before, it took some time to find the right way of accessing the data from my Object through Thymeleaf, into JavaScript and then the correct format for use by Plotly.js.
+
+The next issue was trying to get the line for the Mean to show. The way I got this to work was using an additional data input for the same chart as displaying the GC content window bars and having the same number of data points as there are GC windows, where each data point is the mean number, in order to get the chart to display a line across the entire chart to match the GC windows.
 
 \subsection{Finding Open Reading Frames}
 \subsubsection{Implementation}

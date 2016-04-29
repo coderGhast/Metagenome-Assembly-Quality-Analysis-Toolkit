@@ -26,6 +26,8 @@
 \contentsline {figure}{\numberline {2.22}{\ignorespaces Examples of the continuous integration on CodeShip running my tests every time I committed to my repository.\relax }}{30}{figure.caption.27}
 \addvspace {10\p@ }
 \contentsline {figure}{\numberline {3.1}{\ignorespaces Part of the code for reading in a users data when they have pasted it into the text area of the web service. Deals with creating new ContiguousRead objects and adding them to a ContigResult every time it finds a new header for a contig (or reaches the end of the input).\relax }}{32}{figure.caption.28}
+\contentsline {figure}{\numberline {3.2}{\ignorespaces The code for splitting a contiguous read into windows available for calculating the GC content window percentages.\relax }}{33}{figure.caption.29}
+\contentsline {figure}{\numberline {3.3}{\ignorespaces The code for calculating the GC content percentages for each window passed into the method.\relax }}{33}{figure.caption.30}
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \addvspace {10\p@ }
