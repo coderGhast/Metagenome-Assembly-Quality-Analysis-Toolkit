@@ -231,7 +231,21 @@ If a user encounters an error on the website, such as attempting to access pages
 While not very descriptive, it serves to return the user back to data submission, which is the best place to start again if something bad went wrong or they somehow tried to access a page when they hadn't previously submitted the required data. If there were a future revision of this page, it could be more descriptive of the exact reason why the error occurred, but was out of scope for the current project to make a fully detailed error reasoning. There is an ErrorController class in place however that can deal with this functionality in the future if the application were to be continued. Currently any errors are run through the Error controller but it only returns this page to the user.
 
 \section{Support Tools}
-For writing the code, I used JetBrains IntelliJ Community Edition IDE. This included writing all the code be it Java, HTML, CSS, Javascript, ThymeLeaf and any additional properties for setting up Spring Boot. This was very useful for text highlighting, debugging the code, and tied into my version control, using Git and hosted on GitHub. I also used \url{http://www.tomato.es/} for counting my pomodoros.
+For writing the code, I used JetBrains IntelliJ Community Edition IDE. This included writing all the code be it Java, HTML, CSS, Javascript, ThymeLeaf and any additional properties for setting up Spring Boot. This was very useful for text highlighting, debugging the code, and tied into my version control, using Git and hosted on GitHub.
+
+\begin{figure}[H]
+	\centering
+\includegraphics[width=0.8\textwidth]{images/intellij}
+\caption{The Jet Brains IntelliJ Integrated Developement Environment (IDE) I used for developing my application.}
+\end{figure}
+
+I also used \url{http://www.tomato.es/} for counting my pomodoros. The web site provides a timer and a count for how many pomodoros have been completed during the time the browser has been opened.
+
+\begin{figure}[H]
+	\centering
+\includegraphics[width=0.8\textwidth]{images/tomatoes}
+\caption{A countdown of the pomodoro tomato timer on \url{http://www.tomato.es/}, used for breaking up development time and keeping track of work done over time.}
+\end{figure}
 
 \subsection{Version Control and Continuous Integration}
 I used version control to keep a repository of my code in case of losing data in event of hardware crash or software corruption. For this I selected to use GitHub as I already had a repository on there and Git is supported in the IntelliJ IDE I was using. This can be found at \url{https://github.com/coderghast}.

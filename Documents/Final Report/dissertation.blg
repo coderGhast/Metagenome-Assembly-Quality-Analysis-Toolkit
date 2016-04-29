@@ -13,12 +13,9 @@ A level-1 auxiliary file: Appendix2/appendix2.aux
 A level-1 auxiliary file: Appendix3/appendix3.aux
 The style file: IEEEannot.bst
 Database file #1: References/references.bib
-Warning--I didn't find a database entry for "apache_poi"
-Warning--I didn't find a database entry for "apache_license"
 -- IEEEtranS.bst version 1.11 (2003/04/02) by Michael Shell.
 -- http://www.ctan.org/tex-archive/macros/latex/contrib/supported/IEEEtran/
 -- See the "IEEEtran_bst_HOWTO.pdf" manual for usage information.
 ** Sorting version - not for use with work to be submitted to the IEEE.
 
 Done.
-(There were 2 warnings)

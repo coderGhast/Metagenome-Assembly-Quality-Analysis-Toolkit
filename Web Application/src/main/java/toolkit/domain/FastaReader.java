@@ -38,6 +38,8 @@ public class FastaReader{
      */
     public ContigResult readSequenceInput(UserParameters params) throws Exception {
         ContigResult contigResult;
+        // Clear the String builder before any new input.
+        _sb.setLength(0);
         if(_validator.validateUserContent(params.getUserContent())){
             contigResult = readUserInput(params.getUserContent(), params.getContigLengthThreshold());
         } else {
@@ -64,24 +66,36 @@ public class FastaReader{
 
         for(int i= 0; i < contigCompontents.length; i ++){
             String line = contigCompontents[i];
+            // If the next contig compontent from the String array is the header of a new contig
             if (line.startsWith(">")) {
+                // And if there is already contig information (header) stored
                 if (currentContig.getContigInformation() != null) {
+                    // Set the content of the contig to the contig context, as we're finishing one contig
+                    // and moving onto a new one
                     currentContig.setContigContext(_sb.toString());
+                    // As long as the length of this contig is above the threshold, add it to the contigs
+                    // we want to return to the user.
                     if (_sb.length() > minimumLengthThreshold || minimumLengthThreshold == 0) {
                         _contigsList.add(currentContig);
                     } else {
                         discardedContigs++;
                     }
+                    // Clear out the string builder to build up new contig context.
                     _sb.setLength(0);
                 }
+                // Set the contig information back to new.
                 currentContig = new ContiguousRead();
+                // Then set the header to be the current line that starts with '>'
                 currentContig.setContigInformation(line);
             } else {
+                // Otherwise just add this line to the string builder for the contig context, as it is part
+                // of the content of the contig sequence.
                 _sb.append(line.trim());
             }
 
         }
-        // Create the final contiguous read
+        // Create the final contig, as we reached the end of the String array, but don't have a new header to indicate the
+        // end of the previous contig, we set it manually like so.
         currentContig.setContigContext(_sb.toString());
         if(_sb.length() > minimumLengthThreshold || minimumLengthThreshold == 0) {
             _contigsList.add(currentContig);
@@ -111,24 +125,36 @@ public class FastaReader{
 
             String line;
             while((line = in.readLine())!= null){
+                // If the next line is the header of a new contig
                     if (line.startsWith(">")) {
+                        // And if there is already contig information (header) stored
                         if (currentContig.getContigInformation() != null) {
+                            // Set the content of the contig to the contig context, as we're finishing one contig
+                            // and moving onto a new one
                             currentContig.setContigContext(_sb.toString());
+                            // As long as the length of this contig is above the threshold, add it to the contigs
+                            // we want to return to the user.
                             if (_sb.length() > minimumLengthThreshold || minimumLengthThreshold == 0) {
                                 _contigsList.add(currentContig);
                             } else {
                                 discardedContigs++;
                             }
+                            // Clear out the string builder to build up new contig context.
                             _sb.setLength(0);
                         }
+                        // Set the contig information back to new.
                         currentContig = new ContiguousRead();
+                        // Then set the header to be the current line that starts with '>'
                         currentContig.setContigInformation(line);
                     } else {
+                        // Otherwise just add this line to the string builder for the contig context, as it is part
+                        // of the content of the contig sequence.
                         _sb.append(line.trim());
                     }
 
             }
-            // Create the final contig
+            // Create the final contig, as we reached the end of the file, but don't have a new header to indicate the
+            // end of the previous contig, we set it manually like so.
             currentContig.setContigContext(_sb.toString());
             if(_sb.length() > minimumLengthThreshold || minimumLengthThreshold == 0) {
                 _contigsList.add(currentContig);

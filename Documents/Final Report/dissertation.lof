@@ -19,9 +19,12 @@
 \contentsline {figure}{\numberline {2.15}{\ignorespaces The `Superframe', a comparison between the ORF Locations within the contig and the GC content windows that are above the threshold..\relax }}{26}{figure.caption.20}
 \contentsline {figure}{\numberline {2.16}{\ignorespaces The result of when a user clicks to view a window data, they can see the particular percentage of the GC content of that window, and where that window starts and finishes, if they wished to inspect the contig themselves using those numbers.\relax }}{27}{figure.caption.21}
 \contentsline {figure}{\numberline {2.17}{\ignorespaces If an error occurs as the user is browsing the web service, i.e. they try to access a page when they do not have the required data submitted, they are presented with this page informing them of an issue.\relax }}{28}{figure.caption.22}
-\contentsline {figure}{\numberline {2.18}{\ignorespaces A few of the commits made to my major project repository.\relax }}{29}{figure.caption.23}
-\contentsline {figure}{\numberline {2.19}{\ignorespaces Examples of the continuous integration on CodeShip running my tests every time I committed to my repository.\relax }}{29}{figure.caption.24}
+\contentsline {figure}{\numberline {2.18}{\ignorespaces The Jet Brains IntelliJ Integrated Developement Environment (IDE) I used for developing my application.\relax }}{29}{figure.caption.23}
+\contentsline {figure}{\numberline {2.19}{\ignorespaces A countdown of the pomodoro tomato timer on \url {http://www.tomato.es/}, used for breaking up development time and keeping track of work done over time.\relax }}{29}{figure.caption.24}
+\contentsline {figure}{\numberline {2.20}{\ignorespaces A few of the commits made to my major project repository.\relax }}{30}{figure.caption.25}
+\contentsline {figure}{\numberline {2.21}{\ignorespaces Examples of the continuous integration on CodeShip running my tests every time I committed to my repository.\relax }}{30}{figure.caption.26}
 \addvspace {10\p@ }
+\contentsline {figure}{\numberline {3.1}{\ignorespaces Part of the code for reading in a users data when they have pasted it into the text area of the web service. Deals with creating new ContiguousRead objects and adding them to a ContigResult every time it finds a new header for a contig (or reaches the end of the input).\relax }}{32}{figure.caption.27}
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \addvspace {10\p@ }
