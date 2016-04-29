@@ -113,7 +113,10 @@ In the application, the quality assessment results are returned in a QualitySumm
 I am aware that in the future if we allowed a user to select what type of processing they wish to use and as more techniques for quality assessment are added, this technique would be very useful to implement. It would be possible to do this and in the View have it check for the existence of the expected results, or check if they were empty/null, and then only dynamically include fragments of results that are present. 
 
 \section{User Interface}
-Below is the finalized designs of the user interface, shown through screenshots, along with an explanation for the design choices in how the pages are laid out for the user to navigate through.
+Below is the finalized designs of the user interface, shown through screen shots, along with an explanation for the design choices in how the pages are laid out for the user to navigate through. Each page has a header, containing the title of the application and the logo I made. 
+
+The logo is based on the mythical creature `chimera', a creature made from multiple parts of other creatures (often a lion, snake and a ram). The inspiration for the name and design comes from the application hoping to highlight potential Chimeric regions of contigs to a user, hence `Chimera - Metagenome - Chimeta'. The `K' in Chimera is simply because `Chimeta' sounds too much like it would be pronounced `chai-meta' not `kai-meta' as in `kai-meera' for Chimera. It isn't an important aspect of the design.
+
 % ==== Welcome ====
 \subsection{Welcome}
 \begin{figure}[H]
@@ -122,19 +125,28 @@ Below is the finalized designs of the user interface, shown through screenshots,
 \caption{The `welcome' page that greets the user upon requesting the home page of the web service.}
 \end{figure}
 
+The welcome page is structured so that there is an explanation for the user of what the tool is, and an area for them to paste their FASTA data in. There wasn't much else needed for this page, but were the project to be continued this is where there would also be the option to upload user files instead of pasting in data. The user also specifies the minimum length a contiguous read must be in order to be considered here.
+
 %==== List =====
 \subsection{List}
+The below images show the `List' page, where a user can see all of the contiguous reads within their uploaded data file that are above the minimum length threshold they specified. The page also displays the number of discarded contigs due to the length, as I felt this would be useful information to give to a user.
+
+For each contig, I also believed it would be useful for the user to see the contigs header (name), the length (how many characters) and the number of unknown `N' characters, along with the percentage of those that made up the contig. This could be used for a user to consider whether a contig has too many of these characters to the point that they feel it is a bad quality contiguous read.
 \begin{figure}[H]
 	\centering
 \includegraphics[width=0.8\textwidth]{images/ui2}
 \caption{The `list' page that is displayed after a user submits their (valid) assembly data in FASTA format.}
 \end{figure}
 
+If a user wishes to further inspect a contiguous read, I designed it such that when they click to `Inspect' on a contig, a box appears underneath the contig information for them to modify the parameters for the quality assessment process. I had previously considered a design where these parameters were on the right side of the list, and would stay static there as the user scrolled down the page. However, if a contigs name was very long it would run `underneath' the box and be hidden. I also found it just did not look very appealing, and so I opted for the design you can see below instead. When the user clicks to run the process the `Inspect' button changes to `Loading...', to inform the user that the process is working.
+
 \begin{figure}[H]
 	\centering
 \includegraphics[width=0.8\textwidth]{images/ui3}
 \caption{When a user clicks to inspect a contiguous read, this menu appears giving them options to alter the parameters of the quality assessment inspection.}
 \end{figure}
+
+In order for a user to understand what the inspection process is, I included a box that details the process, which appears when they click the words for `Show inspection explanation'. This box can be hidden by clicking the `Hide inspection explanation'. Currently, the link to display the explanation is at the top of the page, and a user must be at the top of the page to click and view it. It could instead be possible to have the list of contigs scroll in their own box, such that the inspection explanation is always available to be seen and viewed when clicked. However, it did not fall into scope of my Sprints while working on the functionality.
 
 \begin{figure}[H]
 	\centering
@@ -144,32 +156,53 @@ Below is the finalized designs of the user interface, shown through screenshots,
 
 %==== Results =====
 \subsection{Results}
-Each results on a tab of its own - why is this? The tab code is from (INSERT LINK FOR TAB CODE HERE)
+For the display of the inspection results, the user is shown a set of labeled tabs, that correspond to the techniques used. It is designed this way so that more tabs can be added in the future as more techniques are set in the inspection process, and to keep the page from being too crowded with results that would require a large amount of scrolling. The code for making the tabs themselves work is credited to Catalin Rosu\cite{tabcode} and their original code can be seen in the appendices.
+
 \subsubsection{GC Content}
 \begin{figure}[H]
 	\centering
 \includegraphics[width=0.8\textwidth]{images/ui5}
-\caption{If the user clicks to see an explanation of the process, they can click the text that says to `Show explanation', and this text appears.}
+\caption{The GC result tab shown to the user on inspection of a contig. The browser has been zoomed out in order to display the page in full.}
 \end{figure}
+
+The GC Chart result is displayed to the user in order to give them a visual reference of how the GC content in their contig is. Through this they may detect single windows that may have chimeric properties through a difference in GC content above or below the mean, which can be highlighted in red and are set by being a number of standard deviations away from the mean. It also allows them to look and see if there is a naturally large difference at points between the GC content windows that are not necessarily picked up by the threshold.
+
+The chart is built using Plotly.js\cite{plotly}, as it allowed me to give the user more control over how they view the GC content results in a chart than if I spent the time implementing my own solution to give them the same amount of fine-grained control. A number of the options offered to a user by the Plotly.js chart are probably far more than they need to be and may be confusing to a user. If the project were to be continued it may be worth developing a chart system for displaying the GC content without using Plotly.js, which could also help with developing a way of showing when there are drastic changes in the GC content not caught by the threshold.
+
+Above the chart is a small explanation of what the chart is displaying, and what the user might look for in order to understand the chart and whether there could be potential issues in their contig displayed by these results.
+
 \subsubsection{Open Reading Frames}
+The tab for the Open Reading Frame displays a graphic made using JavaScript and HTML5 canvas, that gives the user a visual representation of 6 frames of the contig and any protein coding regions within those frames. The design was inspired by NCBI`s orffinder\cite{orffinder}.
+
 \begin{figure}[H]
 	\centering
 \includegraphics[width=0.8\textwidth]{images/ui6}
-\caption{If the user clicks to see an explanation of the process, they can click the text that says to `Show explanation', and this text appears.}
+\caption{The Open Reading Frame results view tab.}
 \end{figure}
+
+I designed it in a way that allows the user to view the full list of ORF Locations (protein coding region) on one side, including their character length, start and stop point and which frame they are in, organized by largest to smallest. This is reflected in the frame chart where a user can see where the frames physically lie within the contig. If a user clicks an ORF Location, either on the chart or in the list, it highlights that ORF in the list in blue, and red in the chart. This also displays more information about the ORF Location underneath the chart.
+
+The choice to display the ORF Location information was out of interest to the user if they wish to use the tool to look at the protein coding regions. The information displayed about an ORF Location includes the length, start and stop point and the characters within the ORF Location. While these might not be useful to the user for determining quality, the information is used in the comparison for GC content to find if the GC content is explained by an ORF Location, and so I believed the information might be useful to display to a user either way.
+
 \begin{figure}[H]
 	\centering
 \includegraphics[width=0.8\textwidth]{images/ui7}
-\caption{If the user clicks to see an explanation of the process, they can click the text that says to `Show explanation', and this text appears.}
+\caption{The Open Reading Frame results view tab, displaying that when a user clicks on a different ORF Location, the highlight on the frame chart and list changes to reflect this.}
 \end{figure}
-\subsubsection{Superframe}
 
+\subsubsection{Superframe}
+Superframe is where the GC content and ORF Location charts are compared in order to help a user see if there are any areas of GC content difference that might be explained by the ORF Location. It is simply an overlaying of the 6 frames into one chart (all in the same sequence direction) and overlaying the GC content chart results for each window.
 
 \begin{figure}[H]
 	\centering
 \includegraphics[width=0.8\textwidth]{images/ui8}
 \caption{If the user clicks to see an explanation of the process, they can click the text that says to `Show explanation', and this text appears.}
 \end{figure}
+
+If the user clicks on a particular window, they can see information about what window that is (where it starts and ends) and the GC content percentage. I felt this tool could be useful for a user to be able to determine themselves if they felt there were enough individual windows of GC content that were out of the mean threshold and not explainable by ORF Locations and so felt the quality of the contig was or was not good. I attempt to explain this with the description above the chart.
+
+It is worth noting, the GC content areas highlighted for the Superframe are only those that are above the threshold of the mean, not below it. This is because it is those areas that are above could be explained by an ORF Location, as the GC content tends to be higher in protein coding regions, and so there is no use in displaying the GC content windows out of threshold by being below, which cannot be explained by the ORF Locations.
+
 \begin{figure}[H]
 	\centering
 \includegraphics[width=0.8\textwidth]{images/ui9}
@@ -203,7 +236,7 @@ I used version control to keep a repository of my code in case of losing data in
 \begin{figure}[H]
 \centering
 \includegraphics[width=0.8\textwidth]{images/commits}
-\caption{A number of the commits made to my major project repository.}
+\caption{A few of the commits made to my major project repository.}
 \end{figure}
 
 In addition, every time I checked in, I used continuous integration with CodeShip\cite{codeship}, allowing me to receive e-mails any time I made a commit to my repository that didn not pass the tests written. This was very helpful in discovering issues with failing builds when checking in a change and forgetting to update tests or breaking previously written code as the design changed.

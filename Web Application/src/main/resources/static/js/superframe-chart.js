@@ -51,24 +51,26 @@ function paintSuperFrame(){
 
 
     for (var i = 0; i < windowdata.length; i++) {
+        if(windowdata[i] > gccontentmean){
         superframecontext.fillStyle= gcColours[i];
 
-        superframecontext.fillRect(
-            ((i * windowSize) / contigLength) * superframewidth,
-            superframeheight / 2,
-            (windowSize / contigLength) * superframewidth,
-            superframeheight / 2);
+                superframecontext.fillRect(
+                    ((i * windowSize) / contigLength) * superframewidth,
+                    superframeheight / 2,
+                    (windowSize / contigLength) * superframewidth,
+                    superframeheight / 2);
 
-        superframecontext.fillStyle="#000000";
-        drawWindowLine(
-            ((i * windowSize) / contigLength) * superframewidth,
-            ((i * windowSize) / contigLength) * superframewidth,
-            0,
-            superframeheight);
-    }
-    superframecontext.stroke();
+                superframecontext.fillStyle="#000000";
+                drawWindowLine(
+                    ((i * windowSize) / contigLength) * superframewidth,
+                    ((i * windowSize) / contigLength) * superframewidth,
+                    0,
+                    superframeheight);
+            }
+            superframecontext.stroke();
+
+        }
 }
-
 // Sets up the initial data needed for the superframe canvas
 function setupSuperframeChart(){
 superframecanvas = document.getElementById("superframecanvas");
@@ -91,7 +93,7 @@ function displaysuperframesegment(i){
         "<b>GC Content Percentage:</b> " + windowdata[i];
 }
 
-// Check which window segement the user has clicked in.
+// Check which window segment the user has clicked in.
 function findSuperframeWindowClicked(x){
     for(var i = 0; i < windowdata.length; i++){
         if(((i * windowSize) / contigLength) * superframewidth < x &&

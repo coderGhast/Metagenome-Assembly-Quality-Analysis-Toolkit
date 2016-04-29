@@ -18,6 +18,14 @@
 \fi
 #2}}
 
+\bibitem{tabcode}
+{Catalin Rosu}, ``{CSS3 \& jQuery folder tabs},'' [Online] Available:
+  \url{http://red-team-design.com/css3-jquery-folder-tabs/}, 2012, {[Accessed
+  on: 29 April 2016]}.
+ \begin{quotation}\noindent The tutorial and code for creating tabs using CSS3
+  and Jquery that I used in order to implement tabs for the inspection results
+  page. \end{quotation}
+
 \bibitem{citeulike:14021988}
 F.~Cirillo, \emph{{The pomodoro technique}}.\hskip 1em plus 0.5em minus
   0.4em\relax Lulu, 2009, 1445219948.
