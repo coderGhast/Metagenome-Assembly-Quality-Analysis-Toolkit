@@ -37,6 +37,9 @@
 \contentsline {figure}{\numberline {3.10}{\ignorespaces Finding if a click if within an ORF Location is as simple as going through the list of ORF Locations, only checking against those within the same frame as the click, then looking at whether the click is within the start and stop points of an ORF Location within the canvas, based on the size and location of where it was painted (for reverse frames, the start and stop points are swapped, as reverse frames are displayed in the same direction as forward frames, with the indexes in the right order for a reverse frame).\relax }}{39}{figure.caption.37}
 \contentsline {figure}{\numberline {3.11}{\ignorespaces Formatting the characters from within an ORF Location into HTML tags to display the data in the way I wanted it to be designed, then inserting it into the div for displaying ORF Location information within the page.\relax }}{40}{figure.caption.38}
 \addvspace {10\p@ }
+\contentsline {figure}{\numberline {4.1}{\ignorespaces Results of running the set of unit tests developed for the application.\relax }}{43}{figure.caption.39}
+\contentsline {figure}{\numberline {4.2}{\ignorespaces The test coverage of my unit tests over the developed application code.\relax }}{44}{figure.caption.40}
+\contentsline {figure}{\numberline {4.3}{\ignorespaces The test coverage of my unit tests over the developed application code, broken down for each class.\relax }}{44}{figure.caption.41}
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \addvspace {10\p@ }

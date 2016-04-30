@@ -2,7 +2,20 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2d0706c2-c12e-40d6-9032-19d66651f617" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/static/js/toolkit.js" afterPath="$PROJECT_DIR$/src/main/resources/static/js/toolkit.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Documents/Final Report/dissertation.pdf" afterPath="$PROJECT_DIR$/../Documents/Final Report/dissertation.pdf" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Documents/Final Report/dissertation.synctex.gz" afterPath="$PROJECT_DIR$/../Documents/Final Report/dissertation.synctex.gz" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Documents/Final Report/Appendix1/appendix1.aux" afterPath="$PROJECT_DIR$/../Documents/Final Report/Appendix1/appendix1.aux" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Documents/Final Report/Appendix2/appendix2.aux" afterPath="$PROJECT_DIR$/../Documents/Final Report/Appendix2/appendix2.aux" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Documents/Final Report/Appendix3/appendix3.aux" afterPath="$PROJECT_DIR$/../Documents/Final Report/Appendix3/appendix3.aux" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Documents/Final Report/Chapter4/chapter4.aux" afterPath="$PROJECT_DIR$/../Documents/Final Report/Chapter4/chapter4.aux" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Documents/Final Report/Chapter4/chapter4.tex" afterPath="$PROJECT_DIR$/../Documents/Final Report/Chapter4/chapter4.tex" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Documents/Final Report/Chapter5/chapter5.aux" afterPath="$PROJECT_DIR$/../Documents/Final Report/Chapter5/chapter5.aux" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Documents/Final Report/dissertation.aux" afterPath="$PROJECT_DIR$/../Documents/Final Report/dissertation.aux" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Documents/Final Report/dissertation.lof" afterPath="$PROJECT_DIR$/../Documents/Final Report/dissertation.lof" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Documents/Final Report/dissertation.log" afterPath="$PROJECT_DIR$/../Documents/Final Report/dissertation.log" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Documents/Final Report/dissertation.out" afterPath="$PROJECT_DIR$/../Documents/Final Report/dissertation.out" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Documents/Final Report/dissertation.toc" afterPath="$PROJECT_DIR$/../Documents/Final Report/dissertation.toc" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="MetagenomeQualityToolkit.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -30,43 +43,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="OpenReadingFrameFinder.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/toolkit/domain/OpenReadingFrameFinder.java">
+      <file leaf-file-name="FastaReaderTests.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/test/java/toolkit/integration/domain/FastaReaderTests.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="137" column="0" selection-start-line="137" selection-start-column="0" selection-end-line="137" selection-end-column="0" />
-              <folding>
-                <element signature="e#5680#5790#0" expanded="false" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="orf-chart.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/resources/static/js/orf-chart.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="111" column="39" selection-start-line="111" selection-start-column="39" selection-end-line="111" selection-end-column="39" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="utilities.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/resources/static/js/utilities.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="toolkit.js" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/resources/static/js/toolkit.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.39497307">
-              <caret line="40" column="5" selection-start-line="40" selection-start-column="5" selection-end-line="40" selection-end-column="5" />
+            <state vertical-scroll-proportion="-1.2890484">
+              <caret line="43" column="44" selection-start-line="43" selection-start-column="44" selection-end-line="43" selection-end-column="44" />
               <folding />
             </state>
           </provider>
@@ -232,6 +213,62 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="test" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="MetagenomeQualityToolkit" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Web Application" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="test" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="toolkit" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="MetagenomeQualityToolkit" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Web Application" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="test" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="toolkit" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="domain" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -1240,13 +1277,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/resources/application.properties">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/static/contig.1274754.fa">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.32692307">
@@ -1444,13 +1474,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/toolkit/integration/domain/FastaReaderTests.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="43" column="44" selection-start-line="43" selection-start-column="44" selection-end-line="43" selection-end-column="44" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/toolkit/domain/UserParameters.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.11310592">
@@ -1584,20 +1607,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/toolkit/domain/OpenReadingFrameFinder.java">
+    <entry file="file://$PROJECT_DIR$/src/main/resources/static/js/toolkit.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="137" column="0" selection-start-line="137" selection-start-column="0" selection-end-line="137" selection-end-column="0" />
-          <folding>
-            <element signature="e#5680#5790#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/static/js/orf-chart.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="111" column="39" selection-start-line="111" selection-start-column="39" selection-end-line="111" selection-end-column="39" />
+        <state vertical-scroll-proportion="0.39497307">
+          <caret line="40" column="5" selection-start-line="40" selection-start-column="5" selection-end-line="40" selection-end-column="5" />
           <folding />
         </state>
       </provider>
@@ -1610,10 +1623,36 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/static/js/toolkit.js">
+    <entry file="file://$PROJECT_DIR$/src/main/resources/static/js/orf-chart.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.39497307">
-          <caret line="40" column="5" selection-start-line="40" selection-start-column="5" selection-end-line="40" selection-end-column="5" />
+        <state vertical-scroll-proportion="0.42010772">
+          <caret line="111" column="39" selection-start-line="111" selection-start-column="39" selection-end-line="111" selection-end-column="39" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/toolkit/domain/OpenReadingFrameFinder.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-0.8976661">
+          <caret line="137" column="0" selection-start-line="137" selection-start-column="0" selection-end-line="137" selection-end-column="0" />
+          <folding>
+            <element signature="e#5680#5790#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/static/artificialtestcontigs.fa">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.24416517">
+          <caret line="8" column="48" selection-start-line="0" selection-start-column="0" selection-end-line="75" selection-end-column="60" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/toolkit/integration/domain/FastaReaderTests.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-1.2890484">
+          <caret line="43" column="44" selection-start-line="43" selection-start-column="44" selection-end-line="43" selection-end-column="44" />
           <folding />
         </state>
       </provider>
