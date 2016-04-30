@@ -116,7 +116,6 @@ function onClick(event){
 
     var clientBoundary = eventTarget.getBoundingClientRect();
     var x = event.clientX - clientBoundary.left;
-    var y = event.clientY - clientBoundary.top;
 
     var endOfIdCharacter = event.target.id.slice(event.target.id.length - 1);
     var frameNumber = endOfIdCharacter - 1;

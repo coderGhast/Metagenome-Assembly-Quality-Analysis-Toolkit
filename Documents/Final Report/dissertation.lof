@@ -30,6 +30,11 @@
 \contentsline {figure}{\numberline {3.3}{\ignorespaces The code for calculating the GC content percentages for each window passed into the method.\relax }}{33}{figure.caption.30}
 \contentsline {figure}{\numberline {3.4}{\ignorespaces Extracting the data from the Model, provided by the Controller to the View, using Thymeleaf's inline tag to be able to use CDATA to convert the Thymeleaf extracts into JavaScript.\relax }}{34}{figure.caption.31}
 \contentsline {figure}{\numberline {3.5}{\ignorespaces `GcContentViewData', the object provided to the View in order to display the GC content data to the user.\relax }}{35}{figure.caption.32}
+\contentsline {figure}{\numberline {3.6}{\ignorespaces Finding all of the start and stop Codons from within the passed frame from the contig.\relax }}{36}{figure.caption.33}
+\contentsline {figure}{\numberline {3.7}{\ignorespaces Extracting each frame and calling to run the ORF Finding process.\relax }}{36}{figure.caption.34}
+\contentsline {figure}{\numberline {3.8}{\ignorespaces Getting the base pair characters of a reverse frame is as simple as a switch statement and building the reversed contig from back to front.\relax }}{37}{figure.caption.35}
+\contentsline {figure}{\numberline {3.9}{\ignorespaces `Zipping' together ORF Locations from start and stop Codons within the frame.\relax }}{38}{figure.caption.36}
+\contentsline {figure}{\numberline {3.10}{\ignorespaces Finding if a click if within an ORF Location is as simple as going through the list of ORF Locations, only checking against those within the same frame as the click, then looking at whether the click is within the start and stop points of an ORF Location within the canvas, based on the size and location of where it was painted (for reverse frames, the start and stop points are swapped, as reverse frames are displayed in the same direction as forward frames, with the indexes in the right order for a reverse frame).\relax }}{39}{figure.caption.37}
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \addvspace {10\p@ }

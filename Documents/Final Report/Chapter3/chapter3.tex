@@ -77,12 +77,64 @@ The implementation of Open Reading Frames happened in a few steps, with the desi
 
 After a number of attempts at trying to find the ORF Locations within a contig frame, I settled on a method of going through the entire frame, breaking it up into characters of 3 and only keeping the start and stop Codons in lists of each. Each Codon was stored with data about where it starts and ends, in order to be able to later reconstruct the contig between a start and stop Codon based on the character positions.
 
-Through this process, it made it possible to find which Codons came before and after which within the contiguous read in order to find which would construct the longest ORF Locations, which Start Codons were redundant (as they were between an earlier start Codon and the next Stop Codon), and in my first completed version of the algorithm, where the last Stop Codon before the next Start Codon was. At this time, I still had a misunderstanding about protein coding regions, in that I believed the end of an ORF Location was at the last stop Codon before the next start Codon, when in fact it should have been the first stop Codon it reaches is the end of the current Codon. 
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.9\textwidth]{images/orffind2}
+\caption{Finding all of the start and stop Codons from within the passed frame from the contig.}
+\end{figure}
+
+
+Each frame is separated by creating a substring of the original contiguous read, removing 0, 1 and then 2 characters for the first three frames, and the same for the reverse frames but with the contiguous read sequence reversed with the opposing base pair of each character used. 
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.9\textwidth]{images/orffind1}
+\caption{Extracting each frame and calling to run the ORF Finding process.}
+\end{figure}
+
+For each ORF Location found in a reverse frame, the start and stop indexes are swapped, representing that what is the `Start' of an ORF Location is actually closer to the end of the contiguous read. This is so that it can be displayed appropriately in the View, and match up with the proper direction with the forward frames.
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.6\textwidth]{images/orffind4}
+\caption{Getting the base pair characters of a reverse frame is as simple as a switch statement and building the reversed contig from back to front.}
+\end{figure}
+
+Through this process, it made it possible to find which Codons came before and after which within the contiguous read in order to find which would construct the longest ORF Locations, which Start Codons were redundant (as they were between an earlier start Codon and the next Stop Codon), and in my first completed version of the algorithm, where the last Stop Codon before the next Start Codon was.
+
+At this time, I still had a misunderstanding about protein coding regions, in that I believed the end of an ORF Location was at the last stop Codon before the next start Codon, when in fact it should have been the first stop Codon it reaches is the end of the current Codon. This was a simple fix though as it just involved removing a section of my code and fixing my tests.
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.9\textwidth]{images/orffind3}
+\caption{`Zipping' together ORF Locations from start and stop Codons within the frame.}
+\end{figure}
+
+Once each frame has been processed to find the ORF Locations within them, the results of each frame are combined together in a single OpenReadingFrameResult. Each ORF Location is aware of what frame it belongs to, and so combining them all into one result doesn't make a difference when determining what ORF Location belongs where.
+
 \subsubsection{Issues}
-Understanding what they were, how they are built. How do I find them in strings? Issues - Finding the longest, how to know when to stop. Originally had the wrong idea and believed all Stop Codons would be included up until the next Start Codon. Developed against this until feedback from Amanda made me realize the problem was far simpler. Lost developer time, but functionality to fix didn't take too much time. How do we now find ORFs, and store their data? What does it look like, zipping Start and Stop Codons together and getting substrings from within the full contig to create the ORF Location Object.
+The two main issues with implementing the Open Reading Frame finding algorithms were my lack of understanding of what they were when I began, leading to the second issue of implementing more than was necessary. It took me longer than I had anticipated to implement the code for finding ORF Locations because I believed I had the additional requirement task of finding the last stop Codon before the next start Codon, where every stop Codon between the initial start Codon and that last stop Codon was to be included in the ORF Location but ignored as an actual start and stop.
+
+Thinking up how to do this algorithmically took some planning and time, and eventually I came to the conclusion of finding all start and stop Codons and then running a while loop, checking that there was at least 1 of each left in each list to make an ORF Location, where the Start came after the Stop (for reverse frames, this logic still applies as the indexes are only reverse after the ORF Locations have been constructed) and then carrying out a number of conditional checks to remove any start and stop Codons that came between the longest ORF that could possibly be made.
+
+Once I had realized this was erroneous and the first stop Codon encountered is the actual end of an ORF Location and not to continue, it was too late to recover any time and I just had to remove the code that caused the issue and rewrite my tests to match the actual expected outcome. Aside this, once I designed the code based around the `zipping' of start and stop Codons together, the implementation was relatively simple, using unit tests to ensure I was correctly implementing the algorithm for expected results.
 
 \subsection{Displaying ORF Locations}
 \subsubsection{Implementation}
+The first part of the ORF Location displaying for the View takes place in the Controller, where it strips away ORF Locations under minimum length threshold set by the user and then sorts all ORF Locations by length using a comparison method. The display of the ORF Locations in their particular frames is done using HTML5 Canvas, one for each frame. As each ORF Location holds an integer value representing what frame it belongs to, when painting the canvases it is a simple matter finding the correct context  for the particular frame from an array of canvas contexts
+\begin{verbatim}
+var currentContext = contextList[orfData[i].frameIndicator];
+\end{verbatim}
+Reverse and forward frame ORF Locations are painted in the same way, except the start and stop indexes are swapped for reverse frames. Likewise, for the highlighted ORF Location to be painted, the only difference is that the current highlighted frame is stored in a global variable (updated any time an ORF Location is clicked in the list or on a frame) and when re-painting the frame canvases and iterating through the list of ORF Locations, when the loop reaches that ORF Location the fill colour is set to be different than every other ORF Location.
+
+Finding a click within a canvas frame is as simple as checking if the click is horizontally within a frame location by calculating where the start and stop points of all the ORF Locations (with that frame in particular) are and if the click falls within one of the the ORF Locations.
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.9\textwidth]{images/orfdisplay1}
+\caption{Finding if a click if within an ORF Location is as simple as going through the list of ORF Locations, only checking against those within the same frame as the click, then looking at whether the click is within the start and stop points of an ORF Location within the canvas, based on the size and location of where it was painted (for reverse frames, the start and stop points are swapped, as reverse frames are displayed in the same direction as forward frames, with the indexes in the right order for a reverse frame).}
+\end{figure}
+
 \subsubsection{Issues}
 Implementation through each ORF Location knowing where it starts and ends, the characters between in a list. Each has a frame indicator, allows them to be kept in a single array. Javascript goes through the list and uses HTML5 canvas to draw them out in 6 different canvases. Working on finding user clicks within the canvas objects, getting data from Thymeleaf to display it from the Objects. Formatting the display and using colour to highlight the start and stop codons.
 Issues included finding the clicks, highlighting both the menu and the item on canvas. Took some time to get the formatting in the table correct

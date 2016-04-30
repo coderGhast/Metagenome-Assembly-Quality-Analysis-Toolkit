@@ -21,19 +21,24 @@
 \@writefile{toc}{\contentsline {subsubsection}{\numberline {3.2.3.2}Issues}{35}{subsubsection.3.2.3.2}}
 \@writefile{toc}{\contentsline {subsection}{\numberline {3.2.4}Finding Open Reading Frames}{35}{subsection.3.2.4}}
 \@writefile{toc}{\contentsline {subsubsection}{\numberline {3.2.4.1}Implementation}{35}{subsubsection.3.2.4.1}}
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {3.2.4.2}Issues}{35}{subsubsection.3.2.4.2}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {3.2.5}Displaying ORF Locations}{36}{subsection.3.2.5}}
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {3.2.5.1}Implementation}{36}{subsubsection.3.2.5.1}}
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {3.2.5.2}Issues}{36}{subsubsection.3.2.5.2}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {3.2.6}Superframe Comparisson}{36}{subsection.3.2.6}}
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {3.2.6.1}Implementation}{36}{subsubsection.3.2.6.1}}
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {3.2.6.2}Issues}{36}{subsubsection.3.2.6.2}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {3.2.7}User Interface Organisation}{36}{subsection.3.2.7}}
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {3.2.7.1}Implementation}{36}{subsubsection.3.2.7.1}}
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {3.2.7.2}Issues}{36}{subsubsection.3.2.7.2}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {3.2.8}Implementation Review}{36}{subsection.3.2.8}}
+\@writefile{lof}{\contentsline {figure}{\numberline {3.6}{\ignorespaces Finding all of the start and stop Codons from within the passed frame from the contig.\relax }}{36}{figure.caption.33}}
+\@writefile{lof}{\contentsline {figure}{\numberline {3.7}{\ignorespaces Extracting each frame and calling to run the ORF Finding process.\relax }}{36}{figure.caption.34}}
+\@writefile{lof}{\contentsline {figure}{\numberline {3.8}{\ignorespaces Getting the base pair characters of a reverse frame is as simple as a switch statement and building the reversed contig from back to front.\relax }}{37}{figure.caption.35}}
+\@writefile{lof}{\contentsline {figure}{\numberline {3.9}{\ignorespaces `Zipping' together ORF Locations from start and stop Codons within the frame.\relax }}{38}{figure.caption.36}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {3.2.4.2}Issues}{38}{subsubsection.3.2.4.2}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.2.5}Displaying ORF Locations}{39}{subsection.3.2.5}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {3.2.5.1}Implementation}{39}{subsubsection.3.2.5.1}}
+\@writefile{lof}{\contentsline {figure}{\numberline {3.10}{\ignorespaces Finding if a click if within an ORF Location is as simple as going through the list of ORF Locations, only checking against those within the same frame as the click, then looking at whether the click is within the start and stop points of an ORF Location within the canvas, based on the size and location of where it was painted (for reverse frames, the start and stop points are swapped, as reverse frames are displayed in the same direction as forward frames, with the indexes in the right order for a reverse frame).\relax }}{39}{figure.caption.37}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {3.2.5.2}Issues}{39}{subsubsection.3.2.5.2}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.2.6}Superframe Comparisson}{40}{subsection.3.2.6}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {3.2.6.1}Implementation}{40}{subsubsection.3.2.6.1}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {3.2.6.2}Issues}{40}{subsubsection.3.2.6.2}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.2.7}User Interface Organisation}{40}{subsection.3.2.7}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {3.2.7.1}Implementation}{40}{subsubsection.3.2.7.1}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {3.2.7.2}Issues}{40}{subsubsection.3.2.7.2}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.2.8}Implementation Review}{40}{subsection.3.2.8}}
 \@setckpt{Chapter3/chapter3}{
-\setcounter{page}{38}
+\setcounter{page}{41}
 \setcounter{equation}{0}
 \setcounter{enumi}{0}
 \setcounter{enumii}{0}
@@ -48,7 +53,7 @@
 \setcounter{subsubsection}{0}
 \setcounter{paragraph}{0}
 \setcounter{subparagraph}{0}
-\setcounter{figure}{5}
+\setcounter{figure}{10}
 \setcounter{table}{0}
 \setcounter{parentequation}{0}
 \setcounter{ContinuedFloat}{0}

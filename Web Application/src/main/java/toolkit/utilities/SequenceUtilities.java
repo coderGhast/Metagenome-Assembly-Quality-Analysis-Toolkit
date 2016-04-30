@@ -16,14 +16,22 @@ public class SequenceUtilities {
         StringBuilder reverseSequence = new StringBuilder();
         int i = sequence.length() - 1;
         while(i >= 0){
-            switch(sequence.toLowerCase().charAt(i)){
-                case('t') : reverseSequence.append('A');
+            switch(sequence.charAt(i)){
+                case('t') : reverseSequence.append('a');
                     break;
-                case('a') : reverseSequence.append('T');
+                case('a') : reverseSequence.append('t');
                     break;
-                case('g') : reverseSequence.append('C');
+                case('g') : reverseSequence.append('c');
                     break;
-                case('c') : reverseSequence.append('G');
+                case('c') : reverseSequence.append('g');
+                    break;
+                case('T') : reverseSequence.append('A');
+                    break;
+                case('A') : reverseSequence.append('T');
+                    break;
+                case('G') : reverseSequence.append('C');
+                    break;
+                case('C') : reverseSequence.append('G');
                     break;
                 default : reverseSequence.append('N');
                     break;
