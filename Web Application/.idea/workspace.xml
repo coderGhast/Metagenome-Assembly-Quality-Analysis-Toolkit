@@ -2,25 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2d0706c2-c12e-40d6-9032-19d66651f617" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Documents/Final Report/dissertation.pdf" afterPath="$PROJECT_DIR$/../Documents/Final Report/dissertation.pdf" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Documents/Final Report/dissertation.synctex.gz" afterPath="$PROJECT_DIR$/../Documents/Final Report/dissertation.synctex.gz" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/toolkit/domain/FastaReader.class" afterPath="$PROJECT_DIR$/target/classes/toolkit/domain/FastaReader.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/toolkit/utilities/SequenceUtilities.class" afterPath="$PROJECT_DIR$/target/classes/toolkit/utilities/SequenceUtilities.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Documents/Final Report/Appendix1/appendix1.aux" afterPath="$PROJECT_DIR$/../Documents/Final Report/Appendix1/appendix1.aux" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Documents/Final Report/Appendix2/appendix2.aux" afterPath="$PROJECT_DIR$/../Documents/Final Report/Appendix2/appendix2.aux" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Documents/Final Report/Appendix3/appendix3.aux" afterPath="$PROJECT_DIR$/../Documents/Final Report/Appendix3/appendix3.aux" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Documents/Final Report/Chapter3/chapter3.aux" afterPath="$PROJECT_DIR$/../Documents/Final Report/Chapter3/chapter3.aux" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Documents/Final Report/Chapter3/chapter3.tex" afterPath="$PROJECT_DIR$/../Documents/Final Report/Chapter3/chapter3.tex" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Documents/Final Report/Chapter4/chapter4.aux" afterPath="$PROJECT_DIR$/../Documents/Final Report/Chapter4/chapter4.aux" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Documents/Final Report/Chapter5/chapter5.aux" afterPath="$PROJECT_DIR$/../Documents/Final Report/Chapter5/chapter5.aux" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Documents/Final Report/dissertation.aux" afterPath="$PROJECT_DIR$/../Documents/Final Report/dissertation.aux" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Documents/Final Report/dissertation.lof" afterPath="$PROJECT_DIR$/../Documents/Final Report/dissertation.lof" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Documents/Final Report/dissertation.log" afterPath="$PROJECT_DIR$/../Documents/Final Report/dissertation.log" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Documents/Final Report/dissertation.toc" afterPath="$PROJECT_DIR$/../Documents/Final Report/dissertation.toc" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/toolkit/utilities/SequenceUtilities.java" afterPath="$PROJECT_DIR$/src/main/java/toolkit/utilities/SequenceUtilities.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/static/js/orf-chart.js" afterPath="$PROJECT_DIR$/src/main/resources/static/js/orf-chart.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/templates/toolkit.html" afterPath="$PROJECT_DIR$/target/classes/templates/toolkit.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/static/js/toolkit.js" afterPath="$PROJECT_DIR$/src/main/resources/static/js/toolkit.js" />
     </list>
     <ignored path="MetagenomeQualityToolkit.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -60,11 +42,31 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="orf-chart.js" pinned="false" current-in-tab="true">
+      <file leaf-file-name="orf-chart.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/resources/static/js/orf-chart.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.92639136">
+            <state vertical-scroll-proportion="0.0">
               <caret line="111" column="39" selection-start-line="111" selection-start-column="39" selection-end-line="111" selection-end-column="39" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="utilities.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/resources/static/js/utilities.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="toolkit.js" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/resources/static/js/toolkit.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.39497307">
+              <caret line="40" column="5" selection-start-line="40" selection-start-column="5" selection-end-line="40" selection-end-column="5" />
               <folding />
             </state>
           </provider>
@@ -117,7 +119,6 @@
         <option value="$PROJECT_DIR$/src/main/java/toolkit/utilities/UserContentValidator.java" />
         <option value="$PROJECT_DIR$/src/main/java/toolkit/Main.java" />
         <option value="$PROJECT_DIR$/src/main/resources/static/js/utilities.js" />
-        <option value="$PROJECT_DIR$/src/main/resources/static/js/toolkit.js" />
         <option value="$PROJECT_DIR$/src/main/resources/static/js/list.js" />
         <option value="$PROJECT_DIR$/src/main/java/toolkit/web/GlobalControllerExceptionHandler.java" />
         <option value="$PROJECT_DIR$/src/main/java/toolkit/web/ExceptionController.java" />
@@ -143,6 +144,7 @@
         <option value="$PROJECT_DIR$/src/main/java/toolkit/domain/FastaReader.java" />
         <option value="$PROJECT_DIR$/src/main/java/toolkit/utilities/SequenceUtilities.java" />
         <option value="$PROJECT_DIR$/src/main/resources/static/js/orf-chart.js" />
+        <option value="$PROJECT_DIR$/src/main/resources/static/js/toolkit.js" />
       </list>
     </option>
   </component>
@@ -1463,20 +1465,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/static/js/utilities.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/static/js/toolkit.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-0.55655295">
-          <caret line="18" column="3" selection-start-line="18" selection-start-column="3" selection-end-line="18" selection-end-column="3" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/templates/list.html">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-1.2090396">
@@ -1608,8 +1596,24 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/static/js/orf-chart.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.92639136">
+        <state vertical-scroll-proportion="0.0">
           <caret line="111" column="39" selection-start-line="111" selection-start-column="39" selection-end-line="111" selection-end-column="39" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/static/js/utilities.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/static/js/toolkit.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.39497307">
+          <caret line="40" column="5" selection-start-line="40" selection-start-column="5" selection-end-line="40" selection-end-column="5" />
           <folding />
         </state>
       </provider>

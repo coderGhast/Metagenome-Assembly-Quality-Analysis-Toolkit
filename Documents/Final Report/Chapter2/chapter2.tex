@@ -133,6 +133,8 @@ The logo is based on the mythical creature `chimera', a creature made from multi
 
 The welcome page is structured so that there is an explanation for the user of what the tool is, and an area for them to paste their FASTA data in. There wasn't much else needed for this page, but were the project to be continued this is where there would also be the option to upload user files instead of pasting in data. The user also specifies the minimum length a contiguous read must be in order to be considered here.
 
+The original design for this page also included the parameters for modifying the quality assessment, as this tied in with when the application dealt with only one contiguous read at a time. As the application evolved, the design changed and was refactored to shift the parameters for quality inspection to the next page where they could be tied to contiguous reads and not to the assembly data submission as a whole.
+
 %==== List =====
 \subsection{List}
 The below images show the `List' page, where a user can see all of the contiguous reads within their uploaded data file that are above the minimum length threshold they specified. The page also displays the number of discarded contigs due to the length, as I felt this would be useful information to give to a user.

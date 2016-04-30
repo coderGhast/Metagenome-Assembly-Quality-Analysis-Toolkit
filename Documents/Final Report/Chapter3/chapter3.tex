@@ -135,25 +135,39 @@ Finding a click within a canvas frame is as simple as checking if the click is h
 \caption{Finding if a click if within an ORF Location is as simple as going through the list of ORF Locations, only checking against those within the same frame as the click, then looking at whether the click is within the start and stop points of an ORF Location within the canvas, based on the size and location of where it was painted (for reverse frames, the start and stop points are swapped, as reverse frames are displayed in the same direction as forward frames, with the indexes in the right order for a reverse frame).}
 \end{figure}
 
+When an ORF Location is clicked to be viewed in more detail, the characters within that sequence needed to be formatted to be able to be reasonably displayed. This process took some time to build, and through refactoring was re-written twice over until I found a result that was reasonably fast at formatting and worked the way I wanted it to. This is that it highlighted every start and stop Codon within a sequence, split the characters into groups of 3, every 15 groups of 3, a new line is to be created and where the start of the line has the index within the contiguous read where that line of the ORF Location begins.
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.9\textwidth]{images/orfdisplay3}
+\caption{Formatting the characters from within an ORF Location into HTML tags to display the data in the way I wanted it to be designed, then inserting it into the div for displaying ORF Location information within the page.}
+\end{figure}
+
 \subsubsection{Issues}
-Implementation through each ORF Location knowing where it starts and ends, the characters between in a list. Each has a frame indicator, allows them to be kept in a single array. Javascript goes through the list and uses HTML5 canvas to draw them out in 6 different canvases. Working on finding user clicks within the canvas objects, getting data from Thymeleaf to display it from the Objects. Formatting the display and using colour to highlight the start and stop codons.
-Issues included finding the clicks, highlighting both the menu and the item on canvas. Took some time to get the formatting in the table correct
+When formatting the ORF Location characters into the list, I found I kept having results where the newline break would be incorrect, or not all of the start Codons were highlighted. This issue was because the way I built the formatted text was by adding text into an array, and then breaking up the text to add newlines whenever the array had a remainder of zero when divided by 15. This meant that it was including the indicator of what index the line of the ORF Location was on as part of the calculation. The result was that the line would be split incorrectly. Once I changed how the formatting was done and included the character index as part of the first set of characters of each line, the calculation worked correctly for splitting the lines where I wanted them to be split.
+
+Although not an issue as such, my first version of drawing the canvas frames involved a single canvas. While the displayed result was the same, it meant that the detecting of user clicks within ORF Location algorithm took longer to process as it had to determine which frame the user was clicking on and then find if it was within an ORF Location. Additionally, having it all in one canvas made the formatting of the canvas results on the page a little more challenging as I couldn't place values (like the frame indicator) exactly next to each frame without painting them within the canvas.
+
+By just splitting the single canvas into 6 different canvases, one for each frame, it allowed me to easily surround the canvas elements with text for frame indicators and cut down on the code for detecting where and what the user was clicking on within each frame, as shown in the implementation of the click detection above in the section above.
 
 \subsection{Superframe Comparisson}
 \subsubsection{Implementation}
-\subsubsection{Issues}
-Making the view of superframe to help the user compare the ORF and GC content. Able to be built upon with k-mer frequency analysis and other techniques as added. The overall 'compare all' chart. Borrowed code from the ORF canvases. Breaking things up into windows from the GC content.
+Implementing the Superframe was a relatively simple procedure as all of the data required, and part of the code, had already been done within the GC content and ORF charts. Since the Superframe just displays both of these together, it was simply overlaying the 6 frames together and painting on the GC content windows that were out of the threshold (above it, not below) and painting lines to represent the breaks between windows. The algorithm for detecting and highlighting user clicks within windows is also much the same as the code user for the ORF Location clicks and highlighting, just modified to detect within windows rather than within the frames.
 
-Not really any issues, just trying to find the best way to display it to the user and convey any areas where things don't line up properly. Would like to work on this more and develop a system to detect where the issues really are. Need more techniques.
-
-\subsection{User Interface Organisation}
-\subsubsection{Implementation}
+The canvas is set up so that it could also be used with other future techniques from within windows, such as k-mer frequency analysis results, and be a tab page where any comparison or overall results could be displayed.
 \subsubsection{Issues}
-User input section originally having all parameters was messy, only dealing with one contig, then multiple contigs, having parameters appear underneath any contig you wish to inspect, having all charts on the toolbox page displayed in one long list looked ugly, implemented tabs from (credit to the guy here).
+There were no issues implementing this content as the code had mostly been done previously. The main challenge was trying to think of a good way of displaying to the user where there might be potential issues, and giving them a report on the quality. What the application does is just displays them this overlay of the techniques used right now and leaves them to come up with their own decision.
+
+It would be nice in future to be able to expand on this and perhaps be able to truly give the user a report that tells them where there are good or bad areas of their data, instead of making them infer it for themselves through this chart, but without additional techniques this is a challenging prospect.
 
 \subsection{Implementation Review}
-Found that GC Content percentage and ORF Location finding took a lot longer than expected, especially considering that I implemented an additional part of ORF Finding that wasn't needed, and got refactored 3 times until I reached that point. Delayed me to the point I felt I wouldn't have time to implement k-mer frequency analysis. 
-User interface design and programming also took a lot longer. Wanted to present the information in a clean and useful way, without cluttering the page. Getting used to Thymeleaf and how it took the data from the Objects took a while to get used to. Felt that my implementation process was acceptable but issues slowed me down significantly. Everything else I felt I would implement got implemented, but the Superframe needs additional consideration. A lot of the quality assessment is still on the user to look at the produced reports and their content to consider whether they themselves feel their assembly file is good or not through factors highlighted by my application.
+During implementation, I found that GC Content percentage and ORF Location finding took a lot longer than expected, especially considering that I implemented an additional part of ORF Location finding that wasn't needed, and refactored it 3 times until I reached the point where it correctly found them.
+
+The user interface design and coding to format it also took a lot longer than I had originally anticipated. I wanted to present the information in a clean and useful way, without cluttering the page, and a number of redesigned happened due to the underlying code evolving over time to meet the requirements. Getting used to Thymeleaf and how it took the data from the Objects took a while to get used to, too, as I was unfamiliar with Spring Boot and Thymeleaf and wasn't sure how I was adding the data to the Model and then not clear on how it accessed it, or how it was used in form submissions.
+
+The Superframe also needs additional consideration. A lot of the quality assessment is still on the user to look at the produced reports and their content to consider whether they themselves feel their assembly file is good or not through factors highlighted by my application. 
+
+Overall, these issues and lack of understandings delayed me to the point where I didn't have time to implement k-mer frequency analysis or any of the `nice to have' features, and there are certainly areas of the current implementation where I feel bits are lacking, such as file upload, verbose logging and validation and the aforementioned Superframe. What I have got working though, I feel is of decent quality, my process of iterative development and design evolution with prototyping worked quite well and the requirements for those sections are fulfilled.
 
 % The implementation should look at any issues you encountered as you tried to implement your design. During the work, you might have found that elements of your design were unnecessary or overly complex; perhaps third party libraries were available that simplified some of the functions that you intended to implement. If things were easier in some areas, then how did you adapt your project to take account of your findings?
 
