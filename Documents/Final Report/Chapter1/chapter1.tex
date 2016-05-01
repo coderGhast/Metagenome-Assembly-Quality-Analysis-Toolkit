@@ -64,9 +64,29 @@ When an assembler cannot understand what to do with a character, or a sequence o
 The GC content is the percentage of `G' (guanine) and `C' (cytosine) characters within a sequence\cite{citeulike:14021291}. When the application takes a contig, it should break the contig up into windows of a size set by the user. If a contig was of length 30,000, they might break it into 100 windows of 300, for example. These window sizes should then have their GC content percentage calculated, and the mean of the entire contigs GC content worked out. Using these values it then becomes possible to detect potential anomalies in the percentages of individual windows that have a percentage value drastically different than the mean.
 
 \subsubsection{Open Reading Frame Locations}
-`To confirm if a GC window is outside of the mean by misalign, Open Reading Frame (ORF) Locations should be found where the GC content would naturally be higher.'
+`To confirm if a GC window is outside of the mean by misalign, Open Reading Frame (ORF) Locations should be found where the GC content would naturally be higher in protein coding regions.'
 
 This addition to the requirements came later in the projects development as I came to understand GC content and how a window that looks like an area of a misalign may actually not be. We can look at a contiguous read and find protein coding regions through the use of Open Reading Frames\cite{orfdefinition}, where the GC content percentage is often naturally higher than outside of these regions.
+
+An ORF Location is found through looking for where a location starts with ATG and where it ends with TGA, TAA or TAG. There are 6 frames to be found in sequences, where three are `forward' and 3 are `backwards' with the opposite characters of the base pairs to the forward frames. For both forward and backwards, the first frame is the original sequence, the second frame begins one character into the sequences and the third frame begins two characters into the sequence. A very small example just for basic understanding is provided below:
+
+\begin{verbatim}
+Sequence:
+TTGATGGCGCATAG
+
+Frame \#1 (fwd):
+TTGATGGCGCATAG
+Frame \#2 (fwd):
+TGATGGCGCATAG
+Frame \#3 (fwd):
+GATGGCGCATAG
+Frame \#4 (bck):
+CTATGCGCCATCAA
+Frame \#5 (bck):
+TATGCGCCATCAA
+Frame \#6 (bck):
+ATGCGCCATCAA
+\end{verbatim}
 
 By finding the ORF Locations, we can use these in the quality report to match up to windows that may at first seem like anomalies in the contig where it is instead actually a natural occurrence. There is a preexisting tool for this ORF finding functionality by NCBI\cite{orffinder}. While it might not be the case that an ORF Location matches with an out of threshold GC content window, or that they do match but it is still in fact an anomaly, it was a requirement of the application I wished to include in order to give the user another tool to use for inspecting their data.
 

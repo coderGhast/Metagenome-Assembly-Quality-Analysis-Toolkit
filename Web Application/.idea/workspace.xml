@@ -1,10 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="2d0706c2-c12e-40d6-9032-19d66651f617" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Documents/Final Report/Chapter4/chapter4.tex" afterPath="$PROJECT_DIR$/../Documents/Final Report/Chapter4/chapter4.tex" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/static/js/superframe-chart.js" afterPath="$PROJECT_DIR$/src/main/resources/static/js/superframe-chart.js" />
-    </list>
+    <list default="true" id="2d0706c2-c12e-40d6-9032-19d66651f617" name="Default" comment="" />
     <ignored path="MetagenomeQualityToolkit.iws" />
     <ignored path=".idea/workspace.xml" />
     <ignored path="$PROJECT_DIR$/target/" />
