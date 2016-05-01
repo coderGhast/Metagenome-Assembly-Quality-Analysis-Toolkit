@@ -18,6 +18,12 @@
 \fi
 #2}}
 
+\bibitem{apachelicense}
+{Apache Software Foundation}, ``{Apache License, Version 2.0},'' [Online]
+  Available: \url{http://www.apache.org/licenses/LICENSE-2.0}, 2004, {[Accessed
+  on: 1 May 2016]}.
+ \begin{quotation}\noindent The Apache License 2.0. \end{quotation}
+
 \bibitem{tabcode}
 {Catalin Rosu}, ``{CSS3 \& jQuery folder tabs},'' [Online] Available:
   \url{http://red-team-design.com/css3-jquery-folder-tabs/}, 2012, {[Accessed
@@ -42,6 +48,12 @@ F.~Cirillo, \emph{{The pomodoro technique}}.\hskip 1em plus 0.5em minus
   developing my application as it highlighted any time that I broke my build
   through forgetting to modify tests when content was updated, or when I broke
   parts of the application and so old tests would fail. \end{quotation}
+
+\bibitem{mitlicense}
+------, ``{The MIT License (MIT) | Open Source Initiative},'' [Online]
+  Available: \url{https://opensource.org/licenses/MIT}, 2016, {[Accessed on: 1
+  May 2016]}.
+ \begin{quotation}\noindent The MIT license, for jQuery. \end{quotation}
 
 \bibitem{citeulike:11826724}
 N.~C. B. I.~R. Coordinators, ``{Database resources of the National Center for
@@ -159,6 +171,12 @@ P.~Melsted and J.~K. Pritchard, ``{Efficient counting of k-mers in DNA
   documentation for using Spring Boot. Used by me in order to build my
   application as a web service with Java using Spring. \end{quotation}
 
+\bibitem{spring}
+{Pivotal}, ``{spring.io},'' [Online] Available: \url{https://spring.io/}, 2016,
+  {[Accessed on: 1 May 2016]}.
+ \begin{quotation}\noindent The Spring Framework, allowing me to create a web
+  application service using Java for my project. \end{quotation}
+
 \bibitem{citeulike:8714996}
 R.~Schmieder and R.~Edwards, ``{Quality control and preprocessing of
   metagenomic datasets},'' \emph{Bioinformatics}, vol.~27, no.~6, pp.
@@ -203,6 +221,12 @@ J.~C. Segen, \emph{{The dictionary of modern medicine}}.\hskip 1em plus 0.5em
   was from reading this web page. It helped me get a grasp of what ORFs were,
   how they were constructed and what I should do to write code for my own
   application in how to find ORF Locations. \end{quotation}
+
+\bibitem{jquery}
+{The jQuery Foundation}, ``{jQuery},'' [Online] Available:
+  \url{https://jquery.com/}, 2016, {[Accessed on: 1 May 2016]}.
+ \begin{quotation}\noindent jQuery, used for the code for tabs in CSS3, and for
+  some click detection. \end{quotation}
 
 \bibitem{thymeleaf}
 {The Thymeleaf Team}, ``{thymeleaf/thymeleaf},'' [Online] Available:

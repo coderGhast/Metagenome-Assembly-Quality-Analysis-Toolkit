@@ -79,10 +79,10 @@
 \contentsline {chapter}{\numberline {A}Third-Party Code and Libraries}{52}{appendix.A}
 \contentsline {section}{\numberline {1.1}Tabs for results}{52}{section.A.1}
 \contentsline {subsection}{\numberline {1.1.1}HTML}{52}{subsection.A.1.1}
-\contentsline {subsection}{\numberline {1.1.2}CSS}{52}{subsection.A.1.2}
+\contentsline {subsection}{\numberline {1.1.2}CSS}{53}{subsection.A.1.2}
 \contentsline {subsection}{\numberline {1.1.3}Jquery}{54}{subsection.A.1.3}
-\contentsline {chapter}{\numberline {B}Ethics Submission}{55}{appendix.B}
-\contentsline {chapter}{\numberline {C}Examples and Extras}{58}{appendix.C}
-\contentsline {section}{\numberline {3.1}Example User Story Breakdown}{58}{section.C.1}
-\contentsline {section}{\numberline {3.2}Artificial Test File}{59}{section.C.2}
-\contentsline {chapter}{Annotated Bibliography}{62}{section.C.2}
+\contentsline {chapter}{\numberline {B}Ethics Submission}{56}{appendix.B}
+\contentsline {chapter}{\numberline {C}Examples and Extras}{59}{appendix.C}
+\contentsline {section}{\numberline {3.1}Example User Story Breakdown}{59}{section.C.1}
+\contentsline {section}{\numberline {3.2}Artificial Test File}{60}{section.C.2}
+\contentsline {chapter}{Annotated Bibliography}{63}{section.C.2}
