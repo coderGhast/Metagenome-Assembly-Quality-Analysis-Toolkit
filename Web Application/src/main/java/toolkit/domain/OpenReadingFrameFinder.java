@@ -28,7 +28,7 @@ public class OpenReadingFrameFinder {
             // frame indicator. (e.g. i = 0 -> Frame 1, i + 3 = 3 -> Frame 4)
             OpenReadingFrameResult frameResult = getOrfResultFromFrame(contiguousRead.substring(i), i, i);
             OpenReadingFrameResult reverseFrameResult = getOrfResultFromFrame(reverseSequence.substring(i), i, i+3);
-            reverseFrameResult = correctReverseFrameIndicies(reverseFrameResult, contiguousRead.length());
+            reverseFrameResult = correctReverseFrameIndexes(reverseFrameResult, contiguousRead.length());
 
             result.addPotentialOrfLocationListToResult(frameResult.getPotentialOrfLocations());
             result.addPotentialOrfLocationListToResult(reverseFrameResult.getPotentialOrfLocations());
@@ -99,7 +99,7 @@ public class OpenReadingFrameFinder {
      * @param startCodons The list of Start Codons.
      * @param stopCodons The list of Stop Codons.
      * @param contigFrame The contiguous read data from this frame.
-     * @param frameNumberModifier The frame number to modify the indices of any ORF Location to match the real
+     * @param frameNumberModifier The frame number to modify the indexes of any ORF Location to match the real
      *                            contiguous read.
      * @param frameIndicator The frame number (minus 1).
      * @return Returns the result of any ORF Locations found within this frame, using the Start and Stop Codons provided.
@@ -157,7 +157,7 @@ public class OpenReadingFrameFinder {
      * @param contigFrame The characters of the contiguous read from the frame in question.
      * @param startCodon The Codon that marks the start of the ORF Location.
      * @param stopCodon The Codon that marks the end of the ORF Location.
-     * @param frameNumberModifier The modified to the ORF Location indices.
+     * @param frameNumberModifier The modified to the ORF Location indexes.
      * @param frameIndicator The frame indicator to identify which frame the constructed ORF Location is from.
      * @return A completed OpenReadingFrameLocation.
      */
@@ -171,14 +171,14 @@ public class OpenReadingFrameFinder {
     }
 
     /**
-     * Corrects the indices of a reverse frame. Since the frame indices will be reversed when the ORF Locations are
-     * constructed, the indices are corrected to display where the actual 'start' and 'stop' locations are from when
+     * Corrects the indexes of a reverse frame. Since the frame indexes will be reversed when the ORF Locations are
+     * constructed, the indexes are corrected to display where the actual 'start' and 'stop' locations are from when
      * the contiguous is in the original direction.
      * @param reverseFrameResult The OpenReadingFrameResult of a reverse frame.
      * @param contigLength The length of the original and full contiguous read.
-     * @return The OpenReadingFrameResult with corrected indices.
+     * @return The OpenReadingFrameResult with corrected indexes.
      */
-    private OpenReadingFrameResult correctReverseFrameIndicies(OpenReadingFrameResult reverseFrameResult, int contigLength){
+    private OpenReadingFrameResult correctReverseFrameIndexes(OpenReadingFrameResult reverseFrameResult, int contigLength){
         ArrayList<OpenReadingFrameLocation> orfLocations = reverseFrameResult.getPotentialOrfLocations();
         OpenReadingFrameResult correctedResult = new OpenReadingFrameResult();
         for(int i=0; i < orfLocations.size(); i++){

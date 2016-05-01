@@ -15,74 +15,74 @@
 \contentsline {subsection}{\numberline {1.3.2}Quality report and data input}{6}{subsection.1.3.2}
 \contentsline {subsubsection}{\numberline {1.3.2.1}Read user input in FASTA format}{6}{subsubsection.1.3.2.1}
 \contentsline {subsubsection}{\numberline {1.3.2.2}Display a list of the contigs}{6}{subsubsection.1.3.2.2}
-\contentsline {subsubsection}{\numberline {1.3.2.3}User control over GC Content, ORF Location and k-mer frequency analysis parameters}{6}{subsubsection.1.3.2.3}
-\contentsline {subsubsection}{\numberline {1.3.2.4}Visual reports of the quality inspection methods}{6}{subsubsection.1.3.2.4}
-\contentsline {subsection}{\numberline {1.3.3}Implementation - 3rd Party vs Self-Created}{7}{subsection.1.3.3}
-\contentsline {section}{\numberline {1.4}Process}{8}{section.1.4}
-\contentsline {subsection}{\numberline {1.4.1}Scrum}{8}{subsection.1.4.1}
-\contentsline {subsection}{\numberline {1.4.2}Extreme Programming}{9}{subsection.1.4.2}
-\contentsline {subsection}{\numberline {1.4.3}Pomodoro Technique}{9}{subsection.1.4.3}
+\contentsline {subsubsection}{\numberline {1.3.2.3}User control over GC Content, ORF Location and k-mer frequency analysis parameters}{7}{subsubsection.1.3.2.3}
+\contentsline {subsubsection}{\numberline {1.3.2.4}Visual reports of the quality inspection methods}{7}{subsubsection.1.3.2.4}
+\contentsline {subsection}{\numberline {1.3.3}Implementation - 3rd Party vs Self-Created}{8}{subsection.1.3.3}
+\contentsline {section}{\numberline {1.4}Process}{9}{section.1.4}
+\contentsline {subsection}{\numberline {1.4.1}Scrum}{9}{subsection.1.4.1}
+\contentsline {subsection}{\numberline {1.4.2}Extreme Programming}{10}{subsection.1.4.2}
+\contentsline {subsection}{\numberline {1.4.3}Pomodoro Technique}{10}{subsection.1.4.3}
 \contentsline {subsection}{\numberline {1.4.4}Project blog}{10}{subsection.1.4.4}
-\contentsline {chapter}{\numberline {2}Design}{11}{chapter.2}
-\contentsline {section}{\numberline {2.1}Overall Architecture}{11}{section.2.1}
-\contentsline {subsection}{\numberline {2.1.1}Choice of technologies}{11}{subsection.2.1.1}
-\contentsline {subsection}{\numberline {2.1.2}MVC Framework}{13}{subsection.2.1.2}
-\contentsline {subsubsection}{\numberline {2.1.2.1}Model}{14}{subsubsection.2.1.2.1}
-\contentsline {subsubsection}{\numberline {2.1.2.2}View}{17}{subsubsection.2.1.2.2}
-\contentsline {subsubsection}{\numberline {2.1.2.3}Controller}{17}{subsubsection.2.1.2.3}
-\contentsline {subsection}{\numberline {2.1.3}Naming Conventions}{18}{subsection.2.1.3}
-\contentsline {subsection}{\numberline {2.1.4}User Input}{18}{subsection.2.1.4}
-\contentsline {subsection}{\numberline {2.1.5}Directory Structure}{18}{subsection.2.1.5}
-\contentsline {subsection}{\numberline {2.1.6}QualitySummary and Results}{19}{subsection.2.1.6}
-\contentsline {section}{\numberline {2.2}User Interface}{20}{section.2.2}
-\contentsline {subsection}{\numberline {2.2.1}Welcome}{20}{subsection.2.2.1}
-\contentsline {subsection}{\numberline {2.2.2}List}{21}{subsection.2.2.2}
-\contentsline {subsubsection}{\numberline {2.2.2.1}Parameter choices}{22}{subsubsection.2.2.2.1}
-\contentsline {subsection}{\numberline {2.2.3}Results}{23}{subsection.2.2.3}
-\contentsline {subsubsection}{\numberline {2.2.3.1}GC Content}{24}{subsubsection.2.2.3.1}
-\contentsline {subsubsection}{\numberline {2.2.3.2}Open Reading Frames}{24}{subsubsection.2.2.3.2}
-\contentsline {subsubsection}{\numberline {2.2.3.3}Superframe}{26}{subsubsection.2.2.3.3}
-\contentsline {subsection}{\numberline {2.2.4}Error}{27}{subsection.2.2.4}
-\contentsline {section}{\numberline {2.3}Support Tools}{28}{section.2.3}
-\contentsline {subsection}{\numberline {2.3.1}Version Control and Continuous Integration}{29}{subsection.2.3.1}
-\contentsline {chapter}{\numberline {3}Implementation}{31}{chapter.3}
-\contentsline {section}{\numberline {3.1}Development Environment}{31}{section.3.1}
-\contentsline {section}{\numberline {3.2}Features}{31}{section.3.2}
-\contentsline {subsection}{\numberline {3.2.1}Reading User Input}{31}{subsection.3.2.1}
-\contentsline {subsubsection}{\numberline {3.2.1.1}Implementation}{31}{subsubsection.3.2.1.1}
-\contentsline {subsubsection}{\numberline {3.2.1.2}Issues}{32}{subsubsection.3.2.1.2}
-\contentsline {subsection}{\numberline {3.2.2}Counting GC Content \& Percentage}{33}{subsection.3.2.2}
-\contentsline {subsubsection}{\numberline {3.2.2.1}Implementation}{33}{subsubsection.3.2.2.1}
-\contentsline {subsubsection}{\numberline {3.2.2.2}Issues}{33}{subsubsection.3.2.2.2}
-\contentsline {subsection}{\numberline {3.2.3}Displaying GC Content percentage}{34}{subsection.3.2.3}
-\contentsline {subsubsection}{\numberline {3.2.3.1}Implementation}{34}{subsubsection.3.2.3.1}
-\contentsline {subsubsection}{\numberline {3.2.3.2}Issues}{35}{subsubsection.3.2.3.2}
-\contentsline {subsection}{\numberline {3.2.4}Finding Open Reading Frames}{35}{subsection.3.2.4}
-\contentsline {subsubsection}{\numberline {3.2.4.1}Implementation}{35}{subsubsection.3.2.4.1}
-\contentsline {subsubsection}{\numberline {3.2.4.2}Issues}{38}{subsubsection.3.2.4.2}
-\contentsline {subsection}{\numberline {3.2.5}Displaying ORF Locations}{39}{subsection.3.2.5}
-\contentsline {subsubsection}{\numberline {3.2.5.1}Implementation}{39}{subsubsection.3.2.5.1}
-\contentsline {subsubsection}{\numberline {3.2.5.2}Issues}{40}{subsubsection.3.2.5.2}
-\contentsline {subsection}{\numberline {3.2.6}Superframe Comparisson}{41}{subsection.3.2.6}
-\contentsline {subsubsection}{\numberline {3.2.6.1}Implementation}{41}{subsubsection.3.2.6.1}
-\contentsline {subsubsection}{\numberline {3.2.6.2}Issues}{41}{subsubsection.3.2.6.2}
-\contentsline {subsection}{\numberline {3.2.7}Implementation Review}{41}{subsection.3.2.7}
-\contentsline {chapter}{\numberline {4}Testing}{43}{chapter.4}
-\contentsline {section}{\numberline {4.1}Overall Approach to Testing}{43}{section.4.1}
-\contentsline {section}{\numberline {4.2}Automated Testing}{43}{section.4.2}
-\contentsline {subsection}{\numberline {4.2.1}Unit Tests}{43}{subsection.4.2.1}
-\contentsline {subsection}{\numberline {4.2.2}User Interface Testing}{45}{subsection.4.2.2}
-\contentsline {subsection}{\numberline {4.2.3}Manual Testing}{47}{subsection.4.2.3}
-\contentsline {subsubsection}{\numberline {4.2.3.1}Test Table}{47}{subsubsection.4.2.3.1}
-\contentsline {chapter}{\numberline {5}Evaluation}{49}{chapter.5}
-\contentsline {chapter}{Appendices}{50}{chapter.5}
-\contentsline {chapter}{\numberline {A}Third-Party Code and Libraries}{51}{appendix.A}
-\contentsline {section}{\numberline {1.1}Tabs for results}{51}{section.A.1}
-\contentsline {subsection}{\numberline {1.1.1}HTML}{51}{subsection.A.1.1}
-\contentsline {subsection}{\numberline {1.1.2}CSS}{51}{subsection.A.1.2}
-\contentsline {subsection}{\numberline {1.1.3}Jquery}{53}{subsection.A.1.3}
-\contentsline {chapter}{\numberline {B}Ethics Submission}{54}{appendix.B}
-\contentsline {chapter}{\numberline {C}Examples and Extras}{55}{appendix.C}
-\contentsline {section}{\numberline {3.1}Example User Story Breakdown}{55}{section.C.1}
-\contentsline {section}{\numberline {3.2}Artificial Test File}{56}{section.C.2}
-\contentsline {chapter}{Annotated Bibliography}{59}{section.C.2}
+\contentsline {chapter}{\numberline {2}Design}{12}{chapter.2}
+\contentsline {section}{\numberline {2.1}Overall Architecture}{12}{section.2.1}
+\contentsline {subsection}{\numberline {2.1.1}Choice of technologies}{12}{subsection.2.1.1}
+\contentsline {subsection}{\numberline {2.1.2}MVC Framework}{14}{subsection.2.1.2}
+\contentsline {subsubsection}{\numberline {2.1.2.1}Model}{15}{subsubsection.2.1.2.1}
+\contentsline {subsubsection}{\numberline {2.1.2.2}View}{18}{subsubsection.2.1.2.2}
+\contentsline {subsubsection}{\numberline {2.1.2.3}Controller}{18}{subsubsection.2.1.2.3}
+\contentsline {subsection}{\numberline {2.1.3}Naming Conventions}{19}{subsection.2.1.3}
+\contentsline {subsection}{\numberline {2.1.4}User Input}{19}{subsection.2.1.4}
+\contentsline {subsection}{\numberline {2.1.5}Directory Structure}{19}{subsection.2.1.5}
+\contentsline {subsection}{\numberline {2.1.6}QualitySummary and Results}{20}{subsection.2.1.6}
+\contentsline {section}{\numberline {2.2}User Interface}{21}{section.2.2}
+\contentsline {subsection}{\numberline {2.2.1}Welcome}{21}{subsection.2.2.1}
+\contentsline {subsection}{\numberline {2.2.2}List}{22}{subsection.2.2.2}
+\contentsline {subsubsection}{\numberline {2.2.2.1}Parameter choices}{23}{subsubsection.2.2.2.1}
+\contentsline {subsection}{\numberline {2.2.3}Results}{24}{subsection.2.2.3}
+\contentsline {subsubsection}{\numberline {2.2.3.1}GC Content}{25}{subsubsection.2.2.3.1}
+\contentsline {subsubsection}{\numberline {2.2.3.2}Open Reading Frames}{25}{subsubsection.2.2.3.2}
+\contentsline {subsubsection}{\numberline {2.2.3.3}Superframe}{27}{subsubsection.2.2.3.3}
+\contentsline {subsection}{\numberline {2.2.4}Error}{28}{subsection.2.2.4}
+\contentsline {section}{\numberline {2.3}Support Tools}{29}{section.2.3}
+\contentsline {subsection}{\numberline {2.3.1}Version Control and Continuous Integration}{30}{subsection.2.3.1}
+\contentsline {chapter}{\numberline {3}Implementation}{32}{chapter.3}
+\contentsline {section}{\numberline {3.1}Development Environment}{32}{section.3.1}
+\contentsline {section}{\numberline {3.2}Features}{32}{section.3.2}
+\contentsline {subsection}{\numberline {3.2.1}Reading User Input}{32}{subsection.3.2.1}
+\contentsline {subsubsection}{\numberline {3.2.1.1}Implementation}{32}{subsubsection.3.2.1.1}
+\contentsline {subsubsection}{\numberline {3.2.1.2}Issues}{33}{subsubsection.3.2.1.2}
+\contentsline {subsection}{\numberline {3.2.2}Counting GC Content \& Percentage}{34}{subsection.3.2.2}
+\contentsline {subsubsection}{\numberline {3.2.2.1}Implementation}{34}{subsubsection.3.2.2.1}
+\contentsline {subsubsection}{\numberline {3.2.2.2}Issues}{34}{subsubsection.3.2.2.2}
+\contentsline {subsection}{\numberline {3.2.3}Displaying GC Content percentage}{35}{subsection.3.2.3}
+\contentsline {subsubsection}{\numberline {3.2.3.1}Implementation}{35}{subsubsection.3.2.3.1}
+\contentsline {subsubsection}{\numberline {3.2.3.2}Issues}{36}{subsubsection.3.2.3.2}
+\contentsline {subsection}{\numberline {3.2.4}Finding Open Reading Frames}{36}{subsection.3.2.4}
+\contentsline {subsubsection}{\numberline {3.2.4.1}Implementation}{36}{subsubsection.3.2.4.1}
+\contentsline {subsubsection}{\numberline {3.2.4.2}Issues}{39}{subsubsection.3.2.4.2}
+\contentsline {subsection}{\numberline {3.2.5}Displaying ORF Locations}{40}{subsection.3.2.5}
+\contentsline {subsubsection}{\numberline {3.2.5.1}Implementation}{40}{subsubsection.3.2.5.1}
+\contentsline {subsubsection}{\numberline {3.2.5.2}Issues}{41}{subsubsection.3.2.5.2}
+\contentsline {subsection}{\numberline {3.2.6}Superframe Comparisson}{42}{subsection.3.2.6}
+\contentsline {subsubsection}{\numberline {3.2.6.1}Implementation}{42}{subsubsection.3.2.6.1}
+\contentsline {subsubsection}{\numberline {3.2.6.2}Issues}{42}{subsubsection.3.2.6.2}
+\contentsline {subsection}{\numberline {3.2.7}Implementation Review}{42}{subsection.3.2.7}
+\contentsline {chapter}{\numberline {4}Testing}{44}{chapter.4}
+\contentsline {section}{\numberline {4.1}Overall Approach to Testing}{44}{section.4.1}
+\contentsline {section}{\numberline {4.2}Automated Testing}{44}{section.4.2}
+\contentsline {subsection}{\numberline {4.2.1}Unit Tests}{44}{subsection.4.2.1}
+\contentsline {subsection}{\numberline {4.2.2}User Interface Testing}{46}{subsection.4.2.2}
+\contentsline {subsection}{\numberline {4.2.3}Manual Testing}{48}{subsection.4.2.3}
+\contentsline {subsubsection}{\numberline {4.2.3.1}Test Table}{48}{subsubsection.4.2.3.1}
+\contentsline {chapter}{\numberline {5}Evaluation}{50}{chapter.5}
+\contentsline {chapter}{Appendices}{51}{chapter.5}
+\contentsline {chapter}{\numberline {A}Third-Party Code and Libraries}{52}{appendix.A}
+\contentsline {section}{\numberline {1.1}Tabs for results}{52}{section.A.1}
+\contentsline {subsection}{\numberline {1.1.1}HTML}{52}{subsection.A.1.1}
+\contentsline {subsection}{\numberline {1.1.2}CSS}{52}{subsection.A.1.2}
+\contentsline {subsection}{\numberline {1.1.3}Jquery}{54}{subsection.A.1.3}
+\contentsline {chapter}{\numberline {B}Ethics Submission}{55}{appendix.B}
+\contentsline {chapter}{\numberline {C}Examples and Extras}{56}{appendix.C}
+\contentsline {section}{\numberline {3.1}Example User Story Breakdown}{56}{section.C.1}
+\contentsline {section}{\numberline {3.2}Artificial Test File}{57}{section.C.2}
+\contentsline {chapter}{Annotated Bibliography}{60}{section.C.2}

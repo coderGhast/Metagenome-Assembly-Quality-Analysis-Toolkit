@@ -73,7 +73,8 @@ D.~Huson and S.~Mitra, ``{Introduction to the Analysis of Environmental
 P.~T. Inc. (2015) Collaborative data science. Montréal, QC. [Online].
   Available: \url{https://plot.ly}
 \BIBentrySTDinterwordspacing
-
+ \begin{quotation}\noindent Plotly.js, the JavaScript library I used for
+  creating the GC content window chart. \end{quotation}
 
 \bibitem{citeulike:3746363}
 V.~Kunin, A.~Copeland, A.~Lapidus, K.~Mavromatis, and P.~Hugenholtz, ``{A
@@ -85,6 +86,18 @@ V.~Kunin, A.~Copeland, A.~Lapidus, K.~Mavromatis, and P.~Hugenholtz, ``{A
   necessarily relevant to my project as it deals with the full process of
   working with a metagenomic sample, for my background reading it was very
   useful. \end{quotation}
+
+\bibitem{citeulike:12566531}
+\BIBentryALTinterwordspacing
+B.~Liu, Y.~Shi, J.~Yuan, X.~Hu, H.~Zhang, N.~Li, Z.~Li, Y.~Chen, D.~Mu, and
+  W.~Fan, ``{Estimation of genomic characteristics by analyzing k-mer frequency
+  in de novo genome projects},'' Aug. 2013. [Online]. Available:
+  \url{http://arxiv.org/abs/1308.2012}
+\BIBentrySTDinterwordspacing
+ \begin{quotation}\noindent A paper highlighting the usefulness of k-mer
+  frequency analysis and distribution in determining characteristics of
+  genomes. Similar to my projects objectives where I wished to have my project
+  use k-mer frequency analysis for quality assement. \end{quotation}
 
 \bibitem{citeulike:14021056}
 N.~J. Loman, C.~Constantinidou, M.~Christner, H.~Rohde, J.~Z.~M. Chan,
@@ -206,6 +219,20 @@ T.~Thomas, J.~Gilbert, and F.~Meyer, ``{Metagenomics - a guide from sampling to
  \begin{quotation}\noindent A useful article in understanding what metagenomic
   study was. It was helpful to read as I tried to understand metagenomics at
   the beginning of the project. \end{quotation}
+
+\bibitem{JEU:JEU239}
+\BIBentryALTinterwordspacing
+J.~D. WUITSCHICK and K.~M. KARRER, ``Analysis of genomic g + c content, codon
+  usage, initiator codon context and translation termination sites in
+  tetrahymena thermophila,'' \emph{Journal of Eukaryotic Microbiology},
+  vol.~46, no.~3, pp. 239--247, 1999. [Online]. Available:
+  \url{http://dx.doi.org/10.1111/j.1550-7408.1999.tb05120.x}
+\BIBentrySTDinterwordspacing
+ \begin{quotation}\noindent An article that includes a discussion of the
+  increase in GC count within coding regions. Useful for me to understand why
+  using Open Reading Frames could be good for a user to see GC regions that
+  were higher with potentially explainable reasons within their contiguous
+  reads. \end{quotation}
 
 \bibitem{fastaformat}
 {Zhang Lab}, ``{FASTA format},'' [Online] Available:
