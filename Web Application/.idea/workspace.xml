@@ -2,20 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2d0706c2-c12e-40d6-9032-19d66651f617" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Documents/Final Report/dissertation.pdf" afterPath="$PROJECT_DIR$/../Documents/Final Report/dissertation.pdf" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Documents/Final Report/dissertation.synctex.gz" afterPath="$PROJECT_DIR$/../Documents/Final Report/dissertation.synctex.gz" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Documents/Final Report/Appendix1/appendix1.aux" afterPath="$PROJECT_DIR$/../Documents/Final Report/Appendix1/appendix1.aux" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Documents/Final Report/Appendix2/appendix2.aux" afterPath="$PROJECT_DIR$/../Documents/Final Report/Appendix2/appendix2.aux" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Documents/Final Report/Appendix3/appendix3.aux" afterPath="$PROJECT_DIR$/../Documents/Final Report/Appendix3/appendix3.aux" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Documents/Final Report/Chapter4/chapter4.aux" afterPath="$PROJECT_DIR$/../Documents/Final Report/Chapter4/chapter4.aux" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Documents/Final Report/Chapter4/chapter4.tex" afterPath="$PROJECT_DIR$/../Documents/Final Report/Chapter4/chapter4.tex" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Documents/Final Report/Chapter5/chapter5.aux" afterPath="$PROJECT_DIR$/../Documents/Final Report/Chapter5/chapter5.aux" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Documents/Final Report/dissertation.aux" afterPath="$PROJECT_DIR$/../Documents/Final Report/dissertation.aux" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Documents/Final Report/dissertation.lof" afterPath="$PROJECT_DIR$/../Documents/Final Report/dissertation.lof" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Documents/Final Report/dissertation.log" afterPath="$PROJECT_DIR$/../Documents/Final Report/dissertation.log" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Documents/Final Report/dissertation.out" afterPath="$PROJECT_DIR$/../Documents/Final Report/dissertation.out" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Documents/Final Report/dissertation.toc" afterPath="$PROJECT_DIR$/../Documents/Final Report/dissertation.toc" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/static/js/superframe-chart.js" afterPath="$PROJECT_DIR$/src/main/resources/static/js/superframe-chart.js" />
     </list>
     <ignored path="MetagenomeQualityToolkit.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -43,11 +31,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="FastaReaderTests.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/test/java/toolkit/integration/domain/FastaReaderTests.java">
+      <file leaf-file-name="superframe-chart.js" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/resources/static/js/superframe-chart.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-1.2890484">
-              <caret line="43" column="44" selection-start-line="43" selection-start-column="44" selection-end-line="43" selection-end-column="44" />
+            <state vertical-scroll-proportion="0.1981132">
+              <caret line="55" column="0" selection-start-line="55" selection-start-column="0" selection-end-line="55" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -120,12 +108,12 @@
         <option value="$PROJECT_DIR$/src/main/resources/static/js/gc-chart.js" />
         <option value="$PROJECT_DIR$/src/main/java/toolkit/web/ToolkitController.java" />
         <option value="$PROJECT_DIR$/src/main/resources/templates/fragments/sequencepastebox.html" />
-        <option value="$PROJECT_DIR$/src/main/resources/static/js/superframe-chart.js" />
         <option value="$PROJECT_DIR$/src/main/resources/templates/toolkit.html" />
         <option value="$PROJECT_DIR$/src/main/java/toolkit/domain/FastaReader.java" />
         <option value="$PROJECT_DIR$/src/main/java/toolkit/utilities/SequenceUtilities.java" />
         <option value="$PROJECT_DIR$/src/main/resources/static/js/orf-chart.js" />
         <option value="$PROJECT_DIR$/src/main/resources/static/js/toolkit.js" />
+        <option value="$PROJECT_DIR$/src/main/resources/static/js/superframe-chart.js" />
       </list>
     </option>
   </component>
@@ -239,6 +227,44 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="toolkit" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="unit" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="MetagenomeQualityToolkit" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Web Application" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="test" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="toolkit" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="unit" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="domain" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -551,7 +577,7 @@
       <recent name="C:\Users\Narctiss\Documents\University Work\Major Project\Metagenome-Assembly-Quality-Analysis-Toolkit\Web Application\src\main\java\toolkit\configuration" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.All in Web Application">
+  <component name="RunManager" selected="Application.Main">
     <configuration default="false" name="All in Web Application" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
       <module name="Web Application" />
@@ -958,8 +984,8 @@
     </list>
     <recent_temporary>
       <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="JUnit.All in Web Application" />
-        <item index="1" class="java.lang.String" itemvalue="Application.Main" />
+        <item index="0" class="java.lang.String" itemvalue="Application.Main" />
+        <item index="1" class="java.lang.String" itemvalue="JUnit.All in Web Application" />
         <item index="2" class="java.lang.String" itemvalue="JUnit.OpenReadingFrameLocationTests" />
         <item index="3" class="java.lang.String" itemvalue="JUnit.QualitySummaryTests" />
         <item index="4" class="java.lang.String" itemvalue="JUnit.GcContentCounterTests" />
@@ -1161,13 +1187,13 @@
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="All_in_Web_Application - 2016.04.25 at 19h 40m 56s.xml">
-      <configuration name="All in Web Application" configurationId="JUnit" />
-    </history-entry>
     <history-entry file="All_in_Web_Application - 2016.04.27 at 14h 58m 08s.xml">
       <configuration name="All in Web Application" configurationId="JUnit" />
     </history-entry>
     <history-entry file="All_in_Web_Application - 2016.04.30 at 15h 08m 11s.xml">
+      <configuration name="All in Web Application" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="All_in_Web_Application - 2016.05.01 at 01h 29m 28s.xml">
       <configuration name="All in Web Application" configurationId="JUnit" />
     </history-entry>
     <history-entry file="FastaReaderTests - 2016.04.23 at 18h 32m 13s.xml">
@@ -1203,7 +1229,7 @@
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3771331" sideWeight="0.51437217" order="10" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32980332" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4010239" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.408547" sideWeight="0.48562783" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.408547" sideWeight="0.48562783" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32569557" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.22995462" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
@@ -1277,13 +1303,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/resources/static/contig.1274754.fa">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.32692307">
-          <caret line="7" column="60" selection-start-line="7" selection-start-column="60" selection-end-line="7" selection-end-column="60" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/../README.md">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.100890204">
@@ -1302,20 +1321,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.41087613">
           <caret line="8" column="37" selection-start-line="0" selection-start-column="0" selection-end-line="15" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/toolkit/unit/domain/ContiguousReadTests.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="27" column="21" selection-start-line="27" selection-start-column="21" selection-end-line="27" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/toolkit/unit/domain/OpenReadingFrameFinderTests.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.41843972">
-          <caret line="60" column="79" selection-start-line="60" selection-start-column="79" selection-end-line="60" selection-end-column="79" />
         </state>
       </provider>
     </entry>
@@ -1393,13 +1398,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-0.078078076">
           <caret line="19" column="0" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/toolkit/unit/domain/OpenReadingFrameLocationTests.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-0.7597598">
-          <caret line="12" column="42" selection-start-line="12" selection-start-column="42" selection-end-line="12" selection-end-column="42" />
         </state>
       </provider>
     </entry>
@@ -1527,14 +1525,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/static/js/superframe-chart.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="68" column="13" selection-start-line="68" selection-start-column="13" selection-end-line="68" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/templates/fragments/qualityparameters.html">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.03195489">
@@ -1649,10 +1639,50 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/toolkit/unit/domain/ContiguousReadTests.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.6409336">
+          <caret line="27" column="21" selection-start-line="27" selection-start-column="21" selection-end-line="27" selection-end-column="21" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/toolkit/unit/domain/OpenReadingFrameFinderTests.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-0.67863554">
+          <caret line="60" column="79" selection-start-line="60" selection-start-column="79" selection-end-line="60" selection-end-column="79" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/toolkit/unit/domain/OpenReadingFrameLocationTests.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.030520646">
+          <caret line="12" column="42" selection-start-line="12" selection-start-column="42" selection-end-line="12" selection-end-column="42" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/toolkit/unit/domain/OpenReadingFrameResultTests.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="12" column="13" selection-start-line="12" selection-start-column="13" selection-end-line="12" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/toolkit/integration/domain/FastaReaderTests.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-1.2890484">
+        <state vertical-scroll-proportion="-2.0974844">
           <caret line="43" column="44" selection-start-line="43" selection-start-column="44" selection-end-line="43" selection-end-column="44" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/static/js/superframe-chart.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.1981132">
+          <caret line="55" column="0" selection-start-line="55" selection-start-column="0" selection-end-line="55" selection-end-column="0" />
           <folding />
         </state>
       </provider>

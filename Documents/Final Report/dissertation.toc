@@ -69,20 +69,20 @@
 \contentsline {subsection}{\numberline {3.2.7}Implementation Review}{41}{subsection.3.2.7}
 \contentsline {chapter}{\numberline {4}Testing}{43}{chapter.4}
 \contentsline {section}{\numberline {4.1}Overall Approach to Testing}{43}{section.4.1}
-\contentsline {section}{\numberline {4.2}Automated Testing}{45}{section.4.2}
-\contentsline {subsection}{\numberline {4.2.1}Unit Tests}{45}{subsection.4.2.1}
-\contentsline {subsection}{\numberline {4.2.2}Integration Testing}{45}{subsection.4.2.2}
-\contentsline {subsection}{\numberline {4.2.3}User Interface Testing}{45}{subsection.4.2.3}
-\contentsline {subsection}{\numberline {4.2.4}Manual Testing}{45}{subsection.4.2.4}
-\contentsline {chapter}{\numberline {5}Evaluation}{46}{chapter.5}
-\contentsline {chapter}{Appendices}{47}{chapter.5}
-\contentsline {chapter}{\numberline {A}Third-Party Code and Libraries}{48}{appendix.A}
-\contentsline {section}{\numberline {1.1}Tabs for results}{48}{section.A.1}
-\contentsline {subsection}{\numberline {1.1.1}HTML}{48}{subsection.A.1.1}
-\contentsline {subsection}{\numberline {1.1.2}CSS}{48}{subsection.A.1.2}
-\contentsline {subsection}{\numberline {1.1.3}Jquery}{50}{subsection.A.1.3}
-\contentsline {chapter}{\numberline {B}Ethics Submission}{51}{appendix.B}
-\contentsline {chapter}{\numberline {C}Examples and Extras}{52}{appendix.C}
-\contentsline {section}{\numberline {3.1}Example User Story Breakdown}{52}{section.C.1}
-\contentsline {section}{\numberline {3.2}Artificial Test File}{53}{section.C.2}
-\contentsline {chapter}{Annotated Bibliography}{56}{section.C.2}
+\contentsline {section}{\numberline {4.2}Automated Testing}{43}{section.4.2}
+\contentsline {subsection}{\numberline {4.2.1}Unit Tests}{43}{subsection.4.2.1}
+\contentsline {subsection}{\numberline {4.2.2}User Interface Testing}{45}{subsection.4.2.2}
+\contentsline {subsection}{\numberline {4.2.3}Manual Testing}{47}{subsection.4.2.3}
+\contentsline {subsubsection}{\numberline {4.2.3.1}Test Table}{47}{subsubsection.4.2.3.1}
+\contentsline {chapter}{\numberline {5}Evaluation}{49}{chapter.5}
+\contentsline {chapter}{Appendices}{50}{chapter.5}
+\contentsline {chapter}{\numberline {A}Third-Party Code and Libraries}{51}{appendix.A}
+\contentsline {section}{\numberline {1.1}Tabs for results}{51}{section.A.1}
+\contentsline {subsection}{\numberline {1.1.1}HTML}{51}{subsection.A.1.1}
+\contentsline {subsection}{\numberline {1.1.2}CSS}{51}{subsection.A.1.2}
+\contentsline {subsection}{\numberline {1.1.3}Jquery}{53}{subsection.A.1.3}
+\contentsline {chapter}{\numberline {B}Ethics Submission}{54}{appendix.B}
+\contentsline {chapter}{\numberline {C}Examples and Extras}{55}{appendix.C}
+\contentsline {section}{\numberline {3.1}Example User Story Breakdown}{55}{section.C.1}
+\contentsline {section}{\numberline {3.2}Artificial Test File}{56}{section.C.2}
+\contentsline {chapter}{Annotated Bibliography}{59}{section.C.2}

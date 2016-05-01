@@ -37,9 +37,15 @@
 \contentsline {figure}{\numberline {3.10}{\ignorespaces Finding if a click if within an ORF Location is as simple as going through the list of ORF Locations, only checking against those within the same frame as the click, then looking at whether the click is within the start and stop points of an ORF Location within the canvas, based on the size and location of where it was painted (for reverse frames, the start and stop points are swapped, as reverse frames are displayed in the same direction as forward frames, with the indexes in the right order for a reverse frame).\relax }}{39}{figure.caption.37}
 \contentsline {figure}{\numberline {3.11}{\ignorespaces Formatting the characters from within an ORF Location into HTML tags to display the data in the way I wanted it to be designed, then inserting it into the div for displaying ORF Location information within the page.\relax }}{40}{figure.caption.38}
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {4.1}{\ignorespaces Results of running the set of unit tests developed for the application.\relax }}{43}{figure.caption.39}
-\contentsline {figure}{\numberline {4.2}{\ignorespaces The test coverage of my unit tests over the developed application code.\relax }}{44}{figure.caption.40}
-\contentsline {figure}{\numberline {4.3}{\ignorespaces The test coverage of my unit tests over the developed application code, broken down for each class.\relax }}{44}{figure.caption.41}
+\contentsline {figure}{\numberline {4.1}{\ignorespaces An example of a unit test used in my application.\relax }}{43}{figure.caption.39}
+\contentsline {figure}{\numberline {4.2}{\ignorespaces Results of running the set of unit tests developed for the application.\relax }}{44}{figure.caption.40}
+\contentsline {figure}{\numberline {4.3}{\ignorespaces The test coverage of my unit tests over the developed application code.\relax }}{44}{figure.caption.41}
+\contentsline {figure}{\numberline {4.4}{\ignorespaces The test coverage of my unit tests over the developed application code, broken down for each class.\relax }}{45}{figure.caption.42}
+\contentsline {figure}{\numberline {4.5}{\ignorespaces The same page and results from the application shown in different modern browsers.\relax }}{45}{figure.caption.43}
+\contentsline {figure}{\numberline {4.6}{\ignorespaces YSlow report after running on the Welcome page.\relax }}{46}{figure.caption.44}
+\contentsline {figure}{\numberline {4.7}{\ignorespaces YSlow report after running on the List page.\relax }}{46}{figure.caption.45}
+\contentsline {figure}{\numberline {4.8}{\ignorespaces YSlow report after running on the Results page.\relax }}{46}{figure.caption.46}
+\contentsline {figure}{\numberline {4.9}{\ignorespaces Combining two species contiguous reads together at 50\% of each of the file (first half one species, second half another species), we see a very obvious split in the GC chart.\relax }}{47}{figure.caption.47}
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \addvspace {10\p@ }

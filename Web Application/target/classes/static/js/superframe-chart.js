@@ -52,21 +52,21 @@ function paintSuperFrame(){
 
     for (var i = 0; i < windowdata.length; i++) {
         if(windowdata[i] > gccontentmean){
-        superframecontext.fillStyle= gcColours[i];
+            superframecontext.fillStyle= gcColours[i];
 
                 superframecontext.fillRect(
                     ((i * windowSize) / contigLength) * superframewidth,
                     superframeheight / 2,
                     (windowSize / contigLength) * superframewidth,
                     superframeheight / 2);
-
-                superframecontext.fillStyle="#000000";
-                drawWindowLine(
-                    ((i * windowSize) / contigLength) * superframewidth,
-                    ((i * windowSize) / contigLength) * superframewidth,
-                    0,
-                    superframeheight);
             }
+
+            superframecontext.fillStyle="#000000";
+            drawWindowLine(
+                ((i * windowSize) / contigLength) * superframewidth,
+                ((i * windowSize) / contigLength) * superframewidth,
+                0,
+                superframeheight);
             superframecontext.stroke();
 
         }
