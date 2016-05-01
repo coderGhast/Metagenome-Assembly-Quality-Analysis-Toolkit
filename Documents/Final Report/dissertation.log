@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9) (preloaded format=pdflatex 2013.11.17)  1 MAY 2016 16:40
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9) (preloaded format=pdflatex 2013.11.17)  1 MAY 2016 17:05
 entering extended mode
 **D:/Users/James/University*Documents/Modules/Major*Project/Metagenome-Assembly
 -Quality-Analysis-Toolkit/Documents/Final*Report/dissertation.tex
@@ -483,15 +483,15 @@ g (ext4): destination with the same identifier (name{page.iii}) has been alread
 y used, duplicate ignored
 <to be read again> 
                    \relax 
-l.25 ...over time.\relax }}{30}{figure.caption.26}
+l.24 ...plication.\relax }}{30}{figure.caption.25}
                                                    [3]
 LaTeX Font Info:    Try loading font information for OT1+pcr on input line 25.
 
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\psnfss\ot1pcr.fd"
 File: ot1pcr.fd 2001/06/04 font definitions for OT1/pcr.
-))
+) [4])
 \tf@lof=\write5
- [4] [5]
+ [5]
 ("D:\Users\James\University Documents\Modules\Major Project\Metagenome-Assembly
 -Quality-Analysis-Toolkit\Documents\Final Report\dissertation.lot")
 \tf@lot=\write6
@@ -508,7 +508,7 @@ LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <12> not available
 [1
 
 
-] <images/basicmetaassembly.png, id=487, 401.5pt x 247.92625pt>
+] <images/basicmetaassembly.png, id=489, 401.5pt x 247.92625pt>
 File: images/basicmetaassembly.png Graphic file (type png)
 
 <use images/basicmetaassembly.png>
@@ -517,7 +517,7 @@ Package pdftex.def Info: images/basicmetaassembly.png used on input line 30.
  [2 <D:/Users/James/University Documents/Modules/Major Project/Metagenome-Assem
 bly-Quality-Analysis-Toolkit/Documents/Final Report/images/basicmetaassembly.pn
 g>] [3] [4] [5]
-<images/fastaexample.png, id=540, 450.68375pt x 444.66125pt>
+<images/fastaexample.png, id=542, 450.68375pt x 444.66125pt>
 File: images/fastaexample.png Graphic file (type png)
 
 <use images/fastaexample.png>
@@ -526,7 +526,7 @@ Package pdftex.def Info: images/fastaexample.png used on input line 113.
  [6 <D:/Users/James/University Documents/Modules/Major Project/Metagenome-Assem
 bly-Quality-Analysis-Toolkit/Documents/Final Report/images/fastaexample.png (PN
 G copy)>]
-<images/usecase.png, id=549, 424.58624pt x 352.31625pt>
+<images/usecase.png, id=551, 424.58624pt x 352.31625pt>
 File: images/usecase.png Graphic file (type png)
 
 <use images/usecase.png>
@@ -534,19 +534,19 @@ Package pdftex.def Info: images/usecase.png used on input line 138.
 (pdftex.def)             Requested size: 384.10959pt x 318.74284pt.
  [7] [8 <D:/Users/James/University Documents/Modules/Major Project/Metagenome-A
 ssembly-Quality-Analysis-Toolkit/Documents/Final Report/images/usecase.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 162--164
+Underfull \hbox (badness 10000) in paragraph at lines 161--163
 
  []
 
-LaTeX Font Info:    Try loading font information for OML+ptm on input line 165.
+LaTeX Font Info:    Try loading font information for OML+ptm on input line 164.
 
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\psnfss\omlptm.fd"
 File: omlptm.fd 
 )
 LaTeX Font Info:    Font shape `OML/ptm/m/n' in size <10.95> not available
-(Font)              Font shape `OML/cmm/m/it' tried instead on input line 165.
+(Font)              Font shape `OML/cmm/m/it' tried instead on input line 164.
 
-Underfull \hbox (badness 10000) in paragraph at lines 165--167
+Underfull \hbox (badness 10000) in paragraph at lines 164--166
 
  []
 
@@ -558,21 +558,21 @@ Chapter 2.
 
 
 
-] <images/addingtomodel.png, id=599, 602.25pt x 76.285pt>
+] <images/addingtomodel.png, id=601, 602.25pt x 76.285pt>
 File: images/addingtomodel.png Graphic file (type png)
 
 <use images/addingtomodel.png>
 Package pdftex.def Info: images/addingtomodel.png used on input line 32.
 (pdftex.def)             Requested size: 426.79134pt x 54.0626pt.
 
-<images/thymeleafinsert1.png, id=600, 590.205pt x 94.3525pt>
+<images/thymeleafinsert1.png, id=602, 590.205pt x 94.3525pt>
 File: images/thymeleafinsert1.png Graphic file (type png)
 
 <use images/thymeleafinsert1.png>
 Package pdftex.def Info: images/thymeleafinsert1.png used on input line 40.
 (pdftex.def)             Requested size: 426.79134pt x 68.2303pt.
 
-<images/thymeleafinsert2.png, id=601, 699.61375pt x 158.5925pt>
+<images/thymeleafinsert2.png, id=603, 699.61375pt x 158.5925pt>
 File: images/thymeleafinsert2.png Graphic file (type png)
 
 <use images/thymeleafinsert2.png>
@@ -583,7 +583,7 @@ mbly-Quality-Analysis-Toolkit/Documents/Final Report/images/addingtomodel.png (
 PNG copy)> <D:/Users/James/University Documents/Modules/Major Project/Metagenom
 e-Assembly-Quality-Analysis-Toolkit/Documents/Final Report/images/thymeleafinse
 rt1.png (PNG copy)>]
-<images/mvcframework.png, id=610, 325.215pt x 207.8967pt>
+<images/mvcframework.png, id=612, 325.215pt x 207.8967pt>
 File: images/mvcframework.png Graphic file (type png)
 
 <use images/mvcframework.png>
@@ -594,14 +594,14 @@ mbly-Quality-Analysis-Toolkit/Documents/Final Report/images/thymeleafinsert2.pn
 g (PNG copy)> <D:/Users/James/University Documents/Modules/Major Project/Metage
 nome-Assembly-Quality-Analysis-Toolkit/Documents/Final Report/images/mvcframewo
 rk.png>]
-<images/umlwelcomepage.png, id=617, 406.6392pt x 451.9284pt>
+<images/umlwelcomepage.png, id=619, 406.6392pt x 451.9284pt>
 File: images/umlwelcomepage.png Graphic file (type png)
 
 <use images/umlwelcomepage.png>
 Package pdftex.def Info: images/umlwelcomepage.png used on input line 65.
 (pdftex.def)             Requested size: 298.75262pt x 332.03581pt.
 
-<images/umllistpage.png, id=618, 614.295pt x 415.5525pt>
+<images/umllistpage.png, id=620, 614.295pt x 415.5525pt>
 File: images/umllistpage.png Graphic file (type png)
 
 <use images/umllistpage.png>
@@ -610,7 +610,7 @@ Package pdftex.def Info: images/umllistpage.png used on input line 71.
  [15 <D:/Users/James/University Documents/Modules/Major Project/Metagenome-Asse
 mbly-Quality-Analysis-Toolkit/Documents/Final Report/images/umlwelcomepage.png>
 ]
-<images/umlresultspageflip.png, id=626, 695.7192pt x 1264.725pt>
+<images/umlresultspageflip.png, id=628, 695.7192pt x 1264.725pt>
 File: images/umlresultspageflip.png Graphic file (type png)
 
 <use images/umlresultspageflip.png>
@@ -623,7 +623,7 @@ Overfull \vbox (6.33678pt too high) has occurred while \output is active []
 
 [17 <D:/Users/James/University Documents/Modules/Major Project/Metagenome-Assem
 bly-Quality-Analysis-Toolkit/Documents/Final Report/images/umlresultspageflip.p
-ng>] [18] <images/directorystructure.png, id=645, 364.36125pt x 591.20876pt>
+ng>] [18] <images/directorystructure.png, id=647, 364.36125pt x 591.20876pt>
 File: images/directorystructure.png Graphic file (type png)
 
 <use images/directorystructure.png>
@@ -632,7 +632,7 @@ Package pdftex.def Info: images/directorystructure.png used on input line 110.
  [19] [20 <D:/Users/James/University Documents/Modules/Major Project/Metagenome
 -Assembly-Quality-Analysis-Toolkit/Documents/Final Report/images/directorystruc
 ture.png (PNG copy)>]
-<images/ui1.png, id=656, 1371.1225pt x 738.76pt>
+<images/ui1.png, id=658, 1371.1225pt x 738.76pt>
 File: images/ui1.png Graphic file (type png)
  <use images/ui1.png>
 Package pdftex.def Info: images/ui1.png used on input line 130.
@@ -640,13 +640,13 @@ Package pdftex.def Info: images/ui1.png used on input line 130.
  [21 <D:/Users/James/University Documents/Modules/Major Project/Metagenome-Asse
 mbly-Quality-Analysis-Toolkit/Documents/Final Report/images/ui1.png (PNG copy)>
 ]
-<images/ui2.png, id=663, 1371.1225pt x 738.76pt>
+<images/ui2.png, id=665, 1371.1225pt x 738.76pt>
 File: images/ui2.png Graphic file (type png)
  <use images/ui2.png>
 Package pdftex.def Info: images/ui2.png used on input line 145.
 (pdftex.def)             Requested size: 341.43436pt x 183.95682pt.
 
-<images/ui3.png, id=664, 1371.1225pt x 738.76pt>
+<images/ui3.png, id=666, 1371.1225pt x 738.76pt>
 File: images/ui3.png Graphic file (type png)
  <use images/ui3.png>
 Package pdftex.def Info: images/ui3.png used on input line 153.
@@ -654,7 +654,7 @@ Package pdftex.def Info: images/ui3.png used on input line 153.
  [22 <D:/Users/James/University Documents/Modules/Major Project/Metagenome-Asse
 mbly-Quality-Analysis-Toolkit/Documents/Final Report/images/ui2.png (PNG copy)>
 ]
-<images/ui4.png, id=670, 1371.1225pt x 738.76pt>
+<images/ui4.png, id=672, 1371.1225pt x 738.76pt>
 File: images/ui4.png Graphic file (type png)
  <use images/ui4.png>
 Package pdftex.def Info: images/ui4.png used on input line 161.
@@ -663,13 +663,13 @@ Package pdftex.def Info: images/ui4.png used on input line 161.
 mbly-Quality-Analysis-Toolkit/Documents/Final Report/images/ui3.png (PNG copy)>
  <D:/Users/James/University Documents/Modules/Major Project/Metagenome-Assembly
 -Quality-Analysis-Toolkit/Documents/Final Report/images/ui4.png (PNG copy)>]
-<images/ui5.png, id=678, 1371.1225pt x 738.76pt>
+<images/ui5.png, id=680, 1371.1225pt x 738.76pt>
 File: images/ui5.png Graphic file (type png)
  <use images/ui5.png>
 Package pdftex.def Info: images/ui5.png used on input line 181.
 (pdftex.def)             Requested size: 341.43436pt x 183.95682pt.
  [24]
-<images/ui6.png, id=687, 1371.1225pt x 738.76pt>
+<images/ui6.png, id=689, 1371.1225pt x 738.76pt>
 File: images/ui6.png Graphic file (type png)
  <use images/ui6.png>
 Package pdftex.def Info: images/ui6.png used on input line 196.
@@ -677,7 +677,7 @@ Package pdftex.def Info: images/ui6.png used on input line 196.
  [25 <D:/Users/James/University Documents/Modules/Major Project/Metagenome-Asse
 mbly-Quality-Analysis-Toolkit/Documents/Final Report/images/ui5.png (PNG copy)>
 ]
-<images/ui7.png, id=695, 1371.1225pt x 738.76pt>
+<images/ui7.png, id=697, 1371.1225pt x 738.76pt>
 File: images/ui7.png Graphic file (type png)
  <use images/ui7.png>
 Package pdftex.def Info: images/ui7.png used on input line 208.
@@ -685,7 +685,7 @@ Package pdftex.def Info: images/ui7.png used on input line 208.
  [26 <D:/Users/James/University Documents/Modules/Major Project/Metagenome-Asse
 mbly-Quality-Analysis-Toolkit/Documents/Final Report/images/ui6.png (PNG copy)>
 ]
-<images/ui8.png, id=701, 1371.1225pt x 738.76pt>
+<images/ui8.png, id=703, 1371.1225pt x 738.76pt>
 File: images/ui8.png Graphic file (type png)
  <use images/ui8.png>
 Package pdftex.def Info: images/ui8.png used on input line 217.
@@ -694,13 +694,13 @@ Package pdftex.def Info: images/ui8.png used on input line 217.
 mbly-Quality-Analysis-Toolkit/Documents/Final Report/images/ui7.png (PNG copy)>
  <D:/Users/James/University Documents/Modules/Major Project/Metagenome-Assembly
 -Quality-Analysis-Toolkit/Documents/Final Report/images/ui8.png (PNG copy)>]
-<images/ui9.png, id=709, 1371.1225pt x 738.76pt>
+<images/ui9.png, id=711, 1371.1225pt x 738.76pt>
 File: images/ui9.png Graphic file (type png)
  <use images/ui9.png>
 Package pdftex.def Info: images/ui9.png used on input line 227.
 (pdftex.def)             Requested size: 341.43436pt x 183.95682pt.
 
-<images/ui10.png, id=710, 1371.1225pt x 738.76pt>
+<images/ui10.png, id=712, 1371.1225pt x 738.76pt>
 File: images/ui10.png Graphic file (type png)
  <use images/ui10.png>
 Package pdftex.def Info: images/ui10.png used on input line 236.
@@ -708,7 +708,7 @@ Package pdftex.def Info: images/ui10.png used on input line 236.
 
 [28 <D:/Users/James/University Documents/Modules/Major Project/Metagenome-Assem
 bly-Quality-Analysis-Toolkit/Documents/Final Report/images/ui9.png (PNG copy)>]
-<images/intellij.png, id=716, 1371.1225pt x 730.73pt>
+<images/intellij.png, id=718, 1371.1225pt x 730.73pt>
 File: images/intellij.png Graphic file (type png)
 
 <use images/intellij.png>
@@ -717,13 +717,13 @@ Package pdftex.def Info: images/intellij.png used on input line 246.
  [29 <D:/Users/James/University Documents/Modules/Major Project/Metagenome-Asse
 mbly-Quality-Analysis-Toolkit/Documents/Final Report/images/ui10.png (PNG copy)
 >]
-<images/tomatoes.png, id=723, 1092.08pt x 570.13pt>
+<images/tomatoes.png, id=725, 1092.08pt x 570.13pt>
 File: images/tomatoes.png Graphic file (type png)
  <use images/tomatoes.png>
 Package pdftex.def Info: images/tomatoes.png used on input line 254.
 (pdftex.def)             Requested size: 341.43436pt x 178.24348pt.
 
-<images/commits.png, id=727, 574.145pt x 159.59625pt>
+<images/commits.png, id=729, 574.145pt x 159.59625pt>
 File: images/commits.png Graphic file (type png)
  <use images/commits.png>
 Package pdftex.def Info: images/commits.png used on input line 263.
@@ -733,7 +733,7 @@ Package pdftex.def Info: images/commits.png used on input line 263.
 bly-Quality-Analysis-Toolkit/Documents/Final Report/images/intellij.png (PNG co
 py)> <D:/Users/James/University Documents/Modules/Major Project/Metagenome-Asse
 mbly-Quality-Analysis-Toolkit/Documents/Final Report/images/tomatoes.png (PNG c
-opy)>] <images/codeship.png, id=735, 876.27374pt x 218.8175pt>
+opy)>] <images/codeship.png, id=737, 876.27374pt x 218.8175pt>
 File: images/codeship.png Graphic file (type png)
 
 <use images/codeship.png>
@@ -747,7 +747,7 @@ copy)>]
 ("D:\Users\James\University Documents\Modules\Major Project\Metagenome-Assembly
 -Quality-Analysis-Toolkit\Documents\Final Report\Chapter3/chapter3.tex"
 Chapter 3.
-<images/readuserdata.png, id=742, 705.63625pt x 481.8pt>
+<images/readuserdata.png, id=744, 705.63625pt x 481.8pt>
 File: images/readuserdata.png Graphic file (type png)
 
 <use images/readuserdata.png>
@@ -760,14 +760,14 @@ Package pdftex.def Info: images/readuserdata.png used on input line 16.
 ] [33 <D:/Users/James/University Documents/Modules/Major Project/Metagenome-Ass
 embly-Quality-Analysis-Toolkit/Documents/Final Report/images/readuserdata.png (
 PNG copy)>]
-<images/splitgcwindows.png, id=756, 646.415pt x 227.85126pt>
+<images/splitgcwindows.png, id=758, 646.415pt x 227.85126pt>
 File: images/splitgcwindows.png Graphic file (type png)
 
 <use images/splitgcwindows.png>
 Package pdftex.def Info: images/splitgcwindows.png used on input line 33.
 (pdftex.def)             Requested size: 384.10959pt x 135.39412pt.
 
-<images/calcgcpercentage.png, id=757, 663.47874pt x 261.97874pt>
+<images/calcgcpercentage.png, id=759, 663.47874pt x 261.97874pt>
 File: images/calcgcpercentage.png Graphic file (type png)
 
 <use images/calcgcpercentage.png>
@@ -778,14 +778,14 @@ mbly-Quality-Analysis-Toolkit/Documents/Final Report/images/splitgcwindows.png
 (PNG copy)> <D:/Users/James/University Documents/Modules/Major Project/Metageno
 me-Assembly-Quality-Analysis-Toolkit/Documents/Final Report/images/calcgcpercen
 tage.png (PNG copy)>]
-<images/thymeleafdata.png, id=765, 455.7025pt x 383.4325pt>
+<images/thymeleafdata.png, id=767, 455.7025pt x 383.4325pt>
 File: images/thymeleafdata.png Graphic file (type png)
 
 <use images/thymeleafdata.png>
 Package pdftex.def Info: images/thymeleafdata.png used on input line 56.
 (pdftex.def)             Requested size: 256.0774pt x 215.46962pt.
 
-<images/gcviewdata.png, id=766, 309.155pt x 116.435pt>
+<images/gcviewdata.png, id=768, 309.155pt x 116.435pt>
 File: images/gcviewdata.png Graphic file (type png)
 
 <use images/gcviewdata.png>
@@ -794,7 +794,7 @@ Package pdftex.def Info: images/gcviewdata.png used on input line 64.
  [35 <D:/Users/James/University Documents/Modules/Major Project/Metagenome-Asse
 mbly-Quality-Analysis-Toolkit/Documents/Final Report/images/thymeleafdata.png (
 PNG copy)>]
-<images/orffind2.png, id=773, 836.12375pt x 439.6425pt>
+<images/orffind2.png, id=775, 836.12375pt x 439.6425pt>
 File: images/orffind2.png Graphic file (type png)
 
 <use images/orffind2.png>
@@ -803,13 +803,13 @@ Package pdftex.def Info: images/orffind2.png used on input line 82.
  [36 <D:/Users/James/University Documents/Modules/Major Project/Metagenome-Asse
 mbly-Quality-Analysis-Toolkit/Documents/Final Report/images/gcviewdata.png (PNG
  copy)>]
-<images/orffind1.png, id=781, 792.9625pt x 260.975pt>
+<images/orffind1.png, id=783, 792.9625pt x 260.975pt>
 File: images/orffind1.png Graphic file (type png)
 
 <use images/orffind1.png>
 Package pdftex.def Info: images/orffind1.png used on input line 91.
 (pdftex.def)             Requested size: 384.10959pt x 126.41742pt.
- <images/orffind4.png, id=782, 405.515pt x 493.845pt>
+ <images/orffind4.png, id=784, 405.515pt x 493.845pt>
 File: images/orffind4.png Graphic file (type png)
 
 <use images/orffind4.png>
@@ -820,7 +820,7 @@ mbly-Quality-Analysis-Toolkit/Documents/Final Report/images/orffind2.png (PNG c
 opy)> <D:/Users/James/University Documents/Modules/Major Project/Metagenome-Ass
 embly-Quality-Analysis-Toolkit/Documents/Final Report/images/orffind1.png (PNG 
 copy)>]
-<images/orffind3.png, id=788, 1037.8775pt x 650.43pt>
+<images/orffind3.png, id=790, 1037.8775pt x 650.43pt>
 File: images/orffind3.png Graphic file (type png)
 
 <use images/orffind3.png>
@@ -831,7 +831,7 @@ mbly-Quality-Analysis-Toolkit/Documents/Final Report/images/orffind4.png (PNG c
 opy)>] [39 <D:/Users/James/University Documents/Modules/Major Project/Metagenom
 e-Assembly-Quality-Analysis-Toolkit/Documents/Final Report/images/orffind3.png 
 (PNG copy)>]
-<images/orfdisplay1.png, id=801, 818.05624pt x 315.1775pt>
+<images/orfdisplay1.png, id=803, 818.05624pt x 315.1775pt>
 File: images/orfdisplay1.png Graphic file (type png)
 
 <use images/orfdisplay1.png>
@@ -840,7 +840,7 @@ Package pdftex.def Info: images/orfdisplay1.png used on input line 134.
  [40 <D:/Users/James/University Documents/Modules/Major Project/Metagenome-Asse
 mbly-Quality-Analysis-Toolkit/Documents/Final Report/images/orfdisplay1.png (PN
 G copy)>]
-<images/orfdisplay3.png, id=808, 734.745pt x 544.0325pt>
+<images/orfdisplay3.png, id=810, 734.745pt x 544.0325pt>
 File: images/orfdisplay3.png Graphic file (type png)
 
 <use images/orfdisplay3.png>
@@ -852,7 +852,7 @@ G copy)>] [42]) [43]
 ("D:\Users\James\University Documents\Modules\Major Project\Metagenome-Assembly
 -Quality-Analysis-Toolkit\Documents\Final Report\Chapter4/chapter4.tex"
 Chapter 4.
-<images/unittestexample.png, id=827, 785.93625pt x 131.49126pt>
+<images/unittestexample.png, id=829, 785.93625pt x 131.49126pt>
 File: images/unittestexample.png Graphic file (type png)
 
 <use images/unittestexample.png>
@@ -865,21 +865,21 @@ Package pdftex.def Info: images/unittestexample.png used on input line 20.
  <D:/Users/James/University Documents/Modules/Major Project/Metagenome-Assembly
 -Quality-Analysis-Toolkit/Documents/Final Report/images/unittestexample.png (PN
 G copy)>]
-<images/unittestsuccess.png, id=833, 921.4425pt x 338.26375pt>
+<images/unittestsuccess.png, id=835, 921.4425pt x 338.26375pt>
 File: images/unittestsuccess.png Graphic file (type png)
 
 <use images/unittestsuccess.png>
 Package pdftex.def Info: images/unittestsuccess.png used on input line 28.
 (pdftex.def)             Requested size: 384.10959pt x 141.00653pt.
 
-<images/testcoverage1.png, id=834, 489.83pt x 204.765pt>
+<images/testcoverage1.png, id=836, 489.83pt x 204.765pt>
 File: images/testcoverage1.png Graphic file (type png)
 
 <use images/testcoverage1.png>
 Package pdftex.def Info: images/testcoverage1.png used on input line 36.
 (pdftex.def)             Requested size: 384.10959pt x 160.57526pt.
 
-<images/testcoverage2.png, id=835, 497.86pt x 326.21875pt>
+<images/testcoverage2.png, id=837, 497.86pt x 326.21875pt>
 File: images/testcoverage2.png Graphic file (type png)
 
 <use images/testcoverage2.png>
@@ -890,21 +890,21 @@ mbly-Quality-Analysis-Toolkit/Documents/Final Report/images/unittestsuccess.png
  (PNG copy)> <D:/Users/James/University Documents/Modules/Major Project/Metagen
 ome-Assembly-Quality-Analysis-Toolkit/Documents/Final Report/images/testcoverag
 e1.png (PNG copy)>]
-<images/browserchrome.png, id=842, 1371.1225pt x 738.76pt>
+<images/browserchrome.png, id=844, 1371.1225pt x 738.76pt>
 File: images/browserchrome.png Graphic file (type png)
 
 <use images/browserchrome.png>
 Package pdftex.def Info: images/browserchrome.png used on input line 52.
 (pdftex.def)             Requested size: 170.71393pt x 91.97276pt.
 
-<images/browserffox.png, id=843, 1371.1225pt x 730.73pt>
+<images/browserffox.png, id=845, 1371.1225pt x 730.73pt>
 File: images/browserffox.png Graphic file (type png)
 
 <use images/browserffox.png>
 Package pdftex.def Info: images/browserffox.png used on input line 58.
 (pdftex.def)             Requested size: 170.71393pt x 90.97307pt.
 
-<images/browseredge.png, id=844, 1371.1225pt x 730.73pt>
+<images/browseredge.png, id=846, 1371.1225pt x 730.73pt>
 File: images/browseredge.png Graphic file (type png)
 
 <use images/browseredge.png>
@@ -919,21 +919,21 @@ agenome-Assembly-Quality-Analysis-Toolkit/Documents/Final Report/images/browser
 ffox.png (PNG copy)> <D:/Users/James/University Documents/Modules/Major Project
 /Metagenome-Assembly-Quality-Analysis-Toolkit/Documents/Final Report/images/bro
 wseredge.png (PNG copy)>]
-<images/yslowpage1.png, id=851, 1370.11874pt x 645.41125pt>
+<images/yslowpage1.png, id=853, 1370.11874pt x 645.41125pt>
 File: images/yslowpage1.png Graphic file (type png)
 
 <use images/yslowpage1.png>
 Package pdftex.def Info: images/yslowpage1.png used on input line 74.
 (pdftex.def)             Requested size: 341.43436pt x 160.83046pt.
 
-<images/yslowpage2.png, id=852, 1371.1225pt x 644.4075pt>
+<images/yslowpage2.png, id=854, 1371.1225pt x 644.4075pt>
 File: images/yslowpage2.png Graphic file (type png)
 
 <use images/yslowpage2.png>
 Package pdftex.def Info: images/yslowpage2.png used on input line 80.
 (pdftex.def)             Requested size: 341.43436pt x 160.46234pt.
 
-<images/yslowpage3.png, id=853, 1371.1225pt x 640.3925pt>
+<images/yslowpage3.png, id=855, 1371.1225pt x 640.3925pt>
 File: images/yslowpage3.png Graphic file (type png)
 
 <use images/yslowpage3.png>
@@ -946,7 +946,7 @@ ssembly-Quality-Analysis-Toolkit/Documents/Final Report/images/yslowpage2.png (
 PNG copy)> <D:/Users/James/University Documents/Modules/Major Project/Metagenom
 e-Assembly-Quality-Analysis-Toolkit/Documents/Final Report/images/yslowpage3.pn
 g (PNG copy)>]
-<images/combinedspecies.png, id=860, 778.91pt x 623.32875pt>
+<images/combinedspecies.png, id=862, 778.91pt x 623.32875pt>
 File: images/combinedspecies.png Graphic file (type png)
 
 <use images/combinedspecies.png>
@@ -1213,9 +1213,9 @@ les (x86)/MiKTeX 2.9/fonts/type1/urw/courier/ucrr8a.pfb><C:/Program Files (x86)
 /fonts/type1/urw/times/utmr8a.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type
 1/urw/times/utmr8a.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/urw/times
 /utmri8a.pfb>
-Output written on dissertation.pdf (73 pages, 3192373 bytes).
+Output written on dissertation.pdf (73 pages, 3193014 bytes).
 PDF statistics:
- 1048 PDF objects out of 1200 (max. 8388607)
+ 1050 PDF objects out of 1200 (max. 8388607)
  231 named destinations out of 1000 (max. 500000)
  700 words of extra memory for PDF output out of 10000 (max. 10000000)
 
