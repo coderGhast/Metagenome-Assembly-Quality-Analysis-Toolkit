@@ -1,21 +1,32 @@
 \chapter{Evaluation}
+This chapter attempts to evaluate my project as a whole, including how well I felt I carried out my analysis of the problem, designed and implemented the application, whether I feel it would be useful to anybody, whether the resulting application met the project objectives and what I could have done differently, or could be improved upon.
 
 \section{Requirements Analysis}
-How well did I assess the requirements of the project? How did this tie into my Project objectives? Did it impact my design? What about selecting to do GC content over k-mer frequency analysis? Paralysis of choice?
+When looking back on the original problem stated, the requirements I set for the application and the resulting application now that the project has finished, I both believe that I made some good choices and bad choices in what I selected to do, and whether it was worthwhile to produce for an actual user.
+
+On the one hand, by selecting to create a web service that allows users to put in FASTA files and inspect the contiguous reads within that file and carry out a number of quality inspections on the data is a great idea. Having a single place to do this with a page that allows the user to view a number of statistics about their data could be highly useful. However, when I think about my choice of working with GC content and Open Reading Frames, and not understanding the domain enough to implement them faster than I did, I feel like perhaps it would have been a better idea to start with k-mer frequency analysis, as this may have been a better measure of quality than what the current application does.
+
+While this may be the case, the way I did develop the application probably helped me understand the domain a little better than if I did begin with k-mer frequency analysis, even if I just consumed output from 3rd party software, and so while the application may lack in some usefulness, what I gained from following the route that I did may have been better in the long run, if I were to continue developing the application and add the functionality of k-mer frequency analysis.
+
+It is for this reason I also feel justified in designing my application as a web service, where adding additional functionality to serve to a user from somewhere it is hosted on allows multiple features to be added without the demand of processing power or memory on a users machine if the application were a regular software application for them to run locally. It does come with the downside that in order to be able to process very large user requests it needs to be hosted on a powerful machine, but as the cost of computing power and memory lowers year by year, it is possible to do this if the demand were there.
 
 \section{Technical Achievement}
-Do I think I did something technical? What did I actually learn? Was it useful to learn? Could i have done something better? Did the software meet the requirements set out? was it of good quality? Could the design have been done differently, or is it good? What about my technology decisions?
+The resulting application is a piece of software that carries out a number of tasks, and fulfills each of the functional requirements I set out to do, except for those previously mentioned, has test coverage for the functionality and could have a potentially useful role with those who deal with sequence assembly files. The technical challenge of implementing such an application began with understanding the domain, selecting suitable technologies and then carrying out the development within my development lifecycle plan with XP and Scrum.
+
+The application does give a user access to information about their assembly file that they wouldn't have unless they used multiple different tools elsewhere and combined those results themselves. It is built upon Spring Framework, using the MVC framework design pattern and presented as a web service with a lot of room to grow over time with new techniques for quality assessment. I believe that the technical achievement I made from developing this project is pretty good. I got to use technologies I was unfamiliar with (Spring Framework, Thymeleaf, Plotly.js), develop using an agile methodology to appropriately evolve the application design(XP, Scrum), use known software development techniques and practices (MVC, RESTful web service, etc) and came out with an application that produces results that can be tested against requirements.
+
+I am pleased with my choice of technologies, and know that while it would have been possibly to develop the application in a different language (Ruby, C++, etc) or even develop it as a stand-alone application and not as a web service, I stand by my decisions that they were what I felt were the most suitable choices for this application for my implementation, understanding and knowledges. There are a number of technical improvements that could be done, and these will be discussed in the next section.
 
 \subsection{Future Work}
 If I were to continue developing this project, what would I begin with, and how would I go from there? 
 \subsubsection{Improvements}
-What is in the code currently that could be improved? Refactoring? Functionality? Validation
+What is in the code currently that could be improved? Refactoring? Functionality? Validation? File upload?
 Improvements on the Superframe? Displaying GC content could be done with my own chart rather than with Plotly. Better way of reporting on when GC Content is drastically different. Window sizes that change and slide.
 \subsubsection{Additional Functionality}
 What do I feel I would like to implement? k-mer frequency analysis? Tie in to BLAST? File submission? More tests on larger systems? Floor is open from there to find other ways of determining quality.
 
 \section{Project Management}
-What was my process like? Did I find it helped or hindered? Could I have tried something different or been better at it? What was good about it?
+What was my process like? Did I find it helped or hindered? Could I have tried something different or been better at it? What was good about it? Was Scrum useful? Was XP useful? Was the Pomodoro Technique useful? How was my motivation over the projects lifetime?
 
 \section{Final Conclusion}
 Overall, how do I think the project did?
