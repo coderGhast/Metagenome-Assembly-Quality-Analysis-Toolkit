@@ -36,9 +36,23 @@ If we imagine each of the colours representing an individual species (though in 
 It is possible that the resulting contig is a valid genome that could be found in nature, where the particular sequences in the different coloured sections are shared between each colour `species' and so this contig could work. However, it is also likely that the different coloured sections are widly different than the natural connecting colours if instead this contig was made up of a single colour (in this figure, all yellow, all blue, etc). This would then be a chimera. This demonstrates that without some quality assessment tools to attempt to report on where these misaligns have occurred, a user may never know if what they have is good quality data or not.
 
 \subsection{Existing Software}
-There are a number of tools I discovered in my background research that attempt to aid in the quality assessment of metagenomic data, in particular MEGAN, a `next-generation metagenomic data, called MEtaGenomeANalyzer', which attempts to do a taxonomical analysis comparison to known reference data\cite{citeulike:10457549} and PRINSEQ, a tool which provides `summary statistics of FASTA (and QUAL) or FASTQ files in tabular and graphical form'\cite{citeulike:8714996}. When considering what my own application should do, I looked at the techniques used for PRINSEQ most, as these seemed to match up with what I thought would be useful to a user for my own application, and from discussing the topic with my supervisor I found techniques such as the GC Content distribution could be a good place to start.
+There are a number of tools I discovered in my background research that attempt to aid in the quality assessment of metagenomic data, in particular MEGAN, a `next-generation metagenomic data, called MEtaGenomeANalyzer', which attempts to do a taxonomical analysis comparison to known reference data\cite{citeulike:10457549} and PRINSEQ, a tool which provides `summary statistics of FASTA (and QUAL) or FASTQ files in tabular and graphical form'\cite{citeulike:8714996}.
 
-It was not just tools for metagenomic quality assessment I looked into. I also found the NCBI database and their BLAST tool\cite{citeulike:11826724}, and kept in mind these may be useful as I progressed through my applications development, and through reading an article that discussed the advantages of k-mer frequency analysis for quality assessment, I looked into the Jellyfish\cite{citeulike:8643499} and BFCounter\cite{citeulike:9639487} tools for just this role where I could potentially consume the output of their processing, although they took a step back in my mind while I considered what it was I actually wanted my application to be and worked out the requirements.
+% Paragraph about MEGAN
+
+% Paragraph about PRINSEQ
+
+When considering what my own application should do, I looked at the techniques used for PRINSEQ most, as these seemed to match up with what I thought would be useful to a user for my own application, and from discussing the topic with my supervisor I found techniques such as the GC Content distribution could be a good place to start.
+
+It was not just tools for metagenomic quality assessment I looked into. I also found the NCBI database and their BLAST tool\cite{citeulike:11826724}, and kept in mind these may be useful as I progressed through my applications development.
+
+% Paragraph about BLAST
+
+Through reading an article that discussed the advantages of k-mer frequency analysis for quality assessment, I looked into the Jellyfish\cite{citeulike:8643499} and BFCounter\cite{citeulike:9639487} tools for just this role where I could potentially consume the output of their processing, although they took a step back in my mind while I considered what it was I actually wanted my application to be and worked out the requirements.
+
+% Paragraph about Jellyfish
+
+% Paragraph about BFCounter
 
 %========== ANALYSIS =============
 
