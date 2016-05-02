@@ -38,21 +38,19 @@ It is possible that the resulting contig is a valid genome that could be found i
 \subsection{Existing Software}
 There are a number of tools I discovered in my background research that attempt to aid in the quality assessment of metagenomic data, in particular MEGAN, a `next-generation metagenomic data, called MEtaGenomeANalyzer', which attempts to do a taxonomical analysis comparison to known reference data\cite{citeulike:10457549} and PRINSEQ, a tool which provides `summary statistics of FASTA (and QUAL) or FASTQ files in tabular and graphical form'\cite{citeulike:8714996}.
 
-% Paragraph about MEGAN
+The purpose of MEGAN is to look at user uploaded data sets and compare their data against numerous reference databases of known sequences, and then take the resuling comparison data and display it to the user in an interactive analysis visualisation. it uses a number of techniques to format the users data to check against the reference databases to maximize useful results. The aim of MEGAN is to try to determine what is in the sequences the user provides, if they exist already and how they compare to known reference datasets.
 
-% Paragraph about PRINSEQ
+PRINSEQ is a web service (or standalone) tool written in Perl that lets users see statistical analysis data of their metagenome sequences through uploading FASTA files. It allows them to trim, filter and reformat their sequences, and a user can upload files of up to 600MB. Its aim is similar to the task set out for this project, in that it wishes to reduce the amount of time and money wasted on analyzing and interpreting poor metagenomic data.
 
 When considering what my own application should do, I looked at the techniques used for PRINSEQ most, as these seemed to match up with what I thought would be useful to a user for my own application, and from discussing the topic with my supervisor I found techniques such as the GC Content distribution could be a good place to start.
 
 It was not just tools for metagenomic quality assessment I looked into. I also found the NCBI database and their BLAST tool\cite{citeulike:11826724}, and kept in mind these may be useful as I progressed through my applications development.
 
-% Paragraph about BLAST
+BLAST (Basic Local Alignment Search Tool) allows user to search databases for different sequences and find regions of similarity between biological sequences. A user could upload their own sequence and have it aligned against known sequences to see if it already exists in the reference databases. This could be useful to be used in a metagenome quality toolkit, similar to MEGAN, through letting the user know that their assembly data has some similarities to existing sequences, which might indicate good quality.
 
 Through reading an article that discussed the advantages of k-mer frequency analysis for quality assessment, I looked into the Jellyfish\cite{citeulike:8643499} and BFCounter\cite{citeulike:9639487} tools for just this role where I could potentially consume the output of their processing, although they took a step back in my mind while I considered what it was I actually wanted my application to be and worked out the requirements.
 
-% Paragraph about Jellyfish
-
-% Paragraph about BFCounter
+Jellyfish is a k-mer counting application that runs on the command line and uses the CPUs `compare and swap' function and encoding with a hash table to increase efficiency. On the other hand, BFCounter uses a Bloom Filter (a probabilistic data structure) to count k-mers, counting those k-mers that appear more than once and ignoring the singleton k-mers, as they are most likely not important to the data. Both take different methods for counting k-mers, and find their own ways for efficiency. If I wished to implement some kind of k-mer frequency analysis tool into my application, I would need to look into efficiently counting k-mers too.
 
 %========== ANALYSIS =============
 

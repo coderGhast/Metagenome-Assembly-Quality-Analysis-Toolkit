@@ -1,6 +1,6 @@
 \addvspace {10\p@ }
 \contentsline {figure}{\numberline {1.1}{\ignorespaces A very small example of a number of reads being taken into an assembler and the output of a contig where there may be a chimera.\relax }}{2}{figure.caption.3}
-\contentsline {figure}{\numberline {1.2}{\ignorespaces A small example of the contents of a FASTA file, with very short contigs. The example is just to show the format of how multiple contiguous reads are stored in the same FASTA file.\relax }}{6}{figure.caption.4}
+\contentsline {figure}{\numberline {1.2}{\ignorespaces A small example of the contents of a FASTA file, with very short contigs. The example is just to show the format of how multiple contiguous reads are stored in the same FASTA file.\relax }}{7}{figure.caption.4}
 \contentsline {figure}{\numberline {1.3}{\ignorespaces A use case diagram demonstrating the expected functionality for a user based on the functional requirements laid out in this section.\relax }}{8}{figure.caption.5}
 \addvspace {10\p@ }
 \contentsline {figure}{\numberline {2.1}{\ignorespaces Adding an object to the Model via the Controller to be accessed in the View. The View here is `list', which is a Thymeleaf template that will dynamically build the page using the data from the Model added here.\relax }}{13}{figure.caption.6}
