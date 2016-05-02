@@ -2,3 +2,9 @@ contigs.fa
 contig.1274754.fa
 Application/.idea/workspace.xml
 *.class
+Web Application/target/maven-status/
+Web Application/target/maven-archiver/
+Web Application/target/metagenomequalitytool-1.0-SNAPSHOT.jar.original
+Web Application/target/metagenomequalitytool-1.0-SNAPSHOT.war
+Web Application/target/metagenomequalitytool-1.0-SNAPSHOT/
+Web Application/target/surefire-reports/
