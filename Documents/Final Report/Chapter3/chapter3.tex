@@ -7,7 +7,7 @@ The application was developed primarily on a Fujitsu Lifebook A series with an I
 \section{Features}
 \subsection{Reading User Input}
 \subsubsection{Implementation}
-The user input was one of the first parts of the application to be implemented, and consisted of reading in a .fa FASTA file and just outputting the content of the file to the console and return it from the method to be tested against with automated unit tests. It was developed further to extract out the header, checking that it began with the `\textgreater ' character and then every other line was included as part of that contig. 
+The user input was one of the first parts of the application to be implemented, and consisted of reading in a FASTA file and outputting the content of the file to the console. Using TDD, this was tested by matching the output of the file read from a specific test file to the known file contents. The process was developed further to extract out the header that describes each contig, checking that it began with the `\textgreater ' character and then every other line after this header was included as part of that contigs sequence data. 
 
 Originally it dealt with only one contig at a time, but was then expanded to be able to read in a full list of contigs and separate them based on where the header line starts. The code was eventually modified so that the user could paste data, that would be broken into components and processed in the same way. This was for the pasting of the user data rather than file upload, as I decided I would rather have pasted data than uploads for the current state of the application.
 
@@ -18,7 +18,7 @@ Originally it dealt with only one contig at a time, but was then expanded to be 
 \end{figure}
 
 \subsubsection{Issues}
-It took some time to deal with the formatting of the file and knowing when one contiguous read starts and one ends. There was some issue with the escape/return characters in the dealing of pasted content by a user, but this was solved by breaking the pasted content into an array of its components.
+It took some time to deal with the formatting of the file and knowing when one contig starts and one ends. The current system effectively finds every contig within the user content and extracts them out into objects, and so this is no longer an issue. It was solved through detecting when a new header contig header appears, put the contig sequence data and previous header into a new ContiguousRead object (if there is any data yet), and then start the reading process again under this new header. The final contig is constructed by reaching the end of the file and packing up whatever data is left over into a new ContiguousRead object.
 
 While not an issue as such, the original version of the application would carry out the quality assessment of each contig as and when they were read in, to avoid holding too much data in memory. As the design evolved this was no longer a possibility, as it didn't allow the user to see their contigs before they were processed, or do any additional inspection on the contigs without holding the entire user data submitted in memory and going through it a second time upon an inspection request to find the contig they wanted. This option is still a possibility, but is an optimization aspect that wasn't in scope for the project. Additionally, the separation of responsibilities is better in this version of the code after being refactored from the time when the read class both read and assessed the contigs.
 
@@ -31,7 +31,7 @@ Counting the GC content of the application involved breaking up the contig chara
 \begin{figure}[H]
 \centering
 \includegraphics[width=0.9\textwidth]{images/splitgcwindows}
-\caption{The code for splitting a contiguous read into windows available for calculating the GC content window percentages.}
+\caption{The code for splitting a contig into windows available for calculating the GC content window percentages.}
 \end{figure}
 
 Once split, the GcWindows are passed to have their percentages calculated and added to an ArrayList of Doubles This is used for calculation with the mean, standard deviation and for returning results to the user for use in the View.
@@ -65,7 +65,7 @@ The red bars of the GC chart displaying where the percentage of a window is over
 \caption{`GcContentViewData', the object provided to the View in order to display the GC content data to the user.}
 \end{figure}
 
-The final thing to add was the Mean line. This is just displaying to the user where the mean of all the GC windows lie, and helps with the visualization of if any windows of their contiguous read look like they might have issues.
+The final thing to add was the Mean line. This is just displaying to the user where the mean of all the GC windows lie, and helps with the visualization of if any windows of their contig look like they might have issues.
 \subsubsection{Issues}
 The main issue I had with displaying the GC content percentages with Plotly.js was getting data to actually display as I was unfamiliar with Plotly.js and Thymeleaf once I started using the Spring Framework. Thymeleaf makes getting data from the Objects in the Model very easy and simple, but since I was trying to integrate two technologies together that I had never used before, it took some time to find the right way of accessing the data from my Object through Thymeleaf, into JavaScript and then the correct format for use by Plotly.js.
 
@@ -73,18 +73,18 @@ The next issue was trying to get the line for the Mean to show. The way I got th
 
 \subsection{Finding Open Reading Frames}
 \subsubsection{Implementation}
-The implementation of Open Reading Frames happened in a few steps, with the design and code evolving as I understood more what they were and how best to present the results. At first, I was only finding a single, longest ORF Location, as I did not fully comprehend what an ORF was. This was just looking at a contig and finding the first start Codon of ATG and the last stop Codon of TAG/TAA/TGA. Once I understood them though, the process became about how to find whatever ORF Locations I could. Using Test Driven Development was extremely useful for this step, as I wrote tests for finding specific ORF Locations in small sequences I created myself and ran the code against them.
+The implementation of Open Reading Frames happened in a few steps, with the design and code evolving as I understood more what they were and how best to present the results. At first, I was only finding a single, longest ORF Location, as I did not fully comprehend what an ORF was. This was just looking at a contig and finding the first start codon of ATG and the last stop codon of TAG/TAA/TGA. Once I understood them though, the process became about how to find whatever ORF Locations I could. Using Test Driven Development was extremely useful for this step, as I wrote tests for finding specific ORF Locations in small sequences I created myself and ran the code against them.
 
-After a number of attempts at trying to find the ORF Locations within a contig frame, I settled on a method of going through the entire frame, breaking it up into characters of 3 and only keeping the start and stop Codons in lists of each. Each Codon was stored with data about where it starts and ends, in order to be able to later reconstruct the contig between a start and stop Codon based on the character positions.
+After a number of attempts at trying to find the ORF Locations within a contig frame, I settled on a method of going through the entire frame, breaking it up into characters of 3 and only keeping the start and stop codons in lists of each. Each codon was stored with data about where it starts and ends, in order to be able to later reconstruct the contig between a start and stop codon based on the character positions.
 
 \begin{figure}[H]
 \centering
 \includegraphics[width=0.9\textwidth]{images/orffind2}
-\caption{Finding all of the start and stop Codons from within the passed frame from the contig.}
+\caption{Finding all of the start and stop codons from within the passed frame from the contig.}
 \end{figure}
 
 
-Each frame is separated by creating a substring of the original contiguous read, removing 0, 1 and then 2 characters for the first three frames, and the same for the reverse frames but with the contiguous read sequence reversed with the opposing base pair of each character used. 
+Each frame is separated by creating a substring of the original contig, removing 0, 1 and then 2 characters for the first three frames, and the same for the reverse frames but with the contig sequence reversed with the opposing base pair of each character used. 
 
 \begin{figure}[H]
 \centering
@@ -92,7 +92,7 @@ Each frame is separated by creating a substring of the original contiguous read,
 \caption{Extracting each frame and calling to run the ORF Finding process.}
 \end{figure}
 
-For each ORF Location found in a reverse frame, the start and stop indexes are swapped, representing that what is the `Start' of an ORF Location is actually closer to the end of the contiguous read. This is so that it can be displayed appropriately in the View, and match up with the proper direction with the forward frames.
+For each ORF Location found in a reverse frame, the start and stop indexes are swapped, representing that what is the `Start' of an ORF Location is actually closer to the end of the contig. This is so that it can be displayed appropriately in the View, and match up with the proper direction with the forward frames.
 
 \begin{figure}[H]
 \centering
@@ -100,24 +100,24 @@ For each ORF Location found in a reverse frame, the start and stop indexes are s
 \caption{Getting the base pair characters of a reverse frame is as simple as a switch statement and building the reversed contig from back to front.}
 \end{figure}
 
-Through this process, it made it possible to find which Codons came before and after which within the contiguous read in order to find which would construct the longest ORF Locations, which Start Codons were redundant (as they were between an earlier start Codon and the next Stop Codon), and in my first completed version of the algorithm, where the last Stop Codon before the next Start Codon was.
+Through this process, it made it possible to find which codons came before and after which within the contig in order to find which would construct the longest ORF Locations, which start codons were redundant (as they were between an earlier start codon and the next stop codon), and in my first completed version of the algorithm, where the last stop codon before the next start codon was.
 
-At this time, I still had a misunderstanding about protein coding regions, in that I believed the end of an ORF Location was at the last stop Codon before the next start Codon, when in fact it should have been the first stop Codon it reaches is the end of the current Codon. This was a simple fix though as it just involved removing a section of my code and fixing my tests.
+At this time, I still had a misunderstanding about protein coding regions, in that I believed the end of an ORF Location was at the last stop codon before the next start codon, when in fact it should have been the first stop codon it reaches is the end of the current codon. This was a simple fix though as it just involved removing a section of my code and fixing my tests.
 
 \begin{figure}[H]
 \centering
 \includegraphics[width=0.9\textwidth]{images/orffind3}
-\caption{`Zipping' together ORF Locations from start and stop Codons within the frame.}
+\caption{`Zipping' together ORF Locations from start and stop codons within the frame.}
 \end{figure}
 
 Once each frame has been processed to find the ORF Locations within them, the results of each frame are combined together in a single OpenReadingFrameResult. Each ORF Location is aware of what frame it belongs to, and so combining them all into one result doesn't make a difference when determining what ORF Location belongs where.
 
 \subsubsection{Issues}
-The two main issues with implementing the Open Reading Frame finding algorithms were my lack of understanding of what they were when I began, leading to the second issue of implementing more than was necessary. It took me longer than I had anticipated to implement the code for finding ORF Locations because I believed I had the additional requirement task of finding the last stop Codon before the next start Codon, where every stop Codon between the initial start Codon and that last stop Codon was to be included in the ORF Location but ignored as an actual start and stop.
+The two main issues with implementing the Open Reading Frame finding algorithms were my lack of understanding of what they were when I began, leading to the second issue of implementing more than was necessary. It took me longer than I had anticipated to implement the code for finding ORF Locations because I believed I had the additional requirement task of finding the last stop codon before the next start codon, where every stop codon between the initial start codon and that last stop codon was to be included in the ORF Location but ignored as an actual start and stop.
 
-Thinking up how to do this algorithmically took some planning and time, and eventually I came to the conclusion of finding all start and stop Codons and then running a while loop, checking that there was at least 1 of each left in each list to make an ORF Location, where the Start came after the Stop (for reverse frames, this logic still applies as the indexes are only reverse after the ORF Locations have been constructed) and then carrying out a number of conditional checks to remove any start and stop Codons that came between the longest ORF that could possibly be made.
+Thinking up how to do this algorithmically took some planning and time, and eventually I came to the conclusion of finding all start and stop codons and then running a while loop, checking that there was at least 1 of each left in each list to make an ORF Location, where the start came after the stop (for reverse frames, this logic still applies as the indexes are only reverse after the ORF Locations have been constructed) and then carrying out a number of conditional checks to remove any start and stop codons that came between the longest ORF that could possibly be made.
 
-Once I had realized this was erroneous and the first stop Codon encountered is the actual end of an ORF Location and not to continue, it was too late to recover any time and I just had to remove the code that caused the issue and rewrite my tests to match the actual expected outcome. Aside this, once I designed the code based around the `zipping' of start and stop Codons together, the implementation was relatively simple, using unit tests to ensure I was correctly implementing the algorithm for expected results.
+Once I had realized this was erroneous and the first stop codon encountered is the actual end of an ORF Location and not to continue, it was too late to recover any time and I just had to remove the code that caused the issue and rewrite my tests to match the actual expected outcome. Aside this, once I designed the code based around the `zipping' of start and stop codons together, the implementation was relatively simple, using unit tests to ensure I was correctly implementing the algorithm for expected results.
 
 \subsection{Displaying ORF Locations}
 \subsubsection{Implementation}
@@ -135,7 +135,7 @@ Finding a click within a canvas frame is as simple as checking if the click is h
 \caption{Finding if a click if within an ORF Location is as simple as going through the list of ORF Locations, only checking against those within the same frame as the click, then looking at whether the click is within the start and stop points of an ORF Location within the canvas, based on the size and location of where it was painted (for reverse frames, the start and stop points are swapped, as reverse frames are displayed in the same direction as forward frames, with the indexes in the right order for a reverse frame).}
 \end{figure}
 
-When an ORF Location is clicked to be viewed in more detail, the characters within that sequence needed to be formatted to be able to be reasonably displayed. This process took some time to build, and through refactoring was re-written twice over until I found a result that was reasonably fast at formatting and worked the way I wanted it to. This is that it highlighted every start and stop Codon within a sequence, split the characters into groups of 3, every 15 groups of 3, a new line is to be created and where the start of the line has the index within the contiguous read where that line of the ORF Location begins.
+When an ORF Location is clicked to be viewed in more detail, the characters within that sequence needed to be formatted to be able to be reasonably displayed. This process took some time to build, and through refactoring was re-written twice over until I found a result that was reasonably fast at formatting and worked the way I wanted it to. This is that it highlighted every start and stop codon within a sequence, split the characters into groups of 3, every 15 groups of 3, a new line is to be created and where the start of the line has the index within the contig where that line of the ORF Location begins.
 
 \begin{figure}[H]
 \centering
@@ -144,7 +144,7 @@ When an ORF Location is clicked to be viewed in more detail, the characters with
 \end{figure}
 
 \subsubsection{Issues}
-When formatting the ORF Location characters into the list, I found I kept having results where the newline break would be incorrect, or not all of the start Codons were highlighted. This issue was because the way I built the formatted text was by adding text into an array, and then breaking up the text to add newlines whenever the array had a remainder of zero when divided by 15. This meant that it was including the indicator of what index the line of the ORF Location was on as part of the calculation. The result was that the line would be split incorrectly. Once I changed how the formatting was done and included the character index as part of the first set of characters of each line, the calculation worked correctly for splitting the lines where I wanted them to be split.
+When formatting the ORF Location characters into the list, I found I kept having results where the newline break would be incorrect, or not all of the start codons were highlighted. This issue was because the way I built the formatted text was by adding text into an array, and then breaking up the text to add newlines whenever the array had a remainder of zero when divided by 15. This meant that it was including the indicator of what index the line of the ORF Location was on as part of the calculation. The result was that the line would be split incorrectly. Once I changed how the formatting was done and included the character index as part of the first set of characters of each line, the calculation worked correctly for splitting the lines where I wanted them to be split.
 
 Although not an issue as such, my first version of drawing the canvas frames involved a single canvas. While the displayed result was the same, it meant that the detecting of user clicks within ORF Location algorithm took longer to process as it had to determine which frame the user was clicking on and then find if it was within an ORF Location. Additionally, having it all in one canvas made the formatting of the canvas results on the page a little more challenging as I couldn't place values (like the frame indicator) exactly next to each frame without painting them within the canvas.
 

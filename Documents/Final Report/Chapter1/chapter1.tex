@@ -3,7 +3,7 @@
 % This section should discuss your preparation for the project, including background reading, your analysis of the problem and the process or method you have followed to help structure your work.  It is likely that you will reuse part of your outline project % specification, but at this point in the project you should have more to talk about. 
 
 \section{Introduction}
-The project aim was to create an application that could report on the quality of a metagenome assembly  provided by the user, presenting them with feedback about the contiguous reads contained in their data. The requirements for the project topic were very open, as there are multiple techniques for attempting to report the quality of a single species genome assembly, and while some can be used for metagenome assemblies, it was believed that no one tool covered this area yet with numerous techniques. Likewise, the way in which the results could be presented to the user was not established and open to my own interpretation.
+The project aim was to create an application that could report on the quality of a metagenome assembly provided by the user, presenting them with feedback about the contiguous sequences contained in their data. The requirements for the project topic were very open, as there are multiple techniques for attempting to report the quality of a single species genome assembly, and while some can be used for metagenome assemblies, it was believed that no one tool covered this area yet with numerous techniques. Likewise, the way in which the results could be presented to the user was not established and open to my own interpretation. There are definitions for technical terms in appendix E.
 
 %======= BACKGROUND ==========
 
@@ -19,9 +19,11 @@ Metagenomics is a hot and interesting topic in the bioinformatics field, and its
 
 \subsection{Understanding Quality}
 
-Considering the nature of metagenomics and the unknowns, it becomes clear quite quickly that when a sample you have is run through an assembler in an attempt to create a genome for sequencing, without the proper tools to quality assess your data you cannot be sure if what you are creating is an actual thing that could exist in nature. The process of taking a sample through to sequencing with metagenomic data can be very error prone, leading to misassemblies with duplicate or short reads, or combining reads together to make chimeric contiguous reads (contig).\cite{citeulike:3746363}
+Considering the nature of metagenomics and the unknowns, it becomes clear quite quickly that when taking a metagenomic sample from sequencing to assembling there can be a number of areas where errors can be introduced. Without the proper tools to quality assess these contiguous sequences a user cannot be sure if what they are creating is an actual thing that could exist in nature, a part of a genome or a chimera.
 
-A chimieric contig is an instance where an assembler has put together reads from a sample that it believed were part of the same whole, and yet were in fact of different species/sub-species, and so creates a contig that does not actually exist in nature. It can be understood then that if a user were to sequence this, unless that is the result that they wanted, it won't be of any use to them. Without the proper tools, how would they know that their assembly data contains chimeric contigs and are not just wasting their time and money?
+The process of taking a sample through to sequencing with metagenomic data can be very error prone, leading to misassemblies with duplicate or short reads, or combining reads together to make chimeric contigs.\cite{citeulike:3746363} When we take a sample, it gets chopped into short pieces that are then run through a sequencer. The sequencer will output many short `reads' (between 50-100 base pairs of DNA). Within these reads there many be many overlapping copies, and so when an assembler is used to put the reads together, overlaps are combined to create longer contiguous sequences. A perfect assembly of a single organism could produce a full genome sequence. However, with metageomics it is likely that there will be many contigs, of which some may be genomes and others may be smaller pieces of genomes or even pseudo-genomies made up of chimeric data.
+
+A chimieric contig is an instance where an assembler has put together reads from a sample that it believed were part of the same whole, and yet were in fact of different species/sub-species, and so creates a contig that does not actually exist in nature. It can be understood then that if a user were to try and analyze and use this, unless that is the result that they wanted, it would be unlikely to produce useful or meaningful results. Without good quality assessment tools, how would they know that their assembly data contains chimeric contigs and are not just wasting their time and money?
 
 We can visualize this through  the diagram below, where we take a number of reads, put them through an assembler and the output is a number of contigs that the assembler believes it has created correctly, but may in fact be chimeric.
 
@@ -76,9 +78,9 @@ FR3 `Conduct a GC Content percentage analysis in sliding windows of a size set b
 The GC content is the percentage of `G' (guanine) and `C' (cytosine) characters within a sequence\cite{citeulike:14021291}. When the application takes a contig, it should break the contig up into windows of a size set by the user. If a contig was of length 30,000, they might break it into 100 windows of 300, for example. These window sizes should then have their GC content percentage calculated, and the mean of the entire contigs GC content worked out. Using these values it then becomes possible to detect potential anomalies in the percentages of individual windows that have a percentage value drastically different than the mean.
 
 \subsubsection{Open Reading Frame Locations}
-FR4 `To confirm if a GC window is outside of the mean by misalign, Open Reading Frame (ORF) Locations should be found where the GC content would naturally be higher in protein coding regions.'
+FR4 `ORF locations should be highlighted to indicate whether a GC window is outside of the mean because it aligns with an ORF location rather than being a chimeric change.'
 
-This addition to the requirements came later in the projects development as I came to understand GC content and how a window that looks like an area of a misalign may actually not be. We can look at a contiguous read and find protein coding regions through the use of Open Reading Frames\cite{orfdefinition}, where the GC content percentage is often naturally higher than outside of these regions.\cite{JEU:JEU239}
+This addition to the requirements came later in the projects development as I came to understand GC content and how a window that looks like an area of a chimeric change may actually not be. We can look at a contiguous sequence and find Open Reading Frame\cite{orfdefinition} locations, where the GC content percentage is often naturally different than outside of these regions.\cite{JEU:JEU239} This is due to ORFs being subsequences of DNA that may encode proteins, where the GC content is often higher.
 
 An ORF Location is found through looking for where a location starts with ATG and where it ends with TGA, TAA or TAG. There are 6 frames to be found in sequences, where three are `forward' and 3 are `backwards' with the opposite characters of the base pairs to the forward frames. For both forward and backwards, the first frame is the original sequence, the second frame begins one character into the sequences and the third frame begins two characters into the sequence. A very small example just for basic understanding is provided below:
 
@@ -110,33 +112,33 @@ Conducting k-mer frequency analysis in window sizes has a similar output as GC c
 This was set as a stretch requirement, as the process of efficiently conducting k-mer frequency analysis and the research into the possibility of writing my own software to do it or consuming output of another application was expected to take over the time for the project, after my background reading and understanding was completed and the other features previously mentioned implemented.
 
 \subsubsection{NCBI reference data}
-FR6 `The application should compare the contiguous read data to known reference data in the NCBI database with BLAST.'
+FR6 `The application should compare the contigs to known reference data in the NCBI database with BLAST.'
 
-Using the known reference data, much like with MEGAN, it would be possible to see if any of the contigs in the user data match to known reference data and so can be considered good quality. This was a stretch requirement though, with the idea more in mind for if the application were to be continued to be developed after the project deadline.
+Using the known reference data, much like with MEGAN, it would be possible to see if any of the contigs in the user data match to known reference data. If a full contig matches a species with BLAST, perhaps it is of good quality and demonstrates a genome. However if a contig matches one species from BLAST in one half of the data and the other half matches another species from BLAST, then we could conclude that this contig shows evidence of being a chimeric contig. This was a stretch requirement though, with the idea more in mind for if the application were to be continued to be developed after the project deadline.
 
 \subsection{Quality report and data input}
 \subsubsection{Read user input in FASTA format}
 FR7 `A user should be able to paste or upload their data in FASTA format.'
 
-The FASTA format is a commonly used format for sequence data. It is `a text-based format for representing either nucleotide sequences or peptide sequences' \cite{fastaformat}. It is formatted in the way that can be seen in the figure below. I set myself the task for allowing the upload and paste of data, beginning with pasting the data into a form, as uploading data could add a larger realm of security and data size issues and so I wanted to have the simplest thing possible first.
+The FASTA format is a commonly used format for sequence data. It is `a text-based format for representing either nucleotide sequences or peptide sequences' \cite{fastaformat}. It is formatted to have a header of single line description, containing information about the way the data was created, and then lines of sequence data afterwards. An example of this can be seen in the figure below. I set myself the task for allowing the upload and paste of data, beginning with pasting the data into a form, as uploading data could add a larger realm of security and data size issues and so I wanted to have the simplest thing possible first.
 
 \begin{figure}[H]
 \centering
 \includegraphics[width=0.5\textwidth]{images/fastaexample}
-\caption{A small example of the contents of a FASTA file, with very short contigs. The example is just to show the format of how multiple contiguous reads are stored in the same FASTA file.}
+\caption{A small example of the contents of a FASTA file, with very short contigs. The example is just to show the format of how multiple contigs are stored in the same FASTA file.}
 \end{figure}
 
 For the FASTA format my application accepted, I planned for it to begin only taking into account ATGC \& N as characters to deal with, where N was `unknown/unclear' and the other characters were valid. Uppercase and lowercase characters would be preserved in any output display of the application, but capitalization would not taken into account for any of the processes as they did not make a difference to the quality assessment techniques.
 
 \subsubsection{Display a list of the contigs}
-FR8 `A user should be able to see the contiguous reads listed in their FASTA data.'
+FR8 `A user should be able to see the contiguous sequences listed in their FASTA data.'
 
 I decided it would be a good idea to display to the user the list of contigs that their file contained, with small bits of relevant information, such as the size of the contig, the header of it and the previously mentioned `N' count and percentage. From here a user would be able to select a contig they wish to further inspect for quality issues.
 
 \subsubsection{User control over GC Content, ORF Location and k-mer frequency analysis parameters}
 FR9 `When conducting a quality inspection, a user should be able to adjust the parameters of the methods based upon their expectations, data input and choice.'
 
-Since the data uploaded by a user would have been assembled from reads of a particular length, the appropriate size of GC content and k-mer frequency windows, minimum size of ORF Location lengths and minimum length of contigs should be set by the user. It could have been a possibility to guess what a good size would be for the user (i.e. find the shorted contig in the data and consider that that might be the size of a single read, and suggest length parameters based on that).
+Since the data uploaded by a user would have been assembled from reads of a particular length, the appropriate size of GC content and k-mer frequency windows, minimum size of ORF Location lengths and minimum length of contigs should be set by the user. It could have been a possibility to guess what a good size would be for the user (i.e. find the shortened contig in the data and consider that that might be the size of a single read, and suggest length parameters based on that).
 
 \subsubsection{Visual reports of the quality inspection methods}
 FR10 `A user should be able to see a visual representation of a contigs GC content and any anomalies.'

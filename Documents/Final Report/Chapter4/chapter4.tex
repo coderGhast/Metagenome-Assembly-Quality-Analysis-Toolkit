@@ -90,15 +90,18 @@ For testing the speed performance of the web pages of the applications loading t
 My results showed me that for the most part there was not much I could do to improve my application outside adding expiry headers to some session variables and implementing a Content Delivery Network (CDN), which was far outisde the scope of the project.
 
 \subsection{Manual Testing}
-A number of artificial test files were created in order to be used for testing. Some of these were used in automated tests, such as checking for a files existence and possibility of being read, or throwing exceptions when a test file did not exist while other files were for running manually, either being entirely artificial and checking for individual expected behavours or composed of actual data from multiple species that I manually split and combined together to view the results of. The completely artificial file data is included in the appendices. While the results of the mixed real species data is not included, the results of one very obvious combining of species can be seen in the figure below.
+A number of artificial files were created in order to be used for testing. Some of these were used in automated tests, such as checking for a files existence and possibility of being read, or throwing exceptions when a test file did not exist while other files were for running manually, either being entirely artificial and checking for individual expected behavours, or composed of actual data from multiple species that I manually split and combined together to view the results of. The completely artificial file data is included in the appendices. While the results of the mixed real species data is not included, the results of one very obvious combining of species can be seen in the figure below.
 
 \begin{figure}[H]
 \centering
 \includegraphics[width=0.7\textwidth]{images/combinedspecies}
-\caption{Combining two species contiguous reads together at 50\% of each of the file (first half one species, second half another species), we see a very obvious split in the GC chart.}
+\caption{Combining two species contigs together at 50\% of each of the file (first half one species, second half another species), we see a very obvious split in the GC chart.}
 \end{figure}
 
 Running this test showed me that it is possible to see where there is a huge change in GC content, but that the threshold won't pick it up because with a case like this, while extremely unlikely to happen where there is a mix of only two species, the threshold only shows those outside of the mean, not drastic changes. It highlights that there is room for improvement with detecting these changes and reporting on them to the user, rather than having them infer it themselves.
+
+\subsubsection{Real Data}
+I also tested the application using real metagenomic data. This data was provided by Sam Nicholls, and was taken from the gut of a limpet. There is a large file of thousands of contigs, with the shortest being under a hundred bases long and the longest being above twenty five thousand bases. Running this real data and looking at both the short and long contigs allowed me to see that my application did produce results for displaying areas where there could be chimeric regions in contigs, displaying ORFs and highlighting areas where an ORF may align with a highlighted GC content window.
 
 \subsubsection{Test Table}
 For confirming functional requirements were met and testing things that couldn't be done with automation, I produced a test table with tests matching requirements, expected results and avoiding unwanted results. The tests from the table were carried out by fulfilling the action in the table, and then viewing the results and marking whether the expectations were met or not. You can see the System Test Table included in the Appendices.
