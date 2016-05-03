@@ -101,10 +101,6 @@ A number of artificial test files were created in order to be used for testing. 
 Running this test showed me that it is possible to see where there is a huge change in GC content, but that the threshold won't pick it up because with a case like this, while extremely unlikely to happen where there is a mix of only two species, the threshold only shows those outside of the mean, not drastic changes. It highlights that there is room for improvement with detecting these changes and reporting on them to the user, rather than having them infer it themselves.
 
 \subsubsection{Test Table}
-For confirming functional requirements were met and testing things that couldn't be done with automation, I produced a test table with tests matching requirements, expected results and avoiding unwanted results. The tests from the table were carried out by fulfilling the action in the table, and then viewing the results and marking whether the expectations were met or not.
-\newline
-System test table overleaf.
-
-\includepdf[pages=-]{assets/systemtesttablekhimeta.pdf}
+For confirming functional requirements were met and testing things that couldn't be done with automation, I produced a test table with tests matching requirements, expected results and avoiding unwanted results. The tests from the table were carried out by fulfilling the action in the table, and then viewing the results and marking whether the expectations were met or not. You can see the System Test Table included in the Appendices.
 
 When it came to running large files, or files with many contigs, I ran a number of my laptop and for the most part it handled them quite well with a few hundred contigs of moderate length, although with contigs in the sizes of a hundred thousand characters and up, the process of reading in the contigs and then processing one starts taking noticeably longer. I believe this is a restriction with my own machine, however, as should the JVM be allotted enough memory while the application is hosted on a larger, faster machine it is likely it could perform far better.

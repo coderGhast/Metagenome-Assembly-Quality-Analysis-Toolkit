@@ -67,6 +67,14 @@ N.~C. B. I.~R. Coordinators, ``{Database resources of the National Center for
   have understood a lot less about my project while beginning my development.
   \end{quotation}
 
+\bibitem{thymeleaf}
+{Daniel Fernández}, ``{thymeleaf/thymeleaf},'' [Online] Available:
+  \url{https://github.com/thymeleaf/thymeleaf}, 2016, {[Accessed on: 27 April
+  2016]}.
+ \begin{quotation}\noindent The GitHub repository of Thymeleaf, for use with
+  Java Spring Boot. Invaluable for me when accessing objects from the Model via
+  the View of my web service. \end{quotation}
+
 \bibitem{citeulike:10457549}
 D.~Huson and S.~Mitra, ``{Introduction to the Analysis of Environmental
   Sequences: Metagenomics with MEGAN},'' in \emph{Evolutionary Genomics}, ser.
@@ -227,14 +235,6 @@ J.~C. Segen, \emph{{The dictionary of modern medicine}}.\hskip 1em plus 0.5em
   \url{https://jquery.com/}, 2016, {[Accessed on: 1 May 2016]}.
  \begin{quotation}\noindent jQuery, used for the code for tabs in CSS3, and for
   some click detection. \end{quotation}
-
-\bibitem{thymeleaf}
-{The Thymeleaf Team}, ``{thymeleaf/thymeleaf},'' [Online] Available:
-  \url{https://github.com/thymeleaf/thymeleaf}, 2016, {[Accessed on: 27 April
-  2016]}.
- \begin{quotation}\noindent The GitHub repository of Thymeleaf, for use with
-  Java Spring Boot. Invaluable for me when accessing objects from the Model via
-  the View of my web service. \end{quotation}
 
 \bibitem{citeulike:11448654}
 T.~Thomas, J.~Gilbert, and F.~Meyer, ``{Metagenomics - a guide from sampling to
