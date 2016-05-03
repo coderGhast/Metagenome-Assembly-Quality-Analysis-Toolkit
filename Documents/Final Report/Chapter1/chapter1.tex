@@ -61,22 +61,22 @@ After understanding the project topic and problem a little better, I decided upo
 The quality assessment had to use a number of methods suitable enough to produce some data or statistics that could indicate to the user a measure of quality of their assembly data. For this end, I decided upon a number of objectives:
 
 \subsubsection{Contig length}
-`Give the user control over the minimum length a contig should be to be considered.'
+FR1 `Give the user control over the minimum length a contig should be to be considered.'
 
 This measure would be good in displaying where an assembler could not find any reads to match with a single read and so didn't do anything more with it than output it as a contig of an individual read length. This would most likely indicate that it is of no use to a user, as a contig the size of a read length is unlikely to contain any useful genome data. Allowing a user to set the minimum length threshold lets them set their own size, be it the known read length size of their data, or a size they think would be appropriate to start seeing some usable data from contigs with length over a particular amount/number of read lengths.
 
 \subsubsection{Number of unknown characters}
-`The application should count the number of unknown (N) characters within a contig.'
+FR2 `The application should count the number of unknown (N) characters within a contig.'
 
 When an assembler cannot understand what to do with a character, or a sequence of characters, it may insert an `N' character. Indicating to a user how many of these exist in a contig, and what percentage of the whole they make up is a helpful indication of whether their data is of good quality or not, with the less or no unknowns the better the quality.
 
 \subsubsection{GC Content}
-`Conduct a GC Content percentage analysis in sliding windows of a size set by the user.'
+FR3 `Conduct a GC Content percentage analysis in sliding windows of a size set by the user.'
 
 The GC content is the percentage of `G' (guanine) and `C' (cytosine) characters within a sequence\cite{citeulike:14021291}. When the application takes a contig, it should break the contig up into windows of a size set by the user. If a contig was of length 30,000, they might break it into 100 windows of 300, for example. These window sizes should then have their GC content percentage calculated, and the mean of the entire contigs GC content worked out. Using these values it then becomes possible to detect potential anomalies in the percentages of individual windows that have a percentage value drastically different than the mean.
 
 \subsubsection{Open Reading Frame Locations}
-`To confirm if a GC window is outside of the mean by misalign, Open Reading Frame (ORF) Locations should be found where the GC content would naturally be higher in protein coding regions.'
+FR4 `To confirm if a GC window is outside of the mean by misalign, Open Reading Frame (ORF) Locations should be found where the GC content would naturally be higher in protein coding regions.'
 
 This addition to the requirements came later in the projects development as I came to understand GC content and how a window that looks like an area of a misalign may actually not be. We can look at a contiguous read and find protein coding regions through the use of Open Reading Frames\cite{orfdefinition}, where the GC content percentage is often naturally higher than outside of these regions.\cite{JEU:JEU239}
 
@@ -103,20 +103,20 @@ ATGCGCCATCAA
 By finding the ORF Locations, we can use these in the quality report to match up to windows that may at first seem like anomalies in the contig where it is instead actually a natural occurrence. There is a preexisting tool for this ORF finding functionality by NCBI\cite{orffinder}. While it might not be the case that an ORF Location matches with an out of threshold GC content window, or that they do match but it is still in fact an anomaly, it was a requirement of the application I wished to include in order to give the user another tool to use for inspecting their data.
 
 \subsubsection{K-mer frequency analysis}
-`The application should conduct a k-mer frequency analysis, or use output of k-mer frequency analysis tools.'
+FR5 `The application should conduct a k-mer frequency analysis, or use output of k-mer frequency analysis tools.'
 
 Conducting k-mer frequency analysis in window sizes has a similar output as GC content, except we look for the frequency of particular `k-mer' (where `k' is a number of how many characters to be considered, e.g. 3mer `ATG', 4mer `ATGA'). Through measuring the frequency in windows we could see if there was an even distribution of frequencies across a contig, and if any windows had large changes in the frequencies that could indicate a potentially bad quality contig.\cite{citeulike:12566531}
 
 This was set as a stretch requirement, as the process of efficiently conducting k-mer frequency analysis and the research into the possibility of writing my own software to do it or consuming output of another application was expected to take over the time for the project, after my background reading and understanding was completed and the other features previously mentioned implemented.
 
 \subsubsection{NCBI reference data}
-`The application should compare the contiguous read data to known reference data in the NCBI database with BLAST.'
+FR6 `The application should compare the contiguous read data to known reference data in the NCBI database with BLAST.'
 
 Using the known reference data, much like with MEGAN, it would be possible to see if any of the contigs in the user data match to known reference data and so can be considered good quality. This was a stretch requirement though, with the idea more in mind for if the application were to be continued to be developed after the project deadline.
 
 \subsection{Quality report and data input}
 \subsubsection{Read user input in FASTA format}
-`A user should be able to paste or upload their data in FASTA format.'
+FR7 `A user should be able to paste or upload their data in FASTA format.'
 
 The FASTA format is a commonly used format for sequence data. It is `a text-based format for representing either nucleotide sequences or peptide sequences' \cite{fastaformat}. It is formatted in the way that can be seen in the figure below. I set myself the task for allowing the upload and paste of data, beginning with pasting the data into a form, as uploading data could add a larger realm of security and data size issues and so I wanted to have the simplest thing possible first.
 
@@ -129,17 +129,17 @@ The FASTA format is a commonly used format for sequence data. It is `a text-base
 For the FASTA format my application accepted, I planned for it to begin only taking into account ATGC \& N as characters to deal with, where N was `unknown/unclear' and the other characters were valid. Uppercase and lowercase characters would be preserved in any output display of the application, but capitalization would not taken into account for any of the processes as they did not make a difference to the quality assessment techniques.
 
 \subsubsection{Display a list of the contigs}
-`A user should be able to see the contiguous reads listed in their FASTA data.'
+FR8 `A user should be able to see the contiguous reads listed in their FASTA data.'
 
 I decided it would be a good idea to display to the user the list of contigs that their file contained, with small bits of relevant information, such as the size of the contig, the header of it and the previously mentioned `N' count and percentage. From here a user would be able to select a contig they wish to further inspect for quality issues.
 
 \subsubsection{User control over GC Content, ORF Location and k-mer frequency analysis parameters}
-`When conducting a quality inspection, a user should be able to adjust the parameters of the methods based upon their expectations, data input and choice.'
+FR9 `When conducting a quality inspection, a user should be able to adjust the parameters of the methods based upon their expectations, data input and choice.'
 
 Since the data uploaded by a user would have been assembled from reads of a particular length, the appropriate size of GC content and k-mer frequency windows, minimum size of ORF Location lengths and minimum length of contigs should be set by the user. It could have been a possibility to guess what a good size would be for the user (i.e. find the shorted contig in the data and consider that that might be the size of a single read, and suggest length parameters based on that).
 
 \subsubsection{Visual reports of the quality inspection methods}
-`A user should be able to see a visual representation of a contigs GC content and any anomalies.'
+FR10 `A user should be able to see a visual representation of a contigs GC content and any anomalies.'
 
 In order for a user to be shown whether their data is of good quality or not, visualizations would be required that highlight any problem areas, or if areas are not highlighted, at least give them a broad sense of the layout of the results of the quality inspection to allow them to analyze the results from themselves. This should include displays for GC content in windows, ORF Locations broken into individual frames, k-mer frequency analysis in windows and a comparison shown between the GC content and ORF Locations.
 

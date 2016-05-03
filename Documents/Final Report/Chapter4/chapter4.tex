@@ -102,7 +102,9 @@ Running this test showed me that it is possible to see where there is a huge cha
 
 \subsubsection{Test Table}
 For confirming functional requirements were met and testing things that couldn't be done with automation, I produced a test table with tests matching requirements, expected results and avoiding unwanted results. The tests from the table were carried out by fulfilling the action in the table, and then viewing the results and marking whether the expectations were met or not.
+\newline
+System test table overleaf.
 
-%==== INSERT TEST TABLE HERE ==== 
+\includepdf[pages=-]{assets/systemtesttablekhimeta.pdf}
 
 When it came to running large files, or files with many contigs, I ran a number of my laptop and for the most part it handled them quite well with a few hundred contigs of moderate length, although with contigs in the sizes of a hundred thousand characters and up, the process of reading in the contigs and then processing one starts taking noticeably longer. I believe this is a restriction with my own machine, however, as should the JVM be allotted enough memory while the application is hosted on a larger, faster machine it is likely it could perform far better.
